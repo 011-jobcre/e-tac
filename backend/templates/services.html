@@ -1,82 +1,160 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static %}
 {% block title %}
-    {% trans "Services" %} | e-tac
+    {% trans "サービス" %} | e-tac
 {% endblock title %}
 {% block content %}
-    <header class="max-w-[1440px] mx-auto px-6 py-20 md:py-32">
-        <div class="max-w-4xl">
-            <h1 class="text-7xl md:text-9xl font-black uppercase mb-8 leading-[0.85]">
-                {% trans "提供" %} <span class="text-primary">{% trans "サービス" %}</span>
+    <!-- Hero -->
+    <header class="bg-base-300 py-20 border-b border-base-200">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
+            <span class="badge badge-primary badge-outline mb-6 px-4 py-3 font-bold uppercase tracking-widest">Our Services</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                {% trans "製造からITまで、" %}
+                <br />
+                <span class="text-primary">{% trans "次世代のBPOソリューション" %}</span>
             </h1>
-            <p class="text-xl text-base-content/70 max-w-2xl mb-12">
-                {% trans "製造業の課題を解決する、包括的なBPO体制。専門的な技術とグローバルな人材ネットワークで、あなたのビジネスをサポートします。" %}
+            <p class="text-xl text-base-content/70 max-w-3xl mx-auto">
+                {% trans "e-tacは、製造現場の最前線からIT開発まで、幅広い領域で企業の変革をサポートします。" %}
             </p>
         </div>
     </header>
-    <!-- Services Grid -->
-    <section class="max-w-[1440px] mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-base-200 p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-base-300">
-                <div class="bg-primary/10 w-16 h-16 flex items-center justify-center mb-8 rounded">
-                    <span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+    <!-- Manufacturing BPO -->
+    <section class="bg-white section-padding">
+        <div class="section-container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="aspect-video bg-base-200 rounded-box border border-base-300 flex items-center justify-center overflow-hidden shadow-lg">
+                        <span class="text-xs text-base-content/30 uppercase font-bold text-center p-4">{% trans "Factory Machine Image Placeholder (NCT, Robot, etc.)" %}</span>
+                        <!-- <img src="{% static 'images/factory_machines.jpg' %}"
+      alt="Factory Machines"
+      class="w-full h-full object-cover" /> -->
+                    </div>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">{% trans "製造業BPO" %}</h3>
-                <p class="text-base-content/70 mb-auto">
-                    {% trans "ロボット部品や制御盤の製造受託。板金加工（NCT、プレス、曲げ、溶接、塗装）から仕上げ（大判研磨、検査、梱包）まで幅広く対応。" %}
-                </p>
-                <div class="mt-8">
-                    <button class="btn btn-primary btn-outline ">{% trans "詳しく見る" %}</button>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-primary text-primary-content p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-primary-content/20">
-                <div class="bg-primary-content w-16 h-16 flex items-center justify-center mb-8 text-primary rounded">
-                    <span class="material-symbols-outlined text-3xl">terminal</span>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">{% trans "IT・システム開発BPO" %}</h3>
-                <p class="opacity-80 mb-auto">
-                    {% trans "コーディングとバグチェックに特化。東欧のエンジニアと連携し、時差を活かしたスピーディな開発を実現します。" %}
-                </p>
-                <div class="mt-8">
-                    <button class="btn btn-primary-content text-primary border-none">{% trans "詳しく見る" %}</button>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-base-200 p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-base-300">
-                <div class="bg-primary/10 w-16 h-16 flex items-center justify-center mb-8 rounded">
-                    <span class="material-symbols-outlined text-primary text-3xl">route</span>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">{% trans "導入プロセス" %}</h3>
-                <p class="text-base-content/70 mb-auto">
-                    {% trans "ヒアリングからシステム構築まで最短45日で導入可能。現状分析に基づき最適なプランを提案し、本稼働までサポートします。" %}
-                </p>
-                <div class="mt-8">
-                    <button class="btn btn-primary btn-outline ">{% trans "詳しく見る" %}</button>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-4xl font-bold mb-6 border-l-8 border-primary pl-6">{% trans "製造業BPO" %}</h2>
+                    <p class="text-lg text-base-content/70 mb-8">{% trans "ロボット部品や制御盤（Control Panel）の受託製造において、確かな技術と実績を誇ります。" %}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-base-100 p-6 rounded-box border border-base-200 shadow-sm">
+                            <h4 class="font-bold text-primary mb-3">{% trans "金属加工" %}</h4>
+                            <ul class="text-sm space-y-2 text-base-content/80">
+                                <li>・NCT（板金）</li>
+                                <li>・レーザー加工 (YAG)</li>
+                                <li>・曲げ (Press Brake)</li>
+                                <li>・タッピング</li>
+                            </ul>
+                        </div>
+                        <div class="bg-base-100 p-6 rounded-box border border-base-200 shadow-sm">
+                            <h4 class="font-bold text-primary mb-3">{% trans "溶接・組立" %}</h4>
+                            <ul class="text-sm space-y-2 text-base-content/80">
+                                <li>・ロボット溶接</li>
+                                <li>・レーザー溶接</li>
+                                <li>・アルゴン・スポット溶接</li>
+                            </ul>
+                        </div>
+                        <div class="bg-base-100 p-6 rounded-box border border-base-200 shadow-sm">
+                            <h4 class="font-bold text-primary mb-3">{% trans "仕上げ・検査" %}</h4>
+                            <ul class="text-sm space-y-2 text-base-content/80">
+                                <li>・研磨・バリ取り</li>
+                                <li>・塗装</li>
+                                <li>・品質検査・梱包</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- CTA Section -->
-    <section class="max-w-[1440px] mx-auto px-6 mb-32">
-        <div class="bg-neutral text-neutral-content p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative rounded shadow-sm">
-            <div class="relative z-10">
-                <h2 class="text-6xl font-black text-primary mb-6">
-                    {% trans "まずは" %}
-                    <br />
-                    {% trans "ご相談ください" %}
-                </h2>
-                <p class="text-xl opacity-70 max-w-md mb-8">
-                    {% trans "お客様の課題に応じた最適なプランをご提案いたします。お気軽にお問い合わせください。" %}
-                </p>
-                <button class="btn btn-primary btn-lg px-12">{% trans "お問い合わせ" %}</button>
+    <!-- IT BPO -->
+    <section class="bg-base-200 section-padding">
+        <div class="section-container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 border-l-8 border-primary pl-6">{% trans "IT & システム開発BPO" %}</h2>
+                    <p class="text-lg text-base-content/70 mb-8">{% trans "東欧（ポーランド、ウクライナ等）の企業と提携し、時差を活かしたスピーディな開発体制を提供します。" %}</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-box flex-none">
+                                <span class="material-symbols-outlined">terminal</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">{% trans "Coding & Bug Check" %}</h4>
+                                <p class="text-base-content/70">{% trans "コーディングとバグ修正に特化し、開発サイクルの高速化を実現します。" %}</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-box flex-none">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">{% trans "時差を活用した24時間開発" %}</h4>
+                                <p class="text-base-content/70">{% trans "東欧との時差を戦略的に活用し、日本の深夜時間帯も開発を進めることが可能です。" %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="aspect-video bg-white rounded-box border border-base-300 flex items-center justify-center overflow-hidden shadow-lg">
+                        <span class="text-xs text-base-content/30 uppercase font-bold text-center p-4">{% trans "Code/Programming Image Placeholder" %}</span>
+                        <!-- <img src="{% static 'images/it_bpo_code.jpg' %}"
+      alt="IT BPO"
+      class="w-full h-full object-cover" /> -->
+                    </div>
+                </div>
             </div>
-            <div class="relative w-full md:w-1/2 h-64 md:h-96 overflow-hidden shadow-md rounded">
-                <img alt="Wise Card"
-                     class="w-full h-full object-cover"
-                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4-L-v6SG5RgLYXtOnJgrqO2kk4yXZFenWjlLzL-0WLq3DoD8jFcFE_JXQEWsvMDRPT6Nml2yizIw-EGQ2ncblcVgBMrG3wAJuEHfrFhYYdCcLXNstphRZ54xvidU4cGuowSOR0OaG3tXCCRu_IwFxned8AAu7zccL_L3dtLsc4fEocuXUVThNX2YOG5O7sJ3YNcgacvfSHvyDlwfEwEDO-bgUeLtdx-gSRLWqUtpkyeOiT6cJhk0VxXaioLlW5y2X7jXYspSkYcv0" />
+        </div>
+    </section>
+    <section class="section-padding">
+        <div class="section-container">
+            <div class="text-center">
+                <h2 class="section-title">{% trans "導入プロセス" %}</h2>
+                <div class="section-title-underline"></div>
             </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-base-200 p-8 rounded-box relative">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">01</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "ヒアリング・面談" %}</h4>
+                    <p class="text-base-content/70">{% trans "まずは現状の課題やご要望を詳細にお伺いします。" %}</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-base-200 p-8 rounded-box relative">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">02</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "現状分析・調査" %}</h4>
+                    <p class="text-base-content/70">{% trans "実務のプロセスやコスト構造を徹底的に分析します。" %}</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-base-200 p-8 rounded-box relative">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">03</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "プラン提案・見積" %}</h4>
+                    <p class="text-base-content/70">{% trans "最適なBPO体制と、明確なコストメリットを提示します。" %}</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-base-200 p-8 rounded-box relative">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">04</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "契約締結" %}</h4>
+                    <p class="text-base-content/70">{% trans "条件にご納得いただいた上で、契約を締結します。" %}</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-base-200 p-8 rounded-box relative border-2 border-primary">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">05</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "組織・体制構築" %}</h4>
+                    <p class="text-base-content/70">{% trans "約45日間をかけて、実行チームの選抜と教育を行います。" %}</p>
+                </div>
+                <!-- Step 6 -->
+                <div class="bg-base-200 p-8 rounded-box relative">
+                    <span class="text-5xl font-bold text-primary/10 absolute top-4 right-6 italic">06</span>
+                    <h4 class="text-xl font-bold mb-4">{% trans "本稼働・評価" %}</h4>
+                    <p class="text-base-content/70">{% trans "実務を開始し、定期的なモニタリングと改善を行います。" %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA -->
+    <section class="bg-primary text-primary-content py-20 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8">{% trans "最短45日で、現場が変わる。" %}</h2>
+            <p class="text-xl opacity-90 mb-12">{% trans "まずは現状分析から始めましょう。お気軽にお問い合わせください。" %}</p>
+            <a href="{% url 'contact' %}" class="btn btn-neutral btn-lg px-16">{% trans "無料で相談する" %}</a>
         </div>
     </section>
 {% endblock content %}

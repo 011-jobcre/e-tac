@@ -26,7 +26,9 @@
         {% endblock extra_head %}
     </head>
     <body class="min-h-screen flex flex-col bg-base-100 text-base-content">
-        {% include "navbar.html" %}
+        <header>
+            {% include "navbar.html" %}
+        </header>
         <main class="grow">
             {% block content %}
             {% endblock content %}

@@ -1,19 +1,25 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static %}
 {% block title %}
-    {% trans "Contact Us" %} | e-tac
+    {% trans "お問い合わせ" %} | e-tac
 {% endblock title %}
 {% block content %}
-    <section class="max-w-[1440px] mx-auto px-6 py-20 md:py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+    <section class="bg-base-100 section-padding">
+        <div class="section-container grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <!-- Left Side: Contact Info -->
             <div>
-                <h1 class="text-7xl md:text-9xl font-black uppercase mb-8 leading-[0.85]">
-                    {% trans "お問い" %}<span class="text-primary">{% trans "合わせ" %}</span>
+                <span class="badge badge-primary badge-outline mb-6 px-4 py-3 font-bold uppercase tracking-widest">Contact</span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-[0.85] uppercase">
+                    {% trans "お問い" %}
+                    <br />
+                    <span class="text-primary">{% trans "合わせ" %}</span>
                 </h1>
-                <p class="text-xl text-base-content/70 max-w-xl mb-12">{% trans "BPOサービスに関するご相談、お見積り、資料請求など、お気軽にお問い合わせください。" %}</p>
+                <p class="text-xl text-base-content/70 mb-12">
+                    {% trans "BPOサービスに関するご相談、お見積り、現状分析のご依頼など、お気軽にお問い合わせください。専門のコンサルタントが対応いたします。" %}
+                </p>
                 <div class="space-y-8">
                     <div class="flex items-center gap-6">
-                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                        <div class="icon-box">
                             <span class="material-symbols-outlined">mail</span>
                         </div>
                         <div>
@@ -22,7 +28,7 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-6">
-                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                        <div class="icon-box">
                             <span class="material-symbols-outlined">call</span>
                         </div>
                         <div>
@@ -31,42 +37,68 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-6">
-                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                        <div class="icon-box">
                             <span class="material-symbols-outlined">location_on</span>
                         </div>
                         <div>
                             <p class="text-sm uppercase opacity-50 font-bold">{% trans "所在地" %}</p>
-                            <p class="text-xl font-bold">{% trans "東京都渋谷区..." %}</p>
+                            <p class="text-xl font-bold">{% trans "東京都渋谷区" %}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card bg-base-200 shadow-2xl p-8 md:p-12">
+            <!-- Right Side: Contact Form -->
+            <div class="bg-base-200 p-8 md:p-12 rounded-box shadow-2xl border border-base-300">
                 <form class="space-y-6">
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text font-bold uppercase">{% trans "お名前" %}</span>
-                        </label>
-                        <input type="text"
-                               placeholder="山田 太郎"
-                               class="input input-bordered input-lg " />
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold uppercase">{% trans "貴社名" %}</span>
+                            </label>
+                            <input type="text"
+                                   placeholder="{% trans '株式会社〇〇' %}"
+                                   class="input input-bordered input-lg focus:input-primary" />
+                        </div>
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text font-bold uppercase">{% trans "お名前" %}</span>
+                            </label>
+                            <input type="text"
+                                   placeholder="{% trans '山田 太郎' %}"
+                                   class="input input-bordered input-lg focus:input-primary" />
+                        </div>
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text font-bold uppercase">{% trans "メールアドレス" %}</span>
                         </label>
                         <input type="email"
-                               placeholder="info@example.com"
-                               class="input input-bordered input-lg " />
+                               placeholder="email@example.com"
+                               class="input input-bordered input-lg focus:input-primary" />
                     </div>
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text font-bold uppercase">{% trans "お問い合わせ内容" %}</span>
                         </label>
-                        <textarea class="textarea textarea-bordered textarea-lg h-40"
+                        <select class="select select-bordered select-lg focus:select-primary w-full">
+                            <option disabled selected>{% trans "項目を選択してください" %}</option>
+                            <option>{% trans "製造業BPOについて" %}</option>
+                            <option>{% trans "IT・システム開発BPOについて" %}</option>
+                            <option>{% trans "現状分析・お見積りの依頼" %}</option>
+                            <option>{% trans "その他" %}</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-bold uppercase">{% trans "詳細メッセージ" %}</span>
+                        </label>
+                        <textarea class="textarea textarea-bordered textarea-lg h-40 focus:textarea-primary"
                                   placeholder="{% trans 'ご用件をご記入ください' %}"></textarea>
                     </div>
-                    <button class="btn btn-primary btn-lg btn-block mt-4">{% trans "送信する" %}</button>
+                    <button class="btn btn-primary btn-lg btn-block mt-4 shadow-lg group">
+                        {% trans "送信する" %}
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>
+                    </button>
                 </form>
             </div>
         </div>

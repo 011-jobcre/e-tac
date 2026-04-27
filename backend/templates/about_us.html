@@ -1,108 +1,112 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n static %}
 {% block title %}
-    {% trans "About Us" %} | e-tac
+    {% trans "会社概要" %} | e-tac
 {% endblock title %}
 {% block content %}
-    <main class="max-w-[1440px] mx-auto px-6 py-12">
-        <!-- Hero Section -->
-        <section class="mb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="badge badge-primary badge-outline px-4 py-3 uppercase tracking-wider mb-6">{% trans "会社情報" %}</span>
-                    <h1 class="text-7xl font-black uppercase mb-8">{% trans "Job Creatorについて" %}</h1>
-                    <p class="text-xl text-base-content/70 max-w-xl">
-                        {% trans "製造業向けに特化したBPOサービス「Job Creator」を提供しています。ワンストップのソリューションで、企業の課題を解決し、安定した生産体制の構築を支援します。" %}
-                    </p>
+    <!-- Hero Section -->
+    <section class="bg-base-300 section-padding">
+        <div class="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="badge badge-primary badge-outline mb-6 px-4 py-3 font-bold uppercase tracking-widest">About e-tac</span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                    {% trans "企業の真のパートナーとして" %}
+                    <br />
+                    <span class="text-primary">{% trans "安定と成長を支える" %}</span>
+                </h1>
+                <p class="text-xl text-base-content/70">
+                    {% trans "株式会社e-tacは、製造業に特化したBPOサービス「Job Creator」を通じて、お客様の生産体制の安定化と持続的な事業成長を支援するプロフェッショナル集団です。" %}
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="aspect-square bg-base-200 rounded-box border border-base-300 flex items-center justify-center overflow-hidden">
+                    <span class="text-xs text-base-content/30 uppercase font-bold text-center p-4">{% trans "Office Exterior Image Placeholder" %}</span>
+                    <!-- <img src="{% static 'images/office_ext.jpg' %}"
+      alt="Office Exterior"
+      class="w-full h-full object-cover" /> -->
                 </div>
-                <div class="relative group">
-                    <div class="aspect-square overflow-hidden shadow-md rounded">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUKmDz30lbtqL9aJl3c7SEKKm9Lhp_yCztTIENCeZrrmbUyYYK2w8lsLjBfTvb8sOVmHJBM0YFVc6aQKqMQ0plpY7Iomba8jlLQv0bY8yMoGLiwTZVcA-9JN81muADA1e-57TC74n5USNs0eTEj3jlBt_OS-ednDqm_doToXbFAxO71qH0ZbADwGoo_q6vbr5-wwJdXIGNnR-6UV1BgLnlOINzXVyafyz3PVwpbHBkChHuDlfvkYjKj1SOsoKeGQ-YQVyOozmf3XGE" />
+                <div class="aspect-square bg-base-200 rounded-box border border-base-300 flex items-center justify-center overflow-hidden mt-8">
+                    <span class="text-xs text-base-content/30 uppercase font-bold text-center p-4">{% trans "Workspace Image Placeholder" %}</span>
+                    <!-- <img src="{% static 'images/office_int.jpg' %}"
+      alt="Workspace"
+      class="w-full h-full object-cover" /> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-base-200 section-padding">
+        <div class="section-container">
+            <div class="text-center">
+                <h2 class="section-title">{% trans "e-tacの強み" %}</h2>
+                <div class="section-title-underline"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- One-stop -->
+                <div class="bpo-card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center rounded-box mb-8">
+                        <span class="material-symbols-outlined text-4xl">all_in_one</span>
                     </div>
-                    <div class="absolute -bottom-6 -left-6 bg-primary text-primary-content p-8 shadow-md max-w-[240px] rounded">
-                        <p class="text-5xl font-black">90%+</p>
-                        <p class="text-sm uppercase opacity-80 mt-2">{% trans "定着率 (2024年実績)" %}</p>
+                    <h3 class="text-2xl font-bold mb-4">{% trans "One-stop対応" %}</h3>
+                    <p class="text-base-content/70">{% trans "コンサルティング、現状分析から実際の業務実行まで、すべてをワンストップで提供。迅速な課題解決を実現します。" %}</p>
+                </div>
+                <div class="bpo-card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center rounded-box mb-8">
+                        <span class="material-symbols-outlined text-4xl">diversity_3</span>
                     </div>
+                    <h3 class="text-2xl font-bold mb-4">{% trans "高度外国人材の活用" %}</h3>
+                    <p class="text-base-content/70">{% trans "「特定技能」資格を持つ専門性の高い外国人材を活用し、品質と安定性を両立させたオペレーションを構築します。" %}</p>
                 </div>
-            </div>
-        </section>
-        <!-- Mission / Values Bento Grid -->
-        <section class="mb-32">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 bg-base-200 p-12 hover:-translate-y-1 transition-transform rounded shadow-sm border border-base-300">
-                    <span class="material-symbols-outlined text-primary text-5xl mb-6">handshake</span>
-                    <h2 class="text-4xl font-black uppercase mb-6">{% trans "ワンストップ対応" %}</h2>
-                    <p class="text-lg text-base-content/70">{% trans "コンサルティング、現状分析から実際の業務実行まで、すべてを自社で一貫して提供します。" %}</p>
-                </div>
-                <div class="bg-primary text-primary-content p-12 hover:-translate-y-1 transition-transform rounded shadow-sm border border-primary-content/20">
-                    <span class="material-symbols-outlined text-4xl mb-6">group</span>
-                    <h2 class="text-4xl font-black uppercase mb-6">{% trans "迅速な人材対応" %}</h2>
-                    <p class="text-lg opacity-80">{% trans "豊富な登録人材と、専門性の高い外国人材により、企業の多様なニーズに迅速に応えます。" %}</p>
-                </div>
-            </div>
-        </section>
-        <!-- History Timeline Section -->
-        <section class="mb-32">
-            <div class="text-center mb-16">
-                <h2 class="text-6xl font-black uppercase">{% trans "各種許認可・登録" %}</h2>
-                <div class="w-24 h-2 bg-primary mx-auto mt-4"></div>
-            </div>
-            <div class="space-y-8 relative">
-                <!-- Timeline Item 1 -->
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/3 text-3xl font-black text-primary">有料職業紹介事業許可</div>
-                    <div class="md:w-2/3 bg-base-200 p-10 border-l-4 border-primary shadow-sm rounded">
-                        <p class="text-2xl font-bold uppercase">40-ユ-301389</p>
+                <div class="bpo-card flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-primary/10 text-primary flex items-center justify-center rounded-box mb-8">
+                        <span class="material-symbols-outlined text-4xl">verified_user</span>
                     </div>
-                </div>
-                <!-- Timeline Item 2 -->
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/3 text-3xl font-black text-primary">登録支援機関</div>
-                    <div class="md:w-2/3 bg-base-200 p-10 border-l-4 border-primary shadow-sm rounded">
-                        <p class="text-2xl font-bold uppercase">23登-009068</p>
-                    </div>
-                </div>
-                <!-- Timeline Item 3 -->
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/3 text-3xl font-black text-primary">特定技能外国人材受入協議会</div>
-                    <div class="md:w-2/3 bg-base-200 p-10 border-l-4 border-primary shadow-sm rounded">
-                        <p class="text-2xl font-bold uppercase">122-007771, 123-008887</p>
-                    </div>
+                    <h3 class="text-2xl font-bold mb-4">{% trans "高いスタッフ定着率" %}</h3>
+                    <p class="text-base-content/70">{% trans "2024年の実績で定着率90%以上を達成。スタッフの安定が、お客様の生産ラインの安定に直結します。" %}</p>
                 </div>
             </div>
-        </section>
-        <!-- Stats Section -->
-        <section class="bg-neutral text-neutral-content p-16 mb-32 text-center rounded shadow-sm">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div>
-                    <p class="text-5xl font-black text-primary mb-2">
-                        90%<span class="text-3xl">+</span>
-                    </p>
-                    <p class="text-sm uppercase tracking-widest opacity-70">{% trans "スタッフ定着率" %}</p>
-                </div>
-                <div>
-                    <p class="text-5xl font-black text-primary mb-2">
-                        45<span class="text-3xl">日</span>
-                    </p>
-                    <p class="text-sm uppercase tracking-widest opacity-70">{% trans "最短立ち上げ期間" %}</p>
-                </div>
-                <div>
-                    <p class="text-5xl font-black text-primary mb-2">1st</p>
-                    <p class="text-sm uppercase tracking-widest opacity-70">{% trans "ワンストップ解決" %}</p>
-                </div>
+        </div>
+    </section>
+    <!-- Company Details Table -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 uppercase border-l-8 border-primary pl-6">{% trans "企業情報" %}</h2>
+            <div class="overflow-x-auto">
+                <table class="table table-lg w-full">
+                    <tbody class="border-t-2 border-base-300">
+                        <tr>
+                            <th class="bg-base-200 w-1/3">{% trans "社名" %}</th>
+                            <td>{% trans "株式会社e-tac / D事業所" %}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-base-200">{% trans "サービス名" %}</th>
+                            <td>{% trans "Job Creator" %}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-base-200">{% trans "有料職業紹介事業許可" %}</th>
+                            <td>{% trans "40-ユ-301389" %}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-base-200">{% trans "登録支援機関" %}</th>
+                            <td>{% trans "23登-009068" %}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-base-200">{% trans "特定技能受入協議会 ID" %}</th>
+                            <td>
+                                {% trans "122-007771 (製造業)" %}
+                                <br />
+                                {% trans "123-008887 (製造業)" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
-        <section class="text-center pb-32">
-            <h2 class="text-5xl md:text-7xl font-black uppercase mb-10 leading-tight">
-                {% trans "まずは" %}
-                <span class="text-primary">{% trans "ご相談" %}</span>
-                {% trans "ください" %}
-            </h2>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <button class="btn btn-primary btn-lg px-12">{% trans "お問い合わせ" %}</button>
-                <button class="btn btn-ghost btn-lg px-12">{% trans "資料ダウンロード" %}</button>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="bg-neutral text-neutral-content py-20 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-8 leading-tight">{% trans "あなたのビジネスを、もっと強く、もっと自由に。" %}</h2>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-16">{% trans "今すぐ問い合わせる" %}</a>
+        </div>
+    </section>
 {% endblock content %}
