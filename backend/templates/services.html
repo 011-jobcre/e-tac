@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {% trans "Services" %} | e-tac
+{% endblock title %}
+{% block content %}
+    <header class="max-w-[1440px] mx-auto px-6 py-20 md:py-32">
+        <div class="max-w-4xl">
+            <h1 class="text-7xl md:text-9xl font-black uppercase mb-8 leading-[0.85]">
+                {% trans "提供" %} <span class="text-primary">{% trans "サービス" %}</span>
+            </h1>
+            <p class="text-xl text-base-content/70 max-w-2xl mb-12">
+                {% trans "製造業の課題を解決する、包括的なBPO体制。専門的な技術とグローバルな人材ネットワークで、あなたのビジネスをサポートします。" %}
+            </p>
+        </div>
+    </header>
+    <!-- Services Grid -->
+    <section class="max-w-[1440px] mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-base-200 p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-base-300">
+                <div class="bg-primary/10 w-16 h-16 flex items-center justify-center mb-8 rounded">
+                    <span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">{% trans "製造業BPO" %}</h3>
+                <p class="text-base-content/70 mb-auto">
+                    {% trans "ロボット部品や制御盤の製造受託。板金加工（NCT、プレス、曲げ、溶接、塗装）から仕上げ（大判研磨、検査、梱包）まで幅広く対応。" %}
+                </p>
+                <div class="mt-8">
+                    <button class="btn btn-primary btn-outline ">{% trans "詳しく見る" %}</button>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-primary text-primary-content p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-primary-content/20">
+                <div class="bg-primary-content w-16 h-16 flex items-center justify-center mb-8 text-primary rounded">
+                    <span class="material-symbols-outlined text-3xl">terminal</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">{% trans "IT・システム開発BPO" %}</h3>
+                <p class="opacity-80 mb-auto">
+                    {% trans "コーディングとバグチェックに特化。東欧のエンジニアと連携し、時差を活かしたスピーディな開発を実現します。" %}
+                </p>
+                <div class="mt-8">
+                    <button class="btn btn-primary-content text-primary border-none">{% trans "詳しく見る" %}</button>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-base-200 p-8 flex flex-col h-full hover:-translate-y-1 transition-transform rounded shadow-sm border border-base-300">
+                <div class="bg-primary/10 w-16 h-16 flex items-center justify-center mb-8 rounded">
+                    <span class="material-symbols-outlined text-primary text-3xl">route</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">{% trans "導入プロセス" %}</h3>
+                <p class="text-base-content/70 mb-auto">
+                    {% trans "ヒアリングからシステム構築まで最短45日で導入可能。現状分析に基づき最適なプランを提案し、本稼働までサポートします。" %}
+                </p>
+                <div class="mt-8">
+                    <button class="btn btn-primary btn-outline ">{% trans "詳しく見る" %}</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="max-w-[1440px] mx-auto px-6 mb-32">
+        <div class="bg-neutral text-neutral-content p-12 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12 overflow-hidden relative rounded shadow-sm">
+            <div class="relative z-10">
+                <h2 class="text-6xl font-black text-primary mb-6">
+                    {% trans "まずは" %}
+                    <br />
+                    {% trans "ご相談ください" %}
+                </h2>
+                <p class="text-xl opacity-70 max-w-md mb-8">
+                    {% trans "お客様の課題に応じた最適なプランをご提案いたします。お気軽にお問い合わせください。" %}
+                </p>
+                <button class="btn btn-primary btn-lg px-12">{% trans "お問い合わせ" %}</button>
+            </div>
+            <div class="relative w-full md:w-1/2 h-64 md:h-96 overflow-hidden shadow-md rounded">
+                <img alt="Wise Card"
+                     class="w-full h-full object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4-L-v6SG5RgLYXtOnJgrqO2kk4yXZFenWjlLzL-0WLq3DoD8jFcFE_JXQEWsvMDRPT6Nml2yizIw-EGQ2ncblcVgBMrG3wAJuEHfrFhYYdCcLXNstphRZ54xvidU4cGuowSOR0OaG3tXCCRu_IwFxned8AAu7zccL_L3dtLsc4fEocuXUVThNX2YOG5O7sJ3YNcgacvfSHvyDlwfEwEDO-bgUeLtdx-gSRLWqUtpkyeOiT6cJhk0VxXaioLlW5y2X7jXYspSkYcv0" />
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta name="description"
+              content="{% block meta_description %}{% endblock meta_description %}" />
+        <meta name="keywords"
+              content="{% block meta_keywords %}{% endblock meta_keywords %}" />
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+        <!-- Tailwind CSS & DaisyUI -->
+        <link href="{% static 'css/output.css' %}" rel="stylesheet" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Noto+Sans+JP:wght@400;600;900&display=swap"
+              rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+              rel="stylesheet" />
+        {% block extra_head %}
+        {% endblock extra_head %}
+    </head>
+    <body class="min-h-screen flex flex-col bg-base-100 text-base-content">
+        {% include "navbar.html" %}
+        <main class="grow">
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <!-- Footer -->
+        <footer class="footer p-10 bg-base-200 text-base-content border-t border-base-300">
+            <div class="max-w-[1440px] mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+                <nav>
+                    <h6 class="footer-title uppercase opacity-50">e-tac</h6>
+                    <p>© 2026 e-tac. {% trans "All rights reserved." %}</p>
+                </nav>
+                <nav>
+                    <h6 class="footer-title uppercase opacity-50">{% trans "法的情報" %}</h6>
+                    <div class="flex flex-col items-start gap-2">
+                        <a class="link link-hover" href="#">{% trans "プライバシーポリシー" %}</a>
+                        <a class="link link-hover" href="#">{% trans "利用規約" %}</a>
+                        <a class="link link-hover" href="#">{% trans "Cookieポリシー" %}</a>
+                    </div>
+                </nav>
+                <nav>
+                    <h6 class="footer-title uppercase opacity-50">{% trans "公式SNS" %}</h6>
+                    <div class="flex items-center gap-2">
+                        <a href="#" class="btn btn-ghost btn-circle btn-sm">
+                            <span class="material-symbols-outlined">share</span>
+                        </a>
+                        <a href="#" class="btn btn-ghost btn-circle btn-sm">
+                            <span class="material-symbols-outlined">mail</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        {% block extra_scripts %}
+        {% endblock extra_scripts %}
+    </body>
+</html>

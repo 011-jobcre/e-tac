@@ -1,0 +1,343 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-27 11:53+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: templates/about_us.html:4
+msgid "About Us"
+msgstr ""
+
+#: templates/about_us.html:12
+msgid "会社情報"
+msgstr ""
+
+#: templates/about_us.html:13
+msgid "Job Creatorについて"
+msgstr ""
+
+#: templates/about_us.html:15
+msgid ""
+"製造業向けに特化したBPOサービス「Job Creator」を提供しています。ワンストップ"
+"のソリューションで、企業の課題を解決し、安定した生産体制の構築を支援します。"
+msgstr ""
+
+#: templates/about_us.html:25
+msgid "定着率 (2024年実績)"
+msgstr ""
+
+#: templates/about_us.html:35
+msgid "ワンストップ対応"
+msgstr ""
+
+#: templates/about_us.html:36
+msgid ""
+"コンサルティング、現状分析から実際の業務実行まで、すべてを自社で一貫して提供"
+"します。"
+msgstr ""
+
+#: templates/about_us.html:40
+msgid "迅速な人材対応"
+msgstr ""
+
+#: templates/about_us.html:41
+msgid ""
+"豊富な登録人材と、専門性の高い外国人材により、企業の多様なニーズに迅速に応え"
+"ます。"
+msgstr ""
+
+#: templates/about_us.html:48
+msgid "各種許認可・登録"
+msgstr ""
+
+#: templates/about_us.html:82
+msgid "スタッフ定着率"
+msgstr ""
+
+#: templates/about_us.html:88
+msgid "最短立ち上げ期間"
+msgstr ""
+
+#: templates/about_us.html:92
+msgid "ワンストップ解決"
+msgstr ""
+
+#: templates/about_us.html:98 templates/services.html:66
+msgid "まずは"
+msgstr ""
+
+#: templates/about_us.html:99
+msgid "ご相談"
+msgstr ""
+
+#: templates/about_us.html:100
+msgid "ください"
+msgstr ""
+
+#: templates/about_us.html:103 templates/homepage.html:19
+#: templates/navbar.html:27 templates/navbar.html:46 templates/services.html:73
+msgid "お問い合わせ"
+msgstr ""
+
+#: templates/about_us.html:104
+msgid "資料ダウンロード"
+msgstr ""
+
+#: templates/base.html:38
+msgid "All rights reserved."
+msgstr ""
+
+#: templates/base.html:41
+msgid "法的情報"
+msgstr ""
+
+#: templates/base.html:42
+msgid "プライバシーポリシー"
+msgstr ""
+
+#: templates/base.html:43
+msgid "利用規約"
+msgstr ""
+
+#: templates/base.html:44
+msgid "Cookieポリシー"
+msgstr ""
+
+#: templates/base.html:47
+msgid "公式SNS"
+msgstr ""
+
+#: templates/contact_us.html:4
+msgid "Contact Us"
+msgstr ""
+
+#: templates/contact_us.html:11
+msgid "お問い"
+msgstr ""
+
+#: templates/contact_us.html:11
+msgid "合わせ"
+msgstr ""
+
+#: templates/contact_us.html:13
+msgid ""
+"BPOサービスに関するご相談、お見積り、資料請求など、お気軽にお問い合わせくださ"
+"い。"
+msgstr ""
+
+#: templates/contact_us.html:20
+msgid "メール"
+msgstr ""
+
+#: templates/contact_us.html:29
+msgid "お電話"
+msgstr ""
+
+#: templates/contact_us.html:38
+msgid "所在地"
+msgstr ""
+
+#: templates/contact_us.html:39
+msgid "東京都渋谷区..."
+msgstr ""
+
+#: templates/contact_us.html:48
+msgid "お名前"
+msgstr ""
+
+#: templates/contact_us.html:56
+msgid "メールアドレス"
+msgstr ""
+
+#: templates/contact_us.html:64
+msgid "お問い合わせ内容"
+msgstr ""
+
+#: templates/contact_us.html:67
+msgid "ご用件をご記入ください"
+msgstr ""
+
+#: templates/contact_us.html:69
+msgid "送信する"
+msgstr ""
+
+#: templates/homepage.html:12
+msgid "アウトソーシングでコア業務へ"
+msgstr ""
+
+#: templates/homepage.html:14
+msgid "パワーシフト"
+msgstr ""
+
+#: templates/homepage.html:16
+msgid ""
+"製造業の4大課題（人材不足、人件費高騰、自動化の遅れ、技術継承）を根本から解決"
+"します。"
+msgstr ""
+
+#: templates/homepage.html:18
+msgid "サービスを見る"
+msgstr ""
+
+#: templates/homepage.html:24
+msgid "Global Innovation Illustration"
+msgstr ""
+
+#: templates/homepage.html:33
+msgid "選ばれる理由"
+msgstr ""
+
+#: templates/homepage.html:39
+msgid "スピード"
+msgstr ""
+
+#: templates/homepage.html:42
+msgid "固定費の削減"
+msgstr ""
+
+#: templates/homepage.html:43
+msgid ""
+"人件費を変動費化し、利益体質を最適化します。無駄な固定費を抑え、柔軟な経営を"
+"実現します。"
+msgstr ""
+
+#: templates/homepage.html:50
+msgid "コア業務への集中"
+msgstr ""
+
+#: templates/homepage.html:51
+msgid ""
+"ノンコア業務をアウトソーシングすることで、付加価値の高い事業領域へ社内リソー"
+"スを集中させます。"
+msgstr ""
+
+#: templates/homepage.html:58
+msgid "課題の根本解決"
+msgstr ""
+
+#: templates/homepage.html:60
+msgid ""
+"製造業が直面する「人材不足」「人件費高騰」「自動化の遅れ」「技術継承」の4つの"
+"大きな壁を乗り越えるサポートを提供します。"
+msgstr ""
+
+#: templates/homepage.html:67
+msgid "ワンストップ体制"
+msgstr ""
+
+#: templates/homepage.html:68
+msgid ""
+"コンサルティング・分析から業務実行まで、すべてをワンストップで提供し、迅速な"
+"課題解決を実現します。"
+msgstr ""
+
+#: templates/homepage.html:80
+msgid "BPOで実現する未来"
+msgstr ""
+
+#: templates/homepage.html:82
+msgid ""
+"単なる業務委託ではなく、お客様の真のパートナーとして、安定した生産体制の構築"
+"と事業成長に貢献します。"
+msgstr ""
+
+#: templates/homepage.html:87
+#, python-format
+msgid "定着率90%%以上"
+msgstr ""
+
+#: templates/homepage.html:91
+msgid "豊富な登録人材"
+msgstr ""
+
+#: templates/homepage.html:95
+msgid "外国人高度人材"
+msgstr ""
+
+#: templates/navbar.html:18 templates/navbar.html:37
+msgid "ホーム"
+msgstr ""
+
+#: templates/navbar.html:21 templates/navbar.html:40
+msgid "会社概要"
+msgstr ""
+
+#: templates/navbar.html:24 templates/navbar.html:43 templates/services.html:10
+msgid "サービス"
+msgstr ""
+
+#: templates/navbar.html:73
+msgid "無料相談"
+msgstr ""
+
+#: templates/services.html:4
+msgid "Services"
+msgstr ""
+
+#: templates/services.html:10
+msgid "提供"
+msgstr ""
+
+#: templates/services.html:13
+msgid ""
+"製造業の課題を解決する、包括的なBPO体制。専門的な技術とグローバルな人材ネット"
+"ワークで、あなたのビジネスをサポートします。"
+msgstr ""
+
+#: templates/services.html:25
+msgid "製造業BPO"
+msgstr ""
+
+#: templates/services.html:27
+msgid ""
+"ロボット部品や制御盤の製造受託。板金加工（NCT、プレス、曲げ、溶接、塗装）から"
+"仕上げ（大判研磨、検査、梱包）まで幅広く対応。"
+msgstr ""
+
+#: templates/services.html:30 templates/services.html:43
+#: templates/services.html:56
+msgid "詳しく見る"
+msgstr ""
+
+#: templates/services.html:38
+msgid "IT・システム開発BPO"
+msgstr ""
+
+#: templates/services.html:40
+msgid ""
+"コーディングとバグチェックに特化。東欧のエンジニアと連携し、時差を活かしたス"
+"ピーディな開発を実現します。"
+msgstr ""
+
+#: templates/services.html:51
+msgid "導入プロセス"
+msgstr ""
+
+#: templates/services.html:53
+msgid ""
+"ヒアリングからシステム構築まで最短45日で導入可能。現状分析に基づき最適なプラ"
+"ンを提案し、本稼働までサポートします。"
+msgstr ""
+
+#: templates/services.html:68
+msgid "ご相談ください"
+msgstr ""
+
+#: templates/services.html:71
+msgid ""
+"お客様の課題に応じた最適なプランをご提案いたします。お気軽にお問い合わせくだ"
+"さい。"
+msgstr ""

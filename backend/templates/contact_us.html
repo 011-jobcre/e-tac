@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {% trans "Contact Us" %} | e-tac
+{% endblock title %}
+{% block content %}
+    <section class="max-w-[1440px] mx-auto px-6 py-20 md:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div>
+                <h1 class="text-7xl md:text-9xl font-black uppercase mb-8 leading-[0.85]">
+                    {% trans "お問い" %}<span class="text-primary">{% trans "合わせ" %}</span>
+                </h1>
+                <p class="text-xl text-base-content/70 max-w-xl mb-12">{% trans "BPOサービスに関するご相談、お見積り、資料請求など、お気軽にお問い合わせください。" %}</p>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm uppercase opacity-50 font-bold">{% trans "メール" %}</p>
+                            <p class="text-xl font-bold">hello@e-tac.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <p class="text-sm uppercase opacity-50 font-bold">{% trans "お電話" %}</p>
+                            <p class="text-xl font-bold">+81 3-1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-primary text-primary-content flex items-center justify-center rounded shadow-sm">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm uppercase opacity-50 font-bold">{% trans "所在地" %}</p>
+                            <p class="text-xl font-bold">{% trans "東京都渋谷区..." %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-200 shadow-2xl p-8 md:p-12">
+                <form class="space-y-6">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-bold uppercase">{% trans "お名前" %}</span>
+                        </label>
+                        <input type="text"
+                               placeholder="山田 太郎"
+                               class="input input-bordered input-lg " />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-bold uppercase">{% trans "メールアドレス" %}</span>
+                        </label>
+                        <input type="email"
+                               placeholder="info@example.com"
+                               class="input input-bordered input-lg " />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text font-bold uppercase">{% trans "お問い合わせ内容" %}</span>
+                        </label>
+                        <textarea class="textarea textarea-bordered textarea-lg h-40"
+                                  placeholder="{% trans 'ご用件をご記入ください' %}"></textarea>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block mt-4">{% trans "送信する" %}</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

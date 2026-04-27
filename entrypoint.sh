@@ -8,8 +8,10 @@ set -e
 echo "Checking SQLite database..."
 python manage.py migrate --noinput
 
-# --- 2. XỬ LÝ STATIC FILES ---
-# Đối với Homepage dùng Tailwind, collectstatic là bắt buộc để gom file output.css
+# --- 2. XỬ LÝ STATIC FILES & TRANSLATIONS ---
+echo "Compiling translations..."
+python manage.py compilemessages
+
 echo "Collecting static files..."
 python manage.py collectstatic --noinput
 

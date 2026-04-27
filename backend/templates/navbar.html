@@ -1,0 +1,73 @@
+{% load static i18n %}
+<nav class="sticky top-0 w-full z-50 border-b border-base-300 bg-base-100/80 backdrop-blur-md">
+    <div class="navbar max-w-[1440px] mx-auto px-4 md:px-8">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+                <ul tabindex="0"
+                    class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans "ホーム" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">{% trans "会社概要" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'services' %}">{% trans "サービス" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">{% trans "お問い合わせ" %}</a>
+                    </li>
+                </ul>
+            </div>
+            <a href={% url "home" %}>
+                <img src="{% static '/images/logo-etac.png' %}"
+                     alt="logo-etac"
+                     class="h-10 w-auto object-contain" />
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal gap-x-4 font-semibold uppercase tracking-tight">
+                <li>
+                    <a href="{% url 'home' %}">{% trans "ホーム" %}</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">{% trans "会社概要" %}</a>
+                </li>
+                <li>
+                    <a href="{% url 'services' %}">{% trans "サービス" %}</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">{% trans "お問い合わせ" %}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-end gap-2">
+            <!-- Language Toggle -->
+            <form action="{% url 'set_language' %}"
+                  method="post"
+                  class="flex items-center">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path }}" />
+                <div class="join">
+                    <button type="submit"
+                            name="language"
+                            value="ja"
+                            class="join-item btn btn-sm hover:translate-y-0.5 transform transition-all duration-300 {% if LANGUAGE_CODE == 'ja' %}btn-primary{% else %}btn-ghost{% endif %}">
+                        JP
+                    </button>
+                    <button type="submit"
+                            name="language"
+                            value="en"
+                            class="join-item btn btn-sm hover:translate-y-0.5 transform transition-all duration-300 {% if LANGUAGE_CODE == 'en' %}btn-primary{% else %}btn-ghost{% endif %}">
+                        EN
+                    </button>
+                </div>
+            </form>
+            <a class="btn btn-primary btn-sm md:btn-md uppercase"
+               href="{% url 'contact' %}">{% trans "無料相談" %}</a>
+        </div>
+    </div>
+</nav>

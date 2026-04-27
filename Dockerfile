@@ -27,6 +27,7 @@ WORKDIR /app
 # Chỉ cài những thứ thực sự cần thiết
 RUN apt-get update && apt-get install -y --no-install-recommends \
     netcat-openbsd \
+    gettext \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .

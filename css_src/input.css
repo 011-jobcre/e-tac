@@ -1,2 +1,73 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --font-sans: "Noto Sans JP", "Inter", sans-serif;
+    --font-mono: "Fira Code", "Noto Sans JP Mono", monospace;
+}
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+@plugin "daisyui/theme" {
+    name: "bizreach";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+
+    /* Backgrounds */
+    --color-base-100: oklch(100% 0 0);
+    --color-base-200: oklch(98% 0 0);
+    --color-base-300: oklch(95% 0 0);
+    --color-base-content: oklch(21% 0.006 285.885);
+
+    /* Text Colors */
+    --color-base-content: oklch(21% 0.006 285.885);
+
+    /* Brand Colors (Bizreach Reds) */
+    --color-primary: #0066ff;
+    --color-primary-content: oklch(93% 0.034 272.788);
+    /* --color-primary: #a5000b; */
+    /* --color-primary-content: oklch(93% 0.034 272.788); */
+    --color-secondary: #b6111c;
+    --color-secondary-content: oklch(94% 0.028 342.258);
+
+    /* Neutrals */
+    --color-accent: #2b2b2b;
+    --color-accent-content: oklch(38% 0.063 188.416);
+    --color-neutral: #111111;
+    --color-neutral-content: oklch(92% 0.004 286.32);
+
+    /* System States */
+    --color-info: #00bafe;
+    --color-info-content: oklch(29% 0.066 243.157);
+    --color-success: oklch(76% 0.177 163.223);
+    --color-success-content: oklch(37% 0.077 168.94);
+    --color-warning: oklch(82% 0.189 84.429);
+    --color-warning-content: oklch(41% 0.112 45.904);
+    --color-error: oklch(71% 0.194 13.428);
+    --color-error-content: oklch(27% 0.105 12.094);
+
+    /* Border Radius (Bizreach uses sharp, professional corners) */
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+
+    /* Misc */
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
