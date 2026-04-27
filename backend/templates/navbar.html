@@ -1,49 +1,22 @@
-{% load static i18n %}
-<nav class="sticky top-0 w-full z-50 border-b border-base-300 bg-base-100/80 backdrop-blur-md">
-    <div class="navbar max-w-[1440px] mx-auto px-4 md:px-8">
-        <div class="navbar-start">
-            <div class="dropdown">
-                <div tabindex="0"
-                     role="button"
-                     class="btn btn-ghost btn-square btn-neutral lg:hidden">
-                    <span class="material-symbols-outlined">menu</span>
-                </div>
-                <ul tabindex="0"
-                    class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow">
-                    <li>
-                        <a href="{% url 'home' %}">{% trans "ホーム" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">{% trans "会社概要" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'services' %}">{% trans "サービス" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact' %}">{% trans "お問い合わせ" %}</a>
-                    </li>
-                </ul>
-            </div>
-            <a href={% url "home" %}>
-                <img src="{% static '/images/logo-etac.png' %}"
-                     alt="logo-etac"
-                     class="h-20 w-auto object-contain" />
+{% load i18n %}
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b-2 border-slate-900">
+    <div class="flex justify-between items-center h-24 px-10 max-w-[1440px] mx-auto">
+        <div class="text-3xl font-black text-blue-700 uppercase tracking-tighter font-['Space_Grotesk']">
+            <a href="{% url 'home' %}">e-tac</a>
+        </div>
+        <nav class="hidden md:flex items-center gap-10">
+            <a class="font-['Space_Grotesk'] font-bold tracking-tight {% if request.resolver_match.url_name == 'home' %}text-blue-700 border-b-4 border-blue-700 pb-1{% else %}text-slate-900 hover:text-blue-600{% endif %} active:scale-95 transform transition-all duration-200"
+               href="{% url 'home' %}">{% trans "ホーム" %}</a>
+            <a class="font-['Space_Grotesk'] font-bold tracking-tight {% if request.resolver_match.url_name == 'about' %}text-blue-700 border-b-4 border-blue-700 pb-1{% else %}text-slate-900 hover:text-blue-600{% endif %} active:scale-95 transform transition-all duration-200"
+               href="{% url 'about' %}">{% trans "会社概要" %}</a>
+            <a class="font-['Space_Grotesk'] font-bold tracking-tight {% if request.resolver_match.url_name == 'services' %}text-blue-700 border-b-4 border-blue-700 pb-1{% else %}text-slate-900 hover:text-blue-600{% endif %} active:scale-95 transform transition-all duration-200"
+               href="{% url 'services' %}">{% trans "サービス" %}</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <a href="{% url 'contact' %}"
+               class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-bold text-label-bold active:scale-95 transform transition-transform">
+                {% trans "お問い合わせ" %}
             </a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-            <div class="items-center space-x-10 font-medium text-lg">
-                <a href="{% url 'home' %}"
-                   class="px-3 py-1 hover:text-primary transition-colors duration-300">{% trans "ホーム" %}</a>
-                <a href="{% url 'about' %}"
-                   class="px-3 py-1 hover:text-primary transition-colors duration-300">{% trans "会社概要" %}</a>
-                <a href="{% url 'services' %}"
-                   class="px-3 py-1 hover:text-primary transition-colors duration-300">{% trans "サービス" %}</a>
-                <a href="{% url 'contact' %}"
-                   class="px-3 py-1 hover:text-primary transition-colors duration-300">{% trans "お問い合わせ" %}</a>
-            </div>
-        </div>
-        <div class="navbar-end gap-2">
-            <!-- Language Toggle -->
             <form action="{% url 'set_language' %}" method="post" class="inline">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path }}" />
@@ -62,8 +35,6 @@
                     </button>
                 </div>
             </form>
-            <a class="btn btn-primary btn-sm md:btn-md uppercase"
-               href="{% url 'contact' %}">{% trans "無料相談" %}</a>
         </div>
     </div>
-</nav>
+</header>
