@@ -1,243 +1,225 @@
 {% extends "base.html" %}
 {% load i18n static %}
-{% block title %}{% trans "サービス" %} | e-tac{% endblock title %}
-
+{% block title %}
+    {% trans "サービス" %} | e-tac
+{% endblock title %}
 {% block content %}
-<!-- Hero Section -->
-            <section class="px-10 py-20 max-w-[1440px] mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-                    <div class="lg:col-span-8">
-                        <span class="text-primary font-label-bold tracking-widest uppercase mb-4 block">当社のソリューション</span>
-                        <h1 class="font-display-xl text-display-xl mb-8">高精度BPOサービス</h1>
-                        <p class="font-body-lg text-body-lg text-outline max-w-2xl">
-                            製造とITの卓越性を融合。ロボットコンポーネントや高度なソフトウェアエンジニアリング向けの、工業グレードのアウトソーシングソリューションを提供します。
-                        </p>
+    <!-- Hero Section -->
+    <section class="relative h-[70vh] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
+             style="background-image: url({% static '/images/bg-test1.avif' %})">
+        <div class="absolute inset-0"></div>
+        <div class="relative z-10 max-w-[1440px] mx-auto px-10 w-full">
+            <div class="flex flex-col items-start gap-1">
+                <span class="inline-flex bg-primary text-white px-6 py-2 rounded-full uppercase mb-5">当社のソリューション</span>
+                <h1 class="font-grotesk text-hero-xl mb-5">高精度BPOサービス</h1>
+                <p class="max-w-2xl">製造とITの卓越性を融合。ロボットコンポーネントや高度なソフトウェアエンジニアリング向けの、工業グレードのアウトソーシングソリューションを提供します。</p>
+            </div>
+        </div>
+    </section>
+    <!-- Manufacturing BPO Section -->
+    <section class="bg-base-200 py-20">
+        <div class="max-w-[1440px] mx-auto px-10 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div class="space-y-10">
+                    <div class="inline-flex bg-primary text-white px-6 py-2 rounded-full uppercase items-center gap-4">
+                        <span class="material-symbols-outlined">precision_manufacturing</span>製造業 BPO
                     </div>
-                    <div class="lg:col-span-4 flex justify-end">
-                        <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center text-white">
-                            <span class="material-symbols-outlined text-4xl">arrow_downward</span>
+                    <h2 class="font-grotesk text-headline-lg">
+                        ロボット部品 &amp;
+                        <br />
+                        コントロールパネル
+                    </h2>
+                    <p class="max-w-xl">高精度な金属加工および組立における専門技術。産業用ロボット向けのCNC加工、レーザー切断、曲げ加工、溶接、および高品質な仕上げ加工を専門としています。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <h4 class="font-grotesk text-2xl font-bold mb-2">01</h4>
+                            NCT・レーザー加工
                         </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Manufacturing BPO Section -->
-            <section class="bg-surface-container-low py-section-gap">
-                <div class="max-w-[1440px] mx-auto px-10">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                        <div class="space-y-10">
-                            <div class="inline-flex items-center gap-4 bg-primary px-6 py-2 rounded-full text-white">
-                                <span class="material-symbols-outlined">precision_manufacturing</span>
-                                <span class="font-label-bold">MANUFACTURING BPO</span>
-                            </div>
-                            <h2 class="font-headline-lg text-headline-lg">
-                                Robot Parts &amp;
-                                <br />
-                                Control Panels.
-                            </h2>
-                            <p class="font-body-lg text-body-lg text-tertiary">
-                                Expertise in high-precision metal fabrication and assembly. Specialized in NCT, laser cutting, bending, welding, and high-quality finishing for industrial robotics.
-                            </p>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-white p-8 rounded-lg border border-outline-variant">
-                                    <h4 class="font-headline-md text-headline-md text-primary mb-2">01</h4>
-                                    <span class="font-label-bold">NCT・レーザー加工</span>
-                                </div>
-                                <div class="bg-white p-8 rounded-lg border border-outline-variant">
-                                    <h4 class="font-headline-md text-headline-md text-primary mb-2">02</h4>
-                                    <span class="font-label-bold">精密曲げ加工</span>
-                                </div>
-                                <div class="bg-white p-8 rounded-lg border border-outline-variant">
-                                    <h4 class="font-headline-md text-headline-md text-primary mb-2">03</h4>
-                                    <span class="font-label-bold">ロボット溶接</span>
-                                </div>
-                                <div class="bg-white p-8 rounded-lg border border-outline-variant">
-                                    <h4 class="font-headline-md text-headline-md text-primary mb-2">04</h4>
-                                    <span class="font-label-bold">表面仕上げ</span>
-                                </div>
-                            </div>
+                        <div class="bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <h4 class="font-grotesk text-2xl font-bold mb-2">02</h4>
+                            精密曲げ加工
                         </div>
-                        <div class="grid grid-cols-1 gap-6">
-                            <div class="rounded-xl overflow-hidden h-[400px]">
-                                <img class="w-full h-full object-cover"
-                                     data-alt="Close-up of industrial NCT machine punching holes in heavy steel plate with sparks and blue industrial lighting"
-                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFb0pcmIDq1NKAmkY30z7_BQBJ3FyatwfYHXiRIq67JfmIzNHnCibeJXMI5bypdDs0ScWrKDK6Zc7bdC9JSyr8BBe7v8Df1Bye_81SGOvwQIP5rY02DuDKM_0zp6D2kIO0LtknXDH6RFkQhEdSOBsgFegzKcV9zKIHdL-sSj4o5-KKUtTNt4qf9Wbc0n0lixr3vucDzKltcfkKM9mxJX2A8jkyflIAi5AzubRw2PImXGCbA-zY0VpBHjMnxDhE19fk3gQ6q1lUshR" />
-                            </div>
-                            <div class="rounded-xl overflow-hidden h-[300px]">
-                                <img class="w-full h-full object-cover"
-                                     data-alt="Modern robotic welding arm in factory setting with bright orange sparks and blue ambient glow, focus on the weld point"
-                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQzVo2M34E0oCjktvTKTUyaGk88MQV4sN3fZMIpecwi023coRYcGnKgxGlgtfw5joRw3b0VvnNq5SNPFoPTSImwLGIySbwMiF1uD3zPqlXjrQuCRvVPpn8UBjb3qQMctq1kM9fpZW6-0rXUNpHIWJCRaws-o7KAb6VxrNPTcPaslQdvJ4j-L7bTevo-Yd4qwdlvT3x8cuKEIuoqal0KuntuUhwXa-hj8q2xG1OSb-za-gmS5hW3ZdGiZgFvDxpeqr2Ca7f2d1PSYFK" />
-                            </div>
+                        <div class="bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <h4 class="font-grotesk text-2xl font-bold mb-2">03</h4>
+                            ロボット溶接
+                        </div>
+                        <div class="bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <h4 class="font-grotesk text-2xl font-bold mb-2">04</h4>
+                            表面仕上げ
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- IT BPO Section -->
-            <section class="py-section-gap">
-                <div class="max-w-[1440px] mx-auto px-10">
-                    <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
-                        <div class="lg:w-1/2 space-y-10">
-                            <div class="inline-flex items-center gap-4 bg-on-background px-6 py-2 rounded-full text-white">
-                                <span class="material-symbols-outlined">code</span>
-                                <span class="font-label-bold">IT BPO &amp; エンジニアリング</span>
-                            </div>
-                            <h2 class="font-headline-lg text-headline-lg">
-                                グローバル・コーディング &amp;
-                                <br />
-                                品質保証
-                            </h2>
-                            <p class="font-body-lg text-body-lg text-tertiary">
-                                ポーランドやウクライナの戦略的パートナーシップを通じて、グローバルな才能を活用。時差のメリットを活かした継続的なデリバリーとバグチェックを実現します。
-                            </p>
-                            <div class="space-y-6">
-                                <div class="flex gap-6 items-center bg-surface-container p-6 rounded-lg">
-                                    <span class="material-symbols-outlined text-4xl text-primary">public</span>
-                                    <div>
-                                        <h4 class="font-label-bold text-lg">東欧パートナーシップ</h4>
-                                        <p class="text-outline">ポーランドとウクライナのトップクラスの開発者にアクセスし、24時間365日の生産性を確保。</p>
-                                    </div>
-                                </div>
-                                <div class="flex gap-6 items-center bg-surface-container p-6 rounded-lg">
-                                    <span class="material-symbols-outlined text-4xl text-primary">bug_report</span>
-                                    <div>
-                                        <h4 class="font-label-bold text-lg">厳格なQAテスト</h4>
-                                        <p class="text-outline">包括的なバグチェックとコード最適化プロトコルによる品質管理。</p>
-                                    </div>
-                                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="rounded-xl overflow-hidden h-[350px]">
+                        <img class="w-full h-full object-cover"
+                             data-alt="Close-up of industrial NCT machine punching holes in heavy steel plate with sparks and blue industrial lighting"
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFb0pcmIDq1NKAmkY30z7_BQBJ3FyatwfYHXiRIq67JfmIzNHnCibeJXMI5bypdDs0ScWrKDK6Zc7bdC9JSyr8BBe7v8Df1Bye_81SGOvwQIP5rY02DuDKM_0zp6D2kIO0LtknXDH6RFkQhEdSOBsgFegzKcV9zKIHdL-sSj4o5-KKUtTNt4qf9Wbc0n0lixr3vucDzKltcfkKM9mxJX2A8jkyflIAi5AzubRw2PImXGCbA-zY0VpBHjMnxDhE19fk3gQ6q1lUshR" />
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-[350px]">
+                        <img class="w-full h-full object-cover"
+                             data-alt="Modern robotic welding arm in factory setting with bright orange sparks and blue ambient glow, focus on the weld point"
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQzVo2M34E0oCjktvTKTUyaGk88MQV4sN3fZMIpecwi023coRYcGnKgxGlgtfw5joRw3b0VvnNq5SNPFoPTSImwLGIySbwMiF1uD3zPqlXjrQuCRvVPpn8UBjb3qQMctq1kM9fpZW6-0rXUNpHIWJCRaws-o7KAb6VxrNPTcPaslQdvJ4j-L7bTevo-Yd4qwdlvT3x8cuKEIuoqal0KuntuUhwXa-hj8q2xG1OSb-za-gmS5hW3ZdGiZgFvDxpeqr2Ca7f2d1PSYFK" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- IT BPO Section -->
+    <section class="bg-base-200 py-20">
+        <div class="max-w-[1440px] mx-auto px-10 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="rounded-xl overflow-hidden h-[350px]">
+                        <img class="w-full h-full object-cover"
+                             data-alt="Dark computer screen with vibrant colorful code in React and Python, high contrast syntax highlighting, professional developer workspace"
+                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDns6hZH7NimktLVpiFZtr1dLvJefA2juf-9mZrFSWKlr499SgPbN_vk7m1z3J10yJqCM-AZkC6orERCm1dMnhYV1pfyJHKS3fjTbr3xRW4eVfqUUlaPg4vnadsDn9X4JxF1L4vEOYOXaQfV7J9MUQkZ9VNPNquh6QehsvhTkQzCESqseWb1JlfGR_PjU6Qyl8z1oT9it6MkIAUrUhcYbhDlyvMMOrHu6oA6mOAKz5cv3u8A6Y2ABT_-0CMfsi7B7fZbaIxgCsPoqHU" />
+                    </div>
+                </div>
+                <div class="space-y-10">
+                    <div class="inline-flex bg-primary text-white px-6 py-2 rounded-full uppercase items-center gap-4">
+                        <span class="material-symbols-outlined">code</span>IT BPO &amp; エンジニアリング
+                    </div>
+                    <h2 class="font-grotesk text-headline-lg">
+                        グローバル・コーディング &amp;
+                        <br />
+                        品質保証
+                    </h2>
+                    <p class="max-w-xl">ポーランドやウクライナの戦略的パートナーシップを通じて、グローバルな才能を活用。時差のメリットを活かした継続的なデリバリーとバグチェックを実現します。</p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex gap-6 items-center bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <span class="material-symbols-outlined">public</span>
+                            <div>
+                                <h4 class="font-grotesk text-2xl font-bold mb-2">東欧パートナーシップ</h4>
+                                ポーランドとウクライナのトップクラスの開発者にアクセスし、24時間365日の生産性を確保。
                             </div>
                         </div>
-                        <div class="lg:w-1/2 w-full">
-                            <div class="bg-slate-900 p-2 rounded-lg shadow-2xl overflow-hidden">
-                                <div class="bg-slate-800 h-8 flex items-center gap-2 px-4">
-                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                                </div>
-                                <img class="w-full aspect-video object-cover"
-                                     data-alt="Dark computer screen with vibrant colorful code in React and Python, high contrast syntax highlighting, professional developer workspace"
-                                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDns6hZH7NimktLVpiFZtr1dLvJefA2juf-9mZrFSWKlr499SgPbN_vk7m1z3J10yJqCM-AZkC6orERCm1dMnhYV1pfyJHKS3fjTbr3xRW4eVfqUUlaPg4vnadsDn9X4JxF1L4vEOYOXaQfV7J9MUQkZ9VNPNquh6QehsvhTkQzCESqseWb1JlfGR_PjU6Qyl8z1oT9it6MkIAUrUhcYbhDlyvMMOrHu6oA6mOAKz5cv3u8A6Y2ABT_-0CMfsi7B7fZbaIxgCsPoqHU" />
+                        <div class="flex gap-6 items-center bg-primary text-white p-8 rounded-xl border border-base-300">
+                            <span class="material-symbols-outlined">bug_report</span>
+                            <div>
+                                <h4 class="font-grotesk text-2xl font-bold mb-2">厳格なQAテスト</h4>
+                                包括的なバグチェックとコード最適化プロトコルによる品質管理。
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Workflow Section -->
-            <section class="bg-on-background py-section-gap">
-                <div class="max-w-[1440px] mx-auto px-10">
-                    <div class="mb-20 text-center">
-                        <span class="text-primary-fixed font-label-bold tracking-widest uppercase mb-4 block">標準プロセス</span>
-                        <h2 class="font-headline-lg text-headline-lg text-white">プロジェクト導入の流れ</h2>
+            </div>
+        </div>
+    </section>
+    <!-- Workflow Section -->
+    <section class="bg-neutral py-20">
+        <div class="max-w-[1440px] mx-auto px-10 w-full">
+            <div class="text-center mb-16">
+                <p class="text-primary text-2xl font-bold mb-5">標準プロセス</p>
+                <h2 class="font-grotesk text-headline-lg text-white">プロジェクト導入の流れ</h2>
+            </div>
+            <!-- Desktop Workflow -->
+            <div class="relative hidden md:grid grid-cols-6 gap-0 ">
+                <!-- Step 1 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">01</span>
                     </div>
-                    <!-- Desktop Workflow -->
-                    <div class="hidden lg:grid grid-cols-6 gap-0 relative">
-                        <!-- Step 1 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10 step-pill">
-                                <span class="font-headline-md text-xl">01</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">お打ち合わせ</h4>
-                            <p class="text-slate-400 text-sm">主要ニーズの特定</p>
-                        </div>
-                        <!-- Step 2 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10 step-pill">
-                                <span class="font-headline-md text-xl">02</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">調査・検討</h4>
-                            <p class="text-slate-400 text-sm">技術的な実現可能性</p>
-                        </div>
-                        <!-- Step 3 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10 step-pill">
-                                <span class="font-headline-md text-xl">03</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">ご提案</h4>
-                            <p class="text-slate-400 text-sm">最適化されたBPOプラン</p>
-                        </div>
-                        <!-- Step 4 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10 step-pill">
-                                <span class="font-headline-md text-xl">04</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">ご契約</h4>
-                            <p class="text-slate-400 text-sm">法務手続き</p>
-                        </div>
-                        <!-- Step 5 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10 step-pill">
-                                <span class="font-headline-md text-xl">05</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">セットアップ</h4>
-                            <p class="text-slate-400 text-sm">45日間の導入フェーズ</p>
-                        </div>
-                        <!-- Step 6 -->
-                        <div class="relative px-4 text-center">
-                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-6 relative z-10">
-                                <span class="font-headline-md text-xl">06</span>
-                            </div>
-                            <h4 class="text-white font-label-bold mb-2">運用開始</h4>
-                            <p class="text-slate-400 text-sm">テスト・本稼働</p>
-                        </div>
+                    <h4>お打ち合わせ</h4>
+                    <p class="text-slate-400 text-sm">主要ニーズの特定</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">02</span>
                     </div>
-                    <!-- Mobile Workflow -->
-                    <div class="lg:hidden space-y-8">
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">01</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">お打ち合わせ</h4>
-                                <p class="text-slate-400 text-sm">主要ニーズとスコープの特定</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">02</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">調査・検討</h4>
-                                <p class="text-slate-400 text-sm">詳細なテクニカル・オーディット</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">03</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">ご提案</h4>
-                                <p class="text-slate-400 text-sm">ソリューション構成と価格提示</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">04</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">ご契約</h4>
-                                <p class="text-slate-400 text-sm">SLAおよびパートナーシップ契約</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">05</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">セットアップ</h4>
-                                <p class="text-slate-400 text-sm">45日間の迅速なデプロイ</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 border-l-4 border-primary pl-6">
-                            <span class="font-headline-md text-primary">06</span>
-                            <div>
-                                <h4 class="text-white font-label-bold">運用開始</h4>
-                                <p class="text-slate-400 text-sm">継続的なテストと全面運用</p>
-                            </div>
-                        </div>
+                    <h4>調査・検討</h4>
+                    <p class="text-slate-400 text-sm">技術的な実現可能性</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">03</span>
+                    </div>
+                    <h4>ご提案</h4>
+                    <p class="text-slate-400 text-sm">最適化されたBPOプラン</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">04</span>
+                    </div>
+                    <h4>ご契約</h4>
+                    <p class="text-slate-400 text-sm">法務手続き</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">05</span>
+                    </div>
+                    <h4>セットアップ</h4>
+                    <p class="text-slate-400 text-sm">45日間の導入フェーズ</p>
+                </div>
+                <!-- Step 6 -->
+                <div class="relative flex flex-col items-center justify-center text-center gap-4 text-white">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto step-pill">
+                        <span class="font-grotesk text-xl">06</span>
+                    </div>
+                    <h4>運用開始</h4>
+                    <p class="text-slate-400 text-sm">テスト・本稼働</p>
+                </div>
+            </div>
+            <!-- Mobile Workflow -->
+            <div class="md:hidden space-y-8">
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">01</span>
+                    <div>
+                        <h4>お打ち合わせ</h4>
+                        <p class="text-slate-400 text-sm">主要ニーズとスコープの特定</p>
                     </div>
                 </div>
-            </section>
-            <!-- CTA Section -->
-            <section class="py-section-gap px-10">
-                <div class="max-w-[1440px] mx-auto bg-primary rounded-lg p-20 text-center text-white relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full translate-x-1/2 -translate-y-1/2"></div>
-                    <h2 class="font-headline-lg text-headline-lg mb-8 relative z-10">生産ラインの最適化を始めませんか？</h2>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-                        <button class="bg-white text-primary px-10 py-5 rounded-full font-label-bold text-lg hover:bg-slate-100 transition-colors">
-                            相談を予約する
-                        </button>
-                        <button class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full font-label-bold text-lg hover:bg-white/10 transition-colors">
-                            ホワイトペーパーを見る
-                        </button>
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">02</span>
+                    <div>
+                        <h4>調査・検討</h4>
+                        <p class="text-slate-400 text-sm">詳細なテクニカル・オーディット</p>
                     </div>
                 </div>
-            </section>
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">03</span>
+                    <div>
+                        <h4>ご提案</h4>
+                        <p class="text-slate-400 text-sm">ソリューション構成と価格提示</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">04</span>
+                    <div>
+                        <h4>ご契約</h4>
+                        <p class="text-slate-400 text-sm">SLAおよびパートナーシップ契約</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">05</span>
+                    <div>
+                        <h4>セットアップ</h4>
+                        <p class="text-slate-400 text-sm">45日間の迅速なデプロイ</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 border-l-4 border-primary pl-6 text-white">
+                    <span class="font-grotesk text-xl">06</span>
+                    <div>
+                        <h4>運用開始</h4>
+                        <p class="text-slate-400 text-sm">継続的なテストと全面運用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="bg-base-200 py-20">
+        <div class="max-w-[1440px] mx-auto bg-primary rounded-xl p-20 text-center text-white overflow-hidden">
+            <h2 class="font-grotesk text-headline-lg mb-8">生産ラインの最適化を始めませんか？</h2>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <button class="btn bg-white text-primary px-8 py-8 text-base rounded-full hover:bg-slate-100 transition-colors w-full md:w-auto">
+                    相談を予約する
+                </button>
+                <button class="btn btn-white btn-outline px-8 py-8 text-base rounded-full w-full md:w-auto">ホワイトペーパーを見る</button>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
