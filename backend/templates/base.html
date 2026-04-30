@@ -1,7 +1,7 @@
 {% load static i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ LANGUAGE_CODE }}" class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -25,70 +25,82 @@
         {% block extra_head %}
         {% endblock extra_head %}
     </head>
-    <body class="min-h-screen flex flex-col bg-base-100 text-base-content selection:bg-primary selection:text-white overflow-x-hidden">
+    <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white antialiased min-h-screen flex flex-col">
         {% include "navbar.html" %}
         <main class="grow">
             {% block content %}
             {% endblock content %}
         </main>
-        <!-- Footer -->
-        <footer class="bg-slate-900 border-t-8 border-primary mt-auto">
-            <div class="max-w-[1440px] mx-auto px-10 py-20 flex flex-col md:flex-row justify-between items-start gap-10 font-grotesk text-sm tracking-wide">
-                <div class="space-y-6">
-                    <div class="text-2xl font-bold text-white">e-tac</div>
-                    <p class="text-slate-400 max-w-sm">
-                        {% trans "Manufacturing BPO Partner for the Modern Industry. Empowering core operations through precision outsourcing and digital transformation." %}
-                    </p>
+        <!-- Footer Section -->
+        <footer class="bg-zinc-900 dark:bg-black w-full py-20 px-10 border-t-8 border-blue-600 mt-auto">
+            <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <div class="text-xl font-black text-white font-['Space_Grotesk'] uppercase mb-6 tracking-tighter italic">e-tac</div>
+                    <p class="text-zinc-400 font-body-md max-w-sm mb-8">{% trans "先進的なテクノロジーと熟練のオペレーションを融合。次世代の製造アウトソーシングを牽引します。" %}</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors border border-zinc-700"
+                           href="#">
+                            <span class="material-symbols-outlined" data-icon="language">language</span>
+                        </a>
+                        <a class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors border border-zinc-700"
+                           href="#">
+                            <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-20">
-                    <div>
-                        <h5 class="text-white font-bold uppercase mb-4">{% trans "会社" %}</h5>
-                        <ul class="space-y-2 text-slate-400">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <p class="text-white font-bold font-['Space_Grotesk'] text-sm tracking-wide">NAVIGATION</p>
+                        <ul class="space-y-2">
                             <li>
-                                <a class="hover:text-white transition-colors duration-200"
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="{% url 'services' %}">{% trans "サービス" %}</a>
+                            </li>
+                            <li>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="#">{% trans "実績紹介" %}</a>
+                            </li>
+                            <li>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
                                    href="{% url 'about' %}">{% trans "会社概要" %}</a>
                             </li>
                             <li>
-                                <a class="hover:text-white transition-colors duration-200"
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
                                    href="{% url 'contact' %}">{% trans "お問い合わせ" %}</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h5 class="text-white font-bold mb-4 uppercase">{% trans "サービス" %}</h5>
-                        <ul class="space-y-2 text-slate-400">
+                    <div class="space-y-4">
+                        <p class="text-white font-bold font-['Space_Grotesk'] text-sm tracking-wide">LEGAL</p>
+                        <ul class="space-y-2">
                             <li>
-                                <a class="hover:text-white transition-colors duration-200text-white font-bold"
-                                   href="{% url 'services' %}">{% trans "精密製造" %}</a>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="#">{% trans "プライバシーポリシー" %}</a>
                             </li>
                             <li>
-                                <a class="hover:text-white transition-colors duration-200"
-                                   href="{% url 'services' %}">{% trans "ITソリューション" %}</a>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="#">{% trans "利用規約" %}</a>
                             </li>
                             <li>
-                                <a class="hover:text-white transition-colors duration-200"
-                                   href="{% url 'services' %}">{% trans "ワークフロー" %}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5 class="text-white font-bold mb-4 uppercase">{% trans "プライバシー" %}</h5>
-                        <ul class="space-y-2 text-slate-400">
-                            <li>
-                                <a class="hover:text-white transition-colors duration-200" href="#">{% trans "プライバシーポリシー" %}</a>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="#">{% trans "運営会社" %}</a>
                             </li>
                             <li>
-                                <a class="hover:text-white transition-colors duration-200" href="#">{% trans "利用規約" %}</a>
-                            </li>
-                            <li>
-                                <a class="hover:text-white transition-colors duration-200" href="#">{% trans "コンプライアンス" %}</a>
+                                <a class="text-zinc-400 hover:text-white text-sm transition-colors font-['Space_Grotesk']"
+                                   href="#">{% trans "サイトマップ" %}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="max-w-[1440px] mx-auto px-10 pb-10 text-center text-slate-400 font-grotesk text-xs tracking-wide">
-                © 2026 e-tac Manufacturing BPO. {% trans "All rights reserved." %}
+            <div class="max-w-[1440px] mx-auto mt-20 pt-10 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-zinc-400 font-['Space_Grotesk'] text-sm tracking-wide">
+                    © 2026 e-tac Manufacturing BPO. {% trans "All Rights Reserved." %}
+                </p>
+                <div class="flex gap-8">
+                    <span class="text-zinc-600 font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em]">Quality First</span>
+                    <span class="text-zinc-600 font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em]">Efficiency Driven</span>
+                </div>
             </div>
         </footer>
         {% block extra_scripts %}

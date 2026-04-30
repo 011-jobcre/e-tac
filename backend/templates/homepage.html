@@ -5,156 +5,241 @@
 {% endblock title %}
 {% block content %}
     <!-- Hero Section -->
-    <section class="min-h-[921px] flex items-center px-10 max-w-[1440px] mx-auto section-gap mb-20">
-        <div class="grid grid-cols-12 gap-6 w-full items-center">
-            <div class="col-span-12 md:col-span-7">
-                <h1 class="font-grotesk  text-hero-xl mb-8 text-primary">
-                    アウトソーシングで
+    <section class="relative min-h-[800px] flex items-center overflow-hidden bg-white">
+        <!-- Background/Marquee Section -->
+        <div class="absolute inset-0 z-0 flex items-center overflow-hidden opacity-60 brightness-110">
+            <div class="animate-marquee flex items-center gap-8 px-4">
+                <!-- Repeated set of images for marquee -->
+                <div class="flex gap-8 shrink-0">
+                    <div class="w-[500px] h-[700px] bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_be9f78f6.jpg' %}" />
+                    </div>
+                    <div class="w-[400px] h-[500px] mt-24 bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_c5ea20e2.jpg' %}" />
+                    </div>
+                    <div class="w-[600px] h-[600px] bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_8ebd5e90.jpg' %}" />
+                    </div>
+                    <div class="w-[450px] h-[650px] mt-12 bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_cff0befc.jpg' %}" />
+                    </div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="flex gap-8 shrink-0">
+                    <div class="w-[500px] h-[700px] bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_be9f78f6.jpg' %}" />
+                    </div>
+                    <div class="w-[400px] h-[500px] mt-24 bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_c5ea20e2.jpg' %}" />
+                    </div>
+                    <div class="w-[600px] h-[600px] bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_8ebd5e90.jpg' %}" />
+                    </div>
+                    <div class="w-[450px] h-[650px] mt-12 bg-zinc-200 rounded-lg overflow-hidden flex-none">
+                        <img class="w-full h-full object-cover"
+                             src="{% static 'images/stitch_cff0befc.jpg' %}" />
+                    </div>
+                </div>
+            </div>
+            <!-- Ghostly Overlay -->
+            <div class="absolute inset-0 bg-white/30 backdrop-blur-[1px]"></div>
+        </div>
+        <!-- Content Canvas -->
+        <div class="relative z-10 max-w-[1440px] mx-auto px-10 w-full py-20">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-on-primary-fixed text-white rounded-full mb-8">
+                    <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+                    <span class="font-label-bold uppercase tracking-widest text-[12px]">Manufacturing BPO Excellence</span>
+                </div>
+                <!-- Headline -->
+                <h1 class="font-display-xl text-display-xl text-on-background mb-8 leading-[1.0]">
+                    {% trans "アウトソーシングで" %}
                     <br />
-                    コア業務へパワーシフト
+                    <span class="text-primary">{% trans "コア業務へパワーシフト" %}</span>
                 </h1>
-                <p class="text-[18px] leading-[1.6] font-normal max-w-2xl mb-12">
-                    製造現場のノンコア業務を最適化し、貴社のリソースを付加価値の高い「真のコア業務」へ集中。生産性と利益率を劇的に向上させる製造BPOソリューション。
+                <!-- Subheadline -->
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                    {% trans "深刻な人手不足、コスト高騰、自動化の遅れ、そして技能継承。日本の製造現場が直面する4つの大きな課題を、e-tacの高度なBPOソリューションが解決します。" %}
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <button class="bg-primary text-white px-10 py-5 rounded-full   text-lg hover:bg-primary/90 transition-colors active:scale-95 transform">
-                        サービス詳細を見る
-                    </button>
-                    <button class="border-2 border-slate-900 px-10 py-5 rounded-full   text-lg hover:bg-slate-900 hover:text-white transition-all active:scale-95 transform">
-                        資料ダウンロード
-                    </button>
+                <!-- CTAs -->
+                <div class="flex flex-wrap gap-6">
+                    <a href="{% url 'services' %}"
+                       class="px-10 py-6 bg-primary text-white rounded-full font-label-bold text-lg flex items-center justify-center gap-3 hover:scale-[1.02] active:scale-95 transition-all group border-b-4 border-primary-container">
+                        {% trans "ソリューションを見る" %}
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                    </a>
+                    <a href="{% url 'contact' %}"
+                       class="px-10 py-6 bg-white border-2 border-outline-variant text-on-background rounded-full font-label-bold text-lg flex items-center justify-center gap-3 hover:bg-surface-container-low transition-all active:scale-95">
+                        <span class="material-symbols-outlined">download</span>
+                        {% trans "事例をダウンロード" %}
+                    </a>
                 </div>
             </div>
-            <div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
-                <div class="bg-white rounded-xl border-2 border-slate-900 p-8 shadow-[12px_12px_0px_0px_rgba(0,36,193,1)]">
-                    <div class="flex flex-col gap-6">
-                        <div class="p-4 bg-base-200 rounded-lg border border-base-300">
-                            <span class="text-sm font-bold text-primary mb-2 block uppercase tracking-wider">Before</span>
-                            <div class="flex items-center gap-4">
-                                <div class="h-4 flex-1 bg-primary rounded-full"></div>
-                                <div class="h-4 w-32 bg-neutral/10 rounded-full"></div>
-                            </div>
-                            <p class="text-xs mt-2">コア業務 40% | ノンコア業務 60%</p>
-                        </div>
-                        <div class="flex justify-center">
-                            <span class="material-symbols-outlined text-primary text-4xl">south</span>
-                        </div>
-                        <div class="p-4 bg-primary text-white rounded-lg border-2 border-neutral">
-                            <span class="text-sm font-bold mb-2 block uppercase tracking-wider">After with e-tac</span>
-                            <div class="flex items-center gap-4">
-                                <div class="h-4 flex-2 bg-white rounded-full"></div>
-                                <div class="h-4 w-8 bg-white/30 rounded-full"></div>
-                            </div>
-                            <p class="text-xs mt-2 text-white/80">コア業務 90% | ノンコア業務 10%</p>
-                        </div>
-                    </div>
+            <!-- Stats/Indicators Grid (Asymmetric) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 border-t-2 border-zinc-900/10 pt-12">
+                <div class="flex flex-col gap-2">
+                    <span class="font-display-xl text-[48px] text-on-background">99.8<span class="text-primary text-2xl">%</span></span>
+                    <span class="font-label-bold text-zinc-500 uppercase">Operational Accuracy</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="font-display-xl text-[48px] text-on-background">150<span class="text-primary text-2xl">+</span></span>
+                    <span class="font-label-bold text-zinc-500 uppercase">Manufacturing Partners</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="font-display-xl text-[48px] text-on-background">24<span class="text-primary text-2xl">/7</span></span>
+                    <span class="font-label-bold text-zinc-500 uppercase">Real-time Support</span>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Problems/Solutions Section (Bento Grid Style) -->
-    <section class="bg-base-200 py-24 px-10">
+    <!-- Challenges & Solutions Section -->
+    <section class="py-20 px-10 max-w-[1440px] mx-auto">
+        <div class="mb-20">
+            <h2 class="font-display-xl text-display-xl text-on-background mb-4">CHALLENGES</h2>
+            <div class="flex items-center gap-6">
+                <div class="h-1 w-24 bg-primary"></div>
+                <p class="font-headline-md text-headline-md text-primary">{% trans "製造現場が抱える4つの課題" %}</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="group bg-white border border-zinc-100 rounded-lg p-8 transition-all duration-300 hover:border-primary-container hover:-translate-y-2">
+                <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white"
+                          style="font-size: 32px">group_off</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">{% trans "人手不足" %}</h3>
+                <p class="font-body-md text-body-md text-secondary mb-8">{% trans "採用難と離職率の高まりにより、生産ラインの維持が困難な状況を解消します。" %}</p>
+                <div class="pt-6 border-t border-zinc-100">
+                    <span class="text-primary font-label-bold">{% trans "SOLUTION: 人材流動性の確保" %}</span>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="group bg-white border border-zinc-100 rounded-lg p-8 transition-all duration-300 hover:border-primary-container hover:-translate-y-2">
+                <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white"
+                          style="font-size: 32px">payments</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">{% trans "コスト高騰" %}</h3>
+                <p class="font-body-md text-body-md text-secondary mb-8">{% trans "固定費を変動費化し、エネルギーコストや材料費の変動に強い体質を作ります。" %}</p>
+                <div class="pt-6 border-t border-zinc-100">
+                    <span class="text-primary font-label-bold">{% trans "SOLUTION: 変動費化による最適化" %}</span>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="group bg-white border border-zinc-100 rounded-lg p-8 transition-all duration-300 hover:border-primary-container hover:-translate-y-2">
+                <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white"
+                          style="font-size: 32px">precision_manufacturing</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">{% trans "自動化の遅れ" %}</h3>
+                <p class="font-body-md text-body-md text-secondary mb-8">{% trans "投資判断が難しい小規模ラインでも、段階的な自動化とBPOの融合をご提案。" %}</p>
+                <div class="pt-6 border-t border-zinc-100">
+                    <span class="text-primary font-label-bold">{% trans "SOLUTION: スマート製造の導入" %}</span>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="group bg-white border border-zinc-100 rounded-lg p-8 transition-all duration-300 hover:border-primary-container hover:-translate-y-2">
+                <div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white"
+                          style="font-size: 32px">history_edu</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md mb-4">{% trans "技能継承" %}</h3>
+                <p class="font-body-md text-body-md text-secondary mb-8">{% trans "熟練工のノウハウをデジタル化・標準化し、次世代へ確実に引き継ぎます。" %}</p>
+                <div class="pt-6 border-t border-zinc-100">
+                    <span class="text-primary font-label-bold">{% trans "SOLUTION: ナレッジの標準化" %}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bento Grid Section: Key Capabilities -->
+    <section class="py-20 bg-surface-container-low px-10">
         <div class="max-w-[1440px] mx-auto">
-            <div class="mb-16">
-                <h2 class="font-grotesk text-headline-lg mb-4">
-                    製造現場が直面する
-                    <br />
-                    <span class="text-primary">4つの深刻な課題</span>
-                </h2>
-                <p class="text-[18px] leading-[1.6] font-normal">e-tacは現場の「負」を解消し、持続可能な製造体制を構築します。</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Problem 1 -->
-                <div class="bg-white p-10 rounded-xl border border-slate-200 flex flex-col hover:border-primary transition-colors">
-                    <div class="w-16 h-16 bg-base-300 rounded-full flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-primary text-3xl">group_remove</span>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[800px]">
+                <!-- Large Feature -->
+                <div class="md:col-span-8 relative overflow-hidden rounded-lg group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                         data-alt="Industrial technician using a tablet"
+                         src="{% static 'images/stitch_8ebd5e90.jpg' %}" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex flex-col justify-end p-12">
+                        <h3 class="font-headline-lg text-headline-lg text-white mb-4">End-to-End Manufacturing</h3>
+                        <p class="font-body-lg text-body-lg text-white/80 max-w-lg mb-8">
+                            {% trans "設計から製造、検査、出荷まで。全てのプロセスを網羅する一気通貫のアウトソーシング体制。" %}
+                        </p>
+                        <a href="{% url 'services' %}"
+                           class="w-fit bg-white text-primary px-8 py-4 rounded-full font-label-bold hover:bg-primary-fixed transition-colors">
+                            {% trans "サービス詳細" %}
+                        </a>
                     </div>
-                    <h3 class="font-grotesk text-2xl mb-4">深刻な人手不足</h3>
-                    <p class="grow">採用難による欠員を外部リソースで補完し、生産ラインの安定稼働を確保します。</p>
                 </div>
-                <!-- Problem 2 -->
-                <div class="bg-white p-10 rounded-xl border border-slate-200 flex flex-col hover:border-primary transition-colors">
-                    <div class="w-16 h-16 bg-base-300 rounded-full flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+                <!-- Stats Card -->
+                <div class="md:col-span-4 bg-primary p-12 rounded-lg flex flex-col justify-center text-white">
+                    <div class="mb-12">
+                        <span class="text-6xl font-black block mb-2">99.9%</span>
+                        <span class="text-xl font-bold uppercase tracking-widest opacity-80">Quality Standard</span>
                     </div>
-                    <h3 class="font-grotesk text-2xl mb-4">高騰する固定費</h3>
-                    <p class="grow">変動する受注量に合わせてコストを最適化。固定費を変動費化し収益構造を改善します。</p>
-                </div>
-                <!-- Problem 3 -->
-                <div class="bg-white p-10 rounded-xl border border-slate-200 flex flex-col hover:border-primary transition-colors">
-                    <div class="w-16 h-16 bg-base-300 rounded-full flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+                    <div class="mb-12">
+                        <span class="text-6xl font-black block mb-2">30%</span>
+                        <span class="text-xl font-bold uppercase tracking-widest opacity-80">Cost Reduction</span>
                     </div>
-                    <h3 class="font-grotesk text-2xl mb-4">進まない自動化</h3>
-                    <p class="grow">最新の製造ノウハウとDX支援により、現場の自動化・効率化を加速させます。</p>
-                </div>
-                <!-- Problem 4 -->
-                <div class="bg-white p-10 rounded-xl border border-slate-200 flex flex-col hover:border-primary transition-colors">
-                    <div class="w-16 h-16 bg-base-300 rounded-full flex items-center justify-center mb-8">
-                        <span class="material-symbols-outlined text-primary text-3xl">history_edu</span>
+                    <div class="mb-0">
+                        <span class="text-6xl font-black block mb-2">24/7</span>
+                        <span class="text-xl font-bold uppercase tracking-widest opacity-80">Global Support</span>
                     </div>
-                    <h3 class="font-grotesk text-2xl mb-4">技術継承の断絶</h3>
-                    <p class="grow">熟練工の技術を標準化・マニュアル化し、次世代へ確実に引き継ぐ仕組みを作ります。</p>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Benefits Section -->
-    <section class="py-24 px-10 max-w-[1440px] mx-auto">
-        <div class="bg-primary rounded-xl p-16 relative overflow-hidden">
-            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center text-white">
-                <div>
-                    <h2 class="font-grotesk text-headline-lg mb-8">
-                        固定費から変動費へ。
-                        <br />
-                        経営に「柔軟性」を。
-                    </h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                <span class="material-symbols-outlined text-sm">check</span>
-                            </div>
-                            <p class="text-xl">必要な時に、必要な量だけのリソースを確保</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                <span class="material-symbols-outlined text-sm">check</span>
-                            </div>
-                            <p class="text-xl">管理業務の工数削減によるオーバーヘッドの最小化</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center shrink-0 mt-1">
-                                <span class="material-symbols-outlined text-sm">check</span>
-                            </div>
-                            <p class="text-xl">変動する市場環境に即応できるアジャイルな組織体制</p>
+                <!-- Small Feature 1 -->
+                <div class="md:col-span-4 bg-white p-12 rounded-lg border border-zinc-200">
+                    <span class="material-symbols-outlined text-primary mb-6"
+                          style="font-size: 48px">verified_user</span>
+                    <h4 class="font-headline-md text-headline-md mb-4">ISO 9001 {% trans "準拠" %}</h4>
+                    <p class="font-body-md text-secondary">{% trans "業界最高水準の品質管理体制で、貴社のブランド価値を支えます。" %}</p>
+                </div>
+                <!-- Small Feature 2 -->
+                <div class="md:col-span-8 relative overflow-hidden rounded-lg group">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                         data-alt="Futuristic electronic circuit board assembly"
+                         src="{% static 'images/stitch_c5ea20e2.jpg' %}" />
+                    <div class="absolute inset-0 bg-zinc-950/40 p-12 flex items-center">
+                        <div class="max-w-md">
+                            <h4 class="font-headline-lg text-white mb-4">Next-Gen Tech</h4>
+                            <p class="font-body-lg text-white">{% trans "最新のAIとロボティクスを駆使した次世代の製造ライン構築。" %}</p>
                         </div>
                     </div>
-                </div>
-                <div class="relative">
-                    <img alt="Manufacturing Efficiency"
-                         class="rounded-lg w-full h-[400px] object-cover border-4 border-white shadow-2xl"
-                         data-alt="industrial engineer inspecting high-tech manufacturing equipment in a clean modern factory setting with professional lighting"
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgYmtRkZ9AjJtkuaJudBrfogzG8Kon_viGbVLFCwia7HTPtM27Y-fv9f4uwAX5xUHaj72OLrEj6b6iQMayP7Trx77sZfZzLUsl89VVsqbGM4TyQ71_s_pzifL0P5ryiqMqWexlhCb_OqgpZIoy1t6M0SqaXkgo61v8OSTnuQdWl8_I314ki5dnKmPYmM8z9w2V4fjdDDJhCuhmG4H_jmTmriy02gDw8cOUXDAroFfqudT7C7qHOxshydQENpjDuwxOBsJ_W33DVKZS" />
                 </div>
             </div>
         </div>
     </section>
     <!-- CTA Section -->
-    <section class="py-24 px-10 text-center max-w-[1440px] mx-auto">
-        <div class="max-w-4xl mx-auto border-2 border-slate-900 rounded-xl p-20 bg-white">
-            <span class="text-primary tracking-[0.2em] mb-6 block uppercase">Contact Us</span>
-            <h2 class="font-grotesk text-headline-lg mb-10">
-                製造現場の革新を、
+    <section class="py-24 px-10">
+        <div class="max-w-[1440px] mx-auto bg-zinc-950 rounded-lg p-20 flex flex-col items-center text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600 rounded-full blur-[120px]"></div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-400 rounded-full blur-[120px]"></div>
+            </div>
+            <h2 class="font-display-xl text-display-xl text-white mb-8 relative z-10">
+                {% trans "製造の未来を、" %}
                 <br />
-                今すぐ始めませんか？
+                {% trans "共に創り上げる。" %}
             </h2>
-            <p class="text-[18px] leading-[1.6] font-normal mb-12">現状の課題ヒアリングから最適なBPOプランのご提案まで、専門コンサルタントが無料で対応いたします。</p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a class="bg-primary text-white px-12 py-6 rounded-full text-xl inline-flex items-center justify-center gap-3 active:scale-95 transform transition-transform"
-                   href="{% url 'contact' %}">
-                    お問い合わせ
-                    <span class="material-symbols-outlined">arrow_forward</span>
+            <p class="font-body-lg text-zinc-400 mb-12 max-w-2xl relative z-10">
+                {% trans "まずは現状の課題をヒアリングさせていただき、貴社に最適なアウトソーシングプランをご提案します。" %}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 relative z-10">
+                <a href="{% url 'contact' %}"
+                   class="bg-white text-zinc-950 px-12 py-6 rounded-full font-headline-md text-body-lg hover:bg-primary-fixed transition-colors">
+                    {% trans "お問い合わせフォーム" %}
                 </a>
+                <button class="bg-zinc-800 text-white px-12 py-6 rounded-full font-headline-md text-body-lg hover:bg-zinc-700 transition-colors">
+                    0120-XXX-XXX
+                </button>
             </div>
         </div>
     </section>
