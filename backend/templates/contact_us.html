@@ -1,74 +1,63 @@
 {% extends "base.html" %}
 {% load i18n static %}
-{% block title %}
-    {% trans "お問い合わせ" %} | e-tac
-{% endblock title %}
+
+{% block title %}{% trans "お問い合わせ" %} | e-tac{% endblock %}
+
 {% block content %}
-    <div class="max-w-[1440px] mx-auto px-10 py-section-gap">
-        <!-- Hero Section -->
-        <header class="mb-section-gap">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-end">
-                <div>
-                    <span class="text-primary font-label-bold text-label-bold tracking-widest uppercase block mb-4">CONTACT US</span>
-                    <h1 class="font-display-xl text-display-xl text-on-background mb-8">
-                        {% trans "製造現場の課題、" %}
-                        <br />
-                        {% trans "お聞かせください。" %}
-                    </h1>
-                    <p class="font-body-lg text-body-lg text-secondary max-w-xl">
-                        {% trans "生産工程の効率化から品質管理の高度化まで、製造業に特化したBPOソリューションで貴社の変革をサポートします。" %}
-                    </p>
-                </div>
-                <div class="hidden lg:block">
-                    <div class="bg-surface-container h-64 rounded-lg overflow-hidden relative border border-outline-variant">
-                        <img class="w-full h-full object-cover grayscale contrast-125 opacity-50"
-                             data-alt="Modern high-tech manufacturing facility with clean lines, blue ambient lighting, and precision machinery in a professional industrial setting"
-                             src="{% static 'images/stitch_094c65bc.jpg' %}" />
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-primary font-black text-6xl tracking-tighter italic opacity-20">E-TAC PRECISION</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Content Grid -->
+
+<!-- Hero -->
+<section class="hero-section">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover opacity-15 grayscale"
+             src="{% static 'images/stitch_094c65bc.jpg' %}" alt="" />
+    </div>
+    <div class="hero-content" data-aos="fade-up">
+        <p class="text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">Contact Us</p>
+        <h1 class="font-display font-black text-white leading-tight mb-4"
+            style="font-size: clamp(2.2rem, 5vw, 4rem);">
+            {% trans "製造現場の課題、" %}<br />
+            <span class="text-accent">{% trans "お聞かせください。" %}</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-xl mx-auto leading-relaxed">
+            {% trans "生産工程の効率化から品質管理の高度化まで、製造業に特化したBPOソリューションで貴社の変革をサポートします。" %}
+        </p>
+    </div>
+</section>
+
+<!-- Contact body -->
+<section class="section-pad">
+    <div class="container-content">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <!-- Contact Form Container -->
-            <div class="lg:col-span-7">
-                <div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-container-padding">
-                    <h2 class="font-headline-md text-headline-md mb-8">{% trans "お問い合わせフォーム" %}</h2>
-                    <form class="space-y-8">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+
+            <!-- Form -->
+            <div class="lg:col-span-7" data-aos="fade-right">
+                <div class="glass-card p-10">
+                    <h2 class="text-2xl font-bold text-primary mb-8">{% trans "お問い合わせフォーム" %}</h2>
+                    <form class="space-y-6" method="post" action="#">
+                        {% csrf_token %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="font-label-bold text-label-bold text-on-surface">
-                                    {% trans "お名前" %} <span class="text-error">*</span>
-                                </label>
-                                <input class="w-full h-14 px-6 bg-surface-container-low border border-outline-variant rounded-full text-body-md transition-all"
+                                <label class="text-sm font-semibold text-primary">{% trans "お名前" %} <span class="text-error">*</span></label>
+                                <input type="text" required
                                        placeholder="{% trans '例：山田 太郎' %}"
-                                       type="text" required />
+                                       class="w-full h-12 px-5 bg-base-100 border border-base-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all" />
                             </div>
                             <div class="space-y-2">
-                                <label class="font-label-bold text-label-bold text-on-surface">
-                                    {% trans "貴社名" %} <span class="text-error">*</span>
-                                </label>
-                                <input class="w-full h-14 px-6 bg-surface-container-low border border-outline-variant rounded-full text-body-md transition-all"
+                                <label class="text-sm font-semibold text-primary">{% trans "貴社名" %} <span class="text-error">*</span></label>
+                                <input type="text" required
                                        placeholder="{% trans '例：株式会社イーテック' %}"
-                                       type="text" required />
+                                       class="w-full h-12 px-5 bg-base-100 border border-base-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all" />
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="font-label-bold text-label-bold text-on-surface">
-                                {% trans "メールアドレス" %} <span class="text-error">*</span>
-                            </label>
-                            <input class="w-full h-14 px-6 bg-surface-container-low border border-outline-variant rounded-full text-body-md transition-all"
+                            <label class="text-sm font-semibold text-primary">{% trans "メールアドレス" %} <span class="text-error">*</span></label>
+                            <input type="email" required
                                    placeholder="example@e-tac.co.jp"
-                                   type="email" required />
+                                   class="w-full h-12 px-5 bg-base-100 border border-base-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all" />
                         </div>
                         <div class="space-y-2">
-                            <label class="font-label-bold text-label-bold text-on-surface">
-                                {% trans "お問い合わせ種別" %} <span class="text-error">*</span>
-                            </label>
-                            <select class="w-full h-14 px-6 bg-surface-container-low border border-outline-variant rounded-full text-body-md transition-all appearance-none" required>
+                            <label class="text-sm font-semibold text-primary">{% trans "お問い合わせ種別" %} <span class="text-error">*</span></label>
+                            <select required class="w-full h-12 px-5 bg-base-100 border border-base-300 rounded-xl text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all">
                                 <option value="">{% trans "選択してください" %}</option>
                                 <option value="service">{% trans "サービス導入のご相談" %}</option>
                                 <option value="quote">{% trans "お見積り依頼" %}</option>
@@ -77,98 +66,82 @@
                             </select>
                         </div>
                         <div class="space-y-2">
-                            <label class="font-label-bold text-label-bold text-on-surface">
-                                {% trans "お問い合わせ内容" %} <span class="text-error">*</span>
-                            </label>
-                            <textarea class="w-full p-6 bg-surface-container-low border border-outline-variant rounded-lg text-body-md transition-all resize-none"
+                            <label class="text-sm font-semibold text-primary">{% trans "お問い合わせ内容" %} <span class="text-error">*</span></label>
+                            <textarea rows="5" required
                                       placeholder="{% trans '具体的な課題やご要望をご記入ください。' %}"
-                                      rows="6" required></textarea>
+                                      class="w-full px-5 py-4 bg-base-100 border border-base-300 rounded-xl text-sm resize-none focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"></textarea>
                         </div>
-                        <div class="flex items-start gap-3 py-4">
-                            <input class="mt-1 rounded text-primary focus:ring-primary border-outline-variant"
-                                   id="privacy"
-                                   type="checkbox" required />
-                            <label class="text-body-md text-secondary" for="privacy">
-                                <a class="text-primary hover:underline" href="#">{% trans "プライバシーポリシー" %}</a>{% trans "に同意する" %}
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="privacy" required
+                                   class="mt-1 rounded border-base-300 text-primary focus:ring-primary" />
+                            <label for="privacy" class="text-sm text-muted">
+                                <a href="#" class="text-primary hover:underline">{% trans "プライバシーポリシー" %}</a>{% trans "に同意する" %}
                             </label>
                         </div>
-                        <button class="w-full bg-primary text-white font-label-bold text-lg py-5 rounded-full hover:bg-primary-container transition-colors scale-100 active:scale-95 flex items-center justify-center gap-2"
-                                type="submit">
+                        <button type="submit"
+                                class="shine-btn w-full bg-primary text-white font-bold text-base py-4 rounded-full flex items-center justify-center gap-2 shadow-lg">
                             {% trans "送信する" %}
-                            <span class="material-symbols-outlined" data-icon="send">send</span>
+                            <span class="material-symbols-outlined text-[20px]">send</span>
                         </button>
                     </form>
                 </div>
             </div>
-            <!-- Sidebar / Info Container -->
-            <div class="lg:col-span-5 space-y-8">
-                <!-- Office Info Card -->
-                <div class="bg-on-primary-fixed text-white p-container-padding rounded-lg">
-                    <div class="flex items-center gap-4 mb-8">
-                        <span class="material-symbols-outlined text-4xl text-primary-fixed"
-                              data-icon="location_on">location_on</span>
-                        <h3 class="font-headline-md text-headline-md">{% trans "福岡本社" %}</h3>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-5 space-y-6" data-aos="fade-left">
+                <!-- Office info -->
+                <div class="bg-primary rounded-2xl p-8 text-white">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-accent text-3xl">location_on</span>
+                        <h3 class="text-xl font-bold">{% trans "福岡本社" %}</h3>
                     </div>
-                    <div class="space-y-6">
+                    <div class="space-y-5 text-sm">
                         <div>
-                            <p class="text-primary-fixed-dim font-label-bold text-sm mb-1">{% trans "所在地" %}</p>
-                            <p class="font-body-lg text-white">
-                                {% trans "〒812-0011" %}
-                                <br />
-                                {% trans "福岡県福岡市博多区博多駅前 1-2-3" %}
-                                <br />
-                                {% trans "イーテック・マニュファクチャリング・センター" %}
+                            <p class="text-white/40 text-xs font-semibold uppercase tracking-wide mb-1">{% trans "所在地" %}</p>
+                            <p class="text-white/90 leading-relaxed">
+                                〒812-0011<br />
+                                福岡県福岡市博多区博多駅前 1-2-3<br />
+                                イーテック・マニュファクチャリング・センター
                             </p>
                         </div>
                         <div>
-                            <p class="text-primary-fixed-dim font-label-bold text-sm mb-1">{% trans "電話番号" %}</p>
-                            <p class="font-headline-md text-white">092-XXX-XXXX</p>
+                            <p class="text-white/40 text-xs font-semibold uppercase tracking-wide mb-1">{% trans "電話番号" %}</p>
+                            <p class="text-white text-xl font-bold">092-XXX-XXXX</p>
                         </div>
                         <div>
-                            <p class="text-primary-fixed-dim font-label-bold text-sm mb-1">{% trans "営業時間" %}</p>
-                            <p class="font-body-md text-white">{% trans "平日 9:00 - 18:00 (土日祝除く)" %}</p>
+                            <p class="text-white/40 text-xs font-semibold uppercase tracking-wide mb-1">{% trans "営業時間" %}</p>
+                            <p class="text-white/80">{% trans "平日 9:00 - 18:00 (土日祝除く)" %}</p>
                         </div>
                     </div>
                 </div>
-                <!-- Google Maps Integration Mockup -->
-                <div class="bg-white border border-outline-variant rounded-lg overflow-hidden relative h-[400px]">
-                    <div class="absolute inset-0 bg-surface-container">
-                        <img class="w-full h-full object-cover grayscale"
-                             data-alt="Abstract minimalist map graphic of Fukuoka city with blue pinpoint and clean street lines in a modern architectural style"
-                             data-location="Fukuoka"
-                             src="{% static 'images/stitch_67034627.jpg' %}" />
-                        <!-- Pin Overlay -->
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <div class="relative">
-                                <div class="absolute -top-12 -left-1/2 bg-on-primary-fixed text-white px-4 py-2 rounded-lg whitespace-nowrap shadow-xl">
-                                    <p class="text-xs font-bold">e-tac Headquarters</p>
-                                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full border-8 border-transparent border-t-on-primary-fixed">
-                                    </div>
-                                </div>
-                                <div class="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg animate-pulse"></div>
+
+                <!-- Map mockup -->
+                <div class="rounded-2xl overflow-hidden relative h-72 border border-black/5">
+                    <img class="w-full h-full object-cover grayscale"
+                         src="{% static 'images/stitch_67034627.jpg' %}" alt="Map" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="relative">
+                            <div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-2 rounded-lg whitespace-nowrap shadow-lg">
+                                e-tac Headquarters
+                                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full border-4 border-transparent border-t-primary"></div>
                             </div>
+                            <div class="w-5 h-5 bg-secondary rounded-full border-3 border-white shadow-lg animate-pulse"></div>
                         </div>
                     </div>
-                    <!-- Map Controls Mockup -->
-                    <div class="absolute bottom-4 right-4 flex flex-col gap-2">
-                        <button class="w-10 h-10 bg-white shadow-md rounded flex items-center justify-center text-on-surface">
-                            <span class="material-symbols-outlined" data-icon="add">add</span>
-                        </button>
-                        <button class="w-10 h-10 bg-white shadow-md rounded flex items-center justify-center text-on-surface">
-                            <span class="material-symbols-outlined" data-icon="remove">remove</span>
-                        </button>
-                    </div>
                 </div>
-                <!-- FAQ Quick Link -->
-                <div class="bg-surface-container-high p-container-padding rounded-lg flex items-center justify-between group cursor-pointer border border-transparent hover:border-primary transition-all">
+
+                <!-- FAQ link -->
+                <a href="#" class="glass-card p-6 flex items-center justify-between group hover:border-primary border border-transparent transition-all">
                     <div>
-                        <h4 class="font-label-bold text-lg mb-1">{% trans "よくあるご質問" %}</h4>
-                        <p class="text-secondary text-sm">{% trans "導入までの流れや費用について" %}</p>
+                        <h4 class="font-bold text-primary mb-1">{% trans "よくあるご質問" %}</h4>
+                        <p class="text-muted text-sm">{% trans "導入までの流れや費用について" %}</p>
                     </div>
-                    <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform"
-                          data-icon="arrow_forward">arrow_forward</span>
-                </div>
+                    <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
             </div>
+
         </div>
     </div>
-{% endblock content %}
+</section>
+
+{% endblock %}

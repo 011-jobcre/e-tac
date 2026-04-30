@@ -1,330 +1,237 @@
 {% extends "base.html" %}
 {% load i18n static %}
-{% block title %}
-    {% trans "サービス" %} | e-tac
-{% endblock title %}
+
+{% block title %}{% trans "サービス" %} | e-tac{% endblock %}
+
 {% block content %}
-    <!-- Hero Section -->
-    <header class="relative overflow-hidden bg-white px-10 py-20 lg:py-32">
-        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div class="z-10">
-                <span class="inline-block bg-primary text-white text-label-bold font-label-bold px-4 py-1 rounded-full mb-6">MANUFACTURING BPO</span>
-                <h1 class="font-display-xl text-display-xl text-on-background mb-8">
-                    PRECISION
-                    <br />
-                    MANUFACTURING
-                    <br />
-                    <span class="text-primary">ENGINEERED.</span>
-                </h1>
-                <p class="font-body-lg text-body-lg text-secondary max-w-xl mb-10">
-                    {% trans "ロボット部品から制御盤まで。日本品質の製造BPOと、ポーランド・ウクライナ拠点とのIT連携。次世代のモノづくりを実現するハイブリッド・ソリューション。" %}
-                </p>
-                <div class="flex gap-4">
-                    <button class="bg-primary px-8 py-4 rounded-full text-white font-label-bold hover:opacity-90 transition-opacity">
-                        {% trans "サービス詳細を見る" %}
-                    </button>
-                    <a href="{% url 'contact' %}"
-                       class="border-2 border-on-background px-8 py-4 rounded-full text-on-background font-label-bold hover:bg-on-background hover:text-white transition-all">
-                        {% trans "お問い合わせ" %}
-                    </a>
-                </div>
-            </div>
-            <div class="relative h-[600px] rounded-xl overflow-hidden border-2 border-zinc-100">
-                <img class="w-full h-full object-cover"
-                     data-alt="Modern industrial factory floor with robotic arm assembly line, high-tech machinery, clean environment, bright professional lighting"
-                     src="{% static 'images/stitch_ca1cfd42.jpg' %}" />
-                <div class="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur p-8 rounded-lg border border-zinc-200">
-                    <div class="flex items-center gap-4 mb-2">
-                        <span class="material-symbols-outlined text-primary"
-                              data-icon="precision_manufacturing">precision_manufacturing</span>
-                        <span class="font-label-bold text-primary">CURRENT STATUS</span>
-                    </div>
-                    <div class="text-on-background font-headline-md text-headline-md">In Production: Module A-42</div>
-                </div>
-            </div>
+
+<!-- Hero -->
+<section class="hero-section">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover opacity-20"
+             src="{% static 'images/stitch_ca1cfd42.jpg' %}" alt="" />
+    </div>
+    <div class="hero-content" data-aos="fade-up">
+        <p class="text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">Manufacturing BPO</p>
+        <h1 class="font-display font-black text-white leading-tight mb-4 uppercase"
+            style="font-size: clamp(2.2rem, 5vw, 4rem);">
+            Precision Manufacturing<br />
+            <span class="text-accent">Engineered.</span>
+        </h1>
+        <p class="text-white/70 text-lg max-w-xl mx-auto leading-relaxed mb-10">
+            {% trans "ロボット部品から制御盤まで。日本品質の製造BPOと、ポーランド・ウクライナ拠点とのIT連携。次世代のモノづくりを実現するハイブリッド・ソリューション。" %}
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="shine-btn bg-secondary text-white font-bold px-8 py-4 rounded-full shadow-xl">
+                {% trans "サービス詳細を見る" %}
+            </button>
+            <a href="{% url 'contact' %}"
+               class="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:border-white/70 transition-colors">
+                {% trans "お問い合わせ" %}
+            </a>
         </div>
-    </header>
-    <!-- Services Grid (Bento Style) -->
-    <section class="px-10 py-20 max-w-[1440px] mx-auto">
-        <div class="mb-16">
-            <h2 class="font-headline-lg text-headline-lg mb-4">{% trans "コアサービス" %}</h2>
-            <div class="h-2 w-24 bg-primary"></div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="section-pad">
+    <div class="container-content">
+        <div class="mb-12" data-aos="fade-up">
+            <p class="text-xs font-bold tracking-[0.25em] uppercase text-secondary mb-3">Core Services</p>
+            <h2 class="text-3xl font-bold text-primary">{% trans "コアサービス" %}</h2>
+            <div class="w-10 h-1 bg-secondary rounded-full mt-4"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[800px]">
-            <!-- Manufacturing BPO -->
-            <div class="md:col-span-8 bg-white p-10 rounded-lg border border-zinc-200 flex flex-col justify-between group overflow-hidden relative">
-                <div class="z-10">
-                    <h3 class="font-headline-md text-headline-md mb-6">{% trans "製造BPOサービス" %}</h3>
-                    <p class="font-body-lg text-body-lg text-secondary max-w-lg">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6" style="min-height: 600px;" data-aos="fade-up">
+            <!-- Manufacturing BPO - large card -->
+            <div class="md:col-span-8 glass-card p-10 flex flex-col justify-between relative overflow-hidden group">
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-primary mb-4">{% trans "製造BPOサービス" %}</h3>
+                    <p class="text-muted mb-8 max-w-lg leading-relaxed">
                         {% trans "ロボット部品、工作機械の精密板金、制御盤の設計・製作を一貫して請け負います。小ロットから量産まで、徹底した工程管理で高品質な製品を提供します。" %}
                     </p>
-                    <ul class="mt-8 space-y-4">
+                    <ul class="space-y-3">
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary"
-                                  data-icon="check_circle"
-                                  data-weight="fill"
-                                  style="font-variation-settings: 'FILL' 1">check_circle</span>
-                            <span class="font-label-bold">{% trans "精密ロボットアーム部品" %}</span>
+                            <span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span>
+                            <span class="font-semibold text-sm">{% trans "精密ロボットアーム部品" %}</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary"
-                                  data-icon="check_circle"
-                                  data-weight="fill"
-                                  style="font-variation-settings: 'FILL' 1">check_circle</span>
-                            <span class="font-label-bold">{% trans "産業用制御盤・配線ユニット" %}</span>
+                            <span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span>
+                            <span class="font-semibold text-sm">{% trans "産業用制御盤・配線ユニット" %}</span>
                         </li>
                         <li class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-primary"
-                                  data-icon="check_circle"
-                                  data-weight="fill"
-                                  style="font-variation-settings: 'FILL' 1">check_circle</span>
-                            <span class="font-label-bold">{% trans "工作機械向け大型カバー" %}</span>
+                            <span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings:'FILL' 1">check_circle</span>
+                            <span class="font-semibold text-sm">{% trans "工作機械向け大型カバー" %}</span>
                         </li>
                     </ul>
                 </div>
-                <div class="absolute bottom-0 right-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
-                    <img class="w-full h-full object-cover"
-                         data-alt="Detailed close-up of intricate mechanical metal gear parts, high precision engineering, metallic surfaces, industrial aesthetic"
-                         src="{% static 'images/stitch_325e2bfa.jpg' %}" />
+                <div class="absolute bottom-0 right-0 w-1/2 h-full opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+                    <img class="w-full h-full object-cover" src="{% static 'images/stitch_325e2bfa.jpg' %}" alt="" />
                 </div>
             </div>
-            <!-- IT BPO Collaboration -->
-            <div class="md:col-span-4 bg-primary p-10 rounded-lg text-white flex flex-col justify-between relative overflow-hidden">
-                <div class="z-10">
-                    <h3 class="font-headline-md text-headline-md mb-6">{% trans "グローバルIT BPO" %}</h3>
-                    <p class="font-body-md text-body-md opacity-90">
-                        {% trans "ポーランド・ウクライナのエンジニア拠点と連携。製造現場のデジタルトランスフォーメーション(DX)を支援するソフトウェア開発を提供します。" %}
+
+            <!-- IT BPO - accent card -->
+            <div class="md:col-span-4 bg-primary rounded-xl p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">{% trans "グローバルIT BPO" %}</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        {% trans "ポーランド・ウクライナのエンジニア拠点と連携。製造現場のDXを支援するソフトウェア開発を提供します。" %}
                     </p>
                 </div>
-                <div class="z-10 mt-10">
+                <div>
                     <div class="flex gap-2 mb-4">
-                        <span class="bg-white/20 px-3 py-1 rounded text-xs">POLAND</span>
-                        <span class="bg-white/20 px-3 py-1 rounded text-xs">UKRAINE</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">POLAND</span>
+                        <span class="bg-white/20 px-3 py-1 rounded-full text-xs font-medium">UKRAINE</span>
                     </div>
-                    <div class="text-3xl font-black italic tracking-tighter opacity-30">GLOBAL HYBRID</div>
+                    <div class="text-4xl font-black italic tracking-tighter opacity-20">GLOBAL</div>
                 </div>
-                <div class="absolute -bottom-10 -right-10 opacity-20">
-                    <span class="material-symbols-outlined text-[200px]" data-icon="hub">hub</span>
+                <div class="absolute -bottom-8 -right-8 opacity-10">
+                    <span class="material-symbols-outlined text-[160px]">hub</span>
                 </div>
             </div>
-            <!-- Technical Precision Card -->
-            <div class="md:col-span-4 bg-surface-container-low p-10 rounded-lg border border-zinc-200">
-                <span class="material-symbols-outlined text-4xl text-primary mb-6"
-                      data-icon="biometric_setup">android_fingerprint</span>
-                <h4 class="font-headline-md text-headline-md mb-4 text-[24px]">{% trans "設計・技術力" %}</h4>
-                <p class="font-body-md text-body-md text-secondary">
+
+            <!-- Design card -->
+            <div class="md:col-span-4 glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+                <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">android_fingerprint</span>
+                <h4 class="text-xl font-bold text-primary mb-3">{% trans "設計・技術力" %}</h4>
+                <p class="text-muted text-sm leading-relaxed">
                     {% trans "3D CAD/CAMを駆使した最適な設計提案。コストダウンと品質向上を両立させるVE/VA提案に自信があります。" %}
                 </p>
             </div>
-            <!-- Quality Assurance Card -->
-            <div class="md:col-span-8 bg-zinc-900 p-10 rounded-lg text-white flex flex-col md:flex-row items-center gap-10">
+
+            <!-- Quality card -->
+            <div class="md:col-span-8 bg-[#0d1b2a] rounded-xl p-10 text-white flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-delay="150">
                 <div class="flex-1">
-                    <h4 class="font-headline-md text-headline-md mb-4">{% trans "世界基準の品質管理" %}</h4>
-                    <p class="opacity-80 mb-6">{% trans "三次元測定機や非破壊検査など、最新の検査設備を完備。1ミクロン単位の精度を保証するトレーサビリティ体制。" %}</p>
-                    <button class="text-primary font-label-bold flex items-center gap-2 group">
+                    <h4 class="text-xl font-bold mb-3">{% trans "世界基準の品質管理" %}</h4>
+                    <p class="text-white/60 text-sm mb-6 leading-relaxed">{% trans "三次元測定機や非破壊検査など、最新の検査設備を完備。1ミクロン単位の精度を保証するトレーサビリティ体制。" %}</p>
+                    <button class="text-accent font-semibold text-sm flex items-center gap-2 group">
                         {% trans "品質基準を詳しく見る" %}
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1"
-                              data-icon="arrow_forward">arrow_forward</span>
+                        <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </button>
                 </div>
-                <div class="w-full md:w-64 h-40 bg-zinc-800 rounded-lg overflow-hidden flex items-center justify-center">
-                    <span class="material-symbols-outlined text-6xl opacity-50"
-                          data-icon="verified">verified</span>
+                <div class="w-28 h-28 bg-white/5 rounded-xl flex items-center justify-center border border-white/10">
+                    <span class="material-symbols-outlined text-5xl text-white/30">verified</span>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Metal Processing Steps -->
-    <section class="bg-white py-20">
-        <div class="max-w-[1440px] mx-auto px-10">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h2 class="font-headline-lg text-headline-lg">{% trans "金属加工プロセス" %}</h2>
-                    <p class="font-body-lg text-body-lg text-secondary mt-4">{% trans "一貫生産体制による圧倒的なスピードと精度" %}</p>
-                </div>
-                <div class="hidden lg:block text-right">
-                    <span class="text-8xl font-black text-zinc-100 italic">PRECISION</span>
+    </div>
+</section>
+
+<!-- Process Steps -->
+<section class="section-pad bg-surface">
+    <div class="container-content">
+        <div class="mb-12" data-aos="fade-up">
+            <p class="text-xs font-bold tracking-[0.25em] uppercase text-secondary mb-3">Process</p>
+            <h2 class="text-3xl font-bold text-primary">{% trans "金属加工プロセス" %}</h2>
+            <p class="text-muted mt-2 text-sm">{% trans "一貫生産体制による圧倒的なスピードと精度" %}</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for step_num, label, desc, img_src in steps %}{% empty %}
+            <div class="group relative h-80 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                     src="{% static 'images/stitch_7ef1cdf2.jpg' %}" alt="NCT加工" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <div class="text-accent text-xs font-bold tracking-widest mb-1">STEP 01</div>
+                    <h3 class="text-xl font-bold mb-1">{% trans "NCT加工" %}</h3>
+                    <p class="text-xs text-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
+                        {% trans "高速・高精度なタレットパンチプレスによるブランク加工。" %}
+                    </p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- NCT -->
-                <div class="group relative h-[450px] rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         data-alt="Close up of an NCT metal punching machine in action, industrial metal sheets being processed with precision holes, cooling sparks"
-                         src="{% static 'images/stitch_7ef1cdf2.jpg' %}" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <div class="text-primary text-label-bold mb-2">STEP 01</div>
-                        <h3 class="font-headline-md text-headline-md text-[28px] mb-2">{% trans "NCT加工" %}</h3>
-                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {% trans "高速・高精度なタレットパンチプレスによるブランク加工。" %}
-                        </p>
-                    </div>
+            <div class="group relative h-80 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="80">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                     src="{% static 'images/stitch_0cfcd54b.jpg' %}" alt="レーザー加工" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <div class="text-accent text-xs font-bold tracking-widest mb-1">STEP 02</div>
+                    <h3 class="text-xl font-bold mb-1">{% trans "レーザー加工" %}</h3>
+                    <p class="text-xs text-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
+                        {% trans "複雑な形状もクリーンに切り出す、ファイバーレーザー技術。" %}
+                    </p>
                 </div>
-                <!-- Laser -->
-                <div class="group relative h-[450px] rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         data-alt="Laser cutting machine slicing through steel plate with intense orange sparks, high technology metal fabrication, blue industrial light"
-                         src="{% static 'images/stitch_0cfcd54b.jpg' %}" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <div class="text-primary text-label-bold mb-2">STEP 02</div>
-                        <h3 class="font-headline-md text-headline-md text-[28px] mb-2">{% trans "レーザー加工" %}</h3>
-                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {% trans "複雑な形状もクリーンに切り出す、ファイバーレーザー技術。" %}
-                        </p>
-                    </div>
+            </div>
+            <div class="group relative h-80 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="160">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                     src="{% static 'images/stitch_5ff95962.jpg' %}" alt="精密溶接" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <div class="text-accent text-xs font-bold tracking-widest mb-1">STEP 03</div>
+                    <h3 class="text-xl font-bold mb-1">{% trans "精密溶接" %}</h3>
+                    <p class="text-xs text-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
+                        {% trans "歪みを最小限に抑える、熟練工によるTIG/MIG溶接。" %}
+                    </p>
                 </div>
-                <!-- Welding -->
-                <div class="group relative h-[450px] rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         data-alt="Professional welder working on metal components with bright welding flash, safety gear, industrial workshop background, cinematic lighting"
-                         src="{% static 'images/stitch_5ff95962.jpg' %}" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <div class="text-primary text-label-bold mb-2">STEP 03</div>
-                        <h3 class="font-headline-md text-headline-md text-[28px] mb-2">{% trans "精密溶接" %}</h3>
-                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {% trans "歪みを最小限に抑える、熟練工によるTIG/MIG溶接。" %}
-                        </p>
-                    </div>
+            </div>
+            <div class="group relative h-80 rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="240">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                     src="{% static 'images/stitch_5e6e9171.jpg' %}" alt="表面仕上げ" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6 text-white">
+                    <div class="text-accent text-xs font-bold tracking-widest mb-1">STEP 04</div>
+                    <h3 class="text-xl font-bold mb-1">{% trans "表面仕上げ" %}</h3>
+                    <p class="text-xs text-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
+                        {% trans "塗装、メッキ、シルク印刷まで一貫した最終工程。" %}
+                    </p>
                 </div>
-                <!-- Finishing -->
-                <div class="group relative h-[450px] rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                         data-alt="Finished industrial metal enclosures with smooth powder coated surfaces, rows of clean grey metal cabinets in a bright warehouse"
-                         src="{% static 'images/stitch_5e6e9171.jpg' %}" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <div class="text-primary text-label-bold mb-2">STEP 04</div>
-                        <h3 class="font-headline-md text-headline-md text-[28px] mb-2">{% trans "表面仕上げ" %}</h3>
-                        <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            {% trans "塗装、メッキ、シルク印刷まで一貫した最終工程。" %}
-                        </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Workflow Timeline -->
+<section class="section-pad">
+    <div class="container-content">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <p class="text-xs font-bold tracking-[0.25em] uppercase text-secondary mb-3">Workflow</p>
+            <h2 class="text-3xl font-bold text-primary">{% trans "導入までの6つのステップ" %}</h2>
+        </div>
+        <div class="overflow-x-auto scrollbar-hide -mx-6 lg:-mx-10 px-6 lg:px-10" data-aos="fade-up">
+            <div class="flex gap-4 pb-4" style="min-width: max-content;">
+                {% if workflow_steps %}
+                    {% for step_n, step_title, step_desc in workflow_steps %}
+                    <div class="w-60 flex-none {% if forloop.last %}bg-primary text-white{% else %}bg-base-200{% endif %} rounded-xl p-8 border border-black/5">
+                        <div class="text-4xl font-black {% if forloop.last %}text-white/20{% else %}text-primary/10{% endif %} mb-4">{{ step_n }}</div>
+                        <h4 class="font-bold {% if forloop.last %}text-white{% else %}text-primary{% endif %} text-sm uppercase mb-3">{{ step_title }}</h4>
+                        <p class="text-xs {% if forloop.last %}text-white/70{% else %}text-muted{% endif %} leading-relaxed">{{ step_desc }}</p>
                     </div>
+                    {% endfor %}
+                {% else %}
+                {# Static fallback #}
+                <div class="w-60 flex-none bg-base-200 rounded-xl p-8 border border-black/5">
+                    <div class="text-4xl font-black text-primary/10 mb-4">01</div>
+                    <h4 class="font-bold text-primary text-sm uppercase mb-3">{% trans "ヒアリング" %}</h4>
+                    <p class="text-xs text-muted leading-relaxed">{% trans "製品仕様、予算、納期など、お客様の課題を詳細に伺います。" %}</p>
                 </div>
+                <div class="w-60 flex-none bg-base-200 rounded-xl p-8 border border-black/5">
+                    <div class="text-4xl font-black text-primary/10 mb-4">02</div>
+                    <h4 class="font-bold text-primary text-sm uppercase mb-3">{% trans "技術提案" %}</h4>
+                    <p class="text-xs text-muted leading-relaxed">{% trans "3Dデータに基づいた最適な工法とコスト削減プランをご提案。" %}</p>
+                </div>
+                <div class="w-60 flex-none bg-base-200 rounded-xl p-8 border border-black/5">
+                    <div class="text-4xl font-black text-primary/10 mb-4">03</div>
+                    <h4 class="font-bold text-primary text-sm uppercase mb-3">{% trans "試作製作" %}</h4>
+                    <p class="text-xs text-muted leading-relaxed">{% trans "実物による検証。1点からの試作にも柔軟に対応いたします。" %}</p>
+                </div>
+                <div class="w-60 flex-none bg-base-200 rounded-xl p-8 border border-black/5">
+                    <div class="text-4xl font-black text-primary/10 mb-4">04</div>
+                    <h4 class="font-bold text-primary text-sm uppercase mb-3">{% trans "本番製造" %}</h4>
+                    <p class="text-xs text-muted leading-relaxed">{% trans "最新設備と熟練工の技術で、高品質な製品を量産します。" %}</p>
+                </div>
+                <div class="w-60 flex-none bg-base-200 rounded-xl p-8 border border-black/5">
+                    <div class="text-4xl font-black text-primary/10 mb-4">05</div>
+                    <h4 class="font-bold text-primary text-sm uppercase mb-3">{% trans "検査・品質保証" %}</h4>
+                    <p class="text-xs text-muted leading-relaxed">{% trans "独自のチェックリストに基づき、全数検査を実施します。" %}</p>
+                </div>
+                <div class="w-60 flex-none bg-primary rounded-xl p-8 shadow-xl shadow-primary/20">
+                    <div class="text-4xl font-black text-white/20 mb-4">06</div>
+                    <h4 class="font-bold text-white text-sm uppercase mb-3">{% trans "納品・物流" %}</h4>
+                    <p class="text-xs text-white/70 leading-relaxed">{% trans "指定場所への配送。ジャストインタイムでの納品体制。" %}</p>
+                </div>
+                {% endif %}
             </div>
         </div>
-    </section>
-    <!-- 6-Step Workflow Timeline -->
-    <section class="bg-surface-container py-20 overflow-hidden">
-        <div class="max-w-[1440px] mx-auto px-10 mb-20">
-            <h2 class="font-headline-lg text-headline-lg text-center">{% trans "導入までの6つのステップ" %}</h2>
-        </div>
-        <div class="relative max-w-[1440px] mx-auto overflow-x-auto hide-scrollbar px-10 pb-10">
-            <div class="flex gap-8 min-w-[1800px]">
-                <!-- Step 1 -->
-                <div class="w-80 flex-shrink-0 bg-white p-10 rounded-lg border-2 border-zinc-200">
-                    <div class="text-primary font-display-xl text-display-xl mb-4 opacity-20">01</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 uppercase">{% trans "ヒアリング" %}</h4>
-                    <p class="font-body-md text-body-md text-secondary">{% trans "製品仕様、予算、納期など、お客様の課題を詳細に伺います。" %}</p>
-                </div>
-                <!-- Divider -->
-                <div class="flex items-center text-primary opacity-30">
-                    <span class="material-symbols-outlined text-4xl" data-icon="chevron_right">chevron_right</span>
-                </div>
-                <!-- Step 2 -->
-                <div class="w-80 flex-shrink-0 bg-white p-10 rounded-lg border-2 border-zinc-200">
-                    <div class="text-primary font-display-xl text-display-xl mb-4 opacity-20">02</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 uppercase">{% trans "技術提案" %}</h4>
-                    <p class="font-body-md text-body-md text-secondary">{% trans "3Dデータに基づいた最適な工法とコスト削減プランをご提案。" %}</p>
-                </div>
-                <!-- Divider -->
-                <div class="flex items-center text-primary opacity-30">
-                    <span class="material-symbols-outlined text-4xl" data-icon="chevron_right">chevron_right</span>
-                </div>
-                <!-- Step 3 -->
-                <div class="w-80 flex-shrink-0 bg-white p-10 rounded-lg border-2 border-zinc-200">
-                    <div class="text-primary font-display-xl text-display-xl mb-4 opacity-20">03</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 uppercase">{% trans "試作製作" %}</h4>
-                    <p class="font-body-md text-body-md text-secondary">{% trans "実物による検証。1点からの試作にも柔軟に対応いたします。" %}</p>
-                </div>
-                <!-- Divider -->
-                <div class="flex items-center text-primary opacity-30">
-                    <span class="material-symbols-outlined text-4xl" data-icon="chevron_right">chevron_right</span>
-                </div>
-                <!-- Step 4 -->
-                <div class="w-80 flex-shrink-0 bg-white p-10 rounded-lg border-2 border-zinc-200">
-                    <div class="text-primary font-display-xl text-display-xl mb-4 opacity-20">04</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 uppercase">{% trans "本番製造" %}</h4>
-                    <p class="font-body-md text-body-md text-secondary">{% trans "最新設備と熟練工の技術で、高品質な製品を量産します。" %}</p>
-                </div>
-                <!-- Divider -->
-                <div class="flex items-center text-primary opacity-30">
-                    <span class="material-symbols-outlined text-4xl" data-icon="chevron_right">chevron_right</span>
-                </div>
-                <!-- Step 5 -->
-                <div class="w-80 flex-shrink-0 bg-white p-10 rounded-lg border-2 border-zinc-200">
-                    <div class="text-primary font-display-xl text-display-xl mb-4 opacity-20">05</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 uppercase">{% trans "検査・品質保証" %}</h4>
-                    <p class="font-body-md text-body-md text-secondary">{% trans "独自のチェックリストに基づき、全数検査を実施します。" %}</p>
-                </div>
-                <!-- Divider -->
-                <div class="flex items-center text-primary opacity-30">
-                    <span class="material-symbols-outlined text-4xl" data-icon="chevron_right">chevron_right</span>
-                </div>
-                <!-- Step 6 -->
-                <div class="w-80 flex-shrink-0 bg-primary p-10 rounded-lg shadow-xl shadow-primary/20">
-                    <div class="text-white font-display-xl text-display-xl mb-4 opacity-30">06</div>
-                    <h4 class="font-headline-md text-headline-md text-[22px] mb-4 text-white uppercase">{% trans "納品・物流" %}</h4>
-                    <p class="font-body-md text-body-md text-white/90">{% trans "指定場所への配送。ジャストインタイムでの納品体制。" %}</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- IT Collaboration Detail -->
-    <section class="py-20 px-10 bg-zinc-900 text-white overflow-hidden">
-        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
-            <div class="relative">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="space-y-4">
-                        <div class="h-40 bg-zinc-800 rounded-lg flex flex-col items-center justify-center border border-zinc-700">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-2"
-                                  data-icon="code">code</span>
-                            <span class="text-xs">Software Development</span>
-                        </div>
-                        <div class="h-60 bg-zinc-800 rounded-lg overflow-hidden border border-zinc-700">
-                            <img class="w-full h-full object-cover opacity-50"
-                                 data-alt="Diverse tech team of engineers in a modern office in Poland, collaborating over code and manufacturing designs"
-                                 src="{% static 'images/stitch_de2713e2.jpg' %}" />
-                        </div>
-                    </div>
-                    <div class="space-y-4 pt-8">
-                        <div class="h-60 bg-zinc-800 rounded-lg overflow-hidden border border-zinc-700">
-                            <img class="w-full h-full object-cover opacity-50"
-                                 data-alt="Digital dashboard showing real-time manufacturing data, analytics, and operational metrics with blue UI"
-                                 src="{% static 'images/stitch_90334f15.jpg' %}" />
-                        </div>
-                        <div class="h-40 bg-primary rounded-lg flex flex-col items-center justify-center">
-                            <span class="material-symbols-outlined text-4xl mb-2"
-                                  data-icon="cloud_sync">cloud_sync</span>
-                            <span class="text-xs">Real-time Sync</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] rounded-full">
-                </div>
-            </div>
-            <div>
-                <h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">
-                    {% trans "グローバル連携が加速する" %}
-                    <br />
-                    <span class="text-primary">{% trans "製造DX" %}</span>
-                </h2>
-                <p class="font-body-lg text-body-lg text-zinc-400 mb-10">
-                    {% trans "ポーランドとウクライナに開発拠点を置く「IT BPO」ユニットが、製造現場のリアルタイム・モニタリングやサプライチェーン管理システムを構築。アナログな製造工程をデジタル化し、透明性の高い生産体制を実現します。" %}
-                </p>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <div class="text-primary font-bold mb-2">POLAND OFFICE</div>
-                        <div class="text-sm opacity-60">{% trans "高品質なバックエンド開発とプロジェクトマネジメント。" %}</div>
-                    </div>
-                    <div>
-                        <div class="text-primary font-bold mb-2">UKRAINE OFFICE</div>
-                        <div class="text-sm opacity-60">{% trans "先端AIとデータ解析技術による製造効率の最適化。" %}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-{% endblock content %}
+    </div>
+</section>
+
+{% endblock %}

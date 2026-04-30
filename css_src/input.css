@@ -1,188 +1,230 @@
+/* ============================================================
+   E-TAC Corporate Design System — input.css
+   Stack: Tailwind CSS v4 + DaisyUI v5
+   Theme: "Modern Corporate Precision"
+   ============================================================ */
+
 @import "tailwindcss";
 @plugin "daisyui";
 
-html,
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-        "FILL" 0,
-        "wght" 400,
-        "GRAD" 0,
-        "opsz" 24;
-    display: inline-block;
-    vertical-align: middle;
-}
-
+/* ------------------------------------------------------------
+   1. DAISYUI THEME — brand color tokens
+   ------------------------------------------------------------ */
 @plugin "daisyui/theme" {
-    name: "bizreach";
+    name: "etac";
     default: true;
     prefersdark: false;
     color-scheme: "light";
 
-    /* Backgrounds */
-    --color-base-100: oklch(100% 0 0);
-    --color-base-200: oklch(98% 0 0);
-    --color-base-300: oklch(95% 0 0);
+    /* Surfaces */
+    --color-base-100: #ffffff;
+    --color-base-200: #f4f6f9;
+    --color-base-300: #e8ecf0;
+    --color-base-content: #1a2332;
 
-    /* Text Colors */
-    --color-base-content: oklch(21% 0.006 285.885);
+    /* Brand */
+    --color-primary:   #1a5276;
+    --color-primary-content: #ffffff;
+    --color-secondary: #006687;
+    --color-secondary-content: #ffffff;
+    --color-accent:    #d4a843;
+    --color-accent-content: #1a2332;
 
-    /* Brand Colors (Bizreach Reds) */
-    --color-primary: #0024c1;
-    --color-primary-content: #e0e7ff;
-    --color-secondary: #b6111c;
-    --color-secondary-content: #f9e4f0;
+    /* Neutral */
+    --color-neutral: #41474e;
+    --color-neutral-content: #ffffff;
 
-    /* Neutrals */
-    --color-accent: oklch(77% 0.152 181.912);
-    --color-accent-content: oklch(38% 0.063 188.416);
-    --color-neutral: oklch(14% 0.005 285.823);
-    --color-neutral-content: oklch(92% 0.004 286.32);
+    /* States */
+    --color-info:    #2e86ab;
+    --color-success: #2e7d32;
+    --color-warning: #f9a825;
+    --color-error:   #ba1a1a;
 
-    /* System States */
-    --color-info: oklch(74% 0.16 232.661);
-    --color-info-content: oklch(29% 0.066 243.157);
-    --color-success: oklch(76% 0.177 163.223);
-    --color-success-content: oklch(37% 0.077 168.94);
-    --color-warning: oklch(82% 0.189 84.429);
-    --color-warning-content: oklch(41% 0.112 45.904);
-    --color-error: oklch(71% 0.194 13.428);
-    --color-error-content: oklch(27% 0.105 12.094);
-
-    /* Border Radius (Bizreach uses sharp, professional corners) */
-    --radius-selector: 0.5rem;
-    --radius-field: 0.25rem;
-    --radius-box: 0.5rem;
-
-    /* Misc */
-    --size-selector: 0.25rem;
-    --size-field: 0.25rem;
-    --border: 1px;
-    --depth: 0;
-    --noise: 0;
+    /* Shape */
+    --radius-selector: 2rem;
+    --radius-field:    0.5rem;
+    --radius-box:      0.75rem;
 }
 
+/* ------------------------------------------------------------
+   2. TAILWIND THEME EXTENSIONS — custom tokens
+   ------------------------------------------------------------ */
 @theme {
-    --font-sans: "Inter", sans-serif;
-    --font-inter: "Inter", sans-serif;
-    --font-grotesk: "Space Grotesk", sans-serif;
+    /* Fonts */
+    --font-sans:    "Inter", "Noto Sans JP", sans-serif;
+    --font-display: "Inter", "Noto Sans JP", sans-serif;
+    --font-body:    "Noto Sans JP", "Inter", sans-serif;
+    --font-mono:    ui-monospace, monospace;
 
-    --font-body-md: "Inter", sans-serif;
-    --font-body-lg: "Inter", sans-serif;
-    --font-headline-lg: "Space Grotesk", sans-serif;
-    --font-display-xl: "Space Grotesk", sans-serif;
-    --font-headline-md: "Space Grotesk", sans-serif;
-    --font-label-bold: "Inter", sans-serif;
+    /* Extra brand colors (usable as text-*, bg-*, border-*) */
+    --color-navy:        #003b5a;
+    --color-gold:        #d4a843;
+    --color-muted:       #5a6472;
+    --color-surface:     #f4f6f9;
+    --color-border:      rgba(26, 82, 118, 0.12);
 
-    --color-on-primary-fixed: #000d60;
-    --color-surface-container-low: #f0f3ff;
-    --color-surface-container-high: #e2e8f8;
-    --color-inverse-surface: #2a313d;
-    --color-secondary-fixed-dim: #c6c6c7;
-    --color-tertiary: #404040;
-    --color-background: #f9f9ff;
-    --color-secondary-fixed: #e2e2e2;
-    --color-on-background: #151c27;
-    --color-surface-variant: #dce2f3;
-    --color-tertiary-fixed-dim: #c6c6c6;
-    --color-on-tertiary-fixed: #1b1b1b;
-    --color-on-secondary-container: #616363;
-    --color-on-error-container: #93000a;
-    --color-error: #ba1a1a;
-    --color-primary-container: #0033ff;
-    --color-primary: #0024c1;
-    --color-on-tertiary: #ffffff;
-    --color-on-primary-fixed-variant: #0029d3;
-    --color-primary-fixed-dim: #bcc3ff;
-    --color-tertiary-fixed: #e2e2e2;
-    --color-surface-bright: #f9f9ff;
-    --color-error-container: #ffdad6;
-    --color-on-primary-container: #c5caff;
-    --color-on-surface-variant: #444657;
-    --color-secondary-container: #dfe0e0;
-    --color-tertiary-container: #575757;
-    --color-on-tertiary-fixed-variant: #474747;
-    --color-inverse-primary: #bcc3ff;
-    --color-on-tertiary-container: #cdcdcd;
-    --color-on-primary: #ffffff;
-    --color-primary-fixed: #dfe0ff;
-    --color-outline: #747689;
-    --color-on-error: #ffffff;
-    --color-on-secondary-fixed: #1a1c1c;
-    --color-secondary: #5d5f5f;
-    --color-outline-variant: #c4c5da;
-    --color-surface-tint: #1f41ff;
-    --color-surface: #f9f9ff;
-    --color-surface-container: #e7eefe;
-    --color-on-secondary-fixed-variant: #454747;
-    --color-surface-container-lowest: #ffffff;
-    --color-inverse-on-surface: #ebf1ff;
-    --color-on-surface: #151c27;
-    --color-surface-container-highest: #dce2f3;
-    --color-surface-dim: #d3daea;
-    --color-on-secondary: #ffffff;
+    /* Layout */
+    --width-content: 1280px;
 
-    --spacing-unit: 8px;
-    --spacing-section-gap: 80px;
-    --spacing-gutter: 24px;
-    --spacing-container-padding: 40px;
+    /* Type scale */
+    --text-hero:     clamp(2.5rem, 6vw, 5rem);
+    --text-display:  clamp(2rem, 4vw, 3rem);
+    --text-headline: clamp(1.5rem, 2.5vw, 2rem);
+    --text-title:    1.25rem;
+    --text-body:     1rem;
+    --text-small:    0.875rem;
+    --text-xs:       0.75rem;
 
-    --text-body-md: 16px;
-    --text-body-md--line-height: 1.5;
-    --text-body-md--font-weight: 400;
-
-    --text-body-lg: 18px;
-    --text-body-lg--line-height: 1.6;
-    --text-body-lg--font-weight: 400;
-
-    --text-headline-lg: 48px;
-    --text-headline-lg--line-height: 1;
-    --text-headline-lg--letter-spacing: -0.02em;
-    --text-headline-lg--font-weight: 900;
-
-    --text-display-xl: 80px;
-    --text-display-xl--line-height: 0.85;
-    --text-display-xl--letter-spacing: -0.04em;
-    --text-display-xl--font-weight: 900;
-
-    --text-headline-md: 32px;
-    --text-headline-md--line-height: 1.1;
-    --text-headline-md--letter-spacing: -0.01em;
-    --text-headline-md--font-weight: 900;
-
-    --text-label-bold: 14px;
-    --text-label-bold--line-height: 1.2;
-    --text-label-bold--font-weight: 600;
+    /* Spacing scale */
+    --spacing-section: 5rem;
+    --spacing-content: 2rem;
 }
 
+/* ------------------------------------------------------------
+   3. BASE STYLES
+   ------------------------------------------------------------ */
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+/* Material Symbols default weight */
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* ------------------------------------------------------------
+   4. LAYOUT UTILITIES
+   ------------------------------------------------------------ */
 @layer utilities {
-    .text-outline-mask {
-        -webkit-text-stroke: 1px currentColor;
-        color: transparent;
+    /* Max-width container centered */
+    .container-content {
+        @apply max-w-[1280px] mx-auto px-6 lg:px-10;
     }
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none;
+
+    /* Standard section vertical padding */
+    .section-pad {
+        @apply py-20 lg:py-28;
     }
-    .hide-scrollbar {
+
+    /* Hide scrollbar cross-browser */
+    .scrollbar-hide {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
     }
-    .animate-marquee {
+}
+
+/* ------------------------------------------------------------
+   5. COMPONENT UTILITIES
+   ------------------------------------------------------------ */
+@layer utilities {
+    /* ── Hero Section ───────────────────────────────────────── */
+    .hero-section {
+        position: relative;
         display: flex;
-        width: fit-content;
-        animation: marquee 40s linear infinite;
+        align-items: center;
+        justify-content: center;
+        min-height: 600px;
+        overflow: hidden;
+        background-color: var(--color-navy);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* ── Glass Card ─────────────────────────────────────────── */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(26, 82, 118, 0.10);
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        border-radius: 0.75rem;
+    }
+
+    /* ── Shine / CTA Button Effect ──────────────────────────── */
+    .shine-btn {
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .shine-btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            105deg,
+            transparent 40%,
+            rgba(255,255,255,0.22) 50%,
+            transparent 60%
+        );
+        transform: translateX(-100%);
+        transition: transform 0.55s ease;
+    }
+    .shine-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    }
+    .shine-btn:hover::after {
+        transform: translateX(100%);
+    }
+
+    /* ── Marquee ────────────────────────────────────────────── */
+    @keyframes marquee-scroll {
+        from { transform: translateX(0); }
+        to   { transform: translateX(-50%); }
+    }
+    .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee-scroll 50s linear infinite;
+    }
+    .marquee-track:hover {
+        animation-play-state: paused;
+    }
+
+    /* ── Carousel Fade ──────────────────────────────────────── */
+    @keyframes fade-cycle {
+        0%, 26%  { opacity: 1; }
+        33%, 93% { opacity: 0; }
+        100%     { opacity: 1; }
+    }
+    .carousel-fade-item {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        animation: fade-cycle 18s infinite;
+    }
+    .carousel-fade-item:nth-child(1) { animation-delay: 0s; }
+    .carousel-fade-item:nth-child(2) { animation-delay: 6s; }
+    .carousel-fade-item:nth-child(3) { animation-delay: 12s; }
+
+    /* ── Progress bar animation ─────────────────────────────── */
+    @keyframes progress-slide {
+        0%   { transform: translateX(-100%); }
+        100% { transform: translateX(400%); }
+    }
+    .progress-bar {
+        animation: progress-slide 2.8s ease-in-out infinite;
+    }
+
+    /* ── Outline text mask ──────────────────────────────────── */
+    .text-outline-mask {
+        -webkit-text-stroke: 1px currentColor;
+        color: transparent;
     }
 }

@@ -2,218 +2,215 @@
 {% load i18n static %}
 {% block title %}
     {% trans "会社概要" %} | e-tac
-{% endblock title %}
+{% endblock %}
+{% block extra_head %}
+    <style>
+.masonry { column-count: 3; column-gap: 1.5rem; }
+.masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+@media (max-width: 768px) { .masonry { column-count: 2; } }
+@media (max-width: 480px) { .masonry { column-count: 1; } }
+    </style>
+{% endblock %}
 {% block content %}
-    <!-- Hero Section -->
-    <section class="relative min-h-[716px] flex items-center overflow-hidden py-20">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10"></div>
-            <img class="w-full h-full object-cover"
-                 data-alt="modern industrial office interior with clean lines, high-tech manufacturing equipment in background, bright professional lighting"
-                 src="{% static 'images/stitch_cff0befc.jpg' %}" />
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="absolute inset-0">
+            <img class="w-full h-full object-cover opacity-20"
+                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgK5P-i_3tzk8IrAsBneEVEbWUPTgzXqBAplP83QEv8uknBlslil4eGki_SedN9B1pfzX-452P81LNVlpmSvLzN9ofJddcGtLMvD7W-pskKQgAGdGcHhZ3sbiv2WItUvK8_SMEJwQBu5GSXTEMlI4R_MHGRwvo6mlzS7LSaqt23YPNQOnPspIB51ariFJERP6BAMD-zWs-W83TYhhiPWiwuUiNHtTMJnPHi9XkwEK_iZJKYiaN8m9Z8fQ_JeJVpg4pKckg_5k-3w"
+                 alt="" />
         </div>
-        <div class="container mx-auto px-10 relative z-20 max-w-[1440px]">
-            <div class="max-w-3xl">
-                <span class="inline-block px-4 py-1 bg-primary text-on-primary rounded-full font-label-bold text-label-bold mb-6">ABOUT US</span>
-                <h1 class="font-display-xl text-display-xl text-on-background mb-8">
-                    {% trans "製造BPOの" %}
-                    <br />
-                    <span class="text-primary">{% trans "新基準" %}</span>{% trans "を創る。" %}
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                    {% trans "コンサルティングから現場の実行まで。e-tacは、高度な専門性と外国人材のチカラを融合させ、日本の製造業を次世代へと導くパートナーです。" %}
-                </p>
-            </div>
+        <div class="hero-content" data-aos="fade-up">
+            <p class="text-xs font-bold tracking-[0.25em] uppercase text-accent mb-4">Company Profile</p>
+            <h1 class="font-display font-black text-white leading-tight mb-4"
+                style="font-size: clamp(2.2rem, 5vw, 4rem)">{% trans "会社概要" %}</h1>
+            <p class="text-white/70 text-lg max-w-xl mx-auto leading-relaxed">
+                {% trans "日本のビジネスに、革新的な安定と効率を。高度な専門性と透明性の高い運営で、貴社の成長を支えます。" %}
+            </p>
         </div>
     </section>
-    <!-- Stats Section (Bento Grid) -->
-    <section class="py-20 px-10 max-w-[1440px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Retention Stat Card -->
-            <div class="md:col-span-2 bg-white border border-zinc-200 rounded-lg p-10 flex flex-col justify-between overflow-hidden relative">
-                <div class="relative z-10">
-                    <h3 class="font-headline-md text-headline-md mb-4 text-primary">{% trans "高い定着率" %}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-                        {% trans "徹底したサポート体制と適正なマッチングにより、業界平均を大きく上回る数値を維持。安定した生産ラインを実現します。" %}
-                    </p>
+    <!-- Body -->
+    <div class="container-content section-pad space-y-24">
+        <!-- Licenses -->
+        <section data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-1 h-8 bg-secondary rounded-full"></span>
+                <h2 class="text-2xl font-bold text-primary">各種許認可</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">badge</span>
+                    <p class="text-xs text-muted mb-2">有料職業紹介事業許可</p>
+                    <p class="text-xl font-bold text-primary">40-ユ-301389</p>
                 </div>
-                <div class="mt-12 flex items-baseline gap-4 relative z-10">
-                    <span class="font-display-xl text-display-xl text-on-background">90</span>
-                    <span class="text-4xl font-bold text-primary">%+</span>
-                    <span class="text-zinc-400 font-bold ml-4">RETENTION RATE</span>
+                <div class="glass-card p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">account_balance</span>
+                    <p class="text-xs text-muted mb-2">登録支援機関</p>
+                    <p class="text-xl font-bold text-primary">23登-009068</p>
                 </div>
-                <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none">
-                    <span class="font-display-xl text-[240px] leading-none text-primary italic font-black">90</span>
+                <div class="glass-card p-8 flex flex-col items-center text-center">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">precision_manufacturing</span>
+                    <p class="text-xs text-muted mb-2">製造分野特定技能協議会</p>
+                    <p class="text-xl font-bold text-primary">122-007771</p>
                 </div>
             </div>
-            <!-- One-Stop Card -->
-            <div class="bg-primary text-on-primary rounded-lg p-10 flex flex-col justify-between border-b-8 border-on-primary-fixed-variant">
-                <div>
-                    <span class="material-symbols-outlined text-4xl mb-6">all_inclusive</span>
-                    <h3 class="font-headline-md text-headline-md mb-4">{% trans "一気通貫" %}</h3>
-                </div>
-                <p class="font-body-md text-body-md opacity-90">{% trans "戦略立案から実作業まで、ワンストップで課題を解決。分断のない効率的なプロセスを提供します。" %}</p>
+        </section>
+        <!-- Company info -->
+        <section data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-1 h-8 bg-secondary rounded-full"></span>
+                <h2 class="text-2xl font-bold text-primary">会社情報</h2>
             </div>
-            <!-- High-Skilled Talent -->
-            <div class="bg-on-background text-on-primary rounded-lg p-10 flex flex-col justify-between">
-                <div>
-                    <span class="material-symbols-outlined text-4xl mb-6">diversity_3</span>
-                    <h3 class="font-headline-md text-headline-md mb-4">{% trans "高度外国人材" %}</h3>
-                </div>
-                <p class="font-body-md text-body-md opacity-70">{% trans "厳格な基準で選抜された意欲の高い人材が、貴社の現場に新しい活力と確かな技術をもたらします。" %}</p>
-            </div>
-            <!-- Compliance Card -->
-            <div class="md:col-span-2 bg-surface-container rounded-lg p-10 flex items-center gap-8 border border-outline-variant">
-                <div class="flex-1">
-                    <h3 class="font-headline-md text-headline-md mb-4">{% trans "徹底した法令遵守" %}</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">
-                        {% trans "全てのオペレーションにおいてコンプライアンスを最優先。ライセンス情報の透明性を担保し、安全なパートナーシップを築きます。" %}
-                    </p>
-                </div>
-                <div class="hidden sm:block">
-                    <span class="material-symbols-outlined text-[100px] text-primary/20">gavel</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Office Showcase (Asymmetric Layout) -->
-    <section class="py-20 px-10 max-w-[1440px] mx-auto overflow-hidden">
-        <div class="flex flex-col md:flex-row gap-12 items-end mb-16">
-            <div class="flex-1">
-                <h2 class="font-headline-lg text-headline-lg mb-6">
-                    {% trans "拠点の" %}<span>{% trans "プロフェッショナリズム" %}</span>
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    {% trans "私たちのオフィスは、精密な業務遂行と創造的なディスカッションを支えるモダンな空間です。清潔感と機能性を両立させた環境から、高品質なサービスが生まれます。" %}
-                </p>
-            </div>
-            <div class="hidden md:block">
-                <span class="font-display-xl text-outline-mask text-zinc-200">LOCATIONS</span>
-            </div>
-        </div>
-        <div class="grid grid-cols-12 gap-6 h-[600px]">
-            <div class="col-span-12 md:col-span-8 rounded-lg overflow-hidden group">
-                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                     data-alt="imposing modern skyscraper office building with glass facade and steel structure during daytime, professional architecture"
-                     src="{% static 'images/stitch_90c110a9.jpg' %}" />
-            </div>
-            <div class="col-span-12 md:col-span-4 grid grid-rows-2 gap-6">
-                <div class="rounded-lg overflow-hidden group">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                         data-alt="close-up of professional team meeting in a bright conference room with minimal design and glass walls"
-                         src="{% static 'images/stitch_1e379fac.jpg' %}" />
-                </div>
-                <div class="rounded-lg overflow-hidden group">
-                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                         data-alt="clean and minimalist coworking space with designer furniture and natural light filtering through windows"
-                         src="{% static 'images/stitch_a0bf292a.jpg' %}" />
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Legal and License Cards -->
-    <section class="py-20 bg-surface-container-low px-10">
-        <div class="max-w-[1440px] mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-headline-lg text-headline-lg">{% trans "企業情報とライセンス" %}</h2>
-                <p class="text-zinc-500 mt-4">{% trans "信頼を証明する法的基盤と認定情報" %}</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- License Card 1 -->
-                <div class="bg-white border-l-4 border-primary p-8 rounded-lg shadow-sm hover:translate-y-[-4px] transition-all">
-                    <p class="font-label-bold text-primary mb-2">{% trans "労働者派遣事業" %}</p>
-                    <h4 class="font-headline-md text-[24px] mb-4">派 13-000000</h4>
-                    <div class="h-px bg-zinc-100 mb-4"></div>
-                    <p class="text-zinc-500 text-sm">{% trans "適正な雇用管理とスタッフのキャリア支援を徹底しています。" %}</p>
-                </div>
-                <!-- License Card 2 -->
-                <div class="bg-white border-l-4 border-on-background p-8 rounded-lg shadow-sm hover:translate-y-[-4px] transition-all">
-                    <p class="font-label-bold text-zinc-400 mb-2">{% trans "有料職業紹介事業" %}</p>
-                    <h4 class="font-headline-md text-[24px] mb-4">13-ユ-000000</h4>
-                    <div class="h-px bg-zinc-100 mb-4"></div>
-                    <p class="text-zinc-500 text-sm">{% trans "貴社のニーズに合致する最適なプロフェッショナルをご提案。" %}</p>
-                </div>
-                <!-- License Card 3 -->
-                <div class="bg-white border-l-4 border-primary p-8 rounded-lg shadow-sm hover:translate-y-[-4px] transition-all">
-                    <p class="font-label-bold text-primary mb-2">ISO 9001 {% trans "認証" %}</p>
-                    <h4 class="font-headline-md text-[24px] mb-4">{% trans "品質管理基準" %}</h4>
-                    <div class="h-px bg-zinc-100 mb-4"></div>
-                    <p class="text-zinc-500 text-sm">{% trans "グローバルスタンダードに基づいた一貫性のある高品質サービス。" %}</p>
-                </div>
-                <!-- License Card 4 -->
-                <div class="bg-white border-l-4 border-on-background p-8 rounded-lg shadow-sm hover:translate-y-[-4px] transition-all">
-                    <p class="font-label-bold text-zinc-400 mb-2">{% trans "登録支援機関" %}</p>
-                    <h4 class="font-headline-md text-[24px] mb-4">20登-000000</h4>
-                    <div class="h-px bg-zinc-100 mb-4"></div>
-                    <p class="text-zinc-500 text-sm">{% trans "特定技能人材の適正な受け入れと生活・業務サポートを遂行。" %}</p>
-                </div>
-            </div>
-            <div class="mt-20 bg-white rounded-lg p-10 border border-zinc-200">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="font-headline-md text-headline-md mb-6">{% trans "会社概要" %}</h3>
-                        <dl class="space-y-4">
-                            <div class="flex border-b border-zinc-100 pb-2">
-                                <dt class="w-32 font-bold">{% trans "社名" %}</dt>
-                                <dd>
-                                    株式会社 e-tac (イー・タック)
-                                </dd>
-                            </div>
-                            <div class="flex border-b border-zinc-100 pb-2">
-                                <dt class="w-32 font-bold">{% trans "設立" %}</dt>
-                                <dd>
-                                    2018年 10月
-                                </dd>
-                            </div>
-                            <div class="flex border-b border-zinc-100 pb-2">
-                                <dt class="w-32 font-bold">{% trans "代表者" %}</dt>
-                                <dd>
-                                    {% trans "代表取締役 山田 太郎" %}
-                                </dd>
-                            </div>
-                            <div class="flex border-b border-zinc-100 pb-2">
-                                <dt class="w-32 font-bold">{% trans "所在地" %}</dt>
-                                <dd>
-                                    東京都港区新橋 1-2-3 製造ビル 4F
-                                </dd>
-                            </div>
-                            <div class="flex">
-                                <dt class="w-32 font-bold">{% trans "資本金" %}</dt>
-                                <dd>
-                                    50,000,000円
-                                </dd>
-                            </div>
-                        </dl>
+            <div class="glass-card overflow-hidden">
+                {% for label, value in info_rows %}
+                    <div class="grid grid-cols-[180px_1fr] border-b border-black/5 last:border-b-0">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm flex items-center">{{ label }}</div>
+                        <div class="px-6 py-4 text-muted text-sm flex items-center">{{ value }}</div>
                     </div>
-                    <div class="h-64 rounded-lg overflow-hidden bg-zinc-200">
-                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                             data-alt="abstract architectural geometry with blue sky, representing growth and professional structure"
-                             src="{% static 'images/stitch_79284697.jpg' %}" />
+                {% empty %}
+                    <div class="grid grid-cols-[180px_1fr] border-b border-black/5">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm">会社名</div>
+                        <div class="px-6 py-4 text-muted text-sm">BPOソリューション株式会社</div>
+                    </div>
+                    <div class="grid grid-cols-[180px_1fr] border-b border-black/5">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm">設立</div>
+                        <div class="px-6 py-4 text-muted text-sm">2010年4月</div>
+                    </div>
+                    <div class="grid grid-cols-[180px_1fr] border-b border-black/5">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm">資本金</div>
+                        <div class="px-6 py-4 text-muted text-sm">5,000万円</div>
+                    </div>
+                    <div class="grid grid-cols-[180px_1fr] border-b border-black/5">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm">代表者</div>
+                        <div class="px-6 py-4 text-muted text-sm">田中 正樹</div>
+                    </div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm">本社所在地</div>
+                        <div class="px-6 py-4 text-muted text-sm">東京都千代田区丸の内1-2-3</div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- Operation Flow -->
+        <section data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-1 h-8 bg-secondary rounded-full"></span>
+                <h2 class="text-2xl font-bold text-primary">オペレーション・フロー</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                {% for step in steps %}
+                {% empty %}
+                    <div class="glass-card p-6">
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">01</div>
+                        <h4 class="font-bold text-primary text-sm mb-2">コンサルテーション</h4>
+                        <p class="text-xs text-muted leading-relaxed">貴社の課題を詳細にヒアリングし、最適なアウトソーシング範囲を定義します。</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">02</div>
+                        <h4 class="font-bold text-primary text-sm mb-2">プロセス設計</h4>
+                        <p class="text-xs text-muted leading-relaxed">標準化と自動化を組み合わせた、ミスのない業務フローを構築・可視化します。</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">03</div>
+                        <h4 class="font-bold text-primary text-sm mb-2">体制構築</h4>
+                        <p class="text-xs text-muted leading-relaxed">専門スキルを持つスタッフをアサインし、厳格な品質管理体制を整備します。</p>
+                    </div>
+                    <div class="glass-card p-6 border-t-4 border-secondary">
+                        <div class="w-9 h-9 rounded-xl bg-secondary text-white flex items-center justify-center text-sm font-bold mb-4">
+                            04
+                        </div>
+                        <h4 class="font-bold text-primary text-sm mb-2">安定運用・改善</h4>
+                        <p class="text-xs text-muted leading-relaxed">継続的なモニタリングと定期報告により、さらなる効率化を提案し続けます。</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- Retention rate -->
+        <section data-aos="fade-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="glass-card p-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-1 h-8 bg-secondary rounded-full"></span>
+                        <h2 class="text-2xl font-bold text-primary">驚異の定着率</h2>
+                    </div>
+                    <div class="text-7xl font-black text-primary leading-none mb-6">
+                        90%<span class="text-3xl">+</span>
+                    </div>
+                    <p class="text-muted leading-relaxed mb-8 text-sm">
+                        徹底した教育研修と、スタッフのメンタルケアプログラムにより、業界平均を大きく上回る定着率を実現。長期的な安定稼働が、高品質なサービスを維持します。
+                    </p>
+                    <div class="space-y-5">
+                        <div>
+                            <div class="flex justify-between text-sm font-semibold text-primary mb-2">
+                                <span>当社定着率</span><span>92.4%</span>
+                            </div>
+                            <div class="h-3 bg-base-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width:92.4%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm text-muted mb-2">
+                                <span>業界平均</span><span>64.0%</span>
+                            </div>
+                            <div class="h-3 bg-base-200 rounded-full overflow-hidden">
+                                <div class="h-full bg-neutral/30 rounded-full" style="width:64%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-80 lg:h-[420px] rounded-2xl overflow-hidden relative group">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuF2sz_xM-Df4nKH_fRA_pvcRYPmeILt0r-EoQ19t7oVSHP4689AjUjLT0PnHoCo0M_Rgl9Jlq5JHS8NFu1NgT822Hf8KwSNdViume5QfZudzvfxqszkeq5Tcy_IZcWBC9xINHZ1DTGqFqCuTCqlej7CEK2wJU2UEx2Sgy_eZzesbqtNsMQxLR2R-3kmMayzbfIJ5bbWExGEHBaB81l369cemg5DAtuLE91u5AxWWuFFCJJZIkZLUGooKn4S54a22AwVtPwYUvRQ"
+                         alt="Our team" />
+                    <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-xl">「人が財産」という考え方</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- CTA Section -->
-    <section class="py-20 px-10 max-w-[1440px] mx-auto text-center">
-        <div class="bg-primary-container rounded-xl py-20 px-10 overflow-hidden relative">
-            <div class="absolute inset-0 opacity-10">
-                <span class="font-display-xl text-[200px] text-white absolute -top-10 -left-10 select-none">E-TAC</span>
+        </section>
+        <!-- Office gallery marquee -->
+        <section data-aos="fade-up">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-1 h-8 bg-secondary rounded-full"></span>
+                <h2 class="text-2xl font-bold text-primary">オフィス環境</h2>
             </div>
-            <div class="relative z-10">
-                <h2 class="font-headline-lg text-headline-lg text-on-primary mb-8">
-                    {% trans "次なる生産性の向上へ、" %}
-                    <br />
-                    {% trans "共に歩みましょう。" %}
-                </h2>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{% url 'contact' %}"
-                       class="bg-white text-primary px-10 py-5 rounded-full font-label-bold text-lg hover:bg-zinc-100 transition-colors">{% trans "今すぐ相談する" %}</a>
-                    <button class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full font-label-bold text-lg hover:bg-white/10 transition-colors">
-                        {% trans "サービス資料をDL" %}
-                    </button>
+            <div class="overflow-hidden -mx-6 lg:-mx-10">
+                {% if office_photos %}
+                <div class="marquee-track gap-4 px-6">
+                    {% for title, src in office_photos %}
+                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                        <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
+                        <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
+                    </div>
+                    {% endfor %}
+                    {# Duplicate for seamless loop #}
+                    {% for title, src in office_photos %}
+                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                        <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
+                        <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
+                    </div>
+                    {% endfor %}
                 </div>
+                {% else %}
+                {# Static fallback — 5 cards × 2 sets for seamless marquee loop #}
+                <div class="marquee-track gap-4 px-6">
+                    {% for n in "12345" %}
+                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
+                             alt="オフィス" class="w-full h-48 object-cover" />
+                        <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
+                    </div>
+                    {% endfor %}
+                    {# Second set for seamless loop #}
+                    {% for n in "12345" %}
+                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
+                             alt="オフィス" class="w-full h-48 object-cover" />
+                        <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
-        </div>
-    </section>
-{% endblock content %}
+        </section>
+    </div>
+{% endblock %}
