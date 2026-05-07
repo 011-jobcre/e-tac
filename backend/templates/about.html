@@ -30,30 +30,6 @@
     </section>
     <!-- Body -->
     <div class="container-content section-pad space-y-24">
-        <!-- Licenses -->
-        <section data-aos="fade-up">
-            <div class="flex items-center gap-3 mb-8">
-                <span class="w-1 h-8 bg-secondary rounded-full"></span>
-                <h2 class="text-2xl font-bold text-primary">各種許認可</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-8 flex flex-col items-center text-center">
-                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">badge</span>
-                    <p class="text-xs text-muted mb-2">有料職業紹介事業許可</p>
-                    <p class="text-xl font-bold text-primary">40-ユ-301389</p>
-                </div>
-                <div class="glass-card p-8 flex flex-col items-center text-center">
-                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">account_balance</span>
-                    <p class="text-xs text-muted mb-2">登録支援機関</p>
-                    <p class="text-xl font-bold text-primary">23登-009068</p>
-                </div>
-                <div class="glass-card p-8 flex flex-col items-center text-center">
-                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">precision_manufacturing</span>
-                    <p class="text-xs text-muted mb-2">製造分野特定技能協議会</p>
-                    <p class="text-xl font-bold text-primary">122-007771</p>
-                </div>
-            </div>
-        </section>
         <!-- Company info -->
         <section data-aos="fade-up">
             <div class="flex items-center gap-3 mb-8">
@@ -63,7 +39,9 @@
             <div class="glass-card overflow-hidden">
                 {% for label, value in info_rows %}
                     <div class="grid grid-cols-[180px_1fr] border-b border-black/5 last:border-b-0">
-                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm flex items-center">{{ label }}</div>
+                        <div class="bg-base-200 px-6 py-4 font-semibold text-primary text-sm flex items-center">
+                            {{ label }}
+                        </div>
                         <div class="px-6 py-4 text-muted text-sm flex items-center">{{ value }}</div>
                     </div>
                 {% empty %}
@@ -100,17 +78,23 @@
                 {% for step in steps %}
                 {% empty %}
                     <div class="glass-card p-6">
-                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">01</div>
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">
+                            01
+                        </div>
                         <h4 class="font-bold text-primary text-sm mb-2">コンサルテーション</h4>
                         <p class="text-xs text-muted leading-relaxed">貴社の課題を詳細にヒアリングし、最適なアウトソーシング範囲を定義します。</p>
                     </div>
                     <div class="glass-card p-6">
-                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">02</div>
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">
+                            02
+                        </div>
                         <h4 class="font-bold text-primary text-sm mb-2">プロセス設計</h4>
                         <p class="text-xs text-muted leading-relaxed">標準化と自動化を組み合わせた、ミスのない業務フローを構築・可視化します。</p>
                     </div>
                     <div class="glass-card p-6">
-                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">03</div>
+                        <div class="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center text-sm font-bold mb-4">
+                            03
+                        </div>
                         <h4 class="font-bold text-primary text-sm mb-2">体制構築</h4>
                         <p class="text-xs text-muted leading-relaxed">専門スキルを持つスタッフをアサインし、厳格な品質管理体制を整備します。</p>
                     </div>
@@ -175,40 +159,42 @@
             </div>
             <div class="overflow-hidden -mx-6 lg:-mx-10">
                 {% if office_photos %}
-                <div class="marquee-track gap-4 px-6">
-                    {% for title, src in office_photos %}
-                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
-                        <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
-                        <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
+                    <div class="marquee-track gap-4 px-6">
+                        {% for title, src in office_photos %}
+                            <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                                <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
+                                <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
+                            </div>
+                        {% endfor %}
+                        {# Duplicate for seamless loop #}
+                        {% for title, src in office_photos %}
+                            <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                                <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
+                                <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                    {# Duplicate for seamless loop #}
-                    {% for title, src in office_photos %}
-                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
-                        <img src="{{ src }}" alt="{{ title }}" class="w-full h-48 object-cover" />
-                        <div class="p-3 text-xs font-medium text-muted">{{ title }}</div>
-                    </div>
-                    {% endfor %}
-                </div>
                 {% else %}
-                {# Static fallback — 5 cards × 2 sets for seamless marquee loop #}
-                <div class="marquee-track gap-4 px-6">
-                    {% for n in "12345" %}
-                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
-                             alt="オフィス" class="w-full h-48 object-cover" />
-                        <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
+                    {# Static fallback — 5 cards × 2 sets for seamless marquee loop #}
+                    <div class="marquee-track gap-4 px-6">
+                        {% for n in "12345" %}
+                            <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
+                                     alt="オフィス"
+                                     class="w-full h-48 object-cover" />
+                                <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
+                            </div>
+                        {% endfor %}
+                        {# Second set for seamless loop #}
+                        {% for n in "12345" %}
+                            <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
+                                     alt="オフィス"
+                                     class="w-full h-48 object-cover" />
+                                <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
+                            </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
-                    {# Second set for seamless loop #}
-                    {% for n in "12345" %}
-                    <div class="flex-none w-72 rounded-xl overflow-hidden glass-card">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqRXojnCduKR2eXN9tF2qesuZSlgUOMiVsszYAbas-3EEYTfQCHDke-ohEmGhRs3LTJiM4ce220KHecdsqbmvDUwSuVT1GckBa0K-iv6MT3jaAg1TYTymjNK1ZlKWEWlJ5hWUovVvkNkBS7bU30wML5UAxKauw-AWqogoI0-iJq3Li6Xtj_zN6OWZpXQtCNrwbxvnzQo07dmxb4rqm3xM-sPg52kKmqGebHLjnY9gu16xDAh4CLn6wv-kPtA9XmqGCxavHWklqeA"
-                             alt="オフィス" class="w-full h-48 object-cover" />
-                        <div class="p-3 text-xs font-medium text-muted">オフィス環境</div>
-                    </div>
-                    {% endfor %}
-                </div>
                 {% endif %}
             </div>
         </section>

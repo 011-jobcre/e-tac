@@ -23,11 +23,11 @@
     --color-base-content: #1a2332;
 
     /* Brand */
-    --color-primary:   #1a5276;
+    --color-primary: #1a5276;
     --color-primary-content: #ffffff;
     --color-secondary: #006687;
     --color-secondary-content: #ffffff;
-    --color-accent:    #d4a843;
+    --color-accent: #d4a843;
     --color-accent-content: #1a2332;
 
     /* Neutral */
@@ -35,15 +35,15 @@
     --color-neutral-content: #ffffff;
 
     /* States */
-    --color-info:    #2e86ab;
+    --color-info: #2e86ab;
     --color-success: #2e7d32;
     --color-warning: #f9a825;
-    --color-error:   #ba1a1a;
+    --color-error: #ba1a1a;
 
     /* Shape */
     --radius-selector: 2rem;
-    --radius-field:    0.5rem;
-    --radius-box:      0.75rem;
+    --radius-field: 0.5rem;
+    --radius-box: 0.75rem;
 }
 
 /* ------------------------------------------------------------
@@ -51,39 +51,55 @@
    ------------------------------------------------------------ */
 @theme {
     /* Fonts */
-    --font-sans:    "Inter", "Noto Sans JP", sans-serif;
+    --font-sans: "Inter", "Noto Sans JP", sans-serif;
     --font-display: "Inter", "Noto Sans JP", sans-serif;
-    --font-body:    "Noto Sans JP", "Inter", sans-serif;
-    --font-mono:    ui-monospace, monospace;
+    --font-body: "Noto Sans JP", "Inter", sans-serif;
+    --font-mono: ui-monospace, monospace;
 
     /* Extra brand colors (usable as text-*, bg-*, border-*) */
-    --color-navy:        #003b5a;
-    --color-gold:        #d4a843;
-    --color-muted:       #5a6472;
-    --color-surface:     #f4f6f9;
-    --color-border:      rgba(26, 82, 118, 0.12);
+    --color-navy: #003b5a;
+    --color-gold: #d4a843;
+    --color-muted: #5a6472;
+    --color-surface: #f4f6f9;
+    --color-border: rgba(26, 82, 118, 0.12);
 
     /* Layout */
     --width-content: 1280px;
 
     /* Type scale */
-    --text-hero:     clamp(2.5rem, 6vw, 5rem);
-    --text-display:  clamp(2rem, 4vw, 3rem);
+    --text-hero: clamp(2.5rem, 6vw, 5rem);
+    --text-display: clamp(2rem, 4vw, 3rem);
     --text-headline: clamp(1.5rem, 2.5vw, 2rem);
-    --text-title:    1.25rem;
-    --text-body:     1rem;
-    --text-small:    0.875rem;
-    --text-xs:       0.75rem;
+    --text-title: 1.25rem;
+    --text-body: 1rem;
+    --text-small: 0.875rem;
+    --text-xs: 0.75rem;
 
     /* Spacing scale */
     --spacing-section: 5rem;
     --spacing-content: 2rem;
+
+    /* JOB CREATOR specific tokens */
+    --color-etac-navy: #0b1426;
+    --color-etac-navy-light: #121e35;
+    --color-etac-navy-dark: #1c2d4f;
+    --color-etac-teal: #00d4a4;
+    --color-etac-teal-dark: #00b88e;
+    --color-etac-gold: #f5a623;
+    --color-etac-text: #1a2540;
+    --color-etac-gray-light: #f4f6fa;
+    --color-etac-gray-mid: #8492a6;
+    --color-etac-gray-dark: #3d4f6b;
+
+    --font-etac-head: "Syne", sans-serif;
+    --font-etac-body: "DM Sans", sans-serif;
 }
 
 /* ------------------------------------------------------------
    3. BASE STYLES
    ------------------------------------------------------------ */
-html, body {
+html,
+body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -91,7 +107,11 @@ html, body {
 
 /* Material Symbols default weight */
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
     display: inline-block;
     vertical-align: middle;
     line-height: 1;
@@ -151,7 +171,7 @@ html, body {
         background: rgba(255, 255, 255, 0.72);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
-        border: 1px solid rgba(26, 82, 118, 0.10);
+        border: 1px solid rgba(26, 82, 118, 0.1);
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
         border-radius: 0.75rem;
     }
@@ -160,7 +180,9 @@ html, body {
     .shine-btn {
         position: relative;
         overflow: hidden;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
     }
     .shine-btn::after {
         content: "";
@@ -169,7 +191,7 @@ html, body {
         background: linear-gradient(
             105deg,
             transparent 40%,
-            rgba(255,255,255,0.22) 50%,
+            rgba(255, 255, 255, 0.22) 50%,
             transparent 60%
         );
         transform: translateX(-100%);
@@ -177,7 +199,7 @@ html, body {
     }
     .shine-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
     }
     .shine-btn:hover::after {
         transform: translateX(100%);
@@ -185,8 +207,12 @@ html, body {
 
     /* ── Marquee ────────────────────────────────────────────── */
     @keyframes marquee-scroll {
-        from { transform: translateX(0); }
-        to   { transform: translateX(-50%); }
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
     }
     .marquee-track {
         display: flex;
@@ -199,9 +225,17 @@ html, body {
 
     /* ── Carousel Fade ──────────────────────────────────────── */
     @keyframes fade-cycle {
-        0%, 26%  { opacity: 1; }
-        33%, 93% { opacity: 0; }
-        100%     { opacity: 1; }
+        0%,
+        26% {
+            opacity: 1;
+        }
+        33%,
+        93% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
     .carousel-fade-item {
         position: absolute;
@@ -209,14 +243,24 @@ html, body {
         opacity: 0;
         animation: fade-cycle 18s infinite;
     }
-    .carousel-fade-item:nth-child(1) { animation-delay: 0s; }
-    .carousel-fade-item:nth-child(2) { animation-delay: 6s; }
-    .carousel-fade-item:nth-child(3) { animation-delay: 12s; }
+    .carousel-fade-item:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .carousel-fade-item:nth-child(2) {
+        animation-delay: 6s;
+    }
+    .carousel-fade-item:nth-child(3) {
+        animation-delay: 12s;
+    }
 
     /* ── Progress bar animation ─────────────────────────────── */
     @keyframes progress-slide {
-        0%   { transform: translateX(-100%); }
-        100% { transform: translateX(400%); }
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(400%);
+        }
     }
     .progress-bar {
         animation: progress-slide 2.8s ease-in-out infinite;
@@ -226,5 +270,785 @@ html, body {
     .text-outline-mask {
         -webkit-text-stroke: 1px currentColor;
         color: transparent;
+    }
+
+    /* ── JOB CREATOR — etac-page Components ────────────────── */
+    .etac-page {
+        @apply font-etac-body text-etac-text bg-white leading-relaxed;
+        scroll-behavior: smooth;
+    }
+    .etac-page h1,
+    .etac-page h2,
+    .etac-page h3,
+    .etac-page .font-head {
+        @apply font-etac-head;
+    }
+
+    .etac-nav {
+        @apply fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[4%] h-[68px] bg-etac-navy/96 backdrop-blur-xl border-b border-etac-teal/15;
+    }
+    .etac-nav-logo {
+        @apply font-etac-head font-extrabold text-[19px] text-white tracking-tighter shrink-0;
+    }
+    .etac-nav-logo span {
+        @apply text-etac-teal;
+    }
+    .etac-nav-links {
+        @apply hidden lg:flex gap-6 list-none flex-1 justify-center m-0 p-0;
+    }
+    .etac-nav-links a {
+        @apply text-[13px] text-white no-underline transition-colors duration-200 whitespace-nowrap hover:text-etac-teal;
+    }
+    .etac-nav-right {
+        @apply flex items-center gap-3 shrink-0;
+    }
+    .etac-lang-switcher {
+        @apply flex gap-1 bg-white/7 rounded-lg p-1;
+    }
+    .etac-lang-btn {
+        @apply bg-transparent border-none text-white text-[12px] font-semibold px-2.5 py-1 rounded-md cursor-pointer transition-all duration-200 font-etac-body tracking-wider hover:bg-white/10 hover:text-white;
+    }
+    .etac-lang-btn.active {
+        @apply bg-etac-teal text-etac-navy;
+    }
+    .etac-nav-cta {
+        @apply bg-etac-teal text-etac-navy px-[18px] py-2 rounded-md font-semibold text-[13px] transition-colors duration-200 no-underline hover:bg-etac-teal-dark;
+    }
+
+    .etac-hero {
+        @apply min-h-screen bg-etac-navy flex items-center relative overflow-hidden px-[5%] pt-[110px] pb-[80px];
+    }
+    .etac-hero-bg {
+        @apply absolute inset-0 z-0;
+    }
+    .etac-hero-bg img {
+        @apply w-full h-full object-cover opacity-35;
+    }
+    .etac-hero-overlay {
+        @apply absolute inset-0 bg-linear-to-r from-etac-navy via-etac-navy/70 to-transparent z-10;
+    }
+    .etac-hero-inner {
+        @apply relative z-20 max-w-[1180px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[72px] items-center;
+    }
+    .etac-hero-badge {
+        @apply inline-flex items-center gap-2 bg-etac-teal/10 border border-etac-teal/30 px-3.5 py-1 rounded-full text-[12px] text-etac-teal font-semibold mb-[22px] tracking-widest;
+    }
+    .etac-badge-dot {
+        @apply w-1.5 h-1.5 rounded-full bg-etac-teal shrink-0;
+    }
+    .etac-hero-title {
+        @apply font-etac-head text-[clamp(32px,5vw,58px)] font-extrabold text-white leading-[1.1] tracking-[-1.5px] mb-[22px];
+    }
+    .etac-hero-title .accent {
+        @apply text-etac-teal;
+    }
+    .etac-hero-title .line2 {
+        @apply block text-[0.62em] text-white font-normal tracking-[-0.3px] mt-2.5 leading-[1.4];
+    }
+    .etac-hero-sub {
+        @apply text-white text-[15px] leading-[1.85] mb-9 max-w-[480px];
+    }
+    .etac-hero-btns {
+        @apply flex gap-3.5 flex-wrap;
+    }
+    .etac-btn-primary {
+        @apply bg-etac-teal text-etac-navy px-[30px] py-[13px] rounded-lg font-semibold text-[15px] no-underline transition-all duration-200 inline-block hover:bg-etac-teal-dark hover:-translate-y-0.5;
+    }
+    .etac-btn-outline {
+        @apply border border-white/30 text-white px-[30px] py-[13px] rounded-lg text-[15px] no-underline transition-all duration-200 inline-block hover:border-etac-teal hover:text-etac-teal;
+    }
+    .etac-hero-stats {
+        @apply grid grid-cols-3 gap-px bg-white/7 border border-white/7 rounded-[14px] overflow-hidden mt-[44px];
+    }
+    .etac-stat-box {
+        @apply p-4 lg:px-4 lg:py-[22px] bg-white/2.5 text-center;
+    }
+    .etac-stat-num {
+        @apply font-etac-head text-[34px] font-extrabold text-etac-teal leading-none mb-1;
+    }
+    .etac-stat-label {
+        @apply text-[11px] text-white;
+    }
+
+    .etac-one-touch-card {
+        @apply bg-etac-navy-light border border-etac-teal/20 rounded-[20px] p-7 lg:px-7 lg:py-8 relative;
+    }
+    .etac-otc-label {
+        @apply font-etac-head text-[12px] font-bold text-etac-teal tracking-[2px] uppercase mb-[22px];
+    }
+    .etac-otc-client {
+        @apply bg-etac-navy-dark border border-white/7 rounded-xl px-[18px] py-3.5 mb-[18px] flex items-center gap-3;
+    }
+    .etac-otc-icon {
+        @apply w-[38px] h-[38px] rounded-[9px] bg-etac-gold/15 flex items-center justify-center text-[18px] shrink-0;
+    }
+    .etac-otc-client-title {
+        @apply text-[13px] font-semibold text-white mb-[2px];
+    }
+    .etac-otc-client-sub {
+        @apply text-[11px] text-white;
+    }
+    .etac-otc-arrow {
+        @apply text-center text-etac-teal text-[22px] my-1.5;
+    }
+    .etac-otc-services {
+        @apply grid grid-cols-2 gap-2 mb-3.5;
+    }
+    .etac-otc-svc {
+        @apply bg-etac-navy-dark border border-etac-teal/10 rounded-lg px-3 py-2.5 text-[11px] text-white/65 flex items-center gap-[7px];
+    }
+    .etac-otc-svc-dot {
+        @apply w-1.25 h-1.25 rounded-full bg-etac-teal shrink-0;
+    }
+    .etac-otc-center-label {
+        @apply text-center text-[13px] font-semibold text-white/80 pb-3.5;
+    }
+    .etac-otc-result {
+        @apply bg-etac-teal/8 border border-etac-teal/22 rounded-lg px-4 py-3 text-[12px] text-etac-teal text-center font-semibold;
+    }
+
+    .etac-section {
+        @apply px-[5%] py-[64px] lg:py-[96px];
+    }
+    .etac-section-inner {
+        @apply max-w-[1180px] mx-auto;
+    }
+    .etac-section-tag {
+        @apply inline-block text-[11px] font-bold tracking-[2px] uppercase text-etac-teal-dark mb-3;
+    }
+    .etac-section-title {
+        @apply font-etac-head text-[clamp(26px,4vw,44px)] font-extrabold leading-[1.15] tracking-tighter text-etac-text mb-3.5;
+    }
+    .etac-section-sub {
+        @apply text-[15px] text-etac-gray-mid max-w-[600px] leading-[1.85] mb-[56px];
+    }
+
+    .etac-problems-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-[22px];
+    }
+    .etac-problem-card {
+        @apply bg-white rounded-2xl p-[26px] lg:px-[26px] lg:py-[30px] border border-black/5 relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-1 before:h-full before:bg-etac-teal;
+    }
+    .etac-problem-num {
+        @apply font-etac-head text-[44px] font-extrabold text-etac-teal/13 leading-none mb-1.5;
+    }
+    .etac-problem-title {
+        @apply font-etac-head text-[17px] font-bold text-etac-text mb-2.5;
+    }
+    .etac-problem-body {
+        @apply text-[13px] text-etac-gray-mid leading-[1.75];
+    }
+    .etac-problem-stat {
+        @apply mt-3.5 px-3 py-2 bg-etac-gray-light rounded-md text-[12px] font-medium text-etac-navy-dark;
+    }
+    .etac-problem-stat strong {
+        @apply text-etac-teal-dark;
+    }
+
+    .etac-solution-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[72px] items-center;
+    }
+    .etac-compare-table {
+        @apply border border-black/8 rounded-2xl overflow-hidden;
+    }
+    .etac-compare-head {
+        @apply grid grid-cols-1 md:grid-cols-2;
+    }
+    .etac-compare-head-cell {
+        @apply px-[18px] py-3 text-[12px] font-bold tracking-wider uppercase text-center;
+    }
+    .etac-ch-core {
+        @apply bg-etac-navy text-etac-teal;
+    }
+    .etac-ch-non {
+        @apply bg-black/4 text-etac-gray-mid;
+    }
+    .etac-compare-row {
+        @apply grid grid-cols-1 md:grid-cols-2 border-t border-black/5;
+    }
+    .etac-compare-cell {
+        @apply px-[18px] py-3 text-[13px] flex items-center gap-[7px];
+    }
+    .etac-compare-cell.core-cell {
+        @apply text-etac-text font-medium bg-etac-navy/[0.02];
+    }
+    .etac-compare-cell.non-cell {
+        @apply text-etac-gray-mid;
+    }
+    .etac-check {
+        @apply text-etac-teal;
+    }
+    .etac-manufacturing-eq {
+        @apply bg-etac-navy rounded-2xl p-6 lg:px-[22px] lg:py-[26px] mt-7;
+    }
+    .etac-mfg-eq-title {
+        @apply text-[11px] font-bold text-etac-teal tracking-[1.5px] uppercase mb-3.5;
+    }
+    .etac-mfg-eq-row {
+        @apply grid grid-cols-1 md:grid-cols-[1fr_28px_1fr] gap-2.5 items-center;
+    }
+    .etac-mfg-col {
+        @apply bg-etac-navy-dark rounded-lg px-3.5 py-3;
+    }
+    .etac-mfg-col-title {
+        @apply text-[10px] text-etac-teal font-bold tracking-wider mb-2 uppercase;
+    }
+    .etac-mfg-step {
+        @apply text-[11px] text-white/55 py-[3px] border-b border-white/5 last:border-none;
+    }
+    .etac-mfg-eq-sign {
+        @apply text-center text-etac-teal text-[22px] font-extrabold;
+    }
+
+    .etac-onestop {
+        @apply bg-etac-navy;
+    }
+    .etac-onestop .etac-section-title {
+        @apply text-white;
+    }
+    .etac-onestop .etac-section-sub {
+        @apply text-white/50;
+    }
+    .etac-flow-client {
+        @apply bg-etac-gold/10 border border-etac-gold/30 rounded-2xl p-7 lg:px-7 lg:py-6 text-center mb-9 max-w-[420px] mx-auto;
+    }
+    .etac-flow-client-label {
+        @apply text-[11px] text-etac-gold font-bold tracking-[1.5px] uppercase mb-1.5;
+    }
+    .etac-flow-client-text {
+        @apply text-[15px] text-white/85 leading-tight;
+    }
+    .etac-flow-client-example {
+        @apply mt-2.5 bg-black/20 rounded-lg px-3.5 py-2 text-[12px] italic text-white/45;
+    }
+    .etac-flow-arrow-down {
+        @apply text-center text-etac-teal text-[28px] mb-9;
+        animation: etac-bounce 2s infinite;
+    }
+
+    @keyframes etac-bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(6px);
+        }
+    }
+    .etac-flow-center {
+        @apply bg-etac-teal/6 border border-etac-teal/20 rounded-2xl p-9 text-center mb-9;
+    }
+    .etac-flow-center-badge {
+        @apply inline-block bg-etac-teal text-etac-navy font-extrabold font-etac-head text-[12px] tracking-wider px-4 py-1.5 rounded-full mb-3.5;
+    }
+    .etac-flow-center-title {
+        @apply font-etac-head text-[26px] font-extrabold text-white mb-2.5;
+    }
+    .etac-flow-center-sub {
+        @apply text-[13px] text-white/45;
+    }
+    .etac-flow-tasks {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 mt-9;
+    }
+    .etac-flow-task {
+        @apply bg-etac-navy-light border border-etac-teal/12 rounded-xl px-3.5 py-[18px] text-center;
+    }
+    .etac-flow-task-icon {
+        @apply text-[26px] mb-[9px];
+    }
+    .etac-flow-task-name {
+        @apply text-[13px] font-semibold text-white mb-1;
+    }
+    .etac-flow-task-items {
+        @apply text-[10px] text-white/40 leading-relaxed;
+    }
+
+    .etac-services-grid {
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-[22px];
+    }
+    .etac-svc-card {
+        @apply bg-white rounded-[20px] p-7 lg:px-[26px] lg:py-8 border border-black/5 transition-all duration-200 cursor-pointer hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10;
+    }
+    .etac-svc-icon-wrap {
+        @apply w-[52px] h-[52px] rounded-xl bg-etac-teal/10 flex items-center justify-center text-[24px] mb-[18px];
+    }
+    .etac-svc-title {
+        @apply font-etac-head text-[19px] font-bold text-etac-text mb-[9px];
+    }
+    .etac-svc-sub {
+        @apply text-[12px] text-etac-gray-mid leading-relaxed mb-[18px];
+    }
+    .etac-svc-items {
+        @apply list-none p-0 m-0;
+    }
+    .etac-svc-items li {
+        @apply text-[12px] text-etac-gray-dark py-1.5 border-b border-black/5 flex items-center gap-[7px] last:border-none;
+    }
+    .etac-svc-items li::before {
+        @apply content-['→'] text-etac-teal text-[11px];
+    }
+
+    .etac-benefits-grid {
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-7;
+    }
+    .etac-benefit-card {
+        @apply py-7 border-t-3 border-etac-teal;
+    }
+    .etac-benefit-num {
+        @apply font-etac-head text-[52px] font-extrabold text-etac-teal/13 leading-none mb-2.5;
+    }
+    .etac-benefit-title {
+        @apply font-etac-head text-[18px] font-bold mb-2.5;
+    }
+    .etac-benefit-body {
+        @apply text-[13px] text-etac-gray-mid leading-[1.8];
+    }
+
+    .etac-cases-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-[22px];
+    }
+    .etac-case-card {
+        @apply bg-etac-navy-light border border-white/7 rounded-[20px] p-7 lg:px-7 lg:py-8 relative overflow-hidden;
+        &::after {
+            @apply content-[''] absolute top-0 right-0 w-[100px] h-[100px] rounded-tr-[20px] rounded-bl-full bg-etac-teal/5;
+        }
+    }
+    .etac-case-tag {
+        @apply inline-block bg-etac-teal/10 border border-etac-teal/20 text-etac-teal text-[10px] font-bold px-[11px] py-[3px] rounded-sm tracking-wider uppercase mb-3.5;
+    }
+    .etac-case-company {
+        @apply text-[11px] text-white/35 mb-[7px];
+    }
+    .etac-case-title {
+        @apply font-etac-head text-[20px] font-bold text-white mb-3.5;
+    }
+    .etac-case-body {
+        @apply text-[13px] text-white/50 leading-relaxed mb-[22px];
+    }
+    .etac-case-stat {
+        @apply bg-etac-teal/8 rounded-lg px-[18px] py-3.5 flex items-center gap-3.5;
+    }
+    .etac-case-stat-num {
+        @apply font-etac-head text-[30px] font-extrabold text-etac-teal;
+    }
+    .etac-case-stat-text {
+        @apply text-[12px] text-white/45;
+    }
+
+    .etac-process-steps {
+        @apply grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-0 relative lg:before:content-[''] lg:before:absolute lg:before:top-[27px] lg:before:left-[5%] lg:before:right-[5%] lg:before:h-[2px] lg:before:bg-linear-to-r lg:before:from-etac-teal lg:before:to-etac-teal/20 lg:before:z-0;
+    }
+    .etac-process-step {
+        @apply relative z-10 text-center px-2.5;
+    }
+    .etac-step-circle {
+        @apply w-[54px] h-[54px] rounded-full bg-white border-2 border-etac-teal flex items-center justify-center font-etac-head font-extrabold text-[17px] text-etac-teal mx-auto mb-3.5;
+    }
+    .etac-step-name {
+        @apply font-etac-head text-[13px] font-bold mb-1 text-etac-text;
+    }
+    .etac-step-time {
+        @apply text-[10px] text-etac-teal font-semibold mb-1;
+    }
+    .etac-step-sub {
+        @apply text-[10px] text-etac-gray-mid leading-relaxed;
+    }
+
+    .etac-why-grid {
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-[22px];
+    }
+    .etac-why-item {
+        @apply p-6 lg:px-6 lg:py-7 bg-etac-gray-light rounded-xl;
+    }
+    .etac-why-icon {
+        @apply text-[28px] mb-3;
+    }
+    .etac-why-title {
+        @apply font-etac-head text-[16px] font-bold mb-[7px];
+    }
+    .etac-why-body {
+        @apply text-[12px] text-etac-gray-mid leading-relaxed;
+    }
+    .etac-license-strip {
+        @apply mt-[44px] bg-etac-gray-light rounded-xl p-[18px] lg:px-[26px] lg:py-[18px] flex items-center gap-6 flex-wrap;
+    }
+    .etac-license-label {
+        @apply text-[11px] text-etac-gray-mid font-semibold whitespace-nowrap;
+    }
+    .etac-license-tag {
+        @apply bg-white border border-black/8 rounded px-3 py-1 text-[11px] text-etac-gray-dark whitespace-nowrap;
+    }
+
+    .etac-group-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-[22px];
+    }
+    .etac-group-card {
+        @apply bg-etac-navy-light border border-white/7 rounded-[20px] p-7 lg:px-7 lg:py-8 relative overflow-hidden transition-all duration-300 hover:border-etac-teal/35 hover:-translate-y-1;
+    }
+    .etac-group-card-top {
+        @apply flex items-start gap-4 mb-[18px];
+    }
+    .etac-group-logo-box {
+        @apply w-12 h-12 rounded-xl shrink-0 flex items-center justify-center text-[22px];
+    }
+    .etac-gl-blue {
+        @apply bg-blue-500/15;
+    }
+    .etac-gl-teal {
+        @apply bg-etac-teal/12;
+    }
+    .etac-gl-gold {
+        @apply bg-etac-gold/15;
+    }
+    .etac-gl-purple {
+        @apply bg-purple-500/15;
+    }
+    .etac-group-name {
+        @apply font-etac-head text-[17px] font-bold text-white mb-[3px] leading-snug;
+    }
+    .etac-group-en {
+        @apply text-[10px] text-white/30 tracking-tight;
+    }
+    .etac-group-desc {
+        @apply text-[12px] text-white/50 leading-relaxed mb-[18px];
+    }
+    .etac-group-tags {
+        @apply flex flex-wrap gap-[7px];
+    }
+    .etac-group-tag {
+        @apply bg-etac-teal/8 border border-etac-teal/18 text-etac-teal text-[10px] font-semibold px-[10px] py-[3px] rounded-full;
+    }
+    .etac-group-link {
+        @apply mt-[18px] pt-3.5 border-t border-white/6 text-[11px] text-white/30 flex items-center gap-[5px];
+    }
+    .etac-group-link span {
+        @apply text-etac-teal font-medium;
+    }
+    .etac-group-banner {
+        @apply mt-9 bg-etac-teal/5 border border-etac-teal/15 rounded-xl p-[26px] lg:px-8 lg:py-[26px] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-7 flex-wrap;
+    }
+    .etac-group-banner-text {
+        @apply text-[14px] text-white/65 leading-relaxed;
+    }
+    .etac-group-banner-text strong {
+        @apply text-white font-semibold;
+    }
+    .etac-group-banner-stat {
+        @apply flex w-full lg:w-auto justify-around lg:justify-start lg:gap-9 shrink-0;
+    }
+    .etac-gbs {
+        @apply text-center;
+    }
+    .etac-gbs-num {
+        @apply font-etac-head text-[34px] font-extrabold text-etac-teal leading-none;
+    }
+    .etac-gbs-label {
+        @apply text-[10px] text-white/35 mt-1;
+    }
+
+    .etac-industries-intro {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[72px] items-center mb-[52px];
+    }
+    .etac-ind-visual {
+        @apply bg-etac-gray-light rounded-[18px] p-7 lg:px-7 lg:py-8;
+    }
+    .etac-ind-visual-title {
+        @apply text-[11px] font-bold text-etac-teal-dark tracking-[1.5px] uppercase mb-[22px];
+    }
+    .etac-ind-bar-row {
+        @apply flex items-center gap-2.5 mb-3;
+    }
+    .etac-ind-bar-label {
+        @apply text-[11px] text-etac-gray-dark w-16 shrink-0 text-right;
+    }
+    .etac-ind-bar-track {
+        @apply flex-1 bg-black/7 rounded-sm h-[7px] overflow-hidden;
+    }
+    .etac-ind-bar-fill {
+        @apply h-full rounded-sm bg-etac-teal;
+    }
+    .etac-ind-bar-pct {
+        @apply text-[11px] font-semibold text-etac-teal-dark w-[30px];
+    }
+    .etac-industries-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5;
+    }
+    .etac-ind-card {
+        @apply bg-etac-gray-light rounded-xl p-4 lg:px-4 lg:py-6 text-center border-2 border-transparent transition-all duration-200 cursor-pointer hover:border-etac-teal hover:bg-white;
+    }
+    .etac-ind-card.etac-featured {
+        @apply border-etac-teal bg-white;
+    }
+    .etac-ind-card-icon {
+        @apply text-[32px] mb-2.5;
+    }
+    .etac-ind-card-name {
+        @apply font-etac-head text-[14px] font-bold text-etac-text mb-1;
+    }
+    .etac-ind-card-en {
+        @apply text-[9px] text-etac-gray-mid tracking-tight uppercase mb-2;
+    }
+    .etac-ind-card-jobs {
+        @apply text-[10px] text-etac-gray-mid leading-relaxed;
+    }
+    .etac-ind-badge {
+        @apply inline-block bg-etac-teal/12 text-etac-teal-dark text-[9px] font-bold px-2 py-[2px] rounded-full mt-1.5;
+    }
+    .etac-ind-footer-note {
+        @apply mt-9 bg-etac-gray-light rounded-xl px-7 py-6 flex items-center gap-4.5 flex-wrap;
+    }
+
+    .etac-faq-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-3.5;
+    }
+    .etac-faq-item {
+        @apply bg-white rounded-xl border border-black/5 overflow-hidden;
+    }
+    .etac-faq-q {
+        @apply flex items-center justify-between gap-4 p-5 lg:px-6 lg:py-5 cursor-pointer select-none transition-colors duration-150 hover:bg-etac-teal/[0.03];
+    }
+    .etac-faq-q-text {
+        @apply text-[14px] font-semibold text-etac-text leading-tight flex-1;
+    }
+    .etac-faq-icon {
+        @apply w-7 h-7 rounded-full bg-etac-gray-light border border-black/8 flex items-center justify-center text-[16px] text-etac-teal shrink-0 transition-all duration-250 font-bold;
+    }
+    .etac-faq-item.etac-open .etac-faq-icon {
+        @apply rotate-45 bg-etac-teal text-etac-navy;
+    }
+    .etac-faq-a {
+        @apply max-h-0 overflow-hidden transition-[max-height] duration-350 ease-in-out;
+    }
+    .etac-faq-item.etac-open .etac-faq-a {
+        @apply max-h-[300px];
+    }
+    .etac-faq-a-inner {
+        @apply px-6 pb-5 text-[13px] text-etac-gray-mid leading-[1.85] border-t border-black/5;
+    }
+    .etac-faq-a-inner p {
+        @apply pt-4 m-0;
+    }
+
+    .etac-contact {
+        @apply bg-linear-to-br from-etac-navy to-[#0D2540] text-center px-[5%] py-[110px] relative overflow-hidden;
+        &::before {
+            @apply content-[''] absolute inset-0 opacity-[0.03];
+            background-image:
+                linear-gradient(rgba(0, 212, 164, 1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 164, 1) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    }
+    .etac-contact-inner {
+        @apply relative z-20 max-w-[680px] mx-auto;
+    }
+    .etac-contact-badge {
+        @apply inline-block bg-etac-teal/10 border border-etac-teal/30 text-etac-teal text-[11px] font-bold px-4 py-[5px] rounded-full mb-[22px] tracking-widest;
+    }
+    .etac-contact-title {
+        @apply font-etac-head text-[clamp(28px,5vw,48px)] font-extrabold text-white tracking-tighter leading-[1.1] mb-[18px];
+    }
+    .etac-contact-sub {
+        @apply text-[15px] text-white/52 mb-[44px] leading-[1.8];
+    }
+    .etac-contact-form {
+        @apply flex flex-col gap-3 text-left max-w-[460px] mx-auto mb-7;
+    }
+    .etac-form-row {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-3;
+    }
+    .etac-form-input {
+        @apply w-full px-4 py-[13px] bg-white/7 border border-white/10 rounded-[9px] text-white text-[13px] font-etac-body outline-none transition-colors duration-200 placeholder:text-white/[0.28] focus:border-etac-teal;
+    }
+    .etac-form-textarea {
+        @apply min-h-[90px] resize-y;
+    }
+    .etac-form-submit {
+        @apply w-full bg-etac-teal text-etac-navy border-none rounded-[9px] p-[15px] text-[15px] font-bold font-etac-head cursor-pointer transition-all duration-200 tracking-tight hover:bg-etac-teal-dark hover:-translate-y-0.5;
+    }
+    .etac-contact-note {
+        @apply text-[12px] text-white/28;
+    }
+
+    .etac-footer {
+        @apply bg-[#070D1A] px-[5%] py-9 flex items-center justify-between flex-wrap gap-[18px];
+    }
+    .etac-footer-logo {
+        @apply font-etac-head text-[17px] font-extrabold text-white;
+    }
+    .etac-footer-logo span {
+        @apply text-etac-teal;
+    }
+    .etac-footer-info {
+        @apply text-[11px] text-white/28 leading-relaxed;
+    }
+    .etac-footer-copy {
+        @apply text-[11px] text-white/18;
+    }
+
+    /* Carousel Fade Specific to etac-page */
+    .etac-carousel-1 {
+        animation: etac-fade-cycle 18s 0s infinite;
+    }
+    .etac-carousel-2 {
+        animation: etac-fade-cycle 18s 6s infinite;
+    }
+    .etac-carousel-3 {
+        animation: etac-fade-cycle 18s 12s infinite;
+    }
+
+    @keyframes etac-fade-cycle {
+        0% {
+            opacity: 0;
+        }
+        11% {
+            opacity: 1;
+        }
+        33% {
+            opacity: 1;
+        }
+        44% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /* Utility classes specific to etac templates */
+    .etac-bg-gray {
+        @apply bg-etac-gray-light;
+    }
+    .etac-bg-white {
+        @apply bg-white;
+    }
+    .etac-text-teal {
+        @apply text-etac-teal;
+    }
+    .etac-text-white {
+        @apply text-white;
+    }
+    .etac-text-dim {
+        @apply text-white/48;
+    }
+    .etac-center-box {
+        @apply text-center max-w-[660px] mx-auto mb-[56px];
+    }
+    .etac-mb-20 {
+        @apply mb-5;
+    }
+    .etac-text-muted {
+        @apply text-[13px] text-etac-gray-mid leading-[1.8];
+    }
+    .etac-text-xl {
+        @apply text-[22px];
+    }
+    .etac-flex-1 {
+        @apply flex-1;
+    }
+    .etac-text-bold {
+        @apply font-semibold text-[14px] text-etac-text mb-1;
+    }
+    .etac-text-small-muted {
+        @apply text-[12px] text-etac-gray-mid;
+    }
+    .etac-btn-navy {
+        @apply text-etac-navy whitespace-nowrap;
+    }
+    .etac-w-88 {
+        @apply w-[88%];
+    }
+    .etac-w-72 {
+        @apply w-[72%];
+    }
+    .etac-w-65 {
+        @apply w-[65%];
+    }
+    .etac-w-55 {
+        @apply w-[55%];
+    }
+    .etac-w-48 {
+        @apply w-[48%];
+    }
+    .etac-w-35 {
+        @apply w-[35%];
+    }
+    /* One-touch card */
+    .otc-card {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 1.25rem;
+        padding: 1.75rem;
+    }
+    .otc-label {
+        font-size: 0.66rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #f4a522;
+        margin-bottom: 1rem;
+    }
+    .otc-client-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 0.75rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.75rem;
+    }
+    .otc-client-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #fff;
+    }
+    .otc-client-sub {
+        font-size: 0.66rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 2px;
+    }
+    .otc-arrow {
+        text-align: center;
+        font-size: 1.35rem;
+        color: #f4a522;
+        margin: 0.3rem 0;
+    }
+    .otc-center-label {
+        text-align: center;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        color: #f4a522;
+        margin-bottom: 0.75rem;
+    }
+    .otc-services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem;
+        margin-bottom: 0.85rem;
+    }
+    .otc-svc {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.68rem;
+        color: rgba(255, 255, 255, 0.78);
+    }
+    .otc-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #f4a522;
+        flex-shrink: 0;
+    }
+    .otc-result {
+        background: rgba(244, 165, 34, 0.14);
+        border: 1px solid rgba(244, 165, 34, 0.28);
+        border-radius: 0.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #f4a522;
+        text-align: center;
     }
 }

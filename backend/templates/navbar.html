@@ -2,88 +2,107 @@
 {% get_current_language as LANGUAGE_CODE %}
 <nav class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[rgba(26,82,118,0.10)]">
     <div class="container-content flex items-center justify-between h-20">
-
         <!-- Logo -->
-        <a href="{% url 'home' %}" class="text-2xl font-black italic tracking-tighter text-primary">e-tac</a>
-
+        <a href="{% url 'home' %}"
+           class="text-2xl font-black italic tracking-tighter text-primary">e-tac</a>
         <!-- Desktop nav links -->
         <div class="hidden md:flex items-center gap-8">
-            {% url 'home' as url_home %}
-            {% url 'about' as url_about %}
-            {% url 'services' as url_services %}
-            {% url 'contact' as url_contact %}
-
-            <a href="{{ url_home }}"
-               class="relative text-sm font-semibold tracking-wide transition-colors duration-200
-                      {% if request.resolver_match.url_name == 'home' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+            <a href="{% url 'home' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'home' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
                 {% trans "ホーム" %}
                 {% if request.resolver_match.url_name == 'home' %}
-                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                 {% endif %}
             </a>
-            <a href="{{ url_about }}"
-               class="relative text-sm font-semibold tracking-wide transition-colors duration-200
-                      {% if request.resolver_match.url_name == 'about' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+            <a href="{% url 'about' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'about' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
                 {% trans "会社概要" %}
                 {% if request.resolver_match.url_name == 'about' %}
-                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                 {% endif %}
             </a>
-            <a href="{{ url_services }}"
-               class="relative text-sm font-semibold tracking-wide transition-colors duration-200
-                      {% if request.resolver_match.url_name == 'services' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
-                {% trans "サービス" %}
+            <a href="{% url 'services' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'services' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+                {% trans "サービス内容" %}
                 {% if request.resolver_match.url_name == 'services' %}
-                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                 {% endif %}
             </a>
-            <a href="{{ url_contact }}"
-               class="relative text-sm font-semibold tracking-wide transition-colors duration-200
-                      {% if request.resolver_match.url_name == 'contact' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
-                {% trans "お問い合わせ" %}
+            <a href="{% url 'contact' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'contact' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+                {% trans "ご担当者様へ" %}
                 {% if request.resolver_match.url_name == 'contact' %}
-                <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                {% endif %}
+            </a>
+            <a href="{% url 'inquiry' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'inquiry' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+                {% trans "お問い合わせ" %}
+                {% if request.resolver_match.url_name == 'inquiry' %}
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
+                {% endif %}
+            </a>
+            <a href="{% url 'group' %}"
+               class="relative text-sm font-semibold tracking-wide transition-colors duration-200 {% if request.resolver_match.url_name == 'group' %}text-primary{% else %}text-muted hover:text-primary{% endif %}">
+                {% trans "グループ情報" %}
+                {% if request.resolver_match.url_name == 'group' %}
+                    <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                 {% endif %}
             </a>
         </div>
-
         <!-- Right side: CTA + Language switcher + Mobile menu -->
         <div class="flex items-center gap-4">
             <!-- Language switcher -->
-            <form action="{% url 'set_language' %}" method="post" class="flex items-center bg-base-200 rounded-full p-0.5">
+            <form action="{% url 'set_language' %}"
+                  method="post"
+                  class="flex items-center bg-base-200 rounded-full p-0.5">
                 {% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.get_full_path }}" />
-                <button type="submit" name="language" value="ja"
-                        class="px-3 py-1 rounded-full text-xs font-bold transition-all
-                               {% if LANGUAGE_CODE == 'ja' %}bg-white text-primary shadow-sm{% else %}text-muted hover:text-primary{% endif %}">
+                <button type="submit"
+                        name="language"
+                        value="ja"
+                        class="px-3 py-1 rounded-full text-xs font-bold transition-all {% if LANGUAGE_CODE == 'ja' %}bg-white text-primary shadow-sm{% else %}text-muted hover:text-primary{% endif %}">
                     JP
                 </button>
-                <button type="submit" name="language" value="en"
-                        class="px-3 py-1 rounded-full text-xs font-bold transition-all
-                               {% if LANGUAGE_CODE == 'en' %}bg-white text-primary shadow-sm{% else %}text-muted hover:text-primary{% endif %}">
+                <button type="submit"
+                        name="language"
+                        value="en"
+                        class="px-3 py-1 rounded-full text-xs font-bold transition-all {% if LANGUAGE_CODE == 'en' %}bg-white text-primary shadow-sm{% else %}text-muted hover:text-primary{% endif %}">
                     EN
                 </button>
             </form>
-
             <!-- CTA button (desktop) -->
             <a href="{% url 'contact' %}"
                class="shine-btn hidden lg:inline-flex items-center gap-2 bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-md">
                 {% trans "資料請求" %}
             </a>
-
             <!-- Mobile hamburger -->
             <div class="dropdown dropdown-end md:hidden">
                 <div tabindex="0" role="button" class="btn btn-ghost btn-sm btn-square">
                     <span class="material-symbols-outlined">menu</span>
                 </div>
-                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box shadow-xl mt-3 w-48 p-2 z-50">
-                    <li><a href="{% url 'home' %}">{% trans "ホーム" %}</a></li>
-                    <li><a href="{% url 'about' %}">{% trans "会社概要" %}</a></li>
-                    <li><a href="{% url 'services' %}">{% trans "サービス" %}</a></li>
-                    <li><a href="{% url 'contact' %}">{% trans "お問い合わせ" %}</a></li>
+                <ul tabindex="0"
+                    class="dropdown-content menu bg-base-100 rounded-box shadow-xl mt-3 w-48 p-2 z-50">
+                    <li>
+                        <a href="{% url 'home' %}">{% trans "ホーム" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">{% trans "会社概要" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'services' %}">{% trans "サービス内容" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">{% trans "ご担当者様へ" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'inquiry' %}">{% trans "お問い合わせ" %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'group' %}">{% trans "グループ情報" %}</a>
+                    </li>
                 </ul>
             </div>
         </div>
-
     </div>
 </nav>
