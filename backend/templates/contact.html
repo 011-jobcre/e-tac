@@ -1,5 +1,33 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-    <h1>{% trans "ご担当者様へ" %}</h1>
+<!-- ════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════ -->
+<section class="section-pad bg-primary text-white" id="contact" style="min-height: 100vh; display: flex; align-items: center;">
+    <div class="container-content w-full">
+        <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+            <div class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase bg-accent/20 text-accent border border-accent/30 px-4 py-1.5 rounded-full mb-5">無料相談受付中</div>
+            <h2 class="font-display font-bold text-white mb-4" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">まず、一言お聞かせください。</h2>
+            <p class="text-white/60 mb-10 leading-relaxed">「どの業務を委託できるかわからない」でも大丈夫です。<br />現状をお話しいただければ、最適なプランをご提案します。</p>
+        </div>
+        <div class="max-w-xl mx-auto glass-card p-8 rounded-3xl border-t-4 border-secondary shadow-2xl"
+             style="background:rgba(255,255,255,0.055);"
+             data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="text" placeholder="会社名" />
+                <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="text" placeholder="ご担当者名" />
+            </div>
+            <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-4 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="tel" placeholder="電話番号" />
+            <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-4 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="email" placeholder="メールアドレス" />
+            <textarea class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-5 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30 resize-none" rows="4" placeholder="お問い合わせ内容"></textarea>
+            <button class="shine-btn w-full bg-secondary text-white font-bold py-4 rounded-full shadow-xl text-base cursor-pointer border-none hover:-translate-y-1 transition-transform">
+                無料相談を申し込む →
+            </button>
+        </div>
+        <p class="text-center text-white/35 text-xs mt-6" data-aos="fade-up" data-aos-delay="400">
+            通常1営業日以内にご返信いたします。秘密厳守でご対応します。
+        </p>
+    </div>
+</section>
 {% endblock content %}

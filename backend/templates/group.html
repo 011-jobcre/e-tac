@@ -1,5 +1,124 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-    <h1>{% trans "グループ情報" %}</h1>
+    <!-- ════════════════════════════════════════
+     GROUP
+════════════════════════════════════════ -->
+    <section class="section-pad bg-surface" id="group">
+        <div class="container-content">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <p class="section-tag text-secondary font-bold text-xs tracking-[0.25em] uppercase mb-3">
+                    — Group Companies
+                </p>
+                <h2 class="section-title font-display font-bold text-primary mb-4"
+                    style="font-size: clamp(1.8rem, 3.5vw, 2.6rem)">e-tacグループ企業ネットワーク</h2>
+                <p class="section-sub text-muted max-w-2xl mx-auto">
+                    単体の人材会社ではありません。複数の専門会社が連携するグループ体制だからこそ、あらゆる業種・規模の依頼に対応できます。
+                </p>
+                <div class="w-12 h-1 bg-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="glass-card p-7" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center text-2xl shrink-0">
+                            🏢
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary text-sm leading-tight">
+                                e-tac
+                                <br />
+                                CONSULTING SYSTEM
+                            </div>
+                            <div class="text-muted text-xs mt-0.5">Group Headquarters · BPO / Staffing</div>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        グループの中核会社。有料職業紹介・登録支援機関・製造業アウトソーシングを統括。国内外の人材ネットワークとワンストップBPOサービスを提供するグループの司令塔。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">BPO統括</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">有料職業紹介</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">登録支援機関</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">製造業特定技能</span>
+                    </div>
+                    <div class="text-xs text-muted">📍 グループ中核会社</div>
+                </div>
+                <div class="glass-card p-7" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-2xl shrink-0">
+                            🏭
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary text-sm leading-tight">Creator Holdings</div>
+                            <div class="text-muted text-xs mt-0.5">Manufacturing Outsourcing Division</div>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        製造業に特化したアウトソーシング専門会社。NC加工・溶接・塗装・検査・梱包など製造全工程を受託。特定技能外国人材を中心とした安定した生産体制構築が強み。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">製造工程受託</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">特定技能人材</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">品質管理</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">生産性向上</span>
+                    </div>
+                    <div class="text-xs text-muted">🔧 製造業向け専門子会社 · 定着率90%+実績</div>
+                </div>
+                <div class="glass-card p-7" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center text-2xl shrink-0">
+                            💻
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary text-sm uppercase leading-tight">Job Creators</div>
+                            <div class="text-muted text-xs mt-0.5">IT Outsourcing · System Development</div>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        ITシステム開発のコーディング・バグチェック・QAを専門に受託。ポーランド・ウクライナの優秀なエンジニアと連携し、コストと時差を活用した迅速・高品質な開発を実現。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">コーディング受託</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">QA・テスト</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">東欧エンジニア</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">情報管理徹底</span>
+                    </div>
+                    <div class="text-xs text-muted">🌐 ポーランド・ウクライナ連携 · JOIN JAPAN共同管理</div>
+                </div>
+                <div class="glass-card p-7" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-2xl shrink-0">
+                            🌏
+                        </div>
+                        <div>
+                            <div class="font-bold text-primary text-sm leading-tight">Food Creator</div>
+                            <div class="text-muted text-xs mt-0.5">International Human Resources · Care</div>
+                        </div>
+                    </div>
+                    <p class="text-muted text-sm leading-relaxed mb-4">
+                        介護・看護・福祉分野に特化した外国人材の採用・育成・定着支援を行う専門会社。特定技能・技能実習・EPA制度を活用し、医療・介護現場の人手不足を解消します。
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">介護・看護</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">EPA制度活用</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">技能実習</span><span class="text-[11px] bg-primary/8 text-primary font-semibold px-2.5 py-1 rounded-full">生活支援込み</span>
+                    </div>
+                    <div class="text-xs text-muted">🏥 医療・介護分野専門 · EPA・特定技能対応</div>
+                </div>
+            </div>
+            <!-- Group banner -->
+            <div class="glass-card p-8 border-t-4 border-secondary rounded-3xl shadow-xl"
+                 data-aos="fade-up"
+                 data-aos-delay="500">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <p class="text-primary text-base leading-relaxed flex-1">
+                        グループ全社が連携することで、<strong>1つの窓口から複数領域を同時にカバー。</strong>製造現場からIT開発、介護スタッフ確保まで——e-tacグループが一括対応します。
+                    </p>
+                    <div class="flex gap-8 shrink-0">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-secondary">4</div>
+                            <div class="text-xs text-muted mt-1">グループ会社</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-secondary">8+</div>
+                            <div class="text-xs text-muted mt-1">対応業種</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-secondary">∞</div>
+                            <div class="text-xs text-muted mt-1">スケーラブル</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
