@@ -1,0 +1,13 @@
+<div class="minimal-card flex flex-col group h-full">
+    <div class="text-3xl font-black text-secondary/10 mb-6 group-hover:text-secondary/20 transition-colors">{{ num }}</div>
+    <h3 class="text-xl font-bold text-primary mb-4">{{ title }}</h3>
+    <p class="text-sm text-muted leading-relaxed mb-8 flex-1">{{ body }}</p>
+    
+    <div class="pt-6 border-t border-border mt-auto">
+        <div class="flex items-baseline gap-1 mb-1">
+            <span class="text-2xl font-black text-secondary">{{ stat }}</span>
+            {% if stat_unit %}<span class="text-xs font-bold text-secondary">{{ stat_unit }}</span>{% endif %}
+        </div>
+        <div class="text-[10px] font-bold text-muted uppercase tracking-widest">{{ stat_text }}</div>
+    </div>
+</div>

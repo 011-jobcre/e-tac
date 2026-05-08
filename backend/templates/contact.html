@@ -1,33 +1,85 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% block title %}
+    {% trans "ご担当者様へ" %} | e-tac
+{% endblock title %}
 {% block content %}
-<!-- ════════════════════════════════════════
-     CONTACT
-════════════════════════════════════════ -->
-<section class="section-pad bg-primary text-white" id="contact" style="min-height: 100vh; display: flex; align-items: center;">
-    <div class="container-content w-full">
-        <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
-            <div class="inline-block text-[11px] font-bold tracking-[0.2em] uppercase bg-accent/20 text-accent border border-accent/30 px-4 py-1.5 rounded-full mb-5">無料相談受付中</div>
-            <h2 class="font-display font-bold text-white mb-4" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">まず、一言お聞かせください。</h2>
-            <p class="text-white/60 mb-10 leading-relaxed">「どの業務を委託できるかわからない」でも大丈夫です。<br />現状をお話しいただければ、最適なプランをご提案します。</p>
+    <!-- Contact Section -->
+    <section class="min-h-screen flex items-center pt-32 pb-20 bg-white overflow-hidden relative">
+        <!-- Minimalist Background -->
+        <div class="absolute inset-0 pointer-events-none opacity-30">
+            <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-secondary/5 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent/5 rounded-full blur-[100px]"></div>
         </div>
-        <div class="max-w-xl mx-auto glass-card p-8 rounded-3xl border-t-4 border-secondary shadow-2xl"
-             style="background:rgba(255,255,255,0.055);"
-             data-aos="fade-up" data-aos-delay="200">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="text" placeholder="会社名" />
-                <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="text" placeholder="ご担当者名" />
+
+        <div class="container-content relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div data-aos="fade-right">
+                    <span class="section-tag">— Contact Us</span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-8">
+                        {% trans "まず、" %}<br />
+                        <span class="text-secondary">{% trans "一言お聞かせください。" %}</span>
+                    </h2>
+                    <p class="text-lg md:text-xl text-muted leading-relaxed mb-10 max-w-lg">
+                        「どの業務を委託できるかわからない」でも大丈夫です。
+                        現状をお話しいただければ、最適なプランをご提案します。
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center text-secondary border border-border">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-primary">通常1営業日以内に返信</div>
+                                <div class="text-xs text-muted uppercase tracking-widest">Fast Response</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center text-secondary border border-border">
+                                <span class="material-symbols-outlined">lock</span>
+                            </div>
+                            <div>
+                                <div class="text-sm font-bold text-primary">秘密厳守・NDA締結可能</div>
+                                <div class="text-xs text-muted uppercase tracking-widest">Confidential</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="minimal-card bg-surface shadow-2xl shadow-primary/5 p-10 lg:p-12">
+                        <form class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Company Name</label>
+                                    <input class="form-input" type="text" placeholder="{% trans '会社名' %}" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Your Name</label>
+                                    <input class="form-input" type="text" placeholder="{% trans 'ご担当者名' %}" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Phone Number</label>
+                                <input class="form-input" type="tel" placeholder="{% trans '電話番号' %}" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Email Address</label>
+                                <input class="form-input" type="email" placeholder="{% trans 'メールアドレス' %}" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Message</label>
+                                <textarea class="form-input min-h-[120px] resize-none" placeholder="{% trans 'お問い合わせ内容' %}"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="shine-btn w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl shadow-primary/20 text-lg mt-4">
+                                {% trans "無料相談を申し込む" %}
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-4 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="tel" placeholder="電話番号" />
-            <input class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-4 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30" type="email" placeholder="メールアドレス" />
-            <textarea class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 text-sm mb-5 focus:outline-none focus:border-secondary transition-colors placeholder:text-white/30 resize-none" rows="4" placeholder="お問い合わせ内容"></textarea>
-            <button class="shine-btn w-full bg-secondary text-white font-bold py-4 rounded-full shadow-xl text-base cursor-pointer border-none hover:-translate-y-1 transition-transform">
-                無料相談を申し込む →
-            </button>
         </div>
-        <p class="text-center text-white/35 text-xs mt-6" data-aos="fade-up" data-aos-delay="400">
-            通常1営業日以内にご返信いたします。秘密厳守でご対応します。
-        </p>
-    </div>
-</section>
+    </section>
 {% endblock content %}

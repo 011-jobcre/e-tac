@@ -6,6 +6,8 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta name="description"
               content="{% block meta_description %}{% endblock meta_description %}" />
+        <meta name="keywords"
+              content="{% block meta_keywords %}e-tac, BPO, manufacturing, outsourcing, IT, DX{% endblock meta_keywords %}" />
         <title>
             {% block title %}
             {% endblock title %}
@@ -24,87 +26,90 @@
         {% block extra_head %}
         {% endblock extra_head %}
     </head>
-    <body class="font-sans text-base-content bg-base-100 antialiased min-h-screen flex flex-col">
-        <header>
-            {% include "navbar.html" %}
-        </header>
+    <body class="font-sans text-primary bg-white antialiased flex flex-col min-h-screen">
+        {% include "navbar.html" %}
         <main class="flex-1">
             {% block content %}
             {% endblock content %}
         </main>
         <!-- Footer -->
-        <footer class="bg-[#0d1b2a] text-white border-t-4 border-primary">
-            <div class="container-content py-16">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <footer class="bg-primary text-white">
+            <div class="container-content py-20 lg:py-24">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
                     <!-- Brand -->
-                    <div>
-                        <div class="text-2xl font-black italic tracking-tighter text-white mb-4">e-tac</div>
-                        <p class="text-white/50 text-sm leading-relaxed max-w-xs">
+                    <div class="md:col-span-5">
+                        <p class="text-white/70 text-sm font-semibold tracking-wider mb-2">{% trans "現場改善型アウトソーシング" %}</p>
+                        <div class="text-3xl font-black italic tracking-tighter text-white mb-6">e-tac</div>
+                        <p class="text-white/70 text-base leading-relaxed max-w-sm mb-8">
                             {% trans "先進的なテクノロジーと熟練のオペレーションを融合。次世代の製造アウトソーシングを牽引します。" %}
                         </p>
-                        <div class="flex gap-3 mt-6">
+                        <div class="flex gap-4">
                             <a href="#"
-                               class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                               class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10"
                                aria-label="Web">
-                                <span class="material-symbols-outlined text-[18px]">language</span>
+                                <span class="material-symbols-outlined text-[20px]">language</span>
                             </a>
                             <a href="#"
-                               class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                               class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-all border border-white/10"
                                aria-label="Email">
-                                <span class="material-symbols-outlined text-[18px]">mail</span>
+                                <span class="material-symbols-outlined text-[20px]">mail</span>
                             </a>
                         </div>
                     </div>
                     <!-- Navigation -->
-                    <div>
-                        <p class="text-xs font-bold tracking-widest text-white/40 uppercase mb-5">Navigation</p>
-                        <ul class="space-y-3">
+                    <div class="md:col-span-3">
+                        <p class="text-xs font-bold tracking-widest text-white/30 uppercase mb-6">Navigation</p>
+                        <ul class="space-y-4">
                             <li>
                                 <a href="{% url 'home' %}"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "ホーム" %}</a>
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "ホーム" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'about' %}"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "会社概要" %}</a>
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "会社概要" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'services' %}"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "サービス" %}</a>
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "サービス" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'group' %}"
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "グループ" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'contact' %}"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "お問い合わせ" %}</a>
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "ご担当者様へ" %}</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'inquiry' %}"
+                                   class="text-white/70 hover:text-white transition-colors">{% trans "お問い合わせ" %}</a>
                             </li>
                         </ul>
                     </div>
                     <!-- Legal -->
-                    <div>
-                        <p class="text-xs font-bold tracking-widest text-white/40 uppercase mb-5">Legal</p>
-                        <ul class="space-y-3">
+                    <div class="md:col-span-4">
+                        <p class="text-xs font-bold tracking-widest text-white/30 uppercase mb-6">Legal</p>
+                        <ul class="space-y-4">
                             <li>
-                                <a href="#"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "プライバシーポリシー" %}</a>
+                                <a href="#" class="text-white/70 hover:text-white transition-colors">{% trans "プライバシーポリシー" %}</a>
                             </li>
                             <li>
-                                <a href="#"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "利用規約" %}</a>
+                                <a href="#" class="text-white/70 hover:text-white transition-colors">{% trans "利用規約" %}</a>
                             </li>
                             <li>
-                                <a href="#"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "運営会社" %}</a>
+                                <a href="#" class="text-white/70 hover:text-white transition-colors">{% trans "運営会社" %}</a>
                             </li>
                             <li>
-                                <a href="#"
-                                   class="text-white/60 hover:text-white text-sm transition-colors">{% trans "サイトマップ" %}</a>
+                                <a href="#" class="text-white/70 hover:text-white transition-colors">{% trans "サイトマップ" %}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/30">
+                <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/30">
                     <p>© 2026 e-tac Manufacturing BPO. All Rights Reserved.</p>
-                    <div class="flex gap-6 text-xs tracking-widest uppercase">
-                        <span>Quality First</span>
-                        <span>Efficiency Driven</span>
+                    <div class="flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+                        <span>{% trans "品質第一" %}</span>
+                        <span>{% trans "効率指向" %}</span>
                     </div>
                 </div>
             </div>
