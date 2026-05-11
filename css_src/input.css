@@ -11,18 +11,16 @@
    ------------------------------------------------------------ */
 @theme {
     /* Fonts */
-    --font-sans: "Inter", "Noto Sans JP", sans-serif;
-    --font-display: "Inter", "Noto Sans JP", sans-serif;
-    --font-body: "Noto Sans JP", "Inter", sans-serif;
+    --font-sans: "Noto Serif JP", serif;
 
     /* Primary Blue Palette — Brightened Corporate Blue */
     --color-primary: #004e92;
-    --color-primary-light: #0066cc;
-    --color-primary-dark: #003366;
+    /* --color-primary-light: #0066cc;
+    --color-primary-dark: #003366; */
 
     --color-secondary: #0ea5e9;
-    --color-secondary-light: #38bdf8;
-    --color-secondary-dark: #0284c7;
+    /* --color-secondary-light: #38bdf8;
+    --color-secondary-dark: #0284c7; */
 
     --color-accent: #00d2ff;
 
@@ -30,13 +28,6 @@
     --color-muted: #64748b;
     --color-surface: #f8fafc;
     --color-border: #e2e8f0;
-
-    /* Layout */
-    --width-content: 1280px;
-
-    /* Spacing scale */
-    --spacing-section: 6rem;
-    --spacing-content: 2rem;
 }
 
 /* ------------------------------------------------------------
@@ -45,7 +36,7 @@
 @layer base {
     html,
     body {
-        @apply antialiased scroll-smooth bg-white text-primary;
+        @apply antialiased scroll-smooth bg-white text-black;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
@@ -66,10 +57,6 @@
    ------------------------------------------------------------ */
 @layer components {
     /* Layout */
-    .gradient-hero {
-        background: linear-gradient(135deg, #004e92 0%, #0ea5e9 100%);
-    }
-
     .container-content {
         @apply max-w-7xl mx-auto px-6 lg:px-10;
     }
@@ -79,17 +66,17 @@
     }
 
     /* Typography — Components should define the "look", utilities define the "context" */
-    .section-tag {
-        @apply text-secondary font-bold text-xs tracking-[0.2em] uppercase block mb-1;
-    }
+    /* .section-tag {
+        @apply text-accent font-bold text-xs tracking-[0.2em] uppercase block mb-1;
+    } */
 
     .section-title {
-        @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary leading-tight;
+        @apply text-2xl text-primary font-bold tracking-widest leading-tight;
     }
 
-    .section-sub {
-        @apply text-lg text-muted max-w-2xl leading-relaxed;
-    }
+    /* .section-sub {
+        @apply text-muted w-full leading-relaxed;
+    } */
 
     /* Cards & Effects */
     .minimal-card {
@@ -115,7 +102,7 @@
 
     /* Form Elements */
     .form-input {
-        @apply w-full px-4 py-3 bg-surface border border-border rounded-xl outline-none transition-all duration-200 focus:border-secondary focus:ring-2 focus:ring-secondary/10;
+        @apply text-muted w-full px-4 py-3 bg-surface border border-border rounded-xl outline-none transition-all duration-200 focus:border-secondary focus:ring-2 focus:ring-secondary/10;
     }
 }
 
@@ -170,6 +157,12 @@
         100% {
             opacity: 1;
         }
+    }
+    .carousel-fade-item:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .carousel-fade-item:nth-child(2) {
+        animation-delay: 9s;
     }
 
     /* Progress bar */

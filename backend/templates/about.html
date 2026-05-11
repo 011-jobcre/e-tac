@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n static %}
+{% load static i18n %}
 {% block title %}
     {% trans "会社概要" %} | e-tac
 {% endblock title %}
@@ -7,174 +7,86 @@
     <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary text-white">
         <div class="absolute inset-0 pointer-events-none opacity-20">
-            <img class="w-full h-full object-cover"
-                 width="1920"
-                 height="1080"
-                 src="{% static 'images/stitch_094c65bc.jpg' %}"
-                 alt="" />
+            <img src="{% static 'images/stitch_094c65bc.jpg' %}"
+                 alt=""
+                 class="w-full h-full object-cover" />
         </div>
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
-            <span class="section-tag">— Company Profile</span>
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-8 uppercase">
-                {% trans "会社概要" %}
-            </h1>
-            <p class="text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                {% trans "日本のビジネスに、革新的な安定と効率を。高度な専門性と透明性の高い運営で、貴社の成長を支えます。" %}
-            </p>
+            <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "会社概要" %}</h1>
         </div>
     </section>
     <!-- Main Content -->
     <div class="container-content section-pad space-y-32">
         <!-- Company Info Table -->
-        <section data-aos="fade-up">
-            <div class="mb-12">
-                <span class="section-tag">— Conpany Info</span>
-                <h2 class="text-3xl font-bold">会社情報</h2>
-            </div>
-            <div class="minimal-card p-0 overflow-hidden bg-surface">
+        <section>
+            <div class="minimal-card p-0 overflow-hidden bg-surface"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
                 <div class="divide-y divide-border">
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">商号</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">商号</div>
                         <div class="px-8 py-6 font-medium">株式会社e-tac</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">代表者</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">代表者</div>
                         <div class="px-8 py-6 font-medium">代表取締役　小森雅之</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">設立</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">設立</div>
                         <div class="px-8 py-6 font-medium">令和７年３月１０日</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">資本金</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">資本金</div>
                         <div class="px-8 py-6 font-medium">500万円</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">所在地</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">所在地</div>
                         <div class="px-8 py-6 font-medium">福岡県行橋市中央三丁目５番２５号</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">法務顧問</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">法務顧問</div>
                         <div class="px-8 py-6 font-medium">安田法律事務所</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">税務顧問</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">税務顧問</div>
                         <div class="px-8 py-6 font-medium">あんしん税理士法人</div>
                     </div>
-                    <div class="grid md:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 bg-primary-light text-white font-bold text-sm">労務顧問</div>
+                    <div class="grid grid-cols-[180px_1fr]">
+                        <div class="px-8 py-6 font-bold text-lg">労務顧問</div>
                         <div class="px-8 py-6 font-medium">社会保険労務士法人ウインツ</div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Operation Flow -->
-        <section data-aos="fade-up">
-            <div class="mb-12">
-                <span class="section-tag">— Flow</span>
-                <h2 class="text-3xl font-bold">オペレーション・フロー</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="minimal-card">
-                    <div class="text-xs font-black text-secondary mb-6 tracking-widest">STEP 01</div>
-                    <h4 class="text-xl font-bold mb-3">コンサルテーション</h4>
-                    <p class="text-muted leading-relaxed">貴社の課題を詳細にヒアリングし、最適なアウトソーシング範囲を定義します。</p>
-                </div>
-                <div class="minimal-card">
-                    <div class="text-xs font-black text-secondary mb-6 tracking-widest">STEP 02</div>
-                    <h4 class="text-xl font-bold mb-3">プロセス設計</h4>
-                    <p class="text-muted leading-relaxed">標準化と自動化を組み合わせた、ミスのない業務フローを構築・可視化します。</p>
-                </div>
-                <div class="minimal-card">
-                    <div class="text-xs font-black text-secondary mb-6 tracking-widest">STEP 03</div>
-                    <h4 class="text-xl font-bold mb-3">体制構築</h4>
-                    <p class="text-muted leading-relaxed">専門スキルを持つスタッフをアサインし、厳格な品質管理体制を整備します。</p>
-                </div>
-                <div class="minimal-card bg-primary text-white border-none shadow-xl shadow-primary/20">
-                    <div class="text-xs font-black mb-6 tracking-widest">STEP 04</div>
-                    <h4 class="text-xl font-bold mb-3">安定運用・改善</h4>
-                    <p class="leading-relaxed">継続的なモニタリングと定期報告により、さらなる効率化を提案し続けます。</p>
-                </div>
-            </div>
-        </section>
         <!-- History Timeline -->
-        <section data-aos="fade-up">
-            <div class="mb-12">
-                <span class="section-tag">— History</span>
-                <h2 class="text-3xl font-bold">沿革</h2>
+        <section>
+            <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="section-title">沿革</h2>
             </div>
-            <ol class="relative border-s">
+            <ol class="relative border-s" data-aos="fade-up" data-aos-delay="200">
                 <!-- 2022 -->
                 <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -inset-s-3 ring-8 ring-white shadow">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
                     </span>
-                    <time class="bg-neutral-secondary-medium border text-heading font-medium px-2 py-1 rounded">2022年11月</time>
-                    <h3 class="flex items-center mb-1 text-xl font-semibold text-heading my-2">
-                        株式会社JOB CREATORの製造受託部門
-                    </h3>
-                    <p class="mb-4 text-body">e-tac事業部を開設</p>
+                    <time class="border font-medium px-2 py-1 rounded">2022年11月</time>
+                    <h3 class="font-medium my-2">株式会社JOB CREATORの製造受託部門としてe-tac事業部を開設</h3>
                 </li>
                 <!-- 2025 -->
                 <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -inset-s-3 ring-8 ring-white shadow">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
                     </span>
-                    <time class="bg-neutral-secondary-medium border text-heading font-medium px-2 py-1 rounded">2025年3月</time>
-                    <h3 class="flex items-center mb-1 text-xl font-semibold text-heading my-2">株式会社e-tac設立</h3>
-                    <p class="mb-4 text-body">製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により設立</p>
+                    <time class="border font-medium px-2 py-1 rounded">2025年3月</time>
+                    <h3 class="font-medium my-2">製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立</h3>
                 </li>
                 <!-- 2026 -->
                 <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-secondary rounded-full -inset-s-3 ring-8 ring-white shadow">
+                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
                     </span>
-                    <time class="bg-neutral-secondary-medium border text-heading font-medium px-2 py-1 rounded">2026年3月</time>
-                    <h3 class="flex items-center mb-1 text-xl font-semibold text-heading my-2">
-                        一般社団法人工業製品製造技能人材機構（JAIM）加入
-                    </h3>
-                    <p class="mb-4 text-body"></p>
+                    <time class="border font-medium px-2 py-1 rounded">2026年3月</time>
+                    <h3 class="font-medium my-2">一般社団法人工業製品製造技能人材機構（JAIM）加入</h3>
                 </li>
             </ol>
-        </section>
-        <!-- Retention rate -->
-        <section class="minimal-card bg-surface border-none p-12 lg:p-20"
-                 data-aos="fade-up">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="section-tag">— Reliability</span>
-                    <h2 class="text-3xl font-bold mb-8">業界を牽引する定着率</h2>
-                    <div class="text-7xl lg:text-8xl font-black text-secondary leading-none mb-8 tracking-tighter">
-                        90%<span class="text-4xl">+</span>
-                    </div>
-                    <p class="text-lg text-muted leading-relaxed mb-10">
-                        徹底した教育研修と、スタッフのメンタルケアプログラムにより、長期的な安定稼働を実現。高品質なサービスを維持します。
-                    </p>
-                    <div class="space-y-6">
-                        <div-2 "> -2">
-                            <div class="flex justify-between text-xs font-bold uppercase tracking-widest">
-                                <span>e-tac Retention</span><span>92.4%</span>
-                            </div>
-                            <div class="h-1.5 bg-border rounded-full overflow-hidden">
-                                <div class="h-full bg-secondary rounded-full w-[92.4%]"></div>
-                            </div>
-                        </div>
-                        <div class="space-y-2 opacity-50">
-                            <div class="flex justify-between text-xs font-bold uppercase tracking-widest text-muted">
-                                <span>Industry Average</span><span>64.0%</span>
-                            </div>
-                            <div class="h-1.5 bg-border rounded-full overflow-hidden">
-                                <div class="h-full bg-muted rounded-full w-[64%]"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <img class="rounded-3xl shadow-2xl w-full grayscale group-hover:grayscale-0 transition-all duration-700"
-                         width="800"
-                         height="600"
-                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuF2sz_xM-Df4nKH_fRA_pvcRYPmeILt0r-EoQ19t7oVSHP4689AjUjLT0PnHoCo0M_Rgl9Jlq5JHS8NFu1NgT822Hf8KwSNdViume5QfZudzvfxqszkeq5Tcy_IZcWBC9xINHZ1DTGqFqCuTCqlej7CEK2wJU2UEx2Sgy_eZzesbqtNsMQxLR2R-3kmMayzbfIJ5bbWExGEHBaB81l369cemg5DAtuLE91u5AxWWuFFCJJZIkZLUGooKn4S54a22AwVtPwYUvRQ"
-                         alt="Our team" />
-                </div>
-            </div>
         </section>
     </div>
 {% endblock content %}

@@ -1,85 +1,31 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load static i18n %}
 {% block title %}
     {% trans "ご担当者様へ" %} | e-tac
 {% endblock title %}
 {% block content %}
-    <!-- Contact Section -->
-    <section class="min-h-screen flex items-center pt-32 pb-20 bg-white overflow-hidden relative">
-        <!-- Minimalist Background -->
-        <div class="absolute inset-0 pointer-events-none opacity-30">
-            <div class="absolute top-0 right-0 w-[50%] h-[50%] bg-secondary/5 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-0 left-0 w-[40%] h-[40%] bg-accent/5 rounded-full blur-[100px]"></div>
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary text-white">
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <img src="{% static 'images/stitch_de2713e2.jpg' %}"
+                 alt=""
+                 class="w-full h-full object-cover" />
         </div>
-
-        <div class="container-content relative z-10 w-full">
-            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                <div data-aos="fade-right">
-                    <span class="section-tag">— Contact Us</span>
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-[1.1] tracking-tight mb-8">
-                        {% trans "まず、" %}<br />
-                        <span class="text-secondary">{% trans "一言お聞かせください。" %}</span>
-                    </h2>
-                    <p class="text-lg md:text-xl text-muted leading-relaxed mb-10 max-w-lg">
-                        「どの業務を委託できるかわからない」でも大丈夫です。
-                        現状をお話しいただければ、最適なプランをご提案します。
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center text-secondary border border-border">
-                                <span class="material-symbols-outlined">schedule</span>
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-primary">通常1営業日以内に返信</div>
-                                <div class="text-xs text-muted uppercase tracking-widest">Fast Response</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-surface flex items-center justify-center text-secondary border border-border">
-                                <span class="material-symbols-outlined">lock</span>
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-primary">秘密厳守・NDA締結可能</div>
-                                <div class="text-xs text-muted uppercase tracking-widest">Confidential</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="relative" data-aos="fade-left">
-                    <div class="minimal-card bg-surface shadow-2xl shadow-primary/5 p-10 lg:p-12">
-                        <form class="space-y-5">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                <div class="space-y-2">
-                                    <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Company Name</label>
-                                    <input class="form-input" type="text" placeholder="{% trans '会社名' %}" />
-                                </div>
-                                <div class="space-y-2">
-                                    <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Your Name</label>
-                                    <input class="form-input" type="text" placeholder="{% trans 'ご担当者名' %}" />
-                                </div>
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Phone Number</label>
-                                <input class="form-input" type="tel" placeholder="{% trans '電話番号' %}" />
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Email Address</label>
-                                <input class="form-input" type="email" placeholder="{% trans 'メールアドレス' %}" />
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-[10px] font-bold text-muted uppercase tracking-widest ml-1">Message</label>
-                                <textarea class="form-input min-h-[120px] resize-none" placeholder="{% trans 'お問い合わせ内容' %}"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="shine-btn w-full bg-primary text-white font-bold py-5 rounded-2xl shadow-xl shadow-primary/20 text-lg mt-4">
-                                {% trans "無料相談を申し込む" %}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="container-content relative z-10 text-center"
+             data-aos="fade-up">
+            <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "ご担当者様へ" %}</h1>
         </div>
     </section>
+    <!-- Main Content -->
+    <div class="container-content section-pad space-y-32">
+        <section data-aos="fade-up" data-aos-delay="200">
+            <div class="max-w-none leading-relaxed">
+                <p class="mb-6">e-tacは、多種多様な受託業務を通じて製造現場の運営ノウハウの蓄積を行ってまいりました。</p>
+                <p class="mb-6">「業種」「業態」「企業」各々、取り組んでいる業務や方向性が異なるように、問題点も異なります。</p>
+                <p class="mb-6">e-tacは、現場理解を最優先に考えております。課題や問題点、目指す方向を理解させていただいた上で、貴社に最適なご提案をいたします。</p>
+                <p class="mb-6">e-tacは、焦ることなく着実に取り組みます。</p>
+                <p class="mb-0">e-tacとの出会いが企業成長の道しるべになることを約束いたします。</p>
+            </div>
+        </section>
+    </div>
 {% endblock content %}

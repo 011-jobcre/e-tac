@@ -1,139 +1,38 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load static i18n %}
 {% block title %}
     {% trans "グループ情報" %} | e-tac
 {% endblock title %}
 {% block content %}
-    <!-- Hero Header -->
+    <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary text-white">
         <div class="absolute inset-0 pointer-events-none opacity-20">
-            <img class="w-full h-full object-cover"
-                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80"
-                 alt="" />
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80"
+                 alt=""
+                 class="w-full h-full object-cover" />
         </div>
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
-            <span class="section-tag text-accent">— Network</span>
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-8 uppercase">
-                {% trans "グループ情報" %}
-            </h1>
-            <p class="text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                {% trans "単体の人材会社ではありません。複数の専門会社が連携するグループ体制だからこそ、あらゆる業種・規模の依頼に対応できます。" %}
-            </p>
+            <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "グループ" %}</h1>
         </div>
     </section>
-    <!-- Group Companies Grid -->
-    <section class="section-pad bg-white" id="group">
-        <div class="container-content">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                <div class="minimal-card p-10 group hover:bg-surface transition-colors"
-                     data-aos="fade-up">
-                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
-                        🏢
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-2 leading-tight">
-                        e-tac
-                        <br />
-                        CONSULTING SYSTEM
-                    </h3>
-                    <div class="text-[10px] font-bold text-muted uppercase tracking-[0.2em] mb-6">
-                        Group Headquarters · BPO / Staffing
-                    </div>
-                    <p class="text-muted text-sm leading-relaxed mb-8">
-                        グループの中核会社。有料職業紹介・登録支援機関・製造業アウトソーシングを統括。国内外の人材ネットワークとワンストップBPOサービスを提供するグループの司令塔。
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-6 border-t border-border">
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">BPO HQ</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Staffing</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Visas</span>
-                    </div>
+    <!-- Main Content -->
+    <div class="container-content section-pad space-y-32">
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="minimal-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-2">Job Holdings</h3>
                 </div>
-                <div class="minimal-card p-10 group hover:bg-surface transition-colors"
-                     data-aos="fade-up"
-                     data-aos-delay="100">
-                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
-                        🏭
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-2 leading-tight">Creator Holdings</h3>
-                    <div class="text-[10px] font-bold text-muted uppercase tracking-[0.2em] mb-6">
-                        Manufacturing Outsourcing Division
-                    </div>
-                    <p class="text-muted text-sm leading-relaxed mb-8">
-                        製造業に特化したアウトソーシング専門会社。NC加工・溶接・塗装・検査・梱包など製造全工程を受託。特定技能外国人材を中心とした安定した生産体制構築が強み。
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-6 border-t border-border">
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Manufacturing</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">NC / Welding</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">QA</span>
-                    </div>
+                <div class="minimal-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-2 ">Job Creators</h3>
                 </div>
-                <div class="minimal-card p-10 group hover:bg-surface transition-colors"
-                     data-aos="fade-up"
-                     data-aos-delay="200">
-                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
-                        💻
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-2 leading-tight uppercase">Job Creators</h3>
-                    <div class="text-[10px] font-bold text-muted uppercase tracking-[0.2em] mb-6">
-                        IT Outsourcing · System Development
-                    </div>
-                    <p class="text-muted text-sm leading-relaxed mb-8">
-                        ITシステム開発のコーディング・バグチェック・QAを専門に受託。ポーランド・ウクライナの優秀なエンジニアと連携し、コストと時差を活用した迅速・高品質な開発を実現。
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-6 border-t border-border">
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Coding</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Testing</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Euro Team</span>
-                    </div>
+                <div class="minimal-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-2">e-tac</h3>
                 </div>
-                <div class="minimal-card p-10 group hover:bg-surface transition-colors"
-                     data-aos="fade-up"
-                     data-aos-delay="300">
-                    <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-3xl mb-8 group-hover:scale-110 transition-transform">
-                        🌏
-                    </div>
-                    <h3 class="text-2xl font-bold text-primary mb-2 leading-tight uppercase">Food Creator</h3>
-                    <div class="text-[10px] font-bold text-muted uppercase tracking-[0.2em] mb-6">
-                        International Human Resources · Care
-                    </div>
-                    <p class="text-muted text-sm leading-relaxed mb-8">
-                        介護・看護・福祉分野に特化した外国人材の採用・育成・定着支援を行う専門会社。特定技能・技能実習・EPA制度を活用し、医療・介護現場の人手不足を解消します。
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-6 border-t border-border">
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Medical Care</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">Nursing</span>
-                        <span class="text-[10px] font-bold tracking-widest bg-primary/5 text-primary px-3 py-1.5 rounded-full uppercase">EPA</span>
-                    </div>
+                <div class="minimal-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-2">Food Creators</h3>
                 </div>
             </div>
-            <!-- Synergy Banner -->
-            <div class="minimal-card bg-surface border-none p-12 lg:p-20 relative overflow-hidden"
-                 data-aos="fade-up">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full translate-x-1/2 -translate-y-1/2">
-                </div>
-                <div class="relative z-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                    <div class="flex-1 text-center lg:text-left">
-                        <h2 class="text-3xl font-bold text-primary mb-6">グループシナジーによる一括対応</h2>
-                        <p class="text-lg text-muted leading-relaxed">
-                            グループ全社が連携することで、<strong>1つの窓口から複数領域を同時にカバー。</strong>製造現場からIT開発、介護スタッフ確保まで——e-tacグループが一括対応します。
-                        </p>
-                    </div>
-                    <div class="flex gap-12 lg:gap-16 shrink-0">
-                        <div class="text-center">
-                            <div class="text-5xl font-black text-secondary mb-2">4</div>
-                            <div class="text-[10px] font-bold text-muted uppercase tracking-widest">Companies</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-black text-secondary mb-2">8+</div>
-                            <div class="text-[10px] font-bold text-muted uppercase tracking-widest">Industries</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-5xl font-black text-secondary mb-2">∞</div>
-                            <div class="text-[10px] font-bold text-muted uppercase tracking-widest">Scalable</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 {% endblock content %}

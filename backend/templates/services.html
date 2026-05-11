@@ -7,159 +7,64 @@
     <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-primary text-white">
         <div class="absolute inset-0 pointer-events-none opacity-20">
-            <img class="w-full h-full object-cover"
-                 width="1920"
-                 height="1080"
-                 src="{% static 'images/stitch_ca1cfd42.jpg' %}"
-                 alt="" />
+            <img src="{% static 'images/stitch_ca1cfd42.jpg' %}"
+                 alt=""
+                 class="w-full h-full object-cover" />
         </div>
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
-            <span class="section-tag text-accent">— Manufacturing BPO</span>
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-8 uppercase">
-                {% trans "サービス" %}
-            </h1>
-            <p class="text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12">
-                {% trans "ロボット部品から制御盤まで。日本品質の製造BPOと、グローバル拠点とのIT連携。次世代のモノづくりを実現するハイブリッド・ソリューション。" %}
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#core-services"
-                   class="shine-btn bg-white text-primary font-bold px-10 py-5 rounded-full shadow-xl">
-                    {% trans "サービス詳細を見る" %}
-                </a>
-                <a href="{% url 'contact' %}"
-                   class="inline-flex items-center justify-center gap-3 border border-white/30 text-white font-bold px-10 py-5 rounded-full hover:bg-white/10 transition-colors">
-                    {% trans "お問い合わせ" %}
-                </a>
-            </div>
+            <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "サービス" %}</h1>
         </div>
     </section>
-    <!-- Core Services Grid -->
-    <section class="section-pad bg-white" id="core-services">
-        <div class="container-content">
-            <div class="mb-20" data-aos="fade-up">
-                <span class="section-tag mb-4">— Core Services</span>
-                <h2 class="section-title mb-6">提供サービス</h2>
-                <p class="section-sub">製造現場の課題を解決する、多角的なBPOソリューション。</p>
+    <!-- Main Content -->
+    <div class="container-content section-pad space-y-32">
+        <section>
+            <div class="mb-12">
+                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">製造受託業務</h2>
             </div>
-            <div class="grid lg:grid-cols-12 gap-8">
-                <!-- Manufacturing BPO -->
-                <div class="lg:col-span-8 minimal-card group overflow-hidden"
-                     data-aos="fade-up">
-                    <div class="flex flex-col h-full">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-bold text-primary mb-6">{% trans "製造BPOサービス" %}</h3>
-                            <p class="text-muted text-lg mb-10 max-w-xl leading-relaxed">
-                                {% trans "ロボット部品、工作機械の精密板金、制御盤の設計・製作を一貫して請け負います。徹底した工程管理で高品質な製品を提供します。" %}
-                            </p>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-1">
-                                        <span class="material-symbols-outlined text-sm">check</span>
-                                    </div>
-                                    <p class="text-primary font-medium">{% trans "精密ロボットアーム部品" %}</p>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-1">
-                                        <span class="material-symbols-outlined text-sm">check</span>
-                                    </div>
-                                    <p class="text-primary font-medium">{% trans "産業用制御盤・配線ユニット" %}</p>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-1">
-                                        <span class="material-symbols-outlined text-sm">check</span>
-                                    </div>
-                                    <p class="text-primary font-medium">{% trans "工作機械向け大型カバー" %}</p>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0 mt-1">
-                                        <span class="material-symbols-outlined text-sm">check</span>
-                                    </div>
-                                    <p class="text-primary font-medium">{% trans "一貫した品質管理体制" %}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- IT BPO -->
-                <div class="lg:col-span-4 bg-primary rounded-[2rem] p-10 text-white flex flex-col justify-between relative overflow-hidden shadow-2xl shadow-primary/20"
-                     data-aos="fade-up"
-                     data-aos-delay="100">
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-8">
-                            <span class="material-symbols-outlined text-3xl">hub</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-6">{% trans "グローバルIT BPO" %}</h3>
-                        <p class="text-white/70 text-base leading-relaxed mb-8">
-                            {% trans "欧州のエンジニア拠点と連携し、製造現場のDXを支援するソフトウェア開発を提供。" %}
-                        </p>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="flex gap-3 mb-6">
-                            <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest">POLAND</span>
-                            <span class="bg-white/10 border border-white/20 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest">UKRAINE</span>
-                        </div>
-                        <div class="text-5xl font-black italic tracking-tighter opacity-10 uppercase">Global</div>
-                    </div>
-                </div>
-                <!-- Tech & Quality -->
-                <div class="lg:col-span-6 minimal-card" data-aos="fade-up">
-                    <span class="material-symbols-outlined text-secondary text-5xl mb-6">android_fingerprint</span>
-                    <h4 class="text-xl font-bold text-primary mb-4">{% trans "設計・技術力" %}</h4>
-                    <p class="text-muted leading-relaxed">
-                        {% trans "3D CAD/CAMを駆使した最適な設計提案。コストダウンと品質向上を両立させるVE/VA提案に自信があります。" %}
-                    </p>
-                </div>
-                <div class="lg:col-span-6 minimal-card bg-surface border-none"
-                     data-aos="fade-up"
-                     data-aos-delay="100">
-                    <span class="material-symbols-outlined text-secondary text-5xl mb-6">verified</span>
-                    <h4 class="text-xl font-bold text-primary mb-4">{% trans "世界基準の品質管理" %}</h4>
-                    <p class="text-muted leading-relaxed">
-                        {% trans "最新の検査設備を完備。1ミクロン単位の精度を保証するトレーサビリティ体制を構築しています。" %}
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="minimal-card bg-surface">
+                    <p>
+                        企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業務に対応いたします。
+                        <br />
+                        システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様のニーズに応じた業務の受託が可能です。
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Process -->
-    <section class="section-pad bg-surface">
-        <div class="container-content">
-            <div class="mb-20 text-center" data-aos="fade-up">
-                <span class="section-tag mb-4">— Process</span>
-                <h2 class="section-title mb-6">金属加工プロセス</h2>
-                <p class="section-sub mx-auto">一貫生産体制による圧倒的なスピードと精度。</p>
+        </section>
+        <section>
+            <div class="mb-12">
+                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">現場改善型アウトソーシング</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {% include "components/process_card.html" with step="01" title="NCT加工" body="高速・高精度なパンチプレス加工。" img="stitch_7ef1cdf2.jpg" %}
-                {% include "components/process_card.html" with step="02" title="レーザー加工" body="複雑な形状も自在に切り出す最新技術。" img="stitch_0cfcd54b.jpg" %}
-                {% include "components/process_card.html" with step="03" title="精密溶接" body="熟練工による歪みのない接合技術。" img="stitch_5ff95962.jpg" %}
-                {% include "components/process_card.html" with step="04" title="表面仕上げ" body="塗装から印刷まで一貫した最終工程。" img="stitch_5e6e9171.jpg" %}
-            </div>
-        </div>
-    </section>
-    <!-- CTA -->
-    <section class="section-pad">
-        <div class="container-content">
-            <div class="bg-primary rounded-[3rem] p-12 lg:p-20 text-center text-white relative overflow-hidden"
-                 data-aos="zoom-in">
-                <div class="absolute inset-0 opacity-10 pointer-events-none">
-                    <svg class="w-full h-full"
-                         viewBox="0 0 100 100"
-                         preserveAspectRatio="none">
-                        <circle cx="0" cy="0" r="40" fill="white"></circle>
-                        <circle cx="100" cy="100" r="30" fill="white"></circle>
-                    </svg>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="minimal-card bg-surface">
+                    <p>
+                        これまで弊社では様々な業種の業務受託を行ってまいりました。
+                        <br />
+                        各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。
+                        <br />
+                        ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたします。
+                        <br />
+                        現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。
+                    </p>
                 </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-8">課題解決への第一歩を。</h2>
-                <p class="text-lg text-white/70 mb-12 max-w-2xl mx-auto">
-                    貴社の製造工程に合わせた最適なBPOプランをご提案いたします。まずはお気軽にご相談ください。
-                </p>
-                <a href="{% url 'contact' %}"
-                   class="shine-btn inline-block bg-white text-primary font-bold px-12 py-5 rounded-full text-lg shadow-2xl">
-                    {% trans "お問い合わせ" %}
-                </a>
             </div>
-        </div>
-    </section>
+        </section>
+        <section>
+            <div class="mb-12">
+                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">製造DX支援型アウトソーシング</h2>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="minimal-card bg-surface">
+                    <p>
+                        様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。
+                        <br />
+                        机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいたします。
+                        <br />
+                        ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十分に理解・把握させていただき、実際に運用できるDX推進を提案します。
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
 {% endblock content %}
