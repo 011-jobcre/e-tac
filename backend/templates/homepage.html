@@ -3,39 +3,53 @@
 {% block title %}
     {% trans "ホーム" %} | e-tac
 {% endblock title %}
-{% block meta_description %}
-    e-tacは製造・ITアウトソーシングの最先端BPOパートナーです。
-{% endblock meta_description %}
 {% block content %}
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- Hero -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-screen flex items-center overflow-hidden bg-surface">
-        <!-- Minimalist Background Decoration -->
         <div class="container-content relative z-10">
+            <!-- Grid -->
             <div class="grid lg:grid-cols-5 gap-16 lg:gap-24 items-center">
-                <div data-aos="fade-right" class="lg:col-span-2">
-                    <h1 class="text-lg lg:text-2xl font-bold leading-[1.1] tracking-tight mb-12">{% trans "コア業務へパワーシフト" %}</h1>
-                    <p class="text-lg leading-relaxed max-w-xl">
+                <!-- Left Content -->
+                <div class="lg:col-span-2">
+                    <!-- Text 1 -->
+                    <h1 class="hero-text-1 text-lg lg:text-2xl font-bold leading-[1.1] tracking-tight mb-12">
+                        {% trans "コア業務へパワーシフト" %}
+                    </h1>
+                    <!-- Text 2 -->
+                    <p class="hero-text-2 text-lg leading-relaxed max-w-xl">
                         {% trans "ノンコア業務を最適化し、企業成長を全力サポート" %}
                         <br />
                         {% trans "現場の理解から始まるDXソリューション" %}
                     </p>
-                    <p class="font-bold mt-12 lg:mt-70">
-                        現場改善型アウトソーシング　<span class="text-lg">e-tac</span>
+                    <!-- Text 3 -->
+                    <p class="hero-text-3 font-bold mt-12 lg:mt-70">
+                        {% trans "現場改善型アウトソーシング" %}　<span class="text-lg">e-tac</span>
                     </p>
                 </div>
-                <div class="relative lg:col-span-3 aspect-4/3" data-aos="fade-left">
-                    <div class="carousel-fade-item animate-[fade-cycle_18s_0s_infinite]">
+                <!-- Right Content -->
+                <div class="relative lg:col-span-3 aspect-4/3">
+                    <!-- Images 1 -->
+                    <div class="hero-image-1">
                         <div class="h-full">
-                            <img src="{% static 'images/e-tac-img.png' %}"
+                            <img src="{% static 'images/e-tac-img-1.png' %}"
                                  alt=""
-                                 class="w-full h-full object-cover rounded-xl" />
+                                 class="w-full h-full object-fill rounded-xl" />
                         </div>
                     </div>
-                    <div class="carousel-fade-item animate-[fade-cycle_18s_9s_infinite]">
+                    <!-- Images 2 -->
+                    <div class="hero-image-2">
                         <div class="h-full">
                             <img src="{% static 'images/e-tac-img-2.png' %}"
                                  alt=""
-                                 class="w-full h-full object-cover rounded-xl" />
+                                 class="w-full h-full object-fill rounded-xl" />
+                        </div>
+                    </div>
+                    <!-- Images 3 -->
+                    <div class="hero-image-3">
+                        <div class="h-full">
+                            <img src="{% static 'images/e-tac-img-3.png' %}"
+                                 alt=""
+                                 class="w-full h-full object-fill rounded-xl" />
                         </div>
                     </div>
                 </div>

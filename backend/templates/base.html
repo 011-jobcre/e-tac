@@ -9,7 +9,7 @@
             {% block title %}
             {% endblock title %}
         </title>
-        <!-- Compiled CSS -->
+        <!-- CSS -->
         <link href="{% static 'css/output.css' %}" rel="stylesheet" />
         <!-- AOS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -24,7 +24,9 @@
         {% endblock extra_head %}
     </head>
     <body class="font-sans bg-white antialiased flex flex-col min-h-screen">
+        <!-- Navigation Bar -->
         {% include "navbar.html" %}
+        <!-- Main -->
         <main class="flex-1">
             {% block content %}
             {% endblock content %}
@@ -33,54 +35,53 @@
         <footer class="bg-primary text-white">
             <div class="container-content py-20 lg:py-24">
                 <div class="grid grid-cols-1 md:grid-cols-8 gap-12 lg:gap-16">
-                    <!-- Brand -->
+                    <!-- Company -->
                     <div class="md:col-span-5">
-                        <div class="text-3xl font-black tracking-widest text-white mb-6">
-                            株式会社　<span class="text-secondary">e-tac</span>
-                        </div>
+                        <div class="text-3xl font-black tracking-widest text-white mb-6">{% trans "株式会社 e-tac" %}</div>
                     </div>
-                    <!-- Navigation -->
+                    <!-- Navigation Menu -->
                     <div class="md:col-span-3">
                         <p class="text-xs font-bold tracking-widest text-white/30 uppercase mb-6">{% trans "ナビゲーション" %}</p>
                         <ul class="grid grid-cols-2 space-y-4">
                             <li>
                                 <a href="{% url 'home' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "ホーム" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ホーム" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'about' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "会社概要" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "会社概要" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'services' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "サービス" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "サービス" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'group' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "グループ" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "グループ" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'contact' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "ご担当者様へ" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ご担当者様へ" %}</a>
                             </li>
                             <li>
                                 <a href="{% url 'inquiry' %}"
-                                   class="text-white/70 hover:text-white transition-colors">{% trans "お問い合わせ" %}</a>
+                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "お問い合わせ" %}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/30">
-                    <p>© 2026 e-tac Manufacturing BPO. All Rights Reserved.</p>
+                <!-- Copyright -->
+                <div class="mt-20 pt-8 border-t border-white/10 text-sm text-white/30">
+                    <p>© <span id="current-year"></span> e-tac. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
-        <!-- GSAP -->
-        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> {% endcomment %}
-        {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> {% endcomment %}
         <!-- AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true });</script>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
         {% block extra_scripts %}
         {% endblock extra_scripts %}
     </body>

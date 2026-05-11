@@ -15,12 +15,12 @@
 
     /* Primary Blue Palette — Brightened Corporate Blue */
     --color-primary: #004e92;
-    /* --color-primary-light: #0066cc;
-    --color-primary-dark: #003366; */
+    --color-primary-light: #0066cc;
+    --color-primary-dark: #003366;
 
     --color-secondary: #0ea5e9;
-    /* --color-secondary-light: #38bdf8;
-    --color-secondary-dark: #0284c7; */
+    --color-secondary-light: #38bdf8;
+    --color-secondary-dark: #0284c7;
 
     --color-accent: #00d2ff;
 
@@ -141,28 +141,64 @@
     }
 
     /* Carousel Fade */
-    .carousel-fade-item {
+    .hero-image-1 {
         @apply absolute inset-0 opacity-0;
-        animation: fade-cycle 18s infinite;
+        animation: fade-cycle 12s infinite;
+        animation-delay: 0s;
+    }
+    .hero-image-2 {
+        @apply absolute inset-0 opacity-0;
+        animation: fade-cycle 12s infinite;
+        animation-delay: 4s;
+    }
+    .hero-image-3 {
+        @apply absolute inset-0 opacity-0;
+        animation: fade-cycle 12s infinite;
+        animation-delay: 8s;
     }
     @keyframes fade-cycle {
         0%,
-        26% {
+        5% {
+            opacity: 0;
+        }
+        10%,
+        30% {
             opacity: 1;
         }
-        33%,
-        93% {
+        35%,
+        95% {
             opacity: 0;
         }
         100% {
-            opacity: 1;
+            opacity: 0;
         }
     }
-    .carousel-fade-item:nth-child(1) {
-        animation-delay: 0s;
+
+    /* Text animations synced with carousel */
+    .hero-text-1 {
+        opacity: 0;
+        animation: text-fade-in 1.2s forwards;
+        animation-delay: 0.6s;
     }
-    .carousel-fade-item:nth-child(2) {
-        animation-delay: 9s;
+    .hero-text-2 {
+        opacity: 0;
+        animation: text-fade-in 1.2s forwards;
+        animation-delay: 4.6s;
+    }
+    .hero-text-3 {
+        opacity: 0;
+        animation: text-fade-in 1.2s forwards;
+        animation-delay: 8.6s;
+    }
+    @keyframes text-fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* Progress bar */
