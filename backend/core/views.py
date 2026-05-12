@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.core.mail import send_mail
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, FormView
@@ -24,7 +26,41 @@ class ContactView(TemplateView):
 class InquiryView(FormView):
     template_name = "inquiry.html"
     form_class = InquiryForm
-    success_url = reverse_lazy("inquiry")
+    success_url = reverse_lazy("inquiry-thanks")
+
+    def form_valid(self, form):
+        self.send_inquiry_email(form.cleaned_data)
+        return super().form_valid(form)
+
+    def send_inquiry_email(self, data):
+        subject = "【e-tac】お問い合わせが送信されました"
+        message = "\n".join(
+            [
+                "お問い合わせフォームから以下の内容が送信されました。",
+                "",
+                f"会社名: {data['company_name']}",
+                f"業務分類 大分類: {data['daibunrui']}",
+                f"業務分類 中分類: {data['chubunrui']}",
+                f"業務分類 小分類: {data['shobunrui']}",
+                f"職位: {data['position']}",
+                f"担当者名: {data['contact_name']}",
+                "",
+                "お問い合わせ内容:",
+                data["inquiry_content"],
+            ]
+        )
+
+        send_mail(
+            subject,
+            message,
+            settings.INQUIRY_FROM_EMAIL,
+            [settings.INQUIRY_TO_EMAIL],
+            fail_silently=False,
+        )
+
+
+class InquiryThanksView(TemplateView):
+    template_name = "inquiry_thanks.html"
 
 
 class GroupView(TemplateView):
@@ -37,9 +73,7 @@ def chubunrui_options(request):
 
     chubunrui_list = Chubunrui.objects.none()
     if dai_code:
-        chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values(
-            "code", "name"
-        )
+        chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values("code", "name")
 
     return render(
         request,
@@ -58,9 +92,7 @@ def shobunrui_options(request):
 
     shobunrui_list = Shobunrui.objects.none()
     if chu_code:
-        shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values(
-            "code", "name"
-        )
+        shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values("code", "name")
 
     return render(
         request,

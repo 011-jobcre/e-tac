@@ -4,6 +4,7 @@ from .models import Daibunrui, Chubunrui, Shobunrui
 
 
 class InquiryForm(forms.Form):
+    company_name = forms.CharField(required=True, max_length=255)
     daibunrui = forms.ModelChoiceField(
         queryset=Daibunrui.objects.all(),
         required=True,
@@ -47,3 +48,20 @@ class InquiryForm(forms.Form):
             }
         ),
     )
+    position = forms.CharField(required=True, max_length=255)
+    contact_name = forms.CharField(required=True, max_length=255)
+    inquiry_content = forms.CharField(required=True)
+    privacy_policy = forms.BooleanField(required=True)
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        data = self.data if self.is_bound else None
+        dai_code = data.get("daibunrui") if data else None
+        chu_code = data.get("chubunrui") if data else None
+
+        if dai_code:
+            self.fields["chubunrui"].queryset = Chubunrui.objects.filter(daibunrui_id=dai_code)
+
+        if chu_code:
+            self.fields["shobunrui"].queryset = Shobunrui.objects.filter(chubunrui_id=chu_code)

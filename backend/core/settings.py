@@ -7,15 +7,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", "").split(",")
-CSRF_TRUSTED_ORIGINS = config(
-    "CSRF_TRUSTED_ORIGINS", default="https://*.onrender.com"
-).split(",")
+CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", default="https://*.onrender.com").split(",")
 
 # Support for proxy-based HTTPS
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # WhiteNoise stability: prevent crash on missing static files
 WHITENOISE_MANIFEST_STRICT = False
+
+# Email Configuration
+if DEBUG:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_PORT = int(config("EMAIL_PORT", 587))
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", "True") == "True"
+EMAIL_USE_SSL = config("EMAIL_USE_SSL", "False") == "True"
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
+INQUIRY_FROM_EMAIL = config("INQUIRY_FROM_EMAIL", default=DEFAULT_FROM_EMAIL)
+INQUIRY_TO_EMAIL = config("INQUIRY_TO_EMAIL", default=DEFAULT_FROM_EMAIL)
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -66,7 +80,10 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=config("DATABASE_URL", default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
+        default=config(
+            "DATABASE_URL",
+            default=f"sqlite:///{BASE_DIR / config('DB_NAME', default='db.sqlite3')}",
+        ),
         conn_max_age=600,
     )
 }

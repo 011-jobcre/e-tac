@@ -38,6 +38,7 @@
                                 会社名 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
+                                   name="company_name"
                                    required
                                    x-model.trim="companyName"
                                    @input="validateField('companyName')"
@@ -113,6 +114,7 @@
                                 職位 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
+                                   name="position"
                                    required
                                    x-model.trim="position"
                                    @input="validateField('position')"
@@ -131,6 +133,7 @@
                                 担当者名 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
+                                   name="contact_name"
                                    required
                                    x-model.trim="contactName"
                                    @input="validateField('contactName')"
@@ -149,6 +152,7 @@
                                 お問い合わせ内容 <span class="text-red-500">*</span>
                             </label>
                             <textarea type="text"
+                                      name="inquiry_content"
                                       required
                                       x-model.trim="inquiryContent"
                                       @input="validateField('inquiryContent')"
@@ -166,6 +170,7 @@
                             <div class="flex justify-center items-center gap-3">
                                 <input type="checkbox"
                                        id="privacy"
+                                       name="privacy_policy"
                                        required
                                        :checked="isAgreed"
                                        @click="togglePrivacy($event)"
