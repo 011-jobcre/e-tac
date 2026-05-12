@@ -1,0 +1,13 @@
+<label class="text-sm tracking-widest ml-1">中分類</label>
+<select name="chubunrui"
+        id="id_chubunrui"
+        class="w-full form-input"
+        {% if disabled %}disabled{% endif %}
+        hx-get="{% url 'shobunrui-options' %}"
+        hx-target="#shobunrui-wrapper"
+        hx-swap="innerHTML"
+        hx-trigger="change"
+        hx-indicator="#sho-loading">
+    <option value="">中分類を選択してください</option>
+    {% for chu in chubunrui_list %}<option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>{% endfor %}
+</select>

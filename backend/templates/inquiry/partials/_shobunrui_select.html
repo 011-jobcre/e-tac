@@ -1,0 +1,8 @@
+<label class="text-sm tracking-widest ml-1">小分類</label>
+<select name="shobunrui"
+        id="id_shobunrui"
+        class="w-full form-input"
+        {% if disabled %}disabled{% endif %}>
+    <option value="">小分類を選択してください</option>
+    {% for sho in shobunrui_list %}<option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>{% endfor %}
+</select>
