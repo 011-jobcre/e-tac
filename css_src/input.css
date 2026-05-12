@@ -66,17 +66,24 @@
     }
 
     /* Typography — Components should define the "look", utilities define the "context" */
-    /* .section-tag {
-        @apply text-accent font-bold text-xs tracking-[0.2em] uppercase block mb-1;
-    } */
-
-    .section-title {
-        @apply text-2xl text-primary font-bold tracking-widest leading-tight;
+    .section-tag {
+        @apply text-accent font-bold text-xs tracking-widest uppercase block mb-1;
     }
 
-    /* .section-sub {
-        @apply text-muted w-full leading-relaxed;
-    } */
+    .section-title {
+        @apply text-2xl text-primary font-bold tracking-widest;
+    }
+
+    /* HTMX Indicator */
+    .htmx-indicator {
+        display: none;
+    }
+    .htmx-request .htmx-indicator {
+        display: inline-flex;
+    }
+    .htmx-request.htmx-indicator {
+        display: inline-flex;
+    }
 
     /* Cards & Effects */
     .minimal-card {

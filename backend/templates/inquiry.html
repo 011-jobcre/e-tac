@@ -23,7 +23,7 @@
             <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="section-title mb-6 text-center">{% trans "お問い合わせ・ご相談" %}</h2>
             </div>
-            <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 <div class="border border-border rounded-2xl p-10 overflow-hidden bg-surface"
                      x-data="bunruiForm()"
                      x-init="init()">
@@ -50,40 +50,36 @@
                                 {{ form.daibunrui }}
                             </div>
                             <!-- 中分類 (HTMX target) -->
-                            <div id="chubunrui-wrapper" class="space-y-2 relative">
-                                <!-- HTMX sẽ swap content vào đây -->
-                                {% include 'inquiry/partials/_chubunrui_select.html' with disabled=True %}
-                            </div>
-                            <!-- Loading indicator -->
-                            <div id="chu-loading"
-                                 class="htmx-indicator text-sm text-red-500 flex items-center gap-2">
-                                <span class="loading loading-spinner loading-xs"></span>
-                                読み込み中...
+                            <div class="relative">
+                                <div id="chubunrui-wrapper" class="space-y-2">
+                                    {% include 'inquiry/partials/_chubunrui_select.html' with disabled=True %}
+                                </div>
+                                <!-- Loading indicator -->
+                                <div id="chu-loading" class="htmx-indicator absolute right-3 top-9">
+                                    <span class="material-symbols-outlined animate-spin text-sm">sync</span>
+                                    <span class="text-sm">読み込み中...</span>
+                                </div>
                             </div>
                             <!-- 小分類 (HTMX target) -->
-                            <div id="shobunrui-wrapper" class="space-y-2 relative">
-                                {% include 'inquiry/partials/_shobunrui_select.html' with disabled=True %}
-                            </div>
-                            <!-- Loading indicator -->
-                            <div id="sho-loading"
-                                 class="htmx-indicator text-sm text-red-500 flex items-center gap-2">
-                                <span class="loading loading-spinner loading-xs"></span>
-                                読み込み中...
+                            <div class="relative">
+                                <div id="shobunrui-wrapper" class="space-y-2">
+                                    {% include 'inquiry/partials/_shobunrui_select.html' with disabled=True %}
+                                </div>
+                                <!-- Loading indicator -->
+                                <div id="sho-loading" class="htmx-indicator absolute right-3 top-9">
+                                    <span class="material-symbols-outlined animate-spin text-sm">sync</span>
+                                    <span class="text-sm">読み込み中...</span>
+                                </div>
                             </div>
                             <!-- Summary display -->
                             <div x-show="hasSelection"
                                  class="mt-4 p-4 bg-primary/10 rounded-lg border border-primary/20"
                                  x-cloak>
                                 <div class="flex items-start gap-3">
-                                    <svg class="w-5 h-5 text-primary mt-0.5 shrink-0"
-                                         fill="none"
-                                         stroke="currentColor"
-                                         viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
+                                    <span class="material-symbols-outlined text-primary">info</span>
                                     <div>
-                                        <p class="text-sm font-bold text-primary mb-1">選択内容:</p>
-                                        <p class="text-sm text-muted" x-text="summaryText"></p>
+                                        <p class="text-xs font-bold text-primary mb-1">業務分類選択内容:</p>
+                                        <p class="text-sm" x-text="summaryText"></p>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +149,7 @@
                 // Listen cho HTMX events
                 document.body.addEventListener('htmx:afterSwap', (evt) => {
                     if (evt.detail.target.id === 'chubunrui-wrapper') {
-                        this.daiSelected = document.querySelector('#id_daibunrui').value;
+                        this.daiSelected = document.querySelector('#id_daibunrui')?.value;
                         this.resetChuSho();
                     }
                     if (evt.detail.target.id === 'shobunrui-wrapper') {
@@ -173,9 +169,10 @@
                 const daiText = document.querySelector('#id_daibunrui option:checked')?.text || '';
                 const chuText = document.querySelector('#id_chubunrui option:checked')?.text || '';
                 const shoText = document.querySelector('#id_shobunrui option:checked')?.text || '';
-                
-                this.summaryText = [daiText, chuText, shoText].filter(Boolean).join(' > ');
-                this.hasSelection = Boolean(this.daiSelected && this.chuSelected && this.shoSelected);
+
+                const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください'));
+                this.summaryText = parts.join(' > ');
+                this.hasSelection = parts.length > 0;
             }
         }
     }

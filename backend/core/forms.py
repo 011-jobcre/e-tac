@@ -16,6 +16,8 @@ class InquiryForm(forms.Form):
                 "hx-swap": "innerHTML",
                 "hx-trigger": "change",
                 "hx-indicator": "#chu-loading",
+                "x-model": "daiSelected",
+                "@change": "updateSummary()",
             }
         ),
     )
