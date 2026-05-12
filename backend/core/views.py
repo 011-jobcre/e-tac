@@ -35,9 +35,11 @@ def chubunrui_options(request):
     """HTMX endpoint: trả về options cho 中分類"""
     dai_code = request.GET.get("daibunrui")
 
-    chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values(
-        "code", "name"
-    )
+    chubunrui_list = Chubunrui.objects.none()
+    if dai_code:
+        chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values(
+            "code", "name"
+        )
 
     return render(
         request,
@@ -45,6 +47,7 @@ def chubunrui_options(request):
         {
             "chubunrui_list": chubunrui_list,
             "selected_dai": dai_code,
+            "disabled": not dai_code,
         },
     )
 
@@ -53,9 +56,11 @@ def shobunrui_options(request):
     """HTMX endpoint: trả về options cho 小分類"""
     chu_code = request.GET.get("chubunrui")
 
-    shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values(
-        "code", "name"
-    )
+    shobunrui_list = Shobunrui.objects.none()
+    if chu_code:
+        shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values(
+            "code", "name"
+        )
 
     return render(
         request,
@@ -63,5 +68,6 @@ def shobunrui_options(request):
         {
             "shobunrui_list": shobunrui_list,
             "selected_chu": chu_code,
+            "disabled": not chu_code,
         },
     )

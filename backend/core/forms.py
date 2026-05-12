@@ -10,26 +10,26 @@ class InquiryForm(forms.Form):
         empty_label="大分類を選択してください",
         widget=forms.Select(
             attrs={
-                "class": "w-full form-input",
+                "class": "select outline-none w-full",
                 "hx-get": reverse_lazy("chubunrui-options"),  # HTMX endpoint
                 "hx-target": "#chubunrui-wrapper",
                 "hx-swap": "innerHTML",
                 "hx-trigger": "change",
                 "hx-indicator": "#chu-loading",
                 "x-model": "daiSelected",
-                "@change": "updateSummary()",
+                "@change": "handleDaiChange($event)",
             }
         ),
     )
 
-    # 中・小 sẽ được render động qua HTMX
+    # 中・小 will be rendered dynamically via HTMX
     chubunrui = forms.ModelChoiceField(
-        queryset=Chubunrui.objects.none(),  # Empty ban đầu
+        queryset=Chubunrui.objects.none(),  # Empty initially
         required=True,
         empty_label="中分類を選択してください",
         widget=forms.Select(
             attrs={
-                "class": "w-full form-input",
+                "class": "select outline-none w-full",
                 "disabled": "disabled",  # Disabled cho đến khi chọn 大
             }
         ),
@@ -41,7 +41,7 @@ class InquiryForm(forms.Form):
         empty_label="小分類を選択してください",
         widget=forms.Select(
             attrs={
-                "class": "w-full form-input",
+                "class": "select outline-none w-full",
                 "disabled": "disabled",
             }
         ),

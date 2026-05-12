@@ -30,14 +30,14 @@
                     <form class="space-y-6" method="post" action="{% url 'inquiry' %}">
                         {% csrf_token %}
                         <!-- 会社名 -->
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
                                 会社名 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    required
                                    placeholder="{% trans "例：株式会社 e-tac" %}"
-                                   class="form-input" />
+                                   class="input outline-none w-full" />
                         </div>
                         <!-- 業種分類 -->
                         <div class="space-y-4 p-6 rounded-xl border border-border">
@@ -56,7 +56,7 @@
                                 </div>
                                 <!-- Loading indicator -->
                                 <div id="chu-loading" class="htmx-indicator absolute right-3 top-9">
-                                    <span class="material-symbols-outlined animate-spin text-sm">sync</span>
+                                    <span class="loading loading-spinner loading-xs"></span>
                                     <span class="text-sm">読み込み中...</span>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@
                                 </div>
                                 <!-- Loading indicator -->
                                 <div id="sho-loading" class="htmx-indicator absolute right-3 top-9">
-                                    <span class="material-symbols-outlined animate-spin text-sm">sync</span>
+                                    <span class="loading loading-spinner loading-xs"></span>
                                     <span class="text-sm">読み込み中...</span>
                                 </div>
                             </div>
@@ -85,51 +85,82 @@
                             </div>
                         </div>
                         <!-- 職位 -->
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
                                 職位 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    required
-                                   placeholder="{% trans "例：" %}"
-                                   class="form-input" />
+                                   placeholder="{% trans "例：係長、主任など" %}"
+                                   class="input outline-none w-full" />
                         </div>
                         <!-- 担当者名 -->
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
                                 担当者名 <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    required
-                                   placeholder="{% trans "例：" %}"
-                                   class="form-input" />
+                                   placeholder="{% trans "例：田中太郎" %}"
+                                   class="input outline-none w-full" />
                         </div>
                         <!-- お問い合わせ内容 -->
-                        <div class="space-y-2">
+                        <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
                                 お問い合わせ内容 <span class="text-red-500">*</span>
                             </label>
-                            <textarea rows="6"
+                            <textarea type="text"
                                       required
-                                      placeholder="{% trans '具体的な課題やご要望をご記入ください。' %}"
-                                      class="form-input resize-none"></textarea>
+                                      placeholder="{% trans "例：具体的な課題やご要望をご記入ください。" %}"
+                                      class="textarea outline-none w-full"></textarea>
                         </div>
+                        <!-- Privacy policy & Send button -->
                         <div class="flex flex-col gap-3">
                             <div class="flex justify-center items-center gap-3">
                                 <input type="checkbox"
                                        id="privacy"
                                        required
-                                       class="w-4 h-4 rounded border-border text-secondary focus:ring-secondary focus:ring-2" />
-                                <label for="privacy" class="text-sm leading-relaxed">
-                                    <a href="#" class="font-bold hover:underline text-primary">{% trans "プライバシーポリシー" %}</a>{% trans "に同意する" %}
+                                       :checked="isAgreed"
+                                       @click="togglePrivacy($event)"
+                                       class="checkbox checkbox-primary" />
+                                <label for="privacy"
+                                       class="text-sm leading-relaxed cursor-pointer select-none">
+                                    <a href="#"
+                                       @click.prevent.stop="showDialog = true"
+                                       class="font-bold hover:underline text-primary">{% trans "プライバシーポリシー" %}</a>{% trans "に同意する" %}
                                 </label>
                             </div>
                             <button type="submit"
-                                    class="shine-btn w-full max-w-xs mx-auto bg-primary font-bold text-white py-4 rounded-2xl shadow-xl shadow-primary/20 text-lg hover:scale-[1.02] transition-transform">
+                                    :disabled="!isAgreed"
+                                    :class="!isAgreed ? 'opacity-50 cursor-not-allowed hover:translate-y-0' : ''"
+                                    class="shine-btn btn btn-primary btn-wide btn-lg max-w-xs mx-auto">
                                 {% trans "送信する" %}
                             </button>
                         </div>
                     </form>
+                    <!-- Privacy policy modal -->
+                    <dialog id="privacy_modal" class="modal" :class="{'modal-open': showDialog}">
+                        <div class="modal-box relative bg-surface border border-border">
+                            <h3 class="font-bold text-lg text-primary">{% trans "プライバシーポリシー・利用規約" %}</h3>
+                            <p class="py-4 text-sm leading-relaxed text-muted">
+                                {% trans "以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してください。" %}
+                                <br />
+                                <br />
+                                {% trans "（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護することを重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた情報は、お問い合わせ対応の目的のみに使用されます。）" %}
+                            </p>
+                            <div class="modal-action flex justify-end gap-3 mt-4">
+                                <button type="button"
+                                        class="btn btn-outline btn-neutral"
+                                        @click="closeDialog()">{% trans "キャンセル" %}</button>
+                                <button type="button"
+                                        class="shine-btn btn btn-primary"
+                                        @click="agreeToTerms()">{% trans "同意する" %}</button>
+                            </div>
+                        </div>
+                        <form method="dialog" class="modal-backdrop">
+                            <button type="button" @click="closeDialog()" class="cursor-default">close</button>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </section>
@@ -144,6 +175,8 @@
             shoSelected: null,
             hasSelection: false,
             summaryText: '',
+            isAgreed: false,
+            showDialog: false,
 
             init() {
                 // Listen cho HTMX events
@@ -164,6 +197,32 @@
                 this.updateSummary();
             },
 
+            handleDaiChange(event) {
+                this.daiSelected = event.target.value;
+                this.chuSelected = null;
+                this.shoSelected = null;
+                this.resetSelect('id_chubunrui', '中分類を選択してください');
+                this.resetSelect('id_shobunrui', '小分類を選択してください');
+                this.updateSummary();
+            },
+
+            handleChuChange(event) {
+                this.chuSelected = event.target.value;
+                this.shoSelected = null;
+                this.resetSelect('id_shobunrui', '小分類を選択してください');
+                this.updateSummary();
+            },
+
+            resetSelect(id, placeholder) {
+                const select = document.getElementById(id);
+                if (!select) return;
+
+                select.innerHTML = '';
+                select.append(new Option(placeholder, ''));
+                select.value = '';
+                select.disabled = true;
+            },
+
             updateSummary() {
                 // Cập nhật summary text
                 const daiText = document.querySelector('#id_daibunrui option:checked')?.text || '';
@@ -173,8 +232,27 @@
                 const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください'));
                 this.summaryText = parts.join(' > ');
                 this.hasSelection = parts.length > 0;
+            },
+
+            togglePrivacy(event) {
+                if (this.isAgreed) {
+                    this.isAgreed = false;
+                } else {
+                    event.preventDefault();
+                    event.target.checked = false;
+                    this.showDialog = true;
+                }
+            },
+            
+            agreeToTerms() {
+                this.isAgreed = true;
+                this.showDialog = false;
+            },
+            
+            closeDialog() {
+                this.showDialog = false;
             }
         }
     }
     </script>
-{% endblock %}
+{% endblock extra_scripts %}

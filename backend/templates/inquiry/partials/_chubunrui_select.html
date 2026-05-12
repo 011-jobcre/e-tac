@@ -1,7 +1,7 @@
 <label class="text-sm tracking-widest ml-1">中分類</label>
 <select name="chubunrui"
         id="id_chubunrui"
-        class="w-full form-input"
+        class="select outline-none w-full"
         required
         {% if disabled %}disabled{% endif %}
         hx-get="{% url 'shobunrui-options' %}"
@@ -10,7 +10,9 @@
         hx-trigger="change"
         hx-indicator="#sho-loading"
         x-model="chuSelected"
-        @change="updateSummary()">
+        @change="handleChuChange($event)">
     <option value="">中分類を選択してください</option>
-    {% for chu in chubunrui_list %}<option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>{% endfor %}
+    {% for chu in chubunrui_list %}
+        <option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>
+    {% endfor %}
 </select>
