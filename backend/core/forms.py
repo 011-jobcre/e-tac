@@ -18,6 +18,7 @@ class InquiryForm(forms.Form):
                 "hx-indicator": "#chu-loading",
                 "x-model": "daiSelected",
                 "@change": "handleDaiChange($event)",
+                ":class": "fieldErrorClass('daiSelected')",
             }
         ),
     )

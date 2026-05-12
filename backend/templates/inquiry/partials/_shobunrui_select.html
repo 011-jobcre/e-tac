@@ -5,7 +5,8 @@
         required
         {% if disabled %}disabled{% endif %}
         x-model="shoSelected"
-        @change="updateSummary()">
+        @change="handleShoChange($event)"
+        :class="fieldErrorClass('shoSelected')">
     <option value="">小分類を選択してください</option>
     {% for sho in shobunrui_list %}
         <option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>

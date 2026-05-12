@@ -10,7 +10,8 @@
         hx-trigger="change"
         hx-indicator="#sho-loading"
         x-model="chuSelected"
-        @change="handleChuChange($event)">
+        @change="handleChuChange($event)"
+        :class="fieldErrorClass('chuSelected')">
     <option value="">中分類を選択してください</option>
     {% for chu in chubunrui_list %}
         <option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>
