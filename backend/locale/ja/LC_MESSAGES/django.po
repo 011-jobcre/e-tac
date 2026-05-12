@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 10:08+0900\n"
+"POT-Creation-Date: 2026-05-12 17:57+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: core/forms.py:12 templates/inquiry.html:246
+msgid "大分類を選択してください"
+msgstr ""
+
+#: core/forms.py:32 templates/inquiry.html:247
+#: templates/inquiry/partials/_chubunrui_select.html:16
+msgid "中分類を選択してください"
+msgstr ""
+
+#: core/forms.py:44 templates/inquiry.html:248
+#: templates/inquiry/partials/_shobunrui_select.html:11
+msgid "小分類を選択してください"
+msgstr ""
 
 #: templates/about.html:4 templates/about.html:16 templates/base.html:56
 #: templates/navbar.html:11 templates/navbar.html:73
@@ -131,8 +145,8 @@ msgstr ""
 msgid "サービス"
 msgstr ""
 
-#: templates/base.html:64 templates/group.html:16 templates/navbar.html:15
-#: templates/navbar.html:77
+#: templates/base.html:64 templates/group.html:4 templates/group.html:16
+#: templates/navbar.html:15 templates/navbar.html:77
 msgid "グループ"
 msgstr ""
 
@@ -158,37 +172,33 @@ msgid ""
 "点も異なります。"
 msgstr ""
 
-#: templates/contact.html:26
+#: templates/contact.html:25
 msgid ""
 "e-tacは、現場理解を最優先に考えております。課題や問題点、目指す方向を理解させ"
 "ていただいた上で、貴社に最適なご提案をいたします。"
 msgstr ""
 
-#: templates/contact.html:28
+#: templates/contact.html:26
 msgid "e-tacは、焦ることなく着実に取り組みます。"
 msgstr ""
 
-#: templates/contact.html:29
+#: templates/contact.html:27
 msgid "e-tacとの出会いが企業成長の道しるべになることを約束いたします。"
 msgstr ""
 
-#: templates/group.html:4
-msgid "グループ情報"
-msgstr ""
-
-#: templates/homepage.html:16
+#: templates/homepage.html:15
 msgid "コア業務へパワーシフト"
 msgstr ""
 
-#: templates/homepage.html:20
+#: templates/homepage.html:18
 msgid "ノンコア業務を最適化し、企業成長を全力サポート"
 msgstr ""
 
-#: templates/homepage.html:22
+#: templates/homepage.html:20
 msgid "現場の理解から始まるDXソリューション"
 msgstr ""
 
-#: templates/homepage.html:26 templates/services.html:40
+#: templates/homepage.html:24 templates/services.html:39
 msgid "現場改善型アウトソーシング"
 msgstr ""
 
@@ -196,28 +206,120 @@ msgstr ""
 msgid "お問い合わせ・ご相談"
 msgstr ""
 
-#: templates/inquiry.html:39
+#: templates/inquiry.html:38
+msgid "会社名"
+msgstr ""
+
+#: templates/inquiry.html:47
 msgid "例：株式会社 e-tac"
 msgstr ""
 
-#: templates/inquiry.html:92 templates/inquiry.html:102
-msgid "例："
+#: templates/inquiry.html:57
+msgid "業務分類"
 msgstr ""
 
-#: templates/inquiry.html:112
-msgid "具体的な課題やご要望をご記入ください。"
+#: templates/inquiry.html:61
+msgid "大分類"
 msgstr ""
 
-#: templates/inquiry.html:122
+#: templates/inquiry.html:114
+msgid "職位"
+msgstr ""
+
+#: templates/inquiry.html:123
+msgid "例：係長、主任など"
+msgstr ""
+
+#: templates/inquiry.html:133
+msgid "担当者名"
+msgstr ""
+
+#: templates/inquiry.html:142
+msgid "例：田中太郎"
+msgstr ""
+
+#: templates/inquiry.html:152
+msgid "お問い合わせ内容"
+msgstr ""
+
+#: templates/inquiry.html:161
+msgid "例：具体的な課題やご要望をご記入ください。"
+msgstr ""
+
+#: templates/inquiry.html:182
 msgid "プライバシーポリシー"
 msgstr ""
 
-#: templates/inquiry.html:122
+#: templates/inquiry.html:182
 msgid "に同意する"
 msgstr ""
 
-#: templates/inquiry.html:127
+#: templates/inquiry.html:189
 msgid "送信する"
+msgstr ""
+
+#: templates/inquiry.html:196
+msgid "プライバシーポリシー・利用規約"
+msgstr ""
+
+#: templates/inquiry.html:198
+msgid ""
+"以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してください。"
+msgstr ""
+
+#: templates/inquiry.html:201
+msgid ""
+"（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護すること"
+"を重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた"
+"情報は、お問い合わせ対応の目的のみに使用されます。）"
+msgstr ""
+
+#: templates/inquiry.html:206
+msgid "キャンセル"
+msgstr ""
+
+#: templates/inquiry.html:209
+msgid "同意する"
+msgstr ""
+
+#: templates/inquiry.html:245
+msgid "会社名を入力してください"
+msgstr ""
+
+#: templates/inquiry.html:249
+msgid "職位を入力してください"
+msgstr ""
+
+#: templates/inquiry.html:250
+msgid "担当者名を入力してください"
+msgstr ""
+
+#: templates/inquiry.html:251
+msgid "お問い合わせ内容を入力してください"
+msgstr ""
+
+#: templates/inquiry/partials/_chubunrui_select.html:2
+msgid "中分類"
+msgstr ""
+
+#: templates/inquiry/partials/_shobunrui_select.html:2
+msgid "小分類"
+msgstr ""
+
+#: templates/inquiry_thanks.html:4 templates/inquiry_thanks.html:17
+msgid "お問い合わせありがとうございました"
+msgstr ""
+
+#: templates/inquiry_thanks.html:27
+msgid "お問い合わせを受け付けました。"
+msgstr ""
+
+#: templates/inquiry_thanks.html:28
+msgid "内容を確認の上、担当者よりご連絡いたします。"
+msgstr ""
+
+#: templates/inquiry_thanks.html:30
+msgid "ホームへ戻る"
 msgstr ""
 
 #: templates/services.html:24
@@ -237,42 +339,42 @@ msgid ""
 "のニーズに応じた業務の受託が可能です。"
 msgstr ""
 
-#: templates/services.html:46
+#: templates/services.html:44
 msgid "これまで弊社では様々な業種の業務受託を行ってまいりました。"
 msgstr ""
 
-#: templates/services.html:48
+#: templates/services.html:46
 msgid ""
 "各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改"
 "善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。"
 msgstr ""
 
-#: templates/services.html:50
+#: templates/services.html:48
 msgid ""
 "ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたしま"
 "す。"
 msgstr ""
 
-#: templates/services.html:52
+#: templates/services.html:50
 msgid ""
 "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。"
 msgstr ""
 
-#: templates/services.html:61
+#: templates/services.html:58
 msgid "製造DX支援型アウトソーシング"
 msgstr ""
 
-#: templates/services.html:67
+#: templates/services.html:63
 msgid "様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。"
 msgstr ""
 
-#: templates/services.html:69
+#: templates/services.html:65
 msgid ""
 "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいた"
 "します。"
 msgstr ""
 
-#: templates/services.html:71
+#: templates/services.html:67
 msgid ""
 "ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十"
 "分に理解・把握させていただき、実際に運用できるDX推進を提案します。"

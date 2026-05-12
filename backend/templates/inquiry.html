@@ -35,7 +35,7 @@
                         <!-- 会社名 -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
-                                会社名 <span class="text-red-500">*</span>
+                                {% trans "会社名" %} <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    name="company_name"
@@ -54,11 +54,11 @@
                         <!-- 業種分類 -->
                         <div class="space-y-4 p-6 rounded-xl border border-border">
                             <h3 class="text-sm tracking-widest ml-1">
-                                業務分類 <span class="text-red-500">*</span>
+                                {% trans "業務分類" %} <span class="text-red-500">*</span>
                             </h3>
                             <!-- 大分類 -->
                             <div class="space-y-2">
-                                <label class="text-sm tracking-widest ml-1">大分類</label>
+                                <label class="text-sm tracking-widest ml-1">{% trans "大分類" %}</label>
                                 {{ form.daibunrui }}
                                 <p class="text-sm text-error ml-1"
                                    x-show="errors.daiSelected"
@@ -111,7 +111,7 @@
                         <!-- 職位 -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
-                                職位 <span class="text-red-500">*</span>
+                                {% trans "職位" %} <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    name="position"
@@ -130,7 +130,7 @@
                         <!-- 担当者名 -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
-                                担当者名 <span class="text-red-500">*</span>
+                                {% trans "担当者名" %} <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    name="contact_name"
@@ -149,7 +149,7 @@
                         <!-- お問い合わせ内容 -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
-                                お問い合わせ内容 <span class="text-red-500">*</span>
+                                {% trans "お問い合わせ内容" %} <span class="text-red-500">*</span>
                             </label>
                             <textarea type="text"
                                       name="inquiry_content"
@@ -242,13 +242,13 @@
             // State lưu lỗi validate và message required tương ứng
             errors: {},
             requiredMessages: {
-                companyName: '会社名を入力してください',
-                daiSelected: '大分類を選択してください',
-                chuSelected: '中分類を選択してください',
-                shoSelected: '小分類を選択してください',
-                position: '職位を入力してください',
-                contactName: '担当者名を入力してください',
-                inquiryContent: 'お問い合わせ内容を入力してください',
+                companyName: "{% trans '会社名を入力してください'|escapejs %}",
+                daiSelected: "{% trans '大分類を選択してください'|escapejs %}",
+                chuSelected: "{% trans '中分類を選択してください'|escapejs %}",
+                shoSelected: "{% trans '小分類を選択してください'|escapejs %}",
+                position: "{% trans '職位を入力してください'|escapejs %}",
+                contactName: "{% trans '担当者名を入力してください'|escapejs %}",
+                inquiryContent: "{% trans 'お問い合わせ内容を入力してください'|escapejs %}",
             },
 
             init() {

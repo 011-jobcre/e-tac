@@ -1,4 +1,5 @@
-<label class="text-sm tracking-widest ml-1">小分類</label>
+{% load i18n %}
+<label class="text-sm tracking-widest ml-1">{% trans "小分類" %}</label>
 <select name="shobunrui"
         id="id_shobunrui"
         class="select outline-none w-full"
@@ -7,7 +8,7 @@
         x-model="shoSelected"
         @change="handleShoChange($event)"
         :class="fieldErrorClass('shoSelected')">
-    <option value="">小分類を選択してください</option>
+    <option value="">{% trans "小分類を選択してください" %}</option>
     {% for sho in shobunrui_list %}
         <option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>
     {% endfor %}

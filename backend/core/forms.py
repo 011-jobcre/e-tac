@@ -1,5 +1,6 @@
 from django import forms
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 from .models import Daibunrui, Chubunrui, Shobunrui
 
 
@@ -8,7 +9,7 @@ class InquiryForm(forms.Form):
     daibunrui = forms.ModelChoiceField(
         queryset=Daibunrui.objects.all(),
         required=True,
-        empty_label="大分類を選択してください",
+        empty_label=_("大分類を選択してください"),
         widget=forms.Select(
             attrs={
                 "class": "select outline-none w-full",
@@ -28,7 +29,7 @@ class InquiryForm(forms.Form):
     chubunrui = forms.ModelChoiceField(
         queryset=Chubunrui.objects.none(),  # Empty initially
         required=True,
-        empty_label="中分類を選択してください",
+        empty_label=_("中分類を選択してください"),
         widget=forms.Select(
             attrs={
                 "class": "select outline-none w-full",
@@ -40,7 +41,7 @@ class InquiryForm(forms.Form):
     shobunrui = forms.ModelChoiceField(
         queryset=Shobunrui.objects.none(),
         required=True,
-        empty_label="小分類を選択してください",
+        empty_label=_("小分類を選択してください"),
         widget=forms.Select(
             attrs={
                 "class": "select outline-none w-full",

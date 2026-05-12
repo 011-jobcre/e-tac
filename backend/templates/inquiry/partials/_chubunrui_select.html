@@ -1,4 +1,5 @@
-<label class="text-sm tracking-widest ml-1">中分類</label>
+{% load i18n %}
+<label class="text-sm tracking-widest ml-1">{% trans "中分類" %}</label>
 <select name="chubunrui"
         id="id_chubunrui"
         class="select outline-none w-full"
@@ -12,7 +13,7 @@
         x-model="chuSelected"
         @change="handleChuChange($event)"
         :class="fieldErrorClass('chuSelected')">
-    <option value="">中分類を選択してください</option>
+    <option value="">{% trans "中分類を選択してください" %}</option>
     {% for chu in chubunrui_list %}
         <option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>
     {% endfor %}
