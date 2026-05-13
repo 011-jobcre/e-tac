@@ -28,7 +28,7 @@ else
     if [ "$CREATE_SUPERUSER" = "True" ] || [ "$CREATE_SUPERUSER" = "1" ]; then
         echo "Creating superuser..."
         echo "Updating Database & Seeding..."
-        python manage.py loaddata ../gyomu_fixture.json || echo "No fixture found or already loaded."
+        python manage.py loaddata gyomu_fixture.json || echo "No fixture found or already loaded."
         echo "Creating superuser (if not exists)..."
         python manage.py createsuperuser --noinput || echo "Superuser already exists."
     fi
