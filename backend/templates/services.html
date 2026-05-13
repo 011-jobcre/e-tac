@@ -5,64 +5,55 @@
 {% endblock title %}
 {% block content %}
     <!-- Hero -->
-    <section class="relative pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
+    <section class="relative pt-32 pb-10 lg:pt-36 lg:pb-14 overflow-hidden">
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
             <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "サービス" %}</h1>
         </div>
     </section>
     <!-- Main Content -->
-    <div class="container-content section-pad space-y-32">
+    <section class="container-content section-pad space-y-10">
         <!-- Section 1 -->
-        <section>
-            <div class="mb-12">
-                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">{% trans "製造受託業務" %}</h2>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="minimal-card bg-surface">
-                    <p>
-                        {% trans "企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業務に対応いたします。" %}
-                        <br />
-                        {% trans "システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様のニーズに応じた業務の受託が可能です。" %}
-                    </p>
-                </div>
-            </div>
-        </section>
+        <div class="collapse collapse-arrow bg-surface border border-border"
+             data-aos="fade-up"
+             data-aos-delay="100">
+            <input type="radio" name="my-accordion" checked="checked" />
+            <h2 class="collapse-title font-semibold text-2xl">{% trans "製造受託業務" %}</h2>
+            <p class="collapse-content text-sm">
+                {% trans "企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業務に対応いたします。" %}
+                <br />
+                {% trans "システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様のニーズに応じた業務の受託が可能です。" %}
+            </p>
+        </div>
         <!-- Section 2 -->
-        <section>
-            <div class="mb-12">
-                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">{% trans "現場改善型アウトソーシング" %}</h2>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="minimal-card bg-surface">
-                    <p>
-                        {% trans "これまで弊社では様々な業種の業務受託を行ってまいりました。" %}
-                        <br />
-                        {% trans "各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。" %}
-                        <br />
-                        {% trans "ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたします。" %}
-                        <br />
-                        {% trans "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。" %}
-                    </p>
-                </div>
-            </div>
-        </section>
+        <div class="collapse collapse-arrow bg-surface border border-border"
+             data-aos="fade-up"
+             data-aos-delay="200">
+            <input type="radio" name="my-accordion" />
+            <h2 class="collapse-title font-semibold text-2xl">{% trans "現場改善型アウトソーシング" %}</h2>
+            <p class="collapse-content text-sm">
+                {% trans "これまで弊社では様々な業種の業務受託を行ってまいりました。" %}
+                <br />
+                {% trans "各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。" %}
+                <br />
+                {% trans "ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたします。" %}
+                <br />
+                {% trans "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。" %}
+            </p>
+        </div>
         <!-- Section 3 -->
-        <section>
-            <div class="mb-12">
-                <h2 class="section-title mb-6" data-aos="fade-up" data-aos-delay="100">{% trans "製造DX支援型アウトソーシング" %}</h2>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="minimal-card bg-surface">
-                    <p>
-                        {% trans "様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。" %}
-                        <br />
-                        {% trans "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいたします。" %}
-                        <br />
-                        {% trans "ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十分に理解・把握させていただき、実際に運用できるDX推進を提案します。" %}
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
+        <div class="collapse collapse-arrow bg-surface border border-border"
+             data-aos="fade-up"
+             data-aos-delay="300">
+            <input type="radio" name="my-accordion" />
+            <h2 class="collapse-title font-semibold text-2xl">{% trans "製造DX支援型アウトソーシング" %}</h2>
+            <p class="collapse-content text-sm">
+                {% trans "様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。" %}
+                <br />
+                {% trans "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいたします。" %}
+                <br />
+                {% trans "ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十分に理解・把握させていただき、実際に運用できるDX推進を提案します。" %}
+            </p>
+        </div>
+    </section>
 {% endblock content %}

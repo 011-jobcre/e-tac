@@ -49,7 +49,7 @@
                                 {% trans "業務分類" %} <span class="text-red-500">*</span>
                             </h3>
                             <!-- 大分類 -->
-                            <div class="space-y-2">
+                            <div>
                                 <label class="text-sm tracking-widest ml-1">{% trans "大分類" %}</label>
                                 {{ form.daibunrui }}
                                 <p class="text-sm text-error ml-1"
@@ -59,9 +59,7 @@
                             </div>
                             <!-- 中分類 (HTMX target) -->
                             <div class="relative">
-                                <div id="chubunrui-wrapper" class="space-y-2">
-                                    {% include "inquiry/partials/_chubunrui_select.html" with disabled=True %}
-                                </div>
+                                <div id="chubunrui-wrapper">{% include "inquiry/partials/_chubunrui_select.html" with disabled=True %}</div>
                                 <p class="text-sm text-error ml-1 mt-2"
                                    x-show="errors.chuSelected"
                                    x-text="errors.chuSelected"
@@ -74,9 +72,7 @@
                             </div>
                             <!-- 小分類 (HTMX target) -->
                             <div class="relative">
-                                <div id="shobunrui-wrapper" class="space-y-2">
-                                    {% include "inquiry/partials/_shobunrui_select.html" with disabled=True %}
-                                </div>
+                                <div id="shobunrui-wrapper">{% include "inquiry/partials/_shobunrui_select.html" with disabled=True %}</div>
                                 <p class="text-sm text-error ml-1 mt-2"
                                    x-show="errors.shoSelected"
                                    x-text="errors.shoSelected"

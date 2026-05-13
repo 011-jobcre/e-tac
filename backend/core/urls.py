@@ -9,10 +9,11 @@ from .views import (
     InquiryView,
     InquiryThanksView,
     GroupView,
+    PrivacyView,
+    TermsofuseView,
     chubunrui_options,
     shobunrui_options,
 )
-
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -28,6 +29,8 @@ urlpatterns += i18n_patterns(
     path("inquiry/", InquiryView.as_view(), name="inquiry"),
     path("inquiry/thanks/", InquiryThanksView.as_view(), name="inquiry-thanks"),
     path("group/", GroupView.as_view(), name="group"),
+    path("privacy/", PrivacyView.as_view(), name="privacy"),
+    path("termsofuse/", TermsofuseView.as_view(), name="termsofuse"),
     path("api/chubunrui-options/", chubunrui_options, name="chubunrui-options"),
     path("api/shobunrui-options/", shobunrui_options, name="shobunrui-options"),
 )

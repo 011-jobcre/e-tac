@@ -17,18 +17,18 @@ python manage.py collectstatic --noinput
 
 # --- 3. KIỂM TRA CHẾ ĐỘ CHẠY (DEV vs PROD) ---
 if [ "$DEBUG" = "True" ] || [ "$DEBUG" = "1" ]; then
-    echo "🚀 Running in DEVELOPMENT mode"
+    echo "Running in DEVELOPMENT mode"
     # Dùng runserver để có Hot-reload khi sửa code
     exec python manage.py runserver 0.0.0.0:8000
     
 else
-    echo "🌐 Running in PRODUCTION mode"
+    echo "Running in PRODUCTION mode"
     
     # Tạo superuser tự động nếu có yêu cầu (hữu ích khi deploy lần đầu)
     if [ "$CREATE_SUPERUSER" = "True" ] || [ "$CREATE_SUPERUSER" = "1" ]; then
         echo "Creating superuser..."
         echo "Updating Database & Seeding..."
-        python manage.py loaddata gyomu_fixture.json || echo "No fixture found or already loaded."
+        python manage.py loaddata ../gyomu_fixture.json || echo "No fixture found or already loaded."
         echo "Creating superuser (if not exists)..."
         python manage.py createsuperuser --noinput || echo "Superuser already exists."
     fi

@@ -67,13 +67,23 @@ class GroupView(TemplateView):
     template_name = "group.html"
 
 
+class PrivacyView(TemplateView):
+    template_name = "privacy.html"
+
+
+class TermsofuseView(TemplateView):
+    template_name = "termsofuse.html"
+
+
 def chubunrui_options(request):
     """HTMX endpoint: trả về options cho 中分類"""
     dai_code = request.GET.get("daibunrui")
 
     chubunrui_list = Chubunrui.objects.none()
     if dai_code:
-        chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values("code", "name")
+        chubunrui_list = Chubunrui.objects.filter(daibunrui_id=dai_code).values(
+            "code", "name"
+        )
 
     return render(
         request,
@@ -92,7 +102,9 @@ def shobunrui_options(request):
 
     shobunrui_list = Shobunrui.objects.none()
     if chu_code:
-        shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values("code", "name")
+        shobunrui_list = Shobunrui.objects.filter(chubunrui_id=chu_code).values(
+            "code", "name"
+        )
 
     return render(
         request,
