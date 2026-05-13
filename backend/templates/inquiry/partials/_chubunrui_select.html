@@ -13,6 +13,6 @@
         x-model="chuSelected"
         @change="handleChuChange($event)"
         :class="fieldErrorClass('chuSelected')">
-    <option value="">{% trans "中分類を選択してください" %}</option>
+    <option value="">{% trans "---------" %}</option>
     {% for chu in chubunrui_list %}<option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>{% endfor %}
 </select>

@@ -8,6 +8,6 @@
         x-model="shoSelected"
         @change="handleShoChange($event)"
         :class="fieldErrorClass('shoSelected')">
-    <option value="">{% trans "小分類を選択してください" %}</option>
+    <option value="">{% trans "---------" %}</option>
     {% for sho in shobunrui_list %}<option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>{% endfor %}
 </select>

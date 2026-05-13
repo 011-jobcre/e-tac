@@ -60,7 +60,7 @@
                             <!-- 中分類 (HTMX target) -->
                             <div class="relative">
                                 <div id="chubunrui-wrapper" class="space-y-2">
-                                    {% include 'inquiry/partials/_chubunrui_select.html' with disabled=True %}
+                                    {% include "inquiry/partials/_chubunrui_select.html" with disabled=True %}
                                 </div>
                                 <p class="text-sm text-error ml-1 mt-2"
                                    x-show="errors.chuSelected"
@@ -75,7 +75,7 @@
                             <!-- 小分類 (HTMX target) -->
                             <div class="relative">
                                 <div id="shobunrui-wrapper" class="space-y-2">
-                                    {% include 'inquiry/partials/_shobunrui_select.html' with disabled=True %}
+                                    {% include "inquiry/partials/_shobunrui_select.html" with disabled=True %}
                                 </div>
                                 <p class="text-sm text-error ml-1 mt-2"
                                    x-show="errors.shoSelected"
@@ -298,12 +298,12 @@
                         if (evt.detail.target.id === 'chubunrui-wrapper') {
                             this.daiSelected = document.querySelector('#id_daibunrui')?.value;
                             this.resetChuSho();
-                            this.validateField('chuSelected');
-                            this.validateField('shoSelected');
+                            this.clearFieldError('chuSelected');
+                            this.clearFieldError('shoSelected');
                         }
                         if (evt.detail.target.id === 'shobunrui-wrapper') {
                             this.chuSelected = document.querySelector('#id_chubunrui')?.value;
-                            this.validateField('shoSelected');
+                            this.clearFieldError('shoSelected');
                         }
                     });
                 },
@@ -320,8 +320,10 @@
                     this.daiSelected = event.target.value;
                     this.chuSelected = null;
                     this.shoSelected = null;
-                    this.resetSelect('id_chubunrui', "{% trans '中分類を選択してください'|escapejs %}");
-                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+//                    this.resetSelect('id_chubunrui', "{% trans '中分類を選択してください'|escapejs %}");
+//                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+                    this.resetSelect('id_chubunrui', "---------");
+                    this.resetSelect('id_shobunrui', "---------");
                     this.updateSummary();
                     this.validateField('daiSelected');
                     this.validateField('chuSelected');
@@ -332,7 +334,8 @@
                 handleChuChange(event) {
                     this.chuSelected = event.target.value;
                     this.shoSelected = null;
-                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+//                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+                    this.resetSelect('id_shobunrui', "---------");
                     this.updateSummary();
                     this.validateField('chuSelected');
                     this.validateField('shoSelected');
@@ -362,7 +365,7 @@
                     const chuText = document.querySelector('#id_chubunrui option:checked')?.text || '';
                     const shoText = document.querySelector('#id_shobunrui option:checked')?.text || '';
 
-                    const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください') && !p.includes('Please select'));
+                    const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください') && !p.includes('Please select') && !p.includes('---------'));
                     this.summaryText = parts.join(' > ');
                     this.hasSelection = parts.length > 0;
                 },
