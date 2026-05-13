@@ -77,7 +77,7 @@
                                 <!-- Loading indicator -->
                                 <div id="chu-loading" class="htmx-indicator absolute right-3 top-9">
                                     <span class="loading loading-spinner loading-xs"></span>
-                                    <span class="text-sm">読み込み中...</span>
+                                    <span class="text-sm">{% trans "読み込み中" %}...</span>
                                 </div>
                             </div>
                             <!-- 小分類 (HTMX target) -->
@@ -92,7 +92,7 @@
                                 <!-- Loading indicator -->
                                 <div id="sho-loading" class="htmx-indicator absolute right-3 top-9">
                                     <span class="loading loading-spinner loading-xs"></span>
-                                    <span class="text-sm">読み込み中...</span>
+                                    <span class="text-sm">{% trans "読み込み中" %}...</span>
                                 </div>
                             </div>
                             <!-- Summary display -->
@@ -102,7 +102,7 @@
                                 <div class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">info</span>
                                     <div>
-                                        <p class="text-xs font-bold text-primary mb-1">業務分類選択内容:</p>
+                                        <p class="text-xs font-bold text-primary mb-1">{% trans "業務分類選択内容" %}:</p>
                                         <p class="text-sm" x-text="summaryText"></p>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                                        class="text-sm leading-relaxed cursor-pointer select-none">
                                     <a href="#"
                                        @click.prevent.stop="openPrivacyDialog()"
-                                       class="font-bold hover:underline text-primary">{% trans "プライバシーポリシー" %}</a>{% trans "に同意する" %}
+                                       class="font-bold hover:underline text-primary">{% trans "プライバシーポリシー" %}</a> {% trans "に同意する" %}
                                 </label>
                             </div>
                             <button type="submit"
@@ -192,14 +192,63 @@
                     </form>
                     <!-- Privacy policy modal -->
                     <dialog id="privacy_modal" class="modal" :class="{'modal-open': showDialog}">
-                        <div class="modal-box relative bg-surface border border-border">
-                            <h3 class="font-bold text-lg text-primary">{% trans "プライバシーポリシー・利用規約" %}</h3>
-                            <p class="py-4 text-sm leading-relaxed text-muted">
-                                {% trans "以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してください。" %}
-                                <br />
-                                <br />
-                                {% trans "（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護することを重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた情報は、お問い合わせ対応の目的のみに使用されます。）" %}
-                            </p>
+                        <div class="modal-box relative bg-surface border border-border max-w-2xl">
+                            <h3 class="font-bold text-xl text-primary mb-4 border-b border-border pb-2">{% trans "個人情報の取扱いについて（プライバシーポリシー）" %}</h3>
+                            <div class="space-y-6 text-sm leading-relaxed max-h-[60vh] overflow-y-auto pr-4">
+                                <p>{% trans "当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下の通り適切に取り扱います。" %}</p>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">1. {% trans "取得する個人情報" %}</h4>
+                                    <p>{% trans "当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含まれる情報を取得する場合があります。" %}</p>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">2. {% trans "利用目的" %}</h4>
+                                    <p>{% trans "取得した個人情報は、以下の目的のために利用いたします。" %}</p>
+                                    <ul class="list-disc ml-5 mt-2 space-y-1">
+                                        <li>{% trans "お問い合わせへの回答" %}</li>
+                                        <li>{% trans "ご依頼・ご相談への対応" %}</li>
+                                        <li>{% trans "採用選考および関連する連絡" %}</li>
+                                        <li>{% trans "サービス改善・品質向上" %}</li>
+                                        <li>{% trans "当社サービス・関連情報のご案内" %}</li>
+                                        <li>{% trans "法令等に基づく対応" %}</li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">3. {% trans "第三者提供について" %}</h4>
+                                    <p>{% trans "当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしません。" %}</p>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">4. {% trans "安全管理" %}</h4>
+                                    <p>{% trans "当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の安全管理のため、適切な措置を講じます。" %}</p>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">5. {% trans "委託について" %}</h4>
+                                    <p>{% trans "利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があります。この場合、適切な委託管理を行います。" %}</p>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">6. {% trans "開示・訂正・削除等について" %}</h4>
+                                    <p>{% trans "ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった場合には、法令に従い適切に対応いたします。" %}</p>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-base text-primary mb-2">7. {% trans "お問い合わせ窓口" %}</h4>
+                                    <p>{% trans "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。" %}</p>
+                                    <div class="mt-2 p-4 bg-primary/5 rounded-lg space-y-2 border border-primary/10">
+                                        <p class="font-bold text-primary">{% trans "株式会社e-tac　カスタマーサービス係" %}</p>
+                                        <p>{% trans "福岡県行橋市中央三丁目５番２５号" %}</p>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-lg">🆓</span>
+                                            <a href="tel:0800-808-0325" class="hover:text-primary transition-colors">0800-808-0325</a>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-lg">📧</span>
+                                            <a href="mailto:info@e-tac.biz"
+                                               class="hover:text-primary transition-colors underline">info@e-tac.biz</a>
+                                        </div>
+                                    </div>
+                                </section>
+                                <p class="pt-4 border-t border-border font-medium text-primary italic">
+                                    {% trans "当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。" %}
+                                </p>
+                            </div>
                             <div class="modal-action flex justify-end gap-3 mt-4">
                                 <button type="button"
                                         class="btn btn-outline btn-neutral"
@@ -279,8 +328,8 @@
                 this.daiSelected = event.target.value;
                 this.chuSelected = null;
                 this.shoSelected = null;
-                this.resetSelect('id_chubunrui', '中分類を選択してください');
-                this.resetSelect('id_shobunrui', '小分類を選択してください');
+                this.resetSelect('id_chubunrui', "{% trans '中分類を選択してください'|escapejs %}");
+                this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
                 this.updateSummary();
                 this.validateField('daiSelected');
                 this.validateField('chuSelected');
@@ -291,7 +340,7 @@
             handleChuChange(event) {
                 this.chuSelected = event.target.value;
                 this.shoSelected = null;
-                this.resetSelect('id_shobunrui', '小分類を選択してください');
+                this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
                 this.updateSummary();
                 this.validateField('chuSelected');
                 this.validateField('shoSelected');
@@ -321,7 +370,7 @@
                 const chuText = document.querySelector('#id_chubunrui option:checked')?.text || '';
                 const shoText = document.querySelector('#id_shobunrui option:checked')?.text || '';
 
-                const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください'));
+                const parts = [daiText, chuText, shoText].filter(p => p && !p.includes('選択してください') && !p.includes('Please select'));
                 this.summaryText = parts.join(' > ');
                 this.hasSelection = parts.length > 0;
             },
@@ -409,10 +458,10 @@
 
             // Chỉ mở privacy modal khi các field required đã hợp lệ
             openPrivacyDialog() {
-                if (!this.validateForm()) {
+                /*if (!this.validateForm()) {
                     this.focusFirstInvalidField();
                     return;
-                }
+                }*/
 
                 this.showDialog = true;
             },

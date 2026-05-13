@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 17:57+0900\n"
-"PO-Revision-Date: 2026-05-12 17:56+0900\n"
+"POT-Creation-Date: 2026-05-13 10:53+0900\n"
+"PO-Revision-Date: 2026-05-13 10:13+0900\n"
 "Last-Translator:   <admin@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,16 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.3\n"
 
-#: core/forms.py:12 templates/inquiry.html:246
+#: core/forms.py:12 templates/inquiry.html:295
 msgid "大分類を選択してください"
 msgstr "Please select a main category"
 
-#: core/forms.py:32 templates/inquiry.html:247
+#: core/forms.py:32 templates/inquiry.html:296 templates/inquiry.html:331
 #: templates/inquiry/partials/_chubunrui_select.html:16
 msgid "中分類を選択してください"
 msgstr "Please select a subcategory"
 
-#: core/forms.py:44 templates/inquiry.html:248
+#: core/forms.py:44 templates/inquiry.html:297 templates/inquiry.html:332
+#: templates/inquiry.html:343
 #: templates/inquiry/partials/_shobunrui_select.html:11
 msgid "小分類を選択してください"
 msgstr "Please select a category"
@@ -47,12 +48,12 @@ msgid "株式会社 e-tac"
 msgstr "e-tac Co., Ltd."
 
 #: templates/about.html:32
-msgid "代表者"
+msgid "代表取締役"
 msgstr "President"
 
 #: templates/about.html:33
-msgid "代表取締役　小森雅之"
-msgstr "President Director Masayuki Komori"
+msgid "小森雅之"
+msgstr "MASAYUKI KOMORI"
 
 #: templates/about.html:36
 msgid "設立"
@@ -74,7 +75,7 @@ msgstr "5 million yen"
 msgid "所在地"
 msgstr "Location"
 
-#: templates/about.html:45
+#: templates/about.html:45 templates/inquiry.html:236
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr "5-25, Chuo 3-chome, Yukuhashi City, Fukuoka Prefecture"
 
@@ -100,7 +101,7 @@ msgstr "Labor Consultant"
 
 #: templates/about.html:57
 msgid "社会保険労務士法人ウインツ"
-msgstr "Win'ts Social Insurance and Labor Consultants, LLC"
+msgstr "Wintz Social Insurance and Labor Consultant Corporation"
 
 #: templates/about.html:65
 msgid "沿革"
@@ -127,7 +128,7 @@ msgid ""
 msgstr ""
 "e-tac Co., Ltd. was established through a corporate spin-off from JOB "
 "CREATOR Co., Ltd. for the purpose of operating a contract manufacturing "
-"business."
+"business"
 
 #: templates/about.html:86
 msgid "2026年3月"
@@ -206,7 +207,7 @@ msgstr ""
 
 #: templates/homepage.html:15
 msgid "コア業務へパワーシフト"
-msgstr "Shifting Focus to Core Operations"
+msgstr "SHIFTING FOCUS CORE OPERATIONS"
 
 #: templates/homepage.html:18
 msgid "ノンコア業務を最適化し、企業成長を全力サポート"
@@ -216,11 +217,11 @@ msgstr ""
 
 #: templates/homepage.html:20
 msgid "現場の理解から始まるDXソリューション"
-msgstr "DX Solutions That Start with an Understanding of the Front Lines"
+msgstr "DX Solutions begin with understanding of the on-site"
 
 #: templates/homepage.html:24 templates/services.html:39
 msgid "現場改善型アウトソーシング"
-msgstr "On-site Improvement Outsourcing"
+msgstr "ON-SITE IMPROVEMENT OUTSOURCING"
 
 #: templates/inquiry.html:24
 msgid "お問い合わせ・ご相談"
@@ -232,7 +233,7 @@ msgstr "Company Name"
 
 #: templates/inquiry.html:47
 msgid "例：株式会社 e-tac"
-msgstr "Example: e-tac Co., Ltd."
+msgstr "Ex: e-tac Co., Ltd."
 
 #: templates/inquiry.html:57
 msgid "業務分類"
@@ -242,13 +243,21 @@ msgstr "Business Categories"
 msgid "大分類"
 msgstr "Main Category"
 
+#: templates/inquiry.html:80 templates/inquiry.html:95
+msgid "読み込み中"
+msgstr ""
+
+#: templates/inquiry.html:105
+msgid "業務分類選択内容"
+msgstr "Business Categories Selection"
+
 #: templates/inquiry.html:114
 msgid "職位"
 msgstr "Position"
 
 #: templates/inquiry.html:123
 msgid "例：係長、主任など"
-msgstr "Examples: Section Chief, Supervisor, etc."
+msgstr "Ex: Section Chief, Supervisor, etc."
 
 #: templates/inquiry.html:133
 msgid "担当者名"
@@ -256,7 +265,7 @@ msgstr "Contact Person"
 
 #: templates/inquiry.html:142
 msgid "例：田中太郎"
-msgstr "Example: Taro Tanaka"
+msgstr "Ex: Taro Tanaka"
 
 #: templates/inquiry.html:152
 msgid "お問い合わせ内容"
@@ -279,50 +288,147 @@ msgid "送信する"
 msgstr "Send"
 
 #: templates/inquiry.html:196
-msgid "プライバシーポリシー・利用規約"
-msgstr "Privacy Policy"
+msgid "個人情報の取扱いについて（プライバシーポリシー）"
+msgstr ""
 
 #: templates/inquiry.html:198
 msgid ""
-"以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してください。"
+"当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下"
+"の通り適切に取り扱います。"
+msgstr ""
+
+#: templates/inquiry.html:200
+msgid "取得する個人情報"
+msgstr ""
+
+#: templates/inquiry.html:201
+msgid ""
+"当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含ま"
+"れる情報を取得する場合があります。"
+msgstr ""
+
+#: templates/inquiry.html:204
+msgid "利用目的"
+msgstr ""
+
+#: templates/inquiry.html:205
+msgid "取得した個人情報は、以下の目的のために利用いたします。"
+msgstr ""
+
+#: templates/inquiry.html:207
+#, fuzzy
+#| msgid "お問い合わせ"
+msgid "お問い合わせへの回答"
+msgstr "Inquiry"
+
+#: templates/inquiry.html:208
+msgid "ご依頼・ご相談への対応"
+msgstr ""
+
+#: templates/inquiry.html:209
+msgid "採用選考および関連する連絡"
+msgstr ""
+
+#: templates/inquiry.html:210
+msgid "サービス改善・品質向上"
+msgstr ""
+
+#: templates/inquiry.html:211
+msgid "当社サービス・関連情報のご案内"
+msgstr ""
+
+#: templates/inquiry.html:212
+msgid "法令等に基づく対応"
+msgstr ""
+
+#: templates/inquiry.html:216
+msgid "第三者提供について"
+msgstr ""
+
+#: templates/inquiry.html:217
+msgid ""
+"当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしま"
+"せん。"
+msgstr ""
+
+#: templates/inquiry.html:220
+msgid "安全管理"
+msgstr ""
+
+#: templates/inquiry.html:221
+msgid ""
+"当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の"
+"安全管理のため、適切な措置を講じます。"
+msgstr ""
+
+#: templates/inquiry.html:224
+msgid "委託について"
+msgstr ""
+
+#: templates/inquiry.html:225
+msgid ""
+"利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があり"
+"ます。この場合、適切な委託管理を行います。"
+msgstr ""
+
+#: templates/inquiry.html:228
+msgid "開示・訂正・削除等について"
+msgstr ""
+
+#: templates/inquiry.html:229
+msgid ""
+"ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった"
+"場合には、法令に従い適切に対応いたします。"
+msgstr ""
+
+#: templates/inquiry.html:232
+#, fuzzy
+#| msgid "お問い合わせ"
+msgid "お問い合わせ窓口"
+msgstr "Inquiry"
+
+#: templates/inquiry.html:233
+msgid "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。"
+msgstr ""
+
+#: templates/inquiry.html:235
+msgid "株式会社e-tac　カスタマーサービス係"
+msgstr ""
+
+#: templates/inquiry.html:249
+#, fuzzy
+#| msgid ""
+#| "以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してくださ"
+#| "い。"
+msgid ""
+"当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。"
 msgstr ""
 "Please be sure to read the privacy policy below and submit this form only "
 "after you have agreed to it."
 
-#: templates/inquiry.html:201
-msgid ""
-"（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護すること"
-"を重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた"
-"情報は、お問い合わせ対応の目的のみに使用されます。）"
-msgstr ""
-"(Placeholder text: We consider the proper handling and protection of your "
-"personal information to be a serious responsibility and will comply with all "
-"applicable laws and regulations. The information you provide will be used "
-"solely for the purpose of responding to your inquiry.)"
-
-#: templates/inquiry.html:206
+#: templates/inquiry.html:255
 msgid "キャンセル"
 msgstr "Cancel"
 
-#: templates/inquiry.html:209
+#: templates/inquiry.html:258
 msgid "同意する"
 msgstr "I agree"
 
-#: templates/inquiry.html:245
+#: templates/inquiry.html:294
 msgid "会社名を入力してください"
 msgstr "Please enter your company name"
 
-#: templates/inquiry.html:249
+#: templates/inquiry.html:298
 msgid "職位を入力してください"
-msgstr "Please enter your job title"
+msgstr "Please enter your position"
 
-#: templates/inquiry.html:250
+#: templates/inquiry.html:299
 msgid "担当者名を入力してください"
 msgstr "Please enter the contact person's name"
 
-#: templates/inquiry.html:251
+#: templates/inquiry.html:300
 msgid "お問い合わせ内容を入力してください"
-msgstr "We have received your inquiry"
+msgstr "Please enter your inquiry details"
 
 #: templates/inquiry/partials/_chubunrui_select.html:2
 msgid "中分類"
@@ -338,7 +444,7 @@ msgstr "Thank you for your inquiry"
 
 #: templates/inquiry_thanks.html:27
 msgid "お問い合わせを受け付けました。"
-msgstr "We have received your inquiry."
+msgstr "We have received your inquiry"
 
 #: templates/inquiry_thanks.html:28
 msgid "内容を確認の上、担当者よりご連絡いたします。"
@@ -401,7 +507,7 @@ msgstr ""
 msgid ""
 "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。"
 msgstr ""
-"With our in-depth knowledge of the field, we offer on-site improvement "
+"With our in-depth knowledge of the on-site, we offer on-site improvement "
 "outsourcing services that only we can provide."
 
 #: templates/services.html:58
@@ -419,9 +525,8 @@ msgid ""
 "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいた"
 "します。"
 msgstr ""
-"We don’t just promote digital transformation based on theoretical concepts; "
-"we support initiatives that are grounded in a deep understanding of your day-"
-"to-day operations."
+"We support DX initiatives based on a thorough understanding of the actual "
+"situation, rather than relying on theoretical, impractical approaches."
 
 #: templates/services.html:67
 msgid ""
@@ -433,3 +538,19 @@ msgstr ""
 "involved, and the specific circumstances through our work, and we propose "
 "digital transformation initiatives that can be effectively implemented in "
 "practice."
+
+#~ msgid "プライバシーポリシー・利用規約"
+#~ msgstr "Privacy Policy and Terms of Use"
+
+#~ msgid ""
+#~ "（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護するこ"
+#~ "とを重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただ"
+#~ "いた情報は、お問い合わせ対応の目的のみに使用されます。）"
+#~ msgstr ""
+#~ "(Placeholder text: We consider the proper handling and protection of your "
+#~ "personal information to be a serious responsibility and will comply with "
+#~ "all applicable laws and regulations. The information you provide will be "
+#~ "used solely for the purpose of responding to your inquiry.)"
+
+#~ msgid "代表者"
+#~ msgstr "President"

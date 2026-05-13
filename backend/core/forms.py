@@ -62,7 +62,11 @@ class InquiryForm(forms.Form):
         chu_code = data.get("chubunrui") if data else None
 
         if dai_code:
-            self.fields["chubunrui"].queryset = Chubunrui.objects.filter(daibunrui_id=dai_code)
+            self.fields["chubunrui"].queryset = Chubunrui.objects.filter(
+                daibunrui_id=dai_code
+            )
 
         if chu_code:
-            self.fields["shobunrui"].queryset = Shobunrui.objects.filter(chubunrui_id=chu_code)
+            self.fields["shobunrui"].queryset = Shobunrui.objects.filter(
+                chubunrui_id=chu_code
+            )

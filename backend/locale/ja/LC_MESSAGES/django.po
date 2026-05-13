@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-12 17:57+0900\n"
+"POT-Creation-Date: 2026-05-13 10:53+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: core/forms.py:12 templates/inquiry.html:246
+#: core/forms.py:12 templates/inquiry.html:295
 msgid "大分類を選択してください"
 msgstr ""
 
-#: core/forms.py:32 templates/inquiry.html:247
+#: core/forms.py:32 templates/inquiry.html:296 templates/inquiry.html:331
 #: templates/inquiry/partials/_chubunrui_select.html:16
 msgid "中分類を選択してください"
 msgstr ""
 
-#: core/forms.py:44 templates/inquiry.html:248
+#: core/forms.py:44 templates/inquiry.html:297 templates/inquiry.html:332
+#: templates/inquiry.html:343
 #: templates/inquiry/partials/_shobunrui_select.html:11
 msgid "小分類を選択してください"
 msgstr ""
@@ -46,11 +47,11 @@ msgid "株式会社 e-tac"
 msgstr ""
 
 #: templates/about.html:32
-msgid "代表者"
+msgid "代表取締役"
 msgstr ""
 
 #: templates/about.html:33
-msgid "代表取締役　小森雅之"
+msgid "小森雅之"
 msgstr ""
 
 #: templates/about.html:36
@@ -73,7 +74,7 @@ msgstr ""
 msgid "所在地"
 msgstr ""
 
-#: templates/about.html:45
+#: templates/about.html:45 templates/inquiry.html:236
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr ""
 
@@ -222,6 +223,14 @@ msgstr ""
 msgid "大分類"
 msgstr ""
 
+#: templates/inquiry.html:80 templates/inquiry.html:95
+msgid "読み込み中"
+msgstr ""
+
+#: templates/inquiry.html:105
+msgid "業務分類選択内容"
+msgstr ""
+
 #: templates/inquiry.html:114
 msgid "職位"
 msgstr ""
@@ -259,42 +268,135 @@ msgid "送信する"
 msgstr ""
 
 #: templates/inquiry.html:196
-msgid "プライバシーポリシー・利用規約"
+msgid "個人情報の取扱いについて（プライバシーポリシー）"
 msgstr ""
 
 #: templates/inquiry.html:198
 msgid ""
-"以下のプライバシーポリシーを必ずお読みいただき、同意の上で送信してください。"
+"当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下"
+"の通り適切に取り扱います。"
+msgstr ""
+
+#: templates/inquiry.html:200
+msgid "取得する個人情報"
 msgstr ""
 
 #: templates/inquiry.html:201
 msgid ""
-"（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護すること"
-"を重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた"
-"情報は、お問い合わせ対応の目的のみに使用されます。）"
+"当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含ま"
+"れる情報を取得する場合があります。"
 msgstr ""
 
-#: templates/inquiry.html:206
-msgid "キャンセル"
+#: templates/inquiry.html:204
+msgid "利用目的"
+msgstr ""
+
+#: templates/inquiry.html:205
+msgid "取得した個人情報は、以下の目的のために利用いたします。"
+msgstr ""
+
+#: templates/inquiry.html:207
+msgid "お問い合わせへの回答"
+msgstr ""
+
+#: templates/inquiry.html:208
+msgid "ご依頼・ご相談への対応"
 msgstr ""
 
 #: templates/inquiry.html:209
-msgid "同意する"
+msgid "採用選考および関連する連絡"
 msgstr ""
 
-#: templates/inquiry.html:245
-msgid "会社名を入力してください"
+#: templates/inquiry.html:210
+msgid "サービス改善・品質向上"
+msgstr ""
+
+#: templates/inquiry.html:211
+msgid "当社サービス・関連情報のご案内"
+msgstr ""
+
+#: templates/inquiry.html:212
+msgid "法令等に基づく対応"
+msgstr ""
+
+#: templates/inquiry.html:216
+msgid "第三者提供について"
+msgstr ""
+
+#: templates/inquiry.html:217
+msgid ""
+"当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしま"
+"せん。"
+msgstr ""
+
+#: templates/inquiry.html:220
+msgid "安全管理"
+msgstr ""
+
+#: templates/inquiry.html:221
+msgid ""
+"当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の"
+"安全管理のため、適切な措置を講じます。"
+msgstr ""
+
+#: templates/inquiry.html:224
+msgid "委託について"
+msgstr ""
+
+#: templates/inquiry.html:225
+msgid ""
+"利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があり"
+"ます。この場合、適切な委託管理を行います。"
+msgstr ""
+
+#: templates/inquiry.html:228
+msgid "開示・訂正・削除等について"
+msgstr ""
+
+#: templates/inquiry.html:229
+msgid ""
+"ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった"
+"場合には、法令に従い適切に対応いたします。"
+msgstr ""
+
+#: templates/inquiry.html:232
+msgid "お問い合わせ窓口"
+msgstr ""
+
+#: templates/inquiry.html:233
+msgid "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。"
+msgstr ""
+
+#: templates/inquiry.html:235
+msgid "株式会社e-tac　カスタマーサービス係"
 msgstr ""
 
 #: templates/inquiry.html:249
+msgid ""
+"当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。"
+msgstr ""
+
+#: templates/inquiry.html:255
+msgid "キャンセル"
+msgstr ""
+
+#: templates/inquiry.html:258
+msgid "同意する"
+msgstr ""
+
+#: templates/inquiry.html:294
+msgid "会社名を入力してください"
+msgstr ""
+
+#: templates/inquiry.html:298
 msgid "職位を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:250
+#: templates/inquiry.html:299
 msgid "担当者名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:251
+#: templates/inquiry.html:300
 msgid "お問い合わせ内容を入力してください"
 msgstr ""
 
