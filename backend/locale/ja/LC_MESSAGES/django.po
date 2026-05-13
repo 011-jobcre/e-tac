@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 10:53+0900\n"
+"POT-Creation-Date: 2026-05-13 15:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,117 +18,117 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: core/forms.py:12 templates/inquiry.html:295
+#: core/forms.py:12 templates/inquiry.html:287
 msgid "大分類を選択してください"
 msgstr ""
 
-#: core/forms.py:32 templates/inquiry.html:296 templates/inquiry.html:331
+#: core/forms.py:32 templates/inquiry.html:288 templates/inquiry.html:323
 #: templates/inquiry/partials/_chubunrui_select.html:16
 msgid "中分類を選択してください"
 msgstr ""
 
-#: core/forms.py:44 templates/inquiry.html:297 templates/inquiry.html:332
-#: templates/inquiry.html:343
+#: core/forms.py:44 templates/inquiry.html:289 templates/inquiry.html:324
+#: templates/inquiry.html:335
 #: templates/inquiry/partials/_shobunrui_select.html:11
 msgid "小分類を選択してください"
 msgstr ""
 
-#: templates/about.html:4 templates/about.html:16 templates/base.html:56
+#: templates/about.html:4 templates/about.html:11 templates/base.html:56
 #: templates/navbar.html:11 templates/navbar.html:73
 msgid "会社概要"
 msgstr ""
 
-#: templates/about.html:28
+#: templates/about.html:23
 msgid "商号"
 msgstr ""
 
-#: templates/about.html:29 templates/base.html:44
+#: templates/about.html:24 templates/base.html:44
 msgid "株式会社 e-tac"
 msgstr ""
 
-#: templates/about.html:32
+#: templates/about.html:27
 msgid "代表取締役"
 msgstr ""
 
-#: templates/about.html:33
+#: templates/about.html:28
 msgid "小森雅之"
 msgstr ""
 
-#: templates/about.html:36
+#: templates/about.html:31
 msgid "設立"
 msgstr ""
 
-#: templates/about.html:37
+#: templates/about.html:32
 msgid "令和７年３月１０日"
 msgstr ""
 
-#: templates/about.html:40
+#: templates/about.html:35
 msgid "資本金"
 msgstr ""
 
-#: templates/about.html:41
+#: templates/about.html:36
 msgid "500万円"
 msgstr ""
 
-#: templates/about.html:44
+#: templates/about.html:39
 msgid "所在地"
 msgstr ""
 
-#: templates/about.html:45 templates/inquiry.html:236
+#: templates/about.html:40 templates/inquiry.html:228
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr ""
 
-#: templates/about.html:48
+#: templates/about.html:43
 msgid "法務顧問"
 msgstr ""
 
-#: templates/about.html:49
+#: templates/about.html:44
 msgid "安田法律事務所"
 msgstr ""
 
-#: templates/about.html:52
+#: templates/about.html:47
 msgid "税務顧問"
 msgstr ""
 
-#: templates/about.html:53
+#: templates/about.html:48
 msgid "あんしん税理士法人"
 msgstr ""
 
-#: templates/about.html:56
+#: templates/about.html:51
 msgid "労務顧問"
 msgstr ""
 
-#: templates/about.html:57
+#: templates/about.html:52
 msgid "社会保険労務士法人ウインツ"
 msgstr ""
 
-#: templates/about.html:65
+#: templates/about.html:60
 msgid "沿革"
 msgstr ""
 
-#: templates/about.html:72
+#: templates/about.html:67
 msgid "2022年11月"
 msgstr ""
 
-#: templates/about.html:73
+#: templates/about.html:68
 msgid "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設"
 msgstr ""
 
-#: templates/about.html:79
+#: templates/about.html:74
 msgid "2025年3月"
 msgstr ""
 
-#: templates/about.html:80
+#: templates/about.html:75
 msgid ""
 "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社"
 "e-tac設立"
 msgstr ""
 
-#: templates/about.html:86
+#: templates/about.html:81
 msgid "2026年3月"
 msgstr ""
 
-#: templates/about.html:87
+#: templates/about.html:82
 msgid "一般社団法人工業製品製造技能人材機構（JAIM）加入"
 msgstr ""
 
@@ -142,48 +142,49 @@ msgid "ホーム"
 msgstr ""
 
 #: templates/base.html:60 templates/navbar.html:13 templates/navbar.html:75
-#: templates/services.html:4 templates/services.html:16
+#: templates/services.html:4 templates/services.html:11
 msgid "サービス"
 msgstr ""
 
-#: templates/base.html:64 templates/group.html:4 templates/group.html:16
+#: templates/base.html:64 templates/group.html:4 templates/group.html:11
 #: templates/navbar.html:15 templates/navbar.html:77
 msgid "グループ"
 msgstr ""
 
-#: templates/base.html:68 templates/contact.html:4 templates/contact.html:16
+#: templates/base.html:68 templates/contact.html:4 templates/contact.html:11
 #: templates/navbar.html:17 templates/navbar.html:79
 msgid "ご担当者様へ"
 msgstr ""
 
-#: templates/base.html:72 templates/inquiry.html:4 templates/inquiry.html:16
-#: templates/navbar.html:19 templates/navbar.html:81
+#: templates/base.html:72 templates/inquiry.html:4 templates/inquiry.html:11
+#: templates/inquiry_thanks.html:4 templates/navbar.html:19
+#: templates/navbar.html:81
 msgid "お問い合わせ"
 msgstr ""
 
-#: templates/contact.html:23
+#: templates/contact.html:18
 msgid ""
 "e-tacは、多種多様な受託業務を通じて製造現場の運営ノウハウの蓄積を行ってまいり"
 "ました。"
 msgstr ""
 
-#: templates/contact.html:24
+#: templates/contact.html:19
 msgid ""
 "「業種」「業態」「企業」各々、取り組んでいる業務や方向性が異なるように、問題"
 "点も異なります。"
 msgstr ""
 
-#: templates/contact.html:25
+#: templates/contact.html:20
 msgid ""
 "e-tacは、現場理解を最優先に考えております。課題や問題点、目指す方向を理解させ"
 "ていただいた上で、貴社に最適なご提案をいたします。"
 msgstr ""
 
-#: templates/contact.html:26
+#: templates/contact.html:21
 msgid "e-tacは、焦ることなく着実に取り組みます。"
 msgstr ""
 
-#: templates/contact.html:27
+#: templates/contact.html:22
 msgid "e-tacとの出会いが企業成長の道しるべになることを約束いたします。"
 msgstr ""
 
@@ -199,204 +200,200 @@ msgstr ""
 msgid "現場の理解から始まるDXソリューション"
 msgstr ""
 
-#: templates/homepage.html:24 templates/services.html:39
+#: templates/homepage.html:24 templates/services.html:34
 msgid "現場改善型アウトソーシング"
 msgstr ""
 
-#: templates/inquiry.html:24
-msgid "お問い合わせ・ご相談"
-msgstr ""
-
-#: templates/inquiry.html:38
+#: templates/inquiry.html:30
 msgid "会社名"
 msgstr ""
 
-#: templates/inquiry.html:47
+#: templates/inquiry.html:39
 msgid "例：株式会社 e-tac"
 msgstr ""
 
-#: templates/inquiry.html:57
+#: templates/inquiry.html:49
 msgid "業務分類"
 msgstr ""
 
-#: templates/inquiry.html:61
+#: templates/inquiry.html:53
 msgid "大分類"
 msgstr ""
 
-#: templates/inquiry.html:80 templates/inquiry.html:95
-msgid "読み込み中"
+#: templates/inquiry.html:72 templates/inquiry.html:87
+msgid "読み込み中..."
 msgstr ""
 
-#: templates/inquiry.html:105
+#: templates/inquiry.html:97
 msgid "業務分類選択内容"
 msgstr ""
 
-#: templates/inquiry.html:114
+#: templates/inquiry.html:106
 msgid "職位"
 msgstr ""
 
-#: templates/inquiry.html:123
+#: templates/inquiry.html:115
 msgid "例：係長、主任など"
 msgstr ""
 
-#: templates/inquiry.html:133
+#: templates/inquiry.html:125
 msgid "担当者名"
 msgstr ""
 
-#: templates/inquiry.html:142
+#: templates/inquiry.html:134
 msgid "例：田中太郎"
 msgstr ""
 
-#: templates/inquiry.html:152
+#: templates/inquiry.html:144
 msgid "お問い合わせ内容"
 msgstr ""
 
-#: templates/inquiry.html:161
+#: templates/inquiry.html:153
 msgid "例：具体的な課題やご要望をご記入ください。"
 msgstr ""
 
-#: templates/inquiry.html:182
+#: templates/inquiry.html:174
 msgid "プライバシーポリシー"
 msgstr ""
 
-#: templates/inquiry.html:182
+#: templates/inquiry.html:174
 msgid "に同意する"
 msgstr ""
 
-#: templates/inquiry.html:189
+#: templates/inquiry.html:181
 msgid "送信する"
 msgstr ""
 
-#: templates/inquiry.html:196
+#: templates/inquiry.html:188
 msgid "個人情報の取扱いについて（プライバシーポリシー）"
 msgstr ""
 
-#: templates/inquiry.html:198
+#: templates/inquiry.html:190
 msgid ""
 "当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下"
-"の通り適切に取り扱います。"
+"の通り適切に取り扱います"
 msgstr ""
 
-#: templates/inquiry.html:200
+#: templates/inquiry.html:192
 msgid "取得する個人情報"
 msgstr ""
 
-#: templates/inquiry.html:201
+#: templates/inquiry.html:193
 msgid ""
 "当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含ま"
 "れる情報を取得する場合があります。"
 msgstr ""
 
-#: templates/inquiry.html:204
+#: templates/inquiry.html:196
 msgid "利用目的"
 msgstr ""
 
-#: templates/inquiry.html:205
+#: templates/inquiry.html:197
 msgid "取得した個人情報は、以下の目的のために利用いたします。"
 msgstr ""
 
-#: templates/inquiry.html:207
+#: templates/inquiry.html:199
 msgid "お問い合わせへの回答"
 msgstr ""
 
-#: templates/inquiry.html:208
+#: templates/inquiry.html:200
 msgid "ご依頼・ご相談への対応"
 msgstr ""
 
-#: templates/inquiry.html:209
+#: templates/inquiry.html:201
 msgid "採用選考および関連する連絡"
 msgstr ""
 
-#: templates/inquiry.html:210
+#: templates/inquiry.html:202
 msgid "サービス改善・品質向上"
 msgstr ""
 
-#: templates/inquiry.html:211
+#: templates/inquiry.html:203
 msgid "当社サービス・関連情報のご案内"
 msgstr ""
 
-#: templates/inquiry.html:212
+#: templates/inquiry.html:204
 msgid "法令等に基づく対応"
 msgstr ""
 
-#: templates/inquiry.html:216
+#: templates/inquiry.html:208
 msgid "第三者提供について"
 msgstr ""
 
-#: templates/inquiry.html:217
+#: templates/inquiry.html:209
 msgid ""
 "当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしま"
 "せん。"
 msgstr ""
 
-#: templates/inquiry.html:220
+#: templates/inquiry.html:212
 msgid "安全管理"
 msgstr ""
 
-#: templates/inquiry.html:221
+#: templates/inquiry.html:213
 msgid ""
 "当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の"
 "安全管理のため、適切な措置を講じます。"
 msgstr ""
 
-#: templates/inquiry.html:224
+#: templates/inquiry.html:216
 msgid "委託について"
 msgstr ""
 
-#: templates/inquiry.html:225
+#: templates/inquiry.html:217
 msgid ""
 "利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があり"
 "ます。この場合、適切な委託管理を行います。"
 msgstr ""
 
-#: templates/inquiry.html:228
+#: templates/inquiry.html:220
 msgid "開示・訂正・削除等について"
 msgstr ""
 
-#: templates/inquiry.html:229
+#: templates/inquiry.html:221
 msgid ""
 "ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった"
 "場合には、法令に従い適切に対応いたします。"
 msgstr ""
 
-#: templates/inquiry.html:232
+#: templates/inquiry.html:224
 msgid "お問い合わせ窓口"
 msgstr ""
 
-#: templates/inquiry.html:233
+#: templates/inquiry.html:225
 msgid "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。"
 msgstr ""
 
-#: templates/inquiry.html:235
+#: templates/inquiry.html:227
 msgid "株式会社e-tac　カスタマーサービス係"
 msgstr ""
 
-#: templates/inquiry.html:249
+#: templates/inquiry.html:241
 msgid ""
 "当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。"
 msgstr ""
 
-#: templates/inquiry.html:255
+#: templates/inquiry.html:247
 msgid "キャンセル"
 msgstr ""
 
-#: templates/inquiry.html:258
+#: templates/inquiry.html:250
 msgid "同意する"
 msgstr ""
 
-#: templates/inquiry.html:294
+#: templates/inquiry.html:286
 msgid "会社名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:298
+#: templates/inquiry.html:290
 msgid "職位を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:299
+#: templates/inquiry.html:291
 msgid "担当者名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:300
+#: templates/inquiry.html:292
 msgid "お問い合わせ内容を入力してください"
 msgstr ""
 
@@ -408,75 +405,75 @@ msgstr ""
 msgid "小分類"
 msgstr ""
 
-#: templates/inquiry_thanks.html:4 templates/inquiry_thanks.html:17
-msgid "お問い合わせありがとうございました"
+#: templates/inquiry_thanks.html:12
+msgid "お問い合わせ<br />ありがとうございました"
 msgstr ""
 
-#: templates/inquiry_thanks.html:27
-msgid "お問い合わせを受け付けました。"
+#: templates/inquiry_thanks.html:22
+msgid "お問い合わせを受け付けました"
 msgstr ""
 
-#: templates/inquiry_thanks.html:28
-msgid "内容を確認の上、担当者よりご連絡いたします。"
+#: templates/inquiry_thanks.html:23
+msgid "内容を確認の上、担当者よりご連絡いたします"
 msgstr ""
 
-#: templates/inquiry_thanks.html:30
+#: templates/inquiry_thanks.html:25
 msgid "ホームへ戻る"
 msgstr ""
 
-#: templates/services.html:24
+#: templates/services.html:19
 msgid "製造受託業務"
 msgstr ""
 
-#: templates/services.html:29
+#: templates/services.html:24
 msgid ""
 "企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業"
 "務に対応いたします。"
 msgstr ""
 
-#: templates/services.html:31
+#: templates/services.html:26
 msgid ""
 "システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・"
 "検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様"
 "のニーズに応じた業務の受託が可能です。"
 msgstr ""
 
-#: templates/services.html:44
+#: templates/services.html:39
 msgid "これまで弊社では様々な業種の業務受託を行ってまいりました。"
 msgstr ""
 
-#: templates/services.html:46
+#: templates/services.html:41
 msgid ""
 "各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改"
 "善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。"
 msgstr ""
 
-#: templates/services.html:48
+#: templates/services.html:43
 msgid ""
 "ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたしま"
 "す。"
 msgstr ""
 
-#: templates/services.html:50
+#: templates/services.html:45
 msgid ""
 "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。"
 msgstr ""
 
-#: templates/services.html:58
+#: templates/services.html:53
 msgid "製造DX支援型アウトソーシング"
 msgstr ""
 
-#: templates/services.html:63
+#: templates/services.html:58
 msgid "様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。"
 msgstr ""
 
-#: templates/services.html:65
+#: templates/services.html:60
 msgid ""
 "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいた"
 "します。"
 msgstr ""
 
-#: templates/services.html:67
+#: templates/services.html:62
 msgid ""
 "ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十"
 "分に理解・把握させていただき、実際に運用できるDX推進を提案します。"
