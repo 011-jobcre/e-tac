@@ -27,7 +27,9 @@ else
     # Tạo superuser tự động nếu có yêu cầu (hữu ích khi deploy lần đầu)
     if [ "$CREATE_SUPERUSER" = "True" ] || [ "$CREATE_SUPERUSER" = "1" ]; then
         echo "Creating superuser..."
-        # Lưu ý: Cần set DJANGO_SUPERUSER_USERNAME, EMAIL, PASSWORD trong .env
+        echo "Updating Database & Seeding..."
+        python manage.py loaddata gyomu_fixture.json || echo "No fixture found or already loaded."
+        echo "Creating superuser (if not exists)..."
         python manage.py createsuperuser --noinput || echo "Superuser already exists."
     fi
 

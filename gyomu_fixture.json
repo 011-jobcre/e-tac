@@ -1,0 +1,5158 @@
+[
+  {
+    "model": "core.daibunrui",
+    "pk": "A",
+    "fields": {
+      "name": "農業・林業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "B",
+    "fields": {
+      "name": "漁業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "C",
+    "fields": {
+      "name": "鉱業・採石業・砂利採取業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "D",
+    "fields": {
+      "name": "建設業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "E",
+    "fields": {
+      "name": "製造業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "F",
+    "fields": {
+      "name": "電気・ガス・熱供給・水道業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "G",
+    "fields": {
+      "name": "情報通信業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "H",
+    "fields": {
+      "name": "運輸業・郵便業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "I",
+    "fields": {
+      "name": "卸売業・小売業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "J",
+    "fields": {
+      "name": "金融業・保険業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "K",
+    "fields": {
+      "name": "不動産業・物品賃貸業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "L",
+    "fields": {
+      "name": "学術研究・専門・技術サービス業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "M",
+    "fields": {
+      "name": "宿泊業・飲食サービス業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "N",
+    "fields": {
+      "name": "生活関連サービス業・娯楽業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "O",
+    "fields": {
+      "name": "教育・学習支援業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "P",
+    "fields": {
+      "name": "医療・福祉"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "Q",
+    "fields": {
+      "name": "複合サービス事業"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "R",
+    "fields": {
+      "name": "サービス業（他に分類されないもの）"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "S",
+    "fields": {
+      "name": "公務（他に分類されるものを除く）"
+    }
+  },
+  {
+    "model": "core.daibunrui",
+    "pk": "T",
+    "fields": {
+      "name": "分類不能の産業"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "01",
+    "fields": {
+      "name": "農業",
+      "daibunrui": "A"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "02",
+    "fields": {
+      "name": "林業",
+      "daibunrui": "A"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "03",
+    "fields": {
+      "name": "漁業（水産養殖業を除く）",
+      "daibunrui": "B"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "04",
+    "fields": {
+      "name": "水産養殖業",
+      "daibunrui": "B"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "05",
+    "fields": {
+      "name": "鉱業，採石業，砂利採取業",
+      "daibunrui": "C"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "06",
+    "fields": {
+      "name": "総合工事業",
+      "daibunrui": "D"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "07",
+    "fields": {
+      "name": "職別工事業（設備工事業を除く）",
+      "daibunrui": "D"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "08",
+    "fields": {
+      "name": "設備工事業",
+      "daibunrui": "D"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "09",
+    "fields": {
+      "name": "食料品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "10",
+    "fields": {
+      "name": "飲料・たばこ・飼料製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "11",
+    "fields": {
+      "name": "繊維工業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "12",
+    "fields": {
+      "name": "木材・木製品製造業（家具を除く）",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "13",
+    "fields": {
+      "name": "家具・装備品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "14",
+    "fields": {
+      "name": "パルプ・紙・紙加工品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "15",
+    "fields": {
+      "name": "印刷・同関連業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "16",
+    "fields": {
+      "name": "化学工業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "17",
+    "fields": {
+      "name": "石油製品・石炭製品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "18",
+    "fields": {
+      "name": "プラスチック製品製造業（別掲を除く）",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "19",
+    "fields": {
+      "name": "ゴム製品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "20",
+    "fields": {
+      "name": "なめし革・同製品・毛皮製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "21",
+    "fields": {
+      "name": "窯業・土石製品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "22",
+    "fields": {
+      "name": "鉄鋼業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "23",
+    "fields": {
+      "name": "非鉄金属製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "24",
+    "fields": {
+      "name": "金属製品製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "25",
+    "fields": {
+      "name": "はん用機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "26",
+    "fields": {
+      "name": "生産用機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "27",
+    "fields": {
+      "name": "業務用機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "28",
+    "fields": {
+      "name": "電子部品・デバイス・電子回路製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "29",
+    "fields": {
+      "name": "電気機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "30",
+    "fields": {
+      "name": "情報通信機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "31",
+    "fields": {
+      "name": "輸送用機械器具製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "32",
+    "fields": {
+      "name": "その他の製造業",
+      "daibunrui": "E"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "33",
+    "fields": {
+      "name": "電気業",
+      "daibunrui": "F"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "34",
+    "fields": {
+      "name": "ガス業",
+      "daibunrui": "F"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "35",
+    "fields": {
+      "name": "熱供給業",
+      "daibunrui": "F"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "36",
+    "fields": {
+      "name": "水道業",
+      "daibunrui": "F"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "37",
+    "fields": {
+      "name": "通信業",
+      "daibunrui": "G"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "38",
+    "fields": {
+      "name": "放送業",
+      "daibunrui": "G"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "39",
+    "fields": {
+      "name": "情報サービス業",
+      "daibunrui": "G"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "40",
+    "fields": {
+      "name": "インターネット附随サービス業",
+      "daibunrui": "G"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "41",
+    "fields": {
+      "name": "映像・音声・文字情報制作業",
+      "daibunrui": "G"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "42",
+    "fields": {
+      "name": "鉄道業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "43",
+    "fields": {
+      "name": "道路旅客運送業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "44",
+    "fields": {
+      "name": "道路貨物運送業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "45",
+    "fields": {
+      "name": "水運業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "46",
+    "fields": {
+      "name": "航空運輸業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "47",
+    "fields": {
+      "name": "倉庫業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "48",
+    "fields": {
+      "name": "運輸に附帯するサービス業",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "49",
+    "fields": {
+      "name": "郵便業（信書便事業を含む）",
+      "daibunrui": "H"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "50",
+    "fields": {
+      "name": "各種商品卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "51",
+    "fields": {
+      "name": "繊維・衣服等卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "52",
+    "fields": {
+      "name": "飲食料品卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "53",
+    "fields": {
+      "name": "建築材料，鉱物・金属材料等卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "54",
+    "fields": {
+      "name": "機械器具卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "55",
+    "fields": {
+      "name": "その他の卸売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "56",
+    "fields": {
+      "name": "各種商品小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "57",
+    "fields": {
+      "name": "織物・衣服・身の回り品小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "58",
+    "fields": {
+      "name": "飲食料品小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "59",
+    "fields": {
+      "name": "機械器具小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "60",
+    "fields": {
+      "name": "その他の小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "61",
+    "fields": {
+      "name": "無店舗小売業",
+      "daibunrui": "I"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "62",
+    "fields": {
+      "name": "銀行業",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "63",
+    "fields": {
+      "name": "協同組織金融業",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "64",
+    "fields": {
+      "name": "貸金業，クレジットカード業等非預金信用機関",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "65",
+    "fields": {
+      "name": "金融商品取引業，商品先物取引業",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "66",
+    "fields": {
+      "name": "補助的金融業等",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "67",
+    "fields": {
+      "name": "保険業（保険媒介代理業，保険サービス業を含む）",
+      "daibunrui": "J"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "68",
+    "fields": {
+      "name": "不動産取引業",
+      "daibunrui": "K"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "69",
+    "fields": {
+      "name": "不動産賃貸業・管理業",
+      "daibunrui": "K"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "70",
+    "fields": {
+      "name": "物品賃貸業",
+      "daibunrui": "K"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "71",
+    "fields": {
+      "name": "学術・開発研究機関",
+      "daibunrui": "L"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "72",
+    "fields": {
+      "name": "専門サービス業（他に分類されないもの）",
+      "daibunrui": "L"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "73",
+    "fields": {
+      "name": "広告業",
+      "daibunrui": "L"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "74",
+    "fields": {
+      "name": "技術サービス業（他に分類されないもの）",
+      "daibunrui": "L"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "75",
+    "fields": {
+      "name": "宿泊業",
+      "daibunrui": "M"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "76",
+    "fields": {
+      "name": "飲食店",
+      "daibunrui": "M"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "77",
+    "fields": {
+      "name": "持ち帰り・配達飲食サービス業",
+      "daibunrui": "M"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "78",
+    "fields": {
+      "name": "洗濯・理容・美容・浴場業",
+      "daibunrui": "N"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "79",
+    "fields": {
+      "name": "その他の生活関連サービス業",
+      "daibunrui": "N"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "80",
+    "fields": {
+      "name": "娯楽業",
+      "daibunrui": "N"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "81",
+    "fields": {
+      "name": "学校教育",
+      "daibunrui": "O"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "82",
+    "fields": {
+      "name": "その他の教育，学習支援業",
+      "daibunrui": "O"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "83",
+    "fields": {
+      "name": "医療業",
+      "daibunrui": "P"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "84",
+    "fields": {
+      "name": "保健衛生",
+      "daibunrui": "P"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "85",
+    "fields": {
+      "name": "社会保険・社会福祉・介護事業",
+      "daibunrui": "P"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "86",
+    "fields": {
+      "name": "郵便局",
+      "daibunrui": "Q"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "87",
+    "fields": {
+      "name": "協同組合（他に分類されないもの）",
+      "daibunrui": "Q"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "88",
+    "fields": {
+      "name": "廃棄物処理業",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "89",
+    "fields": {
+      "name": "自動車整備業",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "90",
+    "fields": {
+      "name": "機械等修理業（別掲を除く）",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "91",
+    "fields": {
+      "name": "職業紹介・労働者派遣業",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "92",
+    "fields": {
+      "name": "その他の事業サービス業",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "93",
+    "fields": {
+      "name": "政治・経済・文化団体",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "94",
+    "fields": {
+      "name": "宗教",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "95",
+    "fields": {
+      "name": "その他のサービス業",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "96",
+    "fields": {
+      "name": "外国公務",
+      "daibunrui": "R"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "97",
+    "fields": {
+      "name": "国家公務",
+      "daibunrui": "S"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "98",
+    "fields": {
+      "name": "地方公務",
+      "daibunrui": "S"
+    }
+  },
+  {
+    "model": "core.chubunrui",
+    "pk": "99",
+    "fields": {
+      "name": "分類不能の産業",
+      "daibunrui": "T"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "010",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（01農業）",
+      "chubunrui": "01"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "011",
+    "fields": {
+      "name": "耕種農業",
+      "chubunrui": "01"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "012",
+    "fields": {
+      "name": "畜産農業",
+      "chubunrui": "01"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "013",
+    "fields": {
+      "name": "農業サービス業（園芸サービス業を除く）",
+      "chubunrui": "01"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "014",
+    "fields": {
+      "name": "園芸サービス業",
+      "chubunrui": "01"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "020",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(02 林業)",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "021",
+    "fields": {
+      "name": "育林業",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "022",
+    "fields": {
+      "name": "素材生産業",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "023",
+    "fields": {
+      "name": "特用林産物生産業（きのこ類の栽培を除く）",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "024",
+    "fields": {
+      "name": "林業サービス業",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "029",
+    "fields": {
+      "name": "その他の林業",
+      "chubunrui": "02"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "030",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(03 漁業)",
+      "chubunrui": "03"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "031",
+    "fields": {
+      "name": "海面漁業",
+      "chubunrui": "03"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "032",
+    "fields": {
+      "name": "内水面漁業",
+      "chubunrui": "03"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "040",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(04 水産養殖業)",
+      "chubunrui": "04"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "041",
+    "fields": {
+      "name": "海面養殖業",
+      "chubunrui": "04"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "042",
+    "fields": {
+      "name": "内水面養殖業",
+      "chubunrui": "04"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "050",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（05 鉱業，採石業，砂利採取",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "051",
+    "fields": {
+      "name": "金属鉱業",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "052",
+    "fields": {
+      "name": "石炭・亜炭鉱業",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "053",
+    "fields": {
+      "name": "原油・天然ガス鉱業",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "054",
+    "fields": {
+      "name": "採石業，砂・砂利・玉石採取業",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "055",
+    "fields": {
+      "name": "窯業原料用鉱物鉱業（耐火物・陶磁器・ガラス・セメント原料用に限る）",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "059",
+    "fields": {
+      "name": "その他の鉱業",
+      "chubunrui": "05"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "060",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(06 総合工事業)",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "061",
+    "fields": {
+      "name": "一般土木建築工事業",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "062",
+    "fields": {
+      "name": "土木工事業（舗装工事業を除く）",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "063",
+    "fields": {
+      "name": "舗装工事業",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "064",
+    "fields": {
+      "name": "建築工事業（木造建築工事業を除く）",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "065",
+    "fields": {
+      "name": "木造建築工事業",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "066",
+    "fields": {
+      "name": "建築リフォーム工事業",
+      "chubunrui": "06"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "070",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(07 職別工事業)",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "071",
+    "fields": {
+      "name": "大工工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "072",
+    "fields": {
+      "name": "とび・土工・コンクリート工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "073",
+    "fields": {
+      "name": "鉄骨・鉄筋工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "074",
+    "fields": {
+      "name": "石工・れんが・タイル・ブロック工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "075",
+    "fields": {
+      "name": "左官工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "076",
+    "fields": {
+      "name": "板金・金物工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "077",
+    "fields": {
+      "name": "塗装工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "078",
+    "fields": {
+      "name": "床・内装工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "079",
+    "fields": {
+      "name": "その他の職別工事業",
+      "chubunrui": "07"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "080",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所(08 設備工事業)",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "081",
+    "fields": {
+      "name": "電気工事業",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "082",
+    "fields": {
+      "name": "電気通信・信号装置工事業",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "083",
+    "fields": {
+      "name": "管工事業（さく井工事業を除く）",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "084",
+    "fields": {
+      "name": "機械器具設置工事業",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "089",
+    "fields": {
+      "name": "その他の設備工事業",
+      "chubunrui": "08"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "090",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（09 食料品製造業）",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "091",
+    "fields": {
+      "name": "畜産食料品製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "092",
+    "fields": {
+      "name": "水産食料品製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "093",
+    "fields": {
+      "name": "野菜缶詰・果実缶詰・農産保存食料品製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "094",
+    "fields": {
+      "name": "調味料製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "095",
+    "fields": {
+      "name": "糖類製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "096",
+    "fields": {
+      "name": "精穀・製粉業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "097",
+    "fields": {
+      "name": "パン・菓子製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "098",
+    "fields": {
+      "name": "動植物油脂製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "099",
+    "fields": {
+      "name": "その他の食料品製造業",
+      "chubunrui": "09"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "100",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（10 飲料・たばこ・飼料製造業）",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "101",
+    "fields": {
+      "name": "清涼飲料製造業",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "102",
+    "fields": {
+      "name": "酒類製造業",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "103",
+    "fields": {
+      "name": "茶・コーヒー製造業（清涼飲料を除く）",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "104",
+    "fields": {
+      "name": "製氷業",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "105",
+    "fields": {
+      "name": "たばこ製造業",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "106",
+    "fields": {
+      "name": "飼料・有機質肥料製造業",
+      "chubunrui": "10"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "110",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（11 繊維工業）",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "111",
+    "fields": {
+      "name": "製糸業，紡績業，化学繊維・ねん糸等製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "112",
+    "fields": {
+      "name": "織物業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "113",
+    "fields": {
+      "name": "ニット生地製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "114",
+    "fields": {
+      "name": "染色整理業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "115",
+    "fields": {
+      "name": "綱・網・レース・繊維粗製品製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "116",
+    "fields": {
+      "name": "外衣・シャツ製造業（和式を除く）",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "117",
+    "fields": {
+      "name": "下着類製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "118",
+    "fields": {
+      "name": "和装製品・その他の衣服・繊維製身の回り品製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "119",
+    "fields": {
+      "name": "その他の繊維製品製造業",
+      "chubunrui": "11"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "120",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（12 木材・木製品製造業）",
+      "chubunrui": "12"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "121",
+    "fields": {
+      "name": "製材業，木製品製造業",
+      "chubunrui": "12"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "122",
+    "fields": {
+      "name": "造作材・合板・建築用組立材料製造業",
+      "chubunrui": "12"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "123",
+    "fields": {
+      "name": "木製容器製造業（竹，とうを含む）",
+      "chubunrui": "12"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "129",
+    "fields": {
+      "name": "その他の木製品製造業（竹，とうを含む）",
+      "chubunrui": "12"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "130",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（13 家具・装備品製造業）",
+      "chubunrui": "13"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "131",
+    "fields": {
+      "name": "家具製造業",
+      "chubunrui": "13"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "132",
+    "fields": {
+      "name": "宗教用具製造業",
+      "chubunrui": "13"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "133",
+    "fields": {
+      "name": "建具製造業",
+      "chubunrui": "13"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "139",
+    "fields": {
+      "name": "その他の家具・装備品製造業",
+      "chubunrui": "13"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "140",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（14 パルプ・紙・紙加工品製造業）",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "141",
+    "fields": {
+      "name": "パルプ製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "142",
+    "fields": {
+      "name": "紙製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "143",
+    "fields": {
+      "name": "加工紙製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "144",
+    "fields": {
+      "name": "紙製品製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "145",
+    "fields": {
+      "name": "紙製容器製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "149",
+    "fields": {
+      "name": "その他のパルプ・紙・紙加工品製造業",
+      "chubunrui": "14"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "150",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（15 印刷・同関連業）",
+      "chubunrui": "15"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "151",
+    "fields": {
+      "name": "印刷業",
+      "chubunrui": "15"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "152",
+    "fields": {
+      "name": "製版業",
+      "chubunrui": "15"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "153",
+    "fields": {
+      "name": "製本業，印刷物加工業",
+      "chubunrui": "15"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "159",
+    "fields": {
+      "name": "印刷関連サービス業",
+      "chubunrui": "15"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "160",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（16 化学工業）",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "161",
+    "fields": {
+      "name": "化学肥料製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "162",
+    "fields": {
+      "name": "無機化学工業製品製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "163",
+    "fields": {
+      "name": "有機化学工業製品製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "164",
+    "fields": {
+      "name": "油脂加工製品・石けん・合成洗剤・界面活性剤・塗料製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "165",
+    "fields": {
+      "name": "医薬品製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "166",
+    "fields": {
+      "name": "化粧品・歯磨・その他の化粧用調整品製造業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "169",
+    "fields": {
+      "name": "その他の化学工業",
+      "chubunrui": "16"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "170",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（17 石油製品・石炭製品製造業）",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "171",
+    "fields": {
+      "name": "石油精製業",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "172",
+    "fields": {
+      "name": "潤滑油・グリース製造業（石油精製業によらないもの）",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "173",
+    "fields": {
+      "name": "コークス製造業",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "174",
+    "fields": {
+      "name": "舗装材料製造業",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "179",
+    "fields": {
+      "name": "その他の石油製品・石炭製品製造業",
+      "chubunrui": "17"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "180",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（18 プラスチック製品製造",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "181",
+    "fields": {
+      "name": "プラスチック板・棒・管・継手・異形押出製品製造業",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "182",
+    "fields": {
+      "name": "プラスチックフィルム・シート・床材・合成皮革製造業",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "183",
+    "fields": {
+      "name": "工業用プラスチック製品製造業",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "184",
+    "fields": {
+      "name": "発泡・強化プラスチック製品製造業",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "185",
+    "fields": {
+      "name": "プラスチック成形材料製造業（廃プラスチックを含む）",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "189",
+    "fields": {
+      "name": "その他のプラスチック製品製造業",
+      "chubunrui": "18"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "190",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（19 ゴム製品製造業）",
+      "chubunrui": "19"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "191",
+    "fields": {
+      "name": "タイヤ・チューブ製造業",
+      "chubunrui": "19"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "192",
+    "fields": {
+      "name": "ゴム製・プラスチック製履物・同附属品製造業",
+      "chubunrui": "19"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "193",
+    "fields": {
+      "name": "ゴムベルト・ゴムホース・工業用ゴム製品製造業",
+      "chubunrui": "19"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "199",
+    "fields": {
+      "name": "その他のゴム製品製造業",
+      "chubunrui": "19"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "200",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（20 なめし革・同製品・毛皮製造業）",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "201",
+    "fields": {
+      "name": "なめし革製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "202",
+    "fields": {
+      "name": "工業用革製品製造業（手袋を除く）",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "203",
+    "fields": {
+      "name": "革製履物用材料・同附属品製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "204",
+    "fields": {
+      "name": "革製履物製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "205",
+    "fields": {
+      "name": "革製手袋製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "206",
+    "fields": {
+      "name": "かばん製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "207",
+    "fields": {
+      "name": "袋物製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "208",
+    "fields": {
+      "name": "毛皮製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "209",
+    "fields": {
+      "name": "その他のなめし革製品製造業",
+      "chubunrui": "20"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "210",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（21 窯業・土石製品製造業）",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "211",
+    "fields": {
+      "name": "ガラス・同製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "212",
+    "fields": {
+      "name": "セメント・同製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "213",
+    "fields": {
+      "name": "建設用粘土製品製造業（陶磁器製を除く）",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "214",
+    "fields": {
+      "name": "陶磁器・同関連製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "215",
+    "fields": {
+      "name": "耐火物製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "216",
+    "fields": {
+      "name": "炭素・黒鉛製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "217",
+    "fields": {
+      "name": "研磨材・同製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "218",
+    "fields": {
+      "name": "骨材・石工品等製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "219",
+    "fields": {
+      "name": "その他の窯業・土石製品製造業",
+      "chubunrui": "21"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "220",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（22 鉄鋼業）",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "221",
+    "fields": {
+      "name": "製鉄業",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "222",
+    "fields": {
+      "name": "製鋼・製鋼圧延業",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "223",
+    "fields": {
+      "name": "製鋼を行わない鋼材製造業（表面処理鋼材を除く）",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "224",
+    "fields": {
+      "name": "表面処理鋼材製造業",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "225",
+    "fields": {
+      "name": "鉄素形材製造業",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "229",
+    "fields": {
+      "name": "その他の鉄鋼業",
+      "chubunrui": "22"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "230",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（23 非鉄金属製造業）",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "231",
+    "fields": {
+      "name": "非鉄金属第１次製錬・精製業",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "232",
+    "fields": {
+      "name": "非鉄金属第２次製錬・精製業（非鉄金属合金製造業を含む）",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "233",
+    "fields": {
+      "name": "非鉄金属・同合金圧延業（抽伸，押出しを含む）",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "234",
+    "fields": {
+      "name": "電線・ケーブル製造業",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "235",
+    "fields": {
+      "name": "非鉄金属素形材製造業",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "239",
+    "fields": {
+      "name": "その他の非鉄金属製造業",
+      "chubunrui": "23"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "240",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（24 金属製品製造業）",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "241",
+    "fields": {
+      "name": "ブリキ缶・その他のめっき板等製品製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "242",
+    "fields": {
+      "name": "洋食器・刃物・手道具・金物類製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "243",
+    "fields": {
+      "name": "暖房装置・配管工事用附属品製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "244",
+    "fields": {
+      "name": "建設用・建築用金属製品製造業（製缶板金業を含む）",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "245",
+    "fields": {
+      "name": "金属素形材製品製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "246",
+    "fields": {
+      "name": "金属被覆・彫刻業，熱処理業（ほうろう鉄器を除く）",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "247",
+    "fields": {
+      "name": "金属線製品製造業（ねじ類を除く）",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "248",
+    "fields": {
+      "name": "ボルト・ナット・リベット・小ねじ・木ねじ等製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "249",
+    "fields": {
+      "name": "その他の金属製品製造業",
+      "chubunrui": "24"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "250",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（25 はん用機械器具製造業）",
+      "chubunrui": "25"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "251",
+    "fields": {
+      "name": "ボイラ・原動機製造業",
+      "chubunrui": "25"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "252",
+    "fields": {
+      "name": "ポンプ・圧縮機器製造業",
+      "chubunrui": "25"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "253",
+    "fields": {
+      "name": "一般産業用機械・装置製造業",
+      "chubunrui": "25"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "259",
+    "fields": {
+      "name": "その他のはん用機械・同部分品製造業",
+      "chubunrui": "25"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "260",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（26 生産用機械器具製造業）",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "261",
+    "fields": {
+      "name": "農業用機械製造業（農業用器具を除く）",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "262",
+    "fields": {
+      "name": "建設機械・鉱山機械製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "263",
+    "fields": {
+      "name": "繊維機械製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "264",
+    "fields": {
+      "name": "生活関連産業用機械製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "265",
+    "fields": {
+      "name": "基礎素材産業用機械製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "266",
+    "fields": {
+      "name": "金属加工機械製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "267",
+    "fields": {
+      "name": "半導体・フラットパネルディスプレイ製造装置製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "269",
+    "fields": {
+      "name": "その他の生産用機械・同部分品製造業",
+      "chubunrui": "26"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "270",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（27 業務用機械器具製造業）",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "271",
+    "fields": {
+      "name": "事務用機械器具製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "272",
+    "fields": {
+      "name": "サービス用・娯楽用機械器具製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "273",
+    "fields": {
+      "name": "計量器・測定器・分析機器・試験機・測量機械器具・理化学機械器具製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "274",
+    "fields": {
+      "name": "医療用機械器具・医療用品製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "275",
+    "fields": {
+      "name": "光学機械器具・レンズ製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "276",
+    "fields": {
+      "name": "武器製造業",
+      "chubunrui": "27"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "280",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（28 電子部品・デバイス・電子回路製造業）",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "281",
+    "fields": {
+      "name": "電子デバイス製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "282",
+    "fields": {
+      "name": "電子部品製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "283",
+    "fields": {
+      "name": "記録メディア製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "284",
+    "fields": {
+      "name": "電子回路製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "285",
+    "fields": {
+      "name": "ユニット部品製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "289",
+    "fields": {
+      "name": "その他の電子部品・デバイス・電子回路製造業",
+      "chubunrui": "28"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "290",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（２９電気機械器具製造業）",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "291",
+    "fields": {
+      "name": "発電用・送電用・配電用電気機械器具製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "292",
+    "fields": {
+      "name": "産業用電気機械器具製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "293",
+    "fields": {
+      "name": "民生用電気機械器具製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "294",
+    "fields": {
+      "name": "電球・電気照明器具製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "295",
+    "fields": {
+      "name": "電池製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "296",
+    "fields": {
+      "name": "電子応用装置製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "297",
+    "fields": {
+      "name": "電気計測器製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "299",
+    "fields": {
+      "name": "その他の電気機械器具製造業",
+      "chubunrui": "29"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "300",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（30 情報通信機械器具製造業）",
+      "chubunrui": "30"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "301",
+    "fields": {
+      "name": "通信機械器具・同関連機械器具製造業",
+      "chubunrui": "30"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "302",
+    "fields": {
+      "name": "映像・音響機械器具製造業",
+      "chubunrui": "30"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "303",
+    "fields": {
+      "name": "電子計算機・同附属装置製造業",
+      "chubunrui": "30"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "310",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３１輸送用機械器具製造業）",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "311",
+    "fields": {
+      "name": "自動車・同附属品製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "312",
+    "fields": {
+      "name": "鉄道車両・同部分品製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "313",
+    "fields": {
+      "name": "船舶製造・修理業，舶用機関製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "314",
+    "fields": {
+      "name": "航空機・同附属品製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "315",
+    "fields": {
+      "name": "産業用運搬車両・同部分品・附属品製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "319",
+    "fields": {
+      "name": "その他の輸送用機械器具製造業",
+      "chubunrui": "31"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "320",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３２その他の製造業）",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "321",
+    "fields": {
+      "name": "貴金属・宝石製品製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "322",
+    "fields": {
+      "name": "装身具・装飾品・ボタン・同関連品製造業（貴金属・宝石製を除く",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "323",
+    "fields": {
+      "name": "時計・同部分品製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "324",
+    "fields": {
+      "name": "楽器製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "325",
+    "fields": {
+      "name": "がん具・運動用具製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "326",
+    "fields": {
+      "name": "ペン・鉛筆・絵画用品・その他の事務用品製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "327",
+    "fields": {
+      "name": "漆器製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "328",
+    "fields": {
+      "name": "畳等生活雑貨製品製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "329",
+    "fields": {
+      "name": "他に分類されない製造業",
+      "chubunrui": "32"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "330",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３３電気業）",
+      "chubunrui": "33"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "331",
+    "fields": {
+      "name": "電気業",
+      "chubunrui": "33"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "340",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３４ガス業）",
+      "chubunrui": "34"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "341",
+    "fields": {
+      "name": "ガス業",
+      "chubunrui": "34"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "350",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３５熱供給業）",
+      "chubunrui": "35"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "351",
+    "fields": {
+      "name": "熱供給業",
+      "chubunrui": "35"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "360",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３６水道業）",
+      "chubunrui": "36"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "361",
+    "fields": {
+      "name": "上水道業",
+      "chubunrui": "36"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "362",
+    "fields": {
+      "name": "工業用水道業",
+      "chubunrui": "36"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "363",
+    "fields": {
+      "name": "下水道業",
+      "chubunrui": "36"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "370",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３７通信業）",
+      "chubunrui": "37"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "371",
+    "fields": {
+      "name": "固定電気通信業",
+      "chubunrui": "37"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "372",
+    "fields": {
+      "name": "移動電気通信業",
+      "chubunrui": "37"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "373",
+    "fields": {
+      "name": "電気通信に附帯するサービス業",
+      "chubunrui": "37"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "380",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３８放送業）",
+      "chubunrui": "38"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "381",
+    "fields": {
+      "name": "公共放送業（有線放送業を除く）",
+      "chubunrui": "38"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "382",
+    "fields": {
+      "name": "民間放送業（有線放送業を除く）",
+      "chubunrui": "38"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "383",
+    "fields": {
+      "name": "有線放送業",
+      "chubunrui": "38"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "390",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（３９情報サービス業）",
+      "chubunrui": "39"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "391",
+    "fields": {
+      "name": "ソフトウェア業",
+      "chubunrui": "39"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "392",
+    "fields": {
+      "name": "情報処理・提供サービス業",
+      "chubunrui": "39"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "400",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（40 インターネット附随サービス業）",
+      "chubunrui": "40"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "401",
+    "fields": {
+      "name": "インターネット附随サービス業",
+      "chubunrui": "40"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "410",
+    "fields": {
+      "name": "管理・補助的経済活動を行う事業所（41 映像・音声・文字情報制作業）",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "411",
+    "fields": {
+      "name": "映像情報制作・配給業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "412",
+    "fields": {
+      "name": "音声情報制作業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "413",
+    "fields": {
+      "name": "新聞業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "414",
+    "fields": {
+      "name": "出版業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "415",
+    "fields": {
+      "name": "広告制作業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "416",
+    "fields": {
+      "name": "映像・音声・文字情報制作に附帯するサービス業",
+      "chubunrui": "41"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "420",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４２鉄道業）",
+      "chubunrui": "42"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "421",
+    "fields": {
+      "name": "鉄道業",
+      "chubunrui": "42"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "430",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４３道路旅客運送業）",
+      "chubunrui": "43"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "431",
+    "fields": {
+      "name": "一般乗合旅客自動車運送業",
+      "chubunrui": "43"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "432",
+    "fields": {
+      "name": "一般乗用旅客自動車運送業",
+      "chubunrui": "43"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "433",
+    "fields": {
+      "name": "一般貸切旅客自動車運送業",
+      "chubunrui": "43"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "439",
+    "fields": {
+      "name": "その他の道路旅客運送業",
+      "chubunrui": "43"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "440",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４４道路貨物運送業）",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "441",
+    "fields": {
+      "name": "一般貨物自動車運送業",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "442",
+    "fields": {
+      "name": "特定貨物自動車運送業",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "443",
+    "fields": {
+      "name": "貨物軽自動車運送業",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "444",
+    "fields": {
+      "name": "集配利用運送業",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "449",
+    "fields": {
+      "name": "その他の道路貨物運送業",
+      "chubunrui": "44"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "450",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４５水運業）",
+      "chubunrui": "45"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "451",
+    "fields": {
+      "name": "外航海運業",
+      "chubunrui": "45"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "452",
+    "fields": {
+      "name": "沿海海運業",
+      "chubunrui": "45"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "453",
+    "fields": {
+      "name": "内陸水運業",
+      "chubunrui": "45"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "454",
+    "fields": {
+      "name": "船舶貸渡業",
+      "chubunrui": "45"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "460",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４６航空運輸業）",
+      "chubunrui": "46"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "461",
+    "fields": {
+      "name": "航空運送業",
+      "chubunrui": "46"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "462",
+    "fields": {
+      "name": "航空機使用業（航空運送業を除く）",
+      "chubunrui": "46"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "470",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４７倉庫業）",
+      "chubunrui": "47"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "471",
+    "fields": {
+      "name": "倉庫業（冷蔵倉庫業を除く）",
+      "chubunrui": "47"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "472",
+    "fields": {
+      "name": "冷蔵倉庫業",
+      "chubunrui": "47"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "481",
+    "fields": {
+      "name": "港湾運送業",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "482",
+    "fields": {
+      "name": "貨物運送取扱業（集配利用運送業を除く）",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "483",
+    "fields": {
+      "name": "運送代理店",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "484",
+    "fields": {
+      "name": "こん包業",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "485",
+    "fields": {
+      "name": "運輸施設提供業",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "489",
+    "fields": {
+      "name": "その他の運輸に附帯するサービス業",
+      "chubunrui": "48"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "490",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（４９郵便業）",
+      "chubunrui": "49"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "491",
+    "fields": {
+      "name": "郵便業（信書便事業を含む）",
+      "chubunrui": "49"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "500",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５０各種商品卸売業）",
+      "chubunrui": "50"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "501",
+    "fields": {
+      "name": "各種商品卸売業",
+      "chubunrui": "50"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "510",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５１繊維・衣服等卸売業）",
+      "chubunrui": "51"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "511",
+    "fields": {
+      "name": "繊維品卸売業（衣服，身の回り品を除く）",
+      "chubunrui": "51"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "512",
+    "fields": {
+      "name": "衣服卸売業",
+      "chubunrui": "51"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "513",
+    "fields": {
+      "name": "身の回り品卸売業",
+      "chubunrui": "51"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "520",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５２飲食料品卸売業）",
+      "chubunrui": "52"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "521",
+    "fields": {
+      "name": "農畜産物・水産物卸売業",
+      "chubunrui": "52"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "522",
+    "fields": {
+      "name": "食料・飲料卸売業",
+      "chubunrui": "52"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "530",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（53 建築材料、鉱物・金属材料等卸売業）",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "531",
+    "fields": {
+      "name": "建築材料卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "532",
+    "fields": {
+      "name": "化学製品卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "533",
+    "fields": {
+      "name": "石油・鉱物卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "534",
+    "fields": {
+      "name": "鉄鋼製品卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "535",
+    "fields": {
+      "name": "非鉄金属卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "536",
+    "fields": {
+      "name": "再生資源卸売業",
+      "chubunrui": "53"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "540",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５４機械器具卸売業）",
+      "chubunrui": "54"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "541",
+    "fields": {
+      "name": "産業機械器具卸売業",
+      "chubunrui": "54"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "542",
+    "fields": {
+      "name": "自動車卸売業",
+      "chubunrui": "54"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "543",
+    "fields": {
+      "name": "電気機械器具卸売業",
+      "chubunrui": "54"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "549",
+    "fields": {
+      "name": "その他の機械器具卸売業",
+      "chubunrui": "54"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "550",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５５その他の卸売業）",
+      "chubunrui": "55"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "551",
+    "fields": {
+      "name": "家具・建具・じゅう器等卸売業",
+      "chubunrui": "55"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "552",
+    "fields": {
+      "name": "医薬品・化粧品等卸売業",
+      "chubunrui": "55"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "553",
+    "fields": {
+      "name": "紙・紙製品卸売業",
+      "chubunrui": "55"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "559",
+    "fields": {
+      "name": "他に分類されない卸売業",
+      "chubunrui": "55"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "560",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５６各種商品小売業）",
+      "chubunrui": "56"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "561",
+    "fields": {
+      "name": "百貨店，総合スーパー",
+      "chubunrui": "56"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "569",
+    "fields": {
+      "name": "その他の各種商品小売業（従業者が常時５０人未満のもの）",
+      "chubunrui": "56"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "570",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（57 織物・衣服・身の回り品小売業）",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "571",
+    "fields": {
+      "name": "呉服・服地・寝具小売業",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "572",
+    "fields": {
+      "name": "男子服小売業",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "573",
+    "fields": {
+      "name": "婦人・子供服小売業",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "574",
+    "fields": {
+      "name": "靴・履物小売業",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "579",
+    "fields": {
+      "name": "その他の織物・衣服・身の回り品小売業",
+      "chubunrui": "57"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "580",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５８飲食料品小売業）",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "581",
+    "fields": {
+      "name": "各種食料品小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "582",
+    "fields": {
+      "name": "野菜・果実小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "583",
+    "fields": {
+      "name": "食肉小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "584",
+    "fields": {
+      "name": "鮮魚小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "585",
+    "fields": {
+      "name": "酒小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "586",
+    "fields": {
+      "name": "菓子・パン小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "589",
+    "fields": {
+      "name": "その他の飲食料品小売業",
+      "chubunrui": "58"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "590",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（５９機械器具小売業）",
+      "chubunrui": "59"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "591",
+    "fields": {
+      "name": "自動車小売業",
+      "chubunrui": "59"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "592",
+    "fields": {
+      "name": "自転車小売業",
+      "chubunrui": "59"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "593",
+    "fields": {
+      "name": "機械器具小売業（自動車，自転車を除く）",
+      "chubunrui": "59"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "600",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６０その他の小売業）",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "601",
+    "fields": {
+      "name": "家具・建具・畳小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "602",
+    "fields": {
+      "name": "じゅう器小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "603",
+    "fields": {
+      "name": "医薬品・化粧品小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "604",
+    "fields": {
+      "name": "農耕用品小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "605",
+    "fields": {
+      "name": "燃料小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "606",
+    "fields": {
+      "name": "書籍・文房具小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "607",
+    "fields": {
+      "name": "スポーツ用品・がん具・娯楽用品・楽器小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "608",
+    "fields": {
+      "name": "写真機・時計・眼鏡小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "609",
+    "fields": {
+      "name": "他に分類されない小売業",
+      "chubunrui": "60"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "610",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６１無店舗小売業）",
+      "chubunrui": "61"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "611",
+    "fields": {
+      "name": "通信販売・訪問販売小売業",
+      "chubunrui": "61"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "612",
+    "fields": {
+      "name": "自動販売機による小売業",
+      "chubunrui": "61"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "619",
+    "fields": {
+      "name": "その他の無店舗小売業",
+      "chubunrui": "61"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "620",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６２銀行業）",
+      "chubunrui": "62"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "621",
+    "fields": {
+      "name": "中央銀行",
+      "chubunrui": "62"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "622",
+    "fields": {
+      "name": "銀行（中央銀行を除く）",
+      "chubunrui": "62"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "630",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６３協同組織金融業）",
+      "chubunrui": "63"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "631",
+    "fields": {
+      "name": "中小企業等金融業",
+      "chubunrui": "63"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "632",
+    "fields": {
+      "name": "農林水産金融業",
+      "chubunrui": "63"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "640",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（64 貸金業、クレジットカード等非預金信用機関）",
+      "chubunrui": "64"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "641",
+    "fields": {
+      "name": "貸金業",
+      "chubunrui": "64"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "642",
+    "fields": {
+      "name": "質屋",
+      "chubunrui": "64"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "643",
+    "fields": {
+      "name": "クレジットカード業，割賦金融業",
+      "chubunrui": "64"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "649",
+    "fields": {
+      "name": "その他の非預金信用機関",
+      "chubunrui": "64"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "650",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（65 金融商品取引業、商品先物取引業）",
+      "chubunrui": "65"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "651",
+    "fields": {
+      "name": "金融商品取引業",
+      "chubunrui": "65"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "652",
+    "fields": {
+      "name": "商品先物取引業，商品投資業",
+      "chubunrui": "65"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "660",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６６補助的金融業等）",
+      "chubunrui": "66"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "661",
+    "fields": {
+      "name": "補助的金融業，金融附帯業",
+      "chubunrui": "66"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "662",
+    "fields": {
+      "name": "信託業",
+      "chubunrui": "66"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "663",
+    "fields": {
+      "name": "金融代理業",
+      "chubunrui": "66"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "670",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６７保険業）",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "671",
+    "fields": {
+      "name": "生命保険業",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "672",
+    "fields": {
+      "name": "損害保険業",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "673",
+    "fields": {
+      "name": "共済事業・少額短期保険業",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "674",
+    "fields": {
+      "name": "保険媒介代理業",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "675",
+    "fields": {
+      "name": "保険サービス業",
+      "chubunrui": "67"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "680",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６８不動産取引業）",
+      "chubunrui": "68"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "681",
+    "fields": {
+      "name": "建物売買業，土地売買業",
+      "chubunrui": "68"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "682",
+    "fields": {
+      "name": "不動産代理業・仲介業",
+      "chubunrui": "68"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "690",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（６９不動産賃貸業・管理業）",
+      "chubunrui": "69"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "691",
+    "fields": {
+      "name": "不動産賃貸業（貸家業，貸間業を除く）",
+      "chubunrui": "69"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "692",
+    "fields": {
+      "name": "貸家業，貸間業",
+      "chubunrui": "69"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "693",
+    "fields": {
+      "name": "駐車場業",
+      "chubunrui": "69"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "694",
+    "fields": {
+      "name": "不動産管理業",
+      "chubunrui": "69"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "700",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７０物品賃貸業）",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "701",
+    "fields": {
+      "name": "各種物品賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "702",
+    "fields": {
+      "name": "産業用機械器具賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "703",
+    "fields": {
+      "name": "事務用機械器具賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "704",
+    "fields": {
+      "name": "自動車賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "705",
+    "fields": {
+      "name": "スポーツ・娯楽用品賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "709",
+    "fields": {
+      "name": "その他の物品賃貸業",
+      "chubunrui": "70"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "710",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７１学術・開発研究機関）",
+      "chubunrui": "71"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "711",
+    "fields": {
+      "name": "自然科学研究所",
+      "chubunrui": "71"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "712",
+    "fields": {
+      "name": "人文・社会科学研究所",
+      "chubunrui": "71"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "720",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７２専門サービス業）",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "721",
+    "fields": {
+      "name": "法律事務所，特許事務所",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "722",
+    "fields": {
+      "name": "公証人役場，司法書士事務所，土地家屋調査士事務所",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "723",
+    "fields": {
+      "name": "行政書士事務所",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "724",
+    "fields": {
+      "name": "公認会計士事務所，税理士事務所",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "725",
+    "fields": {
+      "name": "社会保険労務士事務所",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "726",
+    "fields": {
+      "name": "デザイン業",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "727",
+    "fields": {
+      "name": "著述・芸術家業",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "728",
+    "fields": {
+      "name": "経営コンサルタント業，純粋持株会社",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "729",
+    "fields": {
+      "name": "その他の専門サービス業",
+      "chubunrui": "72"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "730",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７３広告業）",
+      "chubunrui": "73"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "731",
+    "fields": {
+      "name": "広告業",
+      "chubunrui": "73"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "740",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７４技術サービス業）",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "741",
+    "fields": {
+      "name": "獣医業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "742",
+    "fields": {
+      "name": "土木建築サービス業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "743",
+    "fields": {
+      "name": "機械設計業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "744",
+    "fields": {
+      "name": "商品・非破壊検査業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "745",
+    "fields": {
+      "name": "計量証明業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "746",
+    "fields": {
+      "name": "写真業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "749",
+    "fields": {
+      "name": "その他の技術サービス業",
+      "chubunrui": "74"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "750",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７５宿泊業）",
+      "chubunrui": "75"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "751",
+    "fields": {
+      "name": "旅館，ホテル",
+      "chubunrui": "75"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "752",
+    "fields": {
+      "name": "簡易宿所",
+      "chubunrui": "75"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "753",
+    "fields": {
+      "name": "下宿業",
+      "chubunrui": "75"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "759",
+    "fields": {
+      "name": "その他の宿泊業",
+      "chubunrui": "75"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "760",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（７６飲食店）",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "761",
+    "fields": {
+      "name": "食堂，レストラン（専門料理店を除く）",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "762",
+    "fields": {
+      "name": "専門料理店",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "763",
+    "fields": {
+      "name": "そば・うどん店",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "764",
+    "fields": {
+      "name": "すし店",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "765",
+    "fields": {
+      "name": "酒場，ビヤホール",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "766",
+    "fields": {
+      "name": "バー，キャバレー，ナイトクラブ",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "767",
+    "fields": {
+      "name": "喫茶店",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "769",
+    "fields": {
+      "name": "その他の飲食店",
+      "chubunrui": "76"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "770",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（77 持ち帰り・配達飲食サービス業）",
+      "chubunrui": "77"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "771",
+    "fields": {
+      "name": "持ち帰り飲食サービス業",
+      "chubunrui": "77"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "772",
+    "fields": {
+      "name": "配達飲食サービス業",
+      "chubunrui": "77"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "780",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（78 洗濯・理容・美容・浴場業）",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "781",
+    "fields": {
+      "name": "洗濯業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "782",
+    "fields": {
+      "name": "理容業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "783",
+    "fields": {
+      "name": "美容業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "784",
+    "fields": {
+      "name": "一般公衆浴場業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "785",
+    "fields": {
+      "name": "その他の公衆浴場業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "789",
+    "fields": {
+      "name": "その他の洗濯・理容・美容・浴場業",
+      "chubunrui": "78"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "790",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（79 その他の生活関連サービス業）",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "791",
+    "fields": {
+      "name": "旅行業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "792",
+    "fields": {
+      "name": "家事サービス業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "793",
+    "fields": {
+      "name": "衣服裁縫修理業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "794",
+    "fields": {
+      "name": "物品預り業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "795",
+    "fields": {
+      "name": "火葬・墓地管理業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "796",
+    "fields": {
+      "name": "冠婚葬祭業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "799",
+    "fields": {
+      "name": "他に分類されない生活関連サービス業",
+      "chubunrui": "79"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "800",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８０娯楽業）",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "801",
+    "fields": {
+      "name": "映画館",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "802",
+    "fields": {
+      "name": "興行場（別掲を除く），興行団",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "803",
+    "fields": {
+      "name": "競輪・競馬等の競走場，競技団",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "804",
+    "fields": {
+      "name": "スポーツ施設提供業",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "805",
+    "fields": {
+      "name": "公園，遊園地",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "806",
+    "fields": {
+      "name": "遊戯場",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "809",
+    "fields": {
+      "name": "その他の娯楽業",
+      "chubunrui": "80"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "810",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８１学校教育）",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "811",
+    "fields": {
+      "name": "幼稚園",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "812",
+    "fields": {
+      "name": "小学校",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "813",
+    "fields": {
+      "name": "中学校",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "814",
+    "fields": {
+      "name": "高等学校，中等教育学校",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "815",
+    "fields": {
+      "name": "特別支援学校",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "816",
+    "fields": {
+      "name": "高等教育機関",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "817",
+    "fields": {
+      "name": "専修学校，各種学校",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "818",
+    "fields": {
+      "name": "学校教育支援機関",
+      "chubunrui": "81"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "820",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（82 その他の教育、学習支援業）",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "821",
+    "fields": {
+      "name": "社会教育",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "822",
+    "fields": {
+      "name": "職業・教育支援施設",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "823",
+    "fields": {
+      "name": "学習塾",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "824",
+    "fields": {
+      "name": "教養・技能教授業",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "829",
+    "fields": {
+      "name": "他に分類されない教育，学習支援業",
+      "chubunrui": "82"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "830",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８３医療業）",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "831",
+    "fields": {
+      "name": "病院",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "832",
+    "fields": {
+      "name": "一般診療所",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "833",
+    "fields": {
+      "name": "歯科診療所",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "834",
+    "fields": {
+      "name": "助産・看護業",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "835",
+    "fields": {
+      "name": "療術業",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "836",
+    "fields": {
+      "name": "医療に附帯するサービス業",
+      "chubunrui": "83"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "840",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８４保健衛生）",
+      "chubunrui": "84"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "841",
+    "fields": {
+      "name": "保健所",
+      "chubunrui": "84"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "842",
+    "fields": {
+      "name": "健康相談施設",
+      "chubunrui": "84"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "849",
+    "fields": {
+      "name": "その他の保健衛生",
+      "chubunrui": "84"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "850",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（85 社会保険・社会福祉・介護事業）",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "851",
+    "fields": {
+      "name": "社会保険事業団体",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "852",
+    "fields": {
+      "name": "福祉事務所",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "853",
+    "fields": {
+      "name": "児童福祉事業",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "854",
+    "fields": {
+      "name": "老人福祉・介護事業",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "855",
+    "fields": {
+      "name": "障害者福祉事業",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "859",
+    "fields": {
+      "name": "その他の社会保険・社会福祉・介護事業",
+      "chubunrui": "85"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "860",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８６郵便局）",
+      "chubunrui": "86"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "861",
+    "fields": {
+      "name": "郵便局",
+      "chubunrui": "86"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "862",
+    "fields": {
+      "name": "郵便局受託業",
+      "chubunrui": "86"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "870",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８７協同組合）",
+      "chubunrui": "87"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "871",
+    "fields": {
+      "name": "農林水産業協同組合（他に分類されないもの）",
+      "chubunrui": "87"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "872",
+    "fields": {
+      "name": "事業協同組合（他に分類されないもの）",
+      "chubunrui": "87"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "880",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８８廃棄物処理業）",
+      "chubunrui": "88"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "881",
+    "fields": {
+      "name": "一般廃棄物処理業",
+      "chubunrui": "88"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "882",
+    "fields": {
+      "name": "産業廃棄物処理業",
+      "chubunrui": "88"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "889",
+    "fields": {
+      "name": "その他の廃棄物処理業",
+      "chubunrui": "88"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "890",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（８９自動車整備業）",
+      "chubunrui": "89"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "891",
+    "fields": {
+      "name": "自動車整備業",
+      "chubunrui": "89"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "900",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（９０機械等修理業）",
+      "chubunrui": "90"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "901",
+    "fields": {
+      "name": "機械修理業（電気機械器具を除く）",
+      "chubunrui": "90"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "902",
+    "fields": {
+      "name": "電気機械器具修理業",
+      "chubunrui": "90"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "903",
+    "fields": {
+      "name": "表具業",
+      "chubunrui": "90"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "909",
+    "fields": {
+      "name": "その他の修理業",
+      "chubunrui": "90"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "910",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（91 職業紹介・労働者派遣業）",
+      "chubunrui": "91"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "911",
+    "fields": {
+      "name": "職業紹介業",
+      "chubunrui": "91"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "912",
+    "fields": {
+      "name": "労働者派遣業",
+      "chubunrui": "91"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "920",
+    "fields": {
+      "name": "管理、補助的経済活動を行う事業所（92 その他の事業サービス業）",
+      "chubunrui": "92"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "921",
+    "fields": {
+      "name": "速記・ワープロ入力・複写業",
+      "chubunrui": "92"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "922",
+    "fields": {
+      "name": "建物サービス業",
+      "chubunrui": "92"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "923",
+    "fields": {
+      "name": "警備業",
+      "chubunrui": "92"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "929",
+    "fields": {
+      "name": "他に分類されない事業サービス業",
+      "chubunrui": "92"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "931",
+    "fields": {
+      "name": "経済団体",
+      "chubunrui": "93"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "932",
+    "fields": {
+      "name": "労働団体",
+      "chubunrui": "93"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "933",
+    "fields": {
+      "name": "学術・文化団体",
+      "chubunrui": "93"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "934",
+    "fields": {
+      "name": "政治団体",
+      "chubunrui": "93"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "939",
+    "fields": {
+      "name": "他に分類されない非営利的団体",
+      "chubunrui": "93"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "941",
+    "fields": {
+      "name": "神道系宗教",
+      "chubunrui": "94"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "942",
+    "fields": {
+      "name": "仏教系宗教",
+      "chubunrui": "94"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "943",
+    "fields": {
+      "name": "キリスト教系宗教",
+      "chubunrui": "94"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "949",
+    "fields": {
+      "name": "その他の宗教",
+      "chubunrui": "94"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "950",
+    "fields": {
+      "name": "管理，補助的経済活動を行う事業所（９５その他のサービス業）",
+      "chubunrui": "95"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "951",
+    "fields": {
+      "name": "集会場",
+      "chubunrui": "95"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "952",
+    "fields": {
+      "name": "と畜場",
+      "chubunrui": "95"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "959",
+    "fields": {
+      "name": "他に分類されないサービス業",
+      "chubunrui": "95"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "961",
+    "fields": {
+      "name": "外国公館",
+      "chubunrui": "96"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "969",
+    "fields": {
+      "name": "その他の外国公務",
+      "chubunrui": "96"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "971",
+    "fields": {
+      "name": "立法機関",
+      "chubunrui": "97"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "972",
+    "fields": {
+      "name": "司法機関",
+      "chubunrui": "97"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "973",
+    "fields": {
+      "name": "行政機関",
+      "chubunrui": "97"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "981",
+    "fields": {
+      "name": "都道府県機関",
+      "chubunrui": "98"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "982",
+    "fields": {
+      "name": "市町村機関",
+      "chubunrui": "98"
+    }
+  },
+  {
+    "model": "core.shobunrui",
+    "pk": "999",
+    "fields": {
+      "name": "分類不能の産業",
+      "chubunrui": "99"
+    }
+  }
+]
