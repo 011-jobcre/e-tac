@@ -8,7 +8,7 @@
     <section class="relative pt-32 pb-10 lg:pt-36 lg:pb-14 overflow-hidden">
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
-            <h1 class="text-3xl lg:text-5xl font-bold tracking-widest uppercase">{% trans "お問い合わせ" %}</h1>
+            <h1 class="hero-title">{% trans "お問い合わせ" %}</h1>
         </div>
     </section>
     <!-- Main Content -->
@@ -44,12 +44,12 @@
                                x-cloak></p>
                         </div>
                         <!-- 業種分類 -->
-                        <div class="space-y-4 p-6 rounded-xl border border-border">
-                            <h3 class="text-sm tracking-widest ml-1">
+                        <fieldset class="fieldset space-y-2 p-4 rounded-xl border border-border">
+                            <legend class="fieldset-legend text-sm tracking-widest ml-1">
                                 {% trans "業務分類" %} <span class="text-red-500">*</span>
-                            </h3>
+                            </legend>
                             <!-- 大分類 -->
-                            <div x-data="searchableSelect()" class="relative">
+                            <div x-data="searchableSelect()" class="relative flex flex-col gap-2">
                                 <label class="text-sm tracking-widest ml-1">{% trans "大分類" %}</label>
                                 <!-- Hidden Real Select -->
                                 <div class="hidden">
@@ -86,7 +86,7 @@
                                                        @input="filterOptions()"
                                                        type="text"
                                                        class="w-full bg-surface border border-border rounded-lg pl-9 pr-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20"
-                                                       placeholder="{% trans "検索..." %}">
+                                                       placeholder="{% trans "検索..." %}" />
                                             </div>
                                         </div>
                                         <div x-ref="optionsList" class="max-h-60 overflow-y-auto">
@@ -151,11 +151,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 職位 -->
+                        </fieldset>
+                        <!-- 所属 -->
                         <div class="flex flex-col gap-2">
                             <label class="text-sm tracking-widest ml-1">
-                                {% trans "職位" %} <span class="text-red-500">*</span>
+                                {% trans "所属" %} <span class="text-red-500">*</span>
                             </label>
                             <input type="text"
                                    name="position"
@@ -221,9 +221,9 @@
                                        class="checkbox checkbox-primary" />
                                 <label for="privacy"
                                        class="text-sm leading-relaxed cursor-pointer select-none">
-                                    <a href="#privacy_modal"
-                                       @click.prevent.stop="openPrivacyDialog()"
-                                       class="font-bold hover:underline text-primary">{% trans "プライバシーポリシー" %}</a> {% trans "に同意する" %}
+                                    {% blocktrans %}
+                                        <a href="#privacy_modal" @click.prevent.stop="openPrivacyDialog()" class="link link-primary link-hover font-bold">「プライバシーポリシー」および「利用規約」</a>に同意する
+                                    {% endblocktrans %}
                                 </label>
                             </div>
                             <button type="submit"
@@ -236,62 +236,20 @@
                     </form>
                     <!-- Privacy policy modal -->
                     <dialog id="privacy_modal" class="modal" :class="{'modal-open': showDialog}">
-                        <div class="modal-box w-11/12 relative bg-surface border border-border max-w-xl">
-                            <h3 class="font-bold text-xl text-primary mb-4 border-b border-border pb-2">{% trans "個人情報の取扱いについて（プライバシーポリシー）" %}</h3>
-                            <div class="space-y-6 text-sm leading-relaxed max-h-[60vh] overflow-y-auto pr-4">
-                                <p>{% trans "当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下の通り適切に取り扱います" %}</p>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">1. {% trans "取得する個人情報" %}</h4>
-                                    <p>{% trans "当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含まれる情報を取得する場合があります。" %}</p>
+                        <div class="modal-box w-11/12 bg-surface max-w-xl">
+                            <div class="space-y-6 text-sm leading-relaxed max-h-[60vh] overflow-y-auto">
+                                <section class="space-y-4">
+                                    <p>{% trans "ご入力いただいた個人情報および企業情報は、お問い合わせ対応、ご相談対応、サービス提供検討のために利用いたします。" %}</p>
+                                    <p>{% trans "また、当社は、業務上知り得た相談内容、経営情報、技術情報その他機密性を有する情報について適切な安全管理および守秘義務の徹底に努めます。" %}</p>
                                 </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">2. {% trans "利用目的" %}</h4>
-                                    <p>{% trans "取得した個人情報は、以下の目的のために利用いたします。" %}</p>
-                                    <ul class="list-disc ml-5 mt-2 space-y-1">
-                                        <li>{% trans "お問い合わせへの回答" %}</li>
-                                        <li>{% trans "ご依頼・ご相談への対応" %}</li>
-                                        <li>{% trans "採用選考および関連する連絡" %}</li>
-                                        <li>{% trans "サービス改善・品質向上" %}</li>
-                                        <li>{% trans "当社サービス・関連情報のご案内" %}</li>
-                                        <li>{% trans "法令等に基づく対応" %}</li>
-                                    </ul>
-                                </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">3. {% trans "第三者提供について" %}</h4>
-                                    <p>{% trans "当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしません。" %}</p>
-                                </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">4. {% trans "安全管理" %}</h4>
-                                    <p>{% trans "当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の安全管理のため、適切な措置を講じます。" %}</p>
-                                </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">5. {% trans "委託について" %}</h4>
-                                    <p>{% trans "利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があります。この場合、適切な委託管理を行います。" %}</p>
-                                </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">6. {% trans "開示・訂正・削除等について" %}</h4>
-                                    <p>{% trans "ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった場合には、法令に従い適切に対応いたします。" %}</p>
-                                </section>
-                                <section>
-                                    <h4 class="font-bold text-base text-primary mb-2">7. {% trans "お問い合わせ窓口" %}</h4>
-                                    <p>{% trans "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。" %}</p>
-                                    <div class="mt-2 p-4 bg-primary/5 rounded-lg space-y-2 border border-primary/10">
-                                        <p class="font-bold text-primary">{% trans "株式会社e-tac　カスタマーサービス係" %}</p>
-                                        <p>{% trans "福岡県行橋市中央三丁目５番２５号" %}</p>
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-lg">🆓</span>
-                                            <a href="tel:0800-808-0325" class="hover:text-primary transition-colors">0800-808-0325</a>
-                                        </div>
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-lg">📧</span>
-                                            <a href="mailto:info@e-tac.biz"
-                                               class="hover:text-primary transition-colors underline">info@e-tac.biz</a>
-                                        </div>
-                                    </div>
-                                </section>
-                                <p class="pt-4 border-t border-border font-medium text-xs text-primary text-center italic">
-                                    {% trans "当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。" %}
-                                </p>
+                                <div class="pt-4 border-t border-border font-medium text-md">
+                                    {% url 'privacy-policy' as privacy_url %}
+                                    {% url 'terms-of-use' as terms_url %}
+                                    {% blocktrans %}
+                                        <a href="{{ privacy_url }}" target="_blank" class="link link-primary link-hover font-bold">「プライバシーポリシー」</a>および
+                                        <a href="{{ terms_url }}" target="_blank" class="link link-primary link-hover font-bold">「利用規約」</a>をご確認いただき、内容に同意の上、送信してください。
+                                    {% endblocktrans %}
+                                </div>
                             </div>
                             <div class="modal-action flex justify-end gap-3 mt-4">
                                 <button type="button"
@@ -474,7 +432,7 @@
                     daiSelected: "{% trans '大分類を選択してください'|escapejs %}",
                     chuSelected: "{% trans '中分類を選択してください'|escapejs %}",
                     shoSelected: "{% trans '小分類を選択してください'|escapejs %}",
-                    position: "{% trans '職位を入力してください'|escapejs %}",
+                    position: "{% trans '所属を入力してください'|escapejs %}",
                     contactName: "{% trans '担当者名を入力してください'|escapejs %}",
                     inquiryContent: "{% trans 'お問い合わせ内容を入力してください'|escapejs %}",
                 },
@@ -505,13 +463,11 @@
                 // Xử lý khi user chọn 大分類: reset các cấp con và validate lại
                 handleDaiChange(event) {
                     this.daiSelected = event.target.value;
-                    this.chuSelected = null;
-                    this.shoSelected = null;
-//                    this.resetSelect('id_chubunrui', "{% trans '中分類を選択してください'|escapejs %}");
-//                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+                    this.resetChuSho();
+                    // this.resetSelect('id_chubunrui', "{% trans '中分類を選択してください'|escapejs %}");
+                    // this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
                     this.resetSelect('id_chubunrui', "---------");
                     this.resetSelect('id_shobunrui', "---------");
-                    this.updateSummary();
                     this.validateField('daiSelected');
                     this.validateField('chuSelected');
                     this.validateField('shoSelected');
@@ -521,7 +477,7 @@
                 handleChuChange(event) {
                     this.chuSelected = event.target.value;
                     this.shoSelected = null;
-//                    this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
+                    // this.resetSelect('id_shobunrui', "{% trans '小分類を選択してください'|escapejs %}");
                     this.resetSelect('id_shobunrui', "---------");
                     this.updateSummary();
                     this.validateField('chuSelected');

@@ -1,5 +1,5 @@
 {% load i18n %}
-<div x-data="searchableSelect()" class="relative">
+<div x-data="searchableSelect()" class="relative flex flex-col gap-2">
     <label class="text-sm tracking-widest ml-1">{% trans "中分類" %}</label>
     <!-- Hidden Real Select -->
     <div class="hidden">
@@ -17,7 +17,7 @@
                     x-model="chuSelected"
                     @change="handleChuChange($event)"
                     :class="fieldErrorClass('chuSelected')">
-                <option value="">{% trans "---------" %}</option>
+                <option value="">---------</option>
                 {% for chu in chubunrui_list %}<option value="{{ chu.code }}">{{ chu.code }} {{ chu.name }}</option>{% endfor %}
             </select>
         </div>
@@ -53,7 +53,7 @@
                            @input="filterOptions()"
                            type="text"
                            class="w-full bg-surface border border-border rounded-lg pl-9 pr-3 py-2 text-sm outline-none focus:border-base-content"
-                           placeholder="{% trans "検索..." %}">
+                           placeholder="{% trans "検索..." %}" />
                 </div>
             </div>
             <div x-ref="optionsList" class="max-h-60 overflow-y-auto">

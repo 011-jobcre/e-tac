@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 15:06+0900\n"
-"PO-Revision-Date: 2026-05-13 15:06+0900\n"
+"POT-Creation-Date: 2026-05-14 14:59+0900\n"
+"PO-Revision-Date: 2026-05-14 15:01+0900\n"
 "Last-Translator:   <admin@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,22 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.3\n"
 
-#: core/forms.py:12 templates/inquiry.html:287
-msgid "大分類を選択してください"
-msgstr "Please select a main category"
-
-#: core/forms.py:32 templates/inquiry.html:288 templates/inquiry.html:323
-#: templates/inquiry/partials/_chubunrui_select.html:16
-msgid "中分類を選択してください"
-msgstr "Please select a subcategory"
-
-#: core/forms.py:44 templates/inquiry.html:289 templates/inquiry.html:324
-#: templates/inquiry.html:335
-#: templates/inquiry/partials/_shobunrui_select.html:11
-msgid "小分類を選択してください"
-msgstr "Please select a category"
-
-#: templates/about.html:4 templates/about.html:11 templates/base.html:56
+#: templates/about.html:4 templates/about.html:11 templates/base.html:77
 #: templates/navbar.html:11 templates/navbar.html:73
 msgid "会社概要"
 msgstr "Company Overview"
@@ -75,7 +60,7 @@ msgstr "5 million yen"
 msgid "所在地"
 msgstr "Location"
 
-#: templates/about.html:40 templates/inquiry.html:228
+#: templates/about.html:40 templates/base.html:49 templates/privacy.html:113
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr "5-25, Chuo 3-chome, Yukuhashi City, Fukuoka Prefecture"
 
@@ -122,9 +107,7 @@ msgid "2025年3月"
 msgstr "March 2025"
 
 #: templates/about.html:75
-msgid ""
-"製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社"
-"e-tac設立"
+msgid "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立"
 msgstr ""
 "e-tac Co., Ltd. was established through a corporate spin-off from JOB "
 "CREATOR Co., Ltd. for the purpose of operating a contract manufacturing "
@@ -140,61 +123,64 @@ msgstr ""
 "Membership in the Japan Association for Industrial Manufacturing Skills "
 "(JAIM)"
 
-#: templates/base.html:48
+#: templates/base.html:68
 msgid "ナビゲーション"
 msgstr "Navigation"
 
-#: templates/base.html:52 templates/homepage.html:4 templates/navbar.html:9
+#: templates/base.html:73 templates/homepage.html:4 templates/navbar.html:9
 #: templates/navbar.html:71
 msgid "ホーム"
 msgstr "Home"
 
-#: templates/base.html:60 templates/navbar.html:13 templates/navbar.html:75
+#: templates/base.html:81 templates/navbar.html:13 templates/navbar.html:75
 #: templates/services.html:4 templates/services.html:11
 msgid "サービス"
 msgstr "Service"
 
-#: templates/base.html:64 templates/group.html:4 templates/group.html:11
+#: templates/base.html:87 templates/group.html:4 templates/group.html:11
 #: templates/navbar.html:15 templates/navbar.html:77
 msgid "グループ"
 msgstr "Group"
 
-#: templates/base.html:68 templates/contact.html:4 templates/contact.html:11
+#: templates/base.html:91 templates/contact.html:4 templates/contact.html:11
 #: templates/navbar.html:17 templates/navbar.html:79
 msgid "ご担当者様へ"
 msgstr "Contact"
 
-#: templates/base.html:72 templates/inquiry.html:4 templates/inquiry.html:11
+#: templates/base.html:95 templates/inquiry.html:4 templates/inquiry.html:11
 #: templates/inquiry_thanks.html:4 templates/navbar.html:19
 #: templates/navbar.html:81
 msgid "お問い合わせ"
 msgstr "Inquiry"
 
+#: templates/base.html:101 templates/privacy.html:4 templates/privacy.html:11
+msgid "プライバシーポリシー"
+msgstr "Privacy Policy"
+
+#: templates/base.html:105 templates/terms_of_use.html:4
+#: templates/terms_of_use.html:11 templates/terms_of_use.html:19
+msgid "利用規約"
+msgstr "Terms of Use"
+
 #: templates/contact.html:18
-msgid ""
-"e-tacは、多種多様な受託業務を通じて製造現場の運営ノウハウの蓄積を行ってまいり"
-"ました。"
+msgid "e-tacは、多種多様な受託業務を通じて製造現場の運営ノウハウの蓄積を行ってまいりました。"
 msgstr ""
-"Through a wide range of contract services, e-tac has accumulated operational "
-"expertise in manufacturing environments."
+"Through a wide range of contract services, e-tac has accumulated operational"
+" expertise in manufacturing environments."
 
 #: templates/contact.html:19
-msgid ""
-"「業種」「業態」「企業」各々、取り組んでいる業務や方向性が異なるように、問題"
-"点も異なります。"
+msgid "「業種」「業態」「企業」各々、取り組んでいる業務や方向性が異なるように、問題点も異なります。"
 msgstr ""
 "Just as the specific tasks and strategic directions vary across different "
 "“Industries,” “Business models,” and “Companies,” so do the challenges they "
 "face."
 
 #: templates/contact.html:20
-msgid ""
-"e-tacは、現場理解を最優先に考えております。課題や問題点、目指す方向を理解させ"
-"ていただいた上で、貴社に最適なご提案をいたします。"
+msgid "e-tacは、現場理解を最優先に考えております。課題や問題点、目指す方向を理解させていただいた上で、貴社に最適なご提案をいたします。"
 msgstr ""
-"At e-tac, we prioritize understanding your specific situation. After gaining "
-"a clear understanding of your challenges, issues, and goals, we will provide "
-"you with the solution that best suits your company."
+"At e-tac, we prioritize understanding your specific situation. After gaining"
+" a clear understanding of your challenges, issues, and goals, we will "
+"provide you with the solution that best suits your company."
 
 #: templates/contact.html:21
 msgid "e-tacは、焦ることなく着実に取り組みます。"
@@ -220,7 +206,7 @@ msgstr ""
 msgid "現場の理解から始まるDXソリューション"
 msgstr "DX Solutions begin with understanding of the on-site"
 
-#: templates/homepage.html:24 templates/services.html:34
+#: templates/homepage.html:24 templates/services.html:33
 msgid "現場改善型アウトソーシング"
 msgstr "On-site Improvement Outsourcing"
 
@@ -240,210 +226,132 @@ msgstr "Business Categories"
 msgid "大分類"
 msgstr "Main Category"
 
-#: templates/inquiry.html:72 templates/inquiry.html:87
+#: templates/inquiry.html:89
+#: templates/inquiry/partials/_chubunrui_select.html:56
+#: templates/inquiry/partials/_shobunrui_select.html:51
+msgid "検索..."
+msgstr "Search..."
+
+#: templates/inquiry.html:106
+#: templates/inquiry/partials/_chubunrui_select.html:73
+#: templates/inquiry/partials/_shobunrui_select.html:68
+msgid "一致する結果がありません"
+msgstr "No results found"
+
+#: templates/inquiry.html:126 templates/inquiry.html:139
 msgid "読み込み中..."
 msgstr "Loading..."
 
-#: templates/inquiry.html:97
+#: templates/inquiry.html:149
 msgid "業務分類選択内容"
 msgstr "Business Categories Selection"
 
-#: templates/inquiry.html:106
-msgid "職位"
+#: templates/inquiry.html:158
+msgid "所属"
 msgstr "Position"
 
-#: templates/inquiry.html:115
+#: templates/inquiry.html:167
 msgid "例：係長、主任など"
 msgstr "Ex: Section Chief, Supervisor, etc."
 
-#: templates/inquiry.html:125
+#: templates/inquiry.html:177
 msgid "担当者名"
 msgstr "Contact Person"
 
-#: templates/inquiry.html:134
+#: templates/inquiry.html:186
 msgid "例：田中太郎"
 msgstr "Ex: Taro Tanaka"
 
-#: templates/inquiry.html:144
+#: templates/inquiry.html:196
 msgid "お問い合わせ内容"
 msgstr "Inquiry"
 
-#: templates/inquiry.html:153
+#: templates/inquiry.html:205
 msgid "例：具体的な課題やご要望をご記入ください。"
 msgstr "Please describe your specific issues or requests."
 
-#: templates/inquiry.html:174
-msgid "プライバシーポリシー"
-msgstr "Privacy Policy"
+#: templates/inquiry.html:224
+msgid ""
+"\n"
+"                                        <a href=\"#privacy_modal\" @click.prevent.stop=\"openPrivacyDialog()\" class=\"link link-primary link-hover font-bold\">「プライバシーポリシー」および「利用規約」</a>に同意する\n"
+"                                    "
+msgstr ""
+"\n"
+"I agree to the <a href=\"#privacy_modal\" @click.prevent.stop=\"openPrivacyDialog()\" class=\"font-bold hover:underline text-primary\">Privacy Policy and Terms of Use</a>"
 
-#: templates/inquiry.html:174
-msgid "に同意する"
-msgstr "I agree"
-
-#: templates/inquiry.html:181
+#: templates/inquiry.html:233
 msgid "送信する"
 msgstr "Send"
 
-#: templates/inquiry.html:188
-msgid "個人情報の取扱いについて（プライバシーポリシー）"
-msgstr "Regarding the handling of Personal Information (Privacy Policy)"
+#: templates/inquiry.html:242
+msgid "ご入力いただいた個人情報および企業情報は、お問い合わせ対応、ご相談対応、サービス提供検討のために利用いたします。"
+msgstr ""
+"The personal and corporate information you provide will be used to respond "
+"to your inquiries, address your concerns, and evaluate the provision of our "
+"services."
 
-#: templates/inquiry.html:190
+#: templates/inquiry.html:243
+msgid "また、当社は、業務上知り得た相談内容、経営情報、技術情報その他機密性を有する情報について適切な安全管理および守秘義務の徹底に努めます。"
+msgstr ""
+"In addition, we are committed to ensuring the appropriate security "
+"management and strict confidentiality of all confidential information, "
+"including consultation details, business information, technical information,"
+" and other confidential data obtained in the course of our business "
+"operations."
+
+#: templates/inquiry.html:248
+#, python-format
 msgid ""
-"当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下"
-"の通り適切に取り扱います"
+"\n"
+"                                        <a href=\"%(privacy_url)s\" target=\"_blank\" class=\"link link-primary link-hover font-bold\">「プライバシーポリシー」</a>および\n"
+"                                        <a href=\"%(terms_url)s\" target=\"_blank\" class=\"link link-primary link-hover font-bold\">「利用規約」</a>をご確認いただき、内容に同意の上、送信してください。\n"
+"                                    "
 msgstr ""
-"We will handle the personal information you provide to us in connection with "
-"inquiries, job applications, and other matters appropriately, as outlined "
-"below"
+"\n"
+"Please review our <a href=\"%(privacy_url)s\" class=\"link link-primary link-hover font-bold\">Privacy Policy</a> and <a href=\"%(terms_url)s\" class=\"link link-primary link-hover font-bold\">Terms of Use</a>, and submit this form agreed to the terms."
 
-#: templates/inquiry.html:192
-msgid "取得する個人情報"
-msgstr "Personal Information Collected"
-
-#: templates/inquiry.html:193
-msgid ""
-"当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含ま"
-"れる情報を取得する場合があります。"
-msgstr ""
-"We may collect information such as your name, company name, contact "
-"information, email address, mailing address, and other details included in "
-"your inquiry."
-
-#: templates/inquiry.html:196
-msgid "利用目的"
-msgstr "Purpose of Use"
-
-#: templates/inquiry.html:197
-msgid "取得した個人情報は、以下の目的のために利用いたします。"
-msgstr ""
-"We will use the personal information we collect for the following purposes."
-
-#: templates/inquiry.html:199
-msgid "お問い合わせへの回答"
-msgstr "Response to your Inquiry"
-
-#: templates/inquiry.html:200
-msgid "ご依頼・ご相談への対応"
-msgstr "Handling Requests and Inquiries"
-
-#: templates/inquiry.html:201
-msgid "採用選考および関連する連絡"
-msgstr "Recruitment Process and Related Communications"
-
-#: templates/inquiry.html:202
-msgid "サービス改善・品質向上"
-msgstr "Service Improvement and Quality Enhancement"
-
-#: templates/inquiry.html:203
-msgid "当社サービス・関連情報のご案内"
-msgstr "Information About Our Services and Related Topics"
-
-#: templates/inquiry.html:204
-msgid "法令等に基づく対応"
-msgstr "Compliance with Laws and Regulations"
-
-#: templates/inquiry.html:208
-msgid "第三者提供について"
-msgstr "Regarding Third-party Provision"
-
-#: templates/inquiry.html:209
-msgid ""
-"当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしま"
-"せん。"
-msgstr ""
-"Except as required by law, we will not disclose personal information to "
-"third parties without the individual’s consent."
-
-#: templates/inquiry.html:212
-msgid "安全管理"
-msgstr "Safety Management"
-
-#: templates/inquiry.html:213
-msgid ""
-"当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の"
-"安全管理のため、適切な措置を講じます。"
-msgstr ""
-"We will take appropriate measures to prevent unauthorized access, leakage, "
-"loss, or damage to personal information, and to ensure the secure management "
-"of such information."
-
-#: templates/inquiry.html:216
-msgid "委託について"
-msgstr "Regarding Consignment"
-
-#: templates/inquiry.html:217
-msgid ""
-"利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があり"
-"ます。この場合、適切な委託管理を行います。"
-msgstr ""
-"We may outsource the handling of personal information to third parties to "
-"the extent necessary to achieve the intended purpose. In such cases, we will "
-"ensure appropriate oversight of the outsourcing arrangement."
-
-#: templates/inquiry.html:220
-msgid "開示・訂正・削除等について"
-msgstr "Regarding Disclosure, Correction, Deletion, etc"
-
-#: templates/inquiry.html:221
-msgid ""
-"ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった"
-"場合には、法令に従い適切に対応いたします。"
-msgstr ""
-"If an individual requests the disclosure, correction, suspension of use, or "
-"deletion of their personal information, we will respond appropriately in "
-"accordance with applicable laws and regulations."
-
-#: templates/inquiry.html:224
-msgid "お問い合わせ窓口"
-msgstr "Contact Us"
-
-#: templates/inquiry.html:225
-msgid "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。"
-msgstr ""
-"For inquiries regarding the handling of personal information, please contact "
-"the office listed below."
-
-#: templates/inquiry.html:227
-msgid "株式会社e-tac　カスタマーサービス係"
-msgstr "e-tac Co., Ltd. Customer Service Department"
-
-#: templates/inquiry.html:241
-msgid ""
-"当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。"
-msgstr ""
-"Please review our Privacy Policy and submit your information after agreeing "
-"to its terms."
-
-#: templates/inquiry.html:247
+#: templates/inquiry.html:257
 msgid "キャンセル"
 msgstr "Cancel"
 
-#: templates/inquiry.html:250
+#: templates/inquiry.html:260
 msgid "同意する"
 msgstr "I agree"
 
-#: templates/inquiry.html:286
+#: templates/inquiry.html:431
 msgid "会社名を入力してください"
 msgstr "Please enter your company name"
 
-#: templates/inquiry.html:290
-msgid "職位を入力してください"
+#: templates/inquiry.html:432
+msgid "大分類を選択してください"
+msgstr "Please select a main category"
+
+#: templates/inquiry.html:433 templates/inquiry.html:467
+msgid "中分類を選択してください"
+msgstr "Please select a subcategory"
+
+#: templates/inquiry.html:434 templates/inquiry.html:468
+#: templates/inquiry.html:480
+msgid "小分類を選択してください"
+msgstr "Please select a category"
+
+#: templates/inquiry.html:435
+msgid "所属を入力してください"
 msgstr "Please enter your position"
 
-#: templates/inquiry.html:291
+#: templates/inquiry.html:436
 msgid "担当者名を入力してください"
 msgstr "Please enter the contact person's name"
 
-#: templates/inquiry.html:292
+#: templates/inquiry.html:437
 msgid "お問い合わせ内容を入力してください"
 msgstr "Please enter your inquiry details"
 
-#: templates/inquiry/partials/_chubunrui_select.html:2
+#: templates/inquiry/partials/_chubunrui_select.html:3
 msgid "中分類"
 msgstr "Subcategory"
 
-#: templates/inquiry/partials/_shobunrui_select.html:2
+#: templates/inquiry/partials/_shobunrui_select.html:3
 msgid "小分類"
 msgstr "Category"
 
@@ -463,84 +371,185 @@ msgstr "We will review the details and have a representative contact you"
 msgid "ホームへ戻る"
 msgstr "Return to Home"
 
-#: templates/services.html:19
+#: templates/privacy.html:19
+msgid "個人情報の取扱いについて"
+msgstr "Regarding the handling of Personal Information"
+
+#: templates/privacy.html:23
+msgid "当社は、お問い合わせ・採用募集等に際してご提供いただく個人情報について、以下の通り適切に取り扱います"
+msgstr ""
+"We will handle the personal information you provide to us in connection with"
+" inquiries, job applications, and other matters appropriately, as outlined "
+"below"
+
+#: templates/privacy.html:29
+msgid "取得する個人情報"
+msgstr "Personal Information Collected"
+
+#: templates/privacy.html:31
+msgid "当社は、氏名、会社名、連絡先、メールアドレス、住所、その他お問い合わせに含まれる情報を取得する場合があります。"
+msgstr ""
+"We may collect information such as your name, company name, contact "
+"information, email address, mailing address, and other details included in "
+"your inquiry."
+
+#: templates/privacy.html:37
+msgid "利用目的"
+msgstr "Purpose of Use"
+
+#: templates/privacy.html:40
+msgid "取得した個人情報は、以下の目的のために利用いたします。"
+msgstr ""
+"We will use the personal information we collect for the following purposes."
+
+#: templates/privacy.html:44
+msgid "お問い合わせへの回答"
+msgstr "Response to your Inquiry"
+
+#: templates/privacy.html:48
+msgid "ご依頼・ご相談への対応"
+msgstr "Handling Requests and Inquiries"
+
+#: templates/privacy.html:52
+msgid "採用選考および関連する連絡"
+msgstr "Recruitment Process and Related Communications"
+
+#: templates/privacy.html:56
+msgid "サービス改善・品質向上"
+msgstr "Service Improvement and Quality Enhancement"
+
+#: templates/privacy.html:60
+msgid "当社サービス・関連情報のご案内"
+msgstr "Information About Our Services and Related Topics"
+
+#: templates/privacy.html:64
+msgid "法令等に基づく対応"
+msgstr "Compliance with Laws and Regulations"
+
+#: templates/privacy.html:73
+msgid "第三者提供について"
+msgstr "Regarding Third-party Provision"
+
+#: templates/privacy.html:75
+msgid "当社は、法令に基づく場合を除き、本人の同意なく第三者へ個人情報を提供いたしません。"
+msgstr ""
+"Except as required by law, we will not disclose personal information to "
+"third parties without the individual’s consent."
+
+#: templates/privacy.html:81
+msgid "安全管理"
+msgstr "Safety Management"
+
+#: templates/privacy.html:83
+msgid "当社は、個人情報への不正アクセス、漏洩、滅失または毀損の防止その他個人情報の安全管理のため、適切な措置を講じます。"
+msgstr ""
+"We will take appropriate measures to prevent unauthorized access, leakage, "
+"loss, or damage to personal information, and to ensure the secure management"
+" of such information."
+
+#: templates/privacy.html:89
+msgid "委託について"
+msgstr "Regarding Consignment"
+
+#: templates/privacy.html:91
+msgid "利用目的達成のために必要な範囲で、個人情報の取扱いを外部へ委託する場合があります。この場合、適切な委託管理を行います。"
+msgstr ""
+"We may outsource the handling of personal information to third parties to "
+"the extent necessary to achieve the intended purpose. In such cases, we will"
+" ensure appropriate oversight of the outsourcing arrangement."
+
+#: templates/privacy.html:97
+msgid "開示・訂正・削除等について"
+msgstr "Regarding Disclosure, Correction, Deletion, etc"
+
+#: templates/privacy.html:99
+msgid "ご本人から自己の個人情報について、開示、訂正、利用停止、削除等の請求があった場合には、法令に従い適切に対応いたします。"
+msgstr ""
+"If an individual requests the disclosure, correction, suspension of use, or "
+"deletion of their personal information, we will respond appropriately in "
+"accordance with applicable laws and regulations."
+
+#: templates/privacy.html:105
+msgid "お問い合わせ窓口"
+msgstr "Contact Us"
+
+#: templates/privacy.html:108
+msgid "個人情報の取扱いに関するお問い合わせは、下記窓口までご連絡ください。"
+msgstr ""
+"For inquiries regarding the handling of personal information, please contact"
+" the office listed below."
+
+#: templates/privacy.html:112
+msgid "株式会社e-tac　カスタマーサービス係"
+msgstr "e-tac Co., Ltd. Customer Service Department"
+
+#: templates/services.html:21
 msgid "製造受託業務"
 msgstr "Contract Manufacturing Services"
 
-#: templates/services.html:24
-msgid ""
-"企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業"
-"務に対応いたします。"
+#: templates/services.html:23
+msgid "企業様のリソースをコア業務に集中できる環境づくりを構築するため、様々な受託業務に対応いたします。"
 msgstr ""
 "We offer a wide range of outsourced services to help companies create an "
 "environment where they can focus their resources on their core business "
 "operations."
 
-#: templates/services.html:26
+#: templates/services.html:25
 msgid ""
-"システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・"
-"検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様"
-"のニーズに応じた業務の受託が可能です。"
+"システム開発・運用・管理のIT分野の受託をはじめ、金属加工・プラスチック成型・検査・梱包、食品製造等の製造業分野においては、工数・工程・製造個数等、企業様のニーズに応じた業務の受託が可能です。"
 msgstr ""
-"In addition to providing contract services in the IT sector—including system "
-"development, operation, and management—we also offer contract services "
+"In addition to providing contract services in the IT sector—including system"
+" development, operation, and management—we also offer contract services "
 "tailored to the specific needs of our clients in the manufacturing sector, "
 "such as metalworking, plastic molding, inspection, packaging, and food "
 "production, covering areas such as man-hours, production processes, and "
 "production volumes."
 
-#: templates/services.html:39
+#: templates/services.html:35
 msgid "これまで弊社では様々な業種の業務受託を行ってまいりました。"
 msgstr ""
 "To date, our company has provided contract services across a wide range of "
 "industries."
 
-#: templates/services.html:41
+#: templates/services.html:37
 msgid ""
-"各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改"
-"善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。"
+"各々の業種業態において企業様とともに、業務を通じて問題点や課題を拾い出し、改善提案を行い生産効率の改善や不良発生頻度の低下等に努めてまいりました。"
 msgstr ""
-"We have worked closely with companies across various industries and business "
-"models to identify issues and challenges through our day-to-day operations, "
-"and have made improvement proposals to enhance production efficiency and "
+"We have worked closely with companies across various industries and business"
+" models to identify issues and challenges through our day-to-day operations,"
+" and have made improvement proposals to enhance production efficiency and "
 "reduce the frequency of defects."
 
-#: templates/services.html:43
-msgid ""
-"ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたしま"
-"す。"
+#: templates/services.html:39
+msgid "ただ単に業務処理をするのではなく、生産効率を高め、コスト削減を実現いたします。"
 msgstr ""
 "We don’t just handle routine tasks; we boost productivity and reduce costs."
 
-#: templates/services.html:45
-msgid ""
-"現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。"
+#: templates/services.html:41
+msgid "現場を熟知した弊社だからできる、現場改善型アウトソーシングを提供します。"
 msgstr ""
 "With our in-depth knowledge of the on-site, we offer on-site improvement "
 "outsourcing services that only we can provide."
 
-#: templates/services.html:53
+#: templates/services.html:49
 msgid "製造DX支援型アウトソーシング"
 msgstr "Outsourcing Services Supporting Manufacturing Digital Transformation"
 
-#: templates/services.html:58
+#: templates/services.html:51
 msgid "様々な業種の業務を受託しており、各々の業務・工程等を熟知しております。"
 msgstr ""
 "We handle projects across a wide range of industries and have a thorough "
 "understanding of the specific tasks and processes involved in each."
 
-#: templates/services.html:60
-msgid ""
-"机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいた"
-"します。"
+#: templates/services.html:53
+msgid "机上の空論のDX推進ではなく、現場を理解した上でのDX化の取り組みをサポートいたします。"
 msgstr ""
 "We support DX initiatives based on a thorough understanding of the actual "
 "situation, rather than relying on theoretical, impractical approaches."
 
-#: templates/services.html:62
+#: templates/services.html:55
 msgid ""
-"ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十"
-"分に理解・把握させていただき、実際に運用できるDX推進を提案します。"
+"ただ単にシステム導入等を推し進めるのではなく、現場・人・状況を業務を通じて十分に理解・把握させていただき、実際に運用できるDX推進を提案します。"
 msgstr ""
 "Rather than simply pushing for the implementation of new systems, we take "
 "the time to fully understand and grasp the on-site environment, the people "
@@ -548,24 +557,337 @@ msgstr ""
 "digital transformation initiatives that can be effectively implemented in "
 "practice."
 
+#: templates/terms_of_use.html:25
+msgid ""
+"本利用規約（以下「本規約」という）は、株式会社e-"
+"tac（以下「当社」という）が運営するWebサイト（以下「当サイト」という）の利用条件を定めるものです。当サイトをご利用される方（以下「利用者」という）は、本規約に同意の上、ご利用ください。"
+msgstr ""
+"These Terms of Use (hereinafter referred to as the “Terms”) set forth the "
+"terms and conditions for using the website (hereinafter referred to as the "
+"“Site”) operated by e-tac Co., Ltd. (hereinafter referred to as the "
+"“Company”). Users of the Site (hereinafter referred to as “Users”) must "
+"agree to these Terms before using the Site."
+
+#: templates/terms_of_use.html:31 templates/terms_of_use.html:39
+#: templates/terms_of_use.html:91 templates/terms_of_use.html:105
+#: templates/terms_of_use.html:124 templates/terms_of_use.html:134
+#: templates/terms_of_use.html:146 templates/terms_of_use.html:154
+#: templates/terms_of_use.html:164 templates/terms_of_use.html:181
+#: templates/terms_of_use.html:189 templates/terms_of_use.html:197
+msgid "第"
+msgstr "Article"
+
+#: templates/terms_of_use.html:31 templates/terms_of_use.html:39
+#: templates/terms_of_use.html:91 templates/terms_of_use.html:105
+#: templates/terms_of_use.html:124 templates/terms_of_use.html:134
+#: templates/terms_of_use.html:146 templates/terms_of_use.html:154
+#: templates/terms_of_use.html:164 templates/terms_of_use.html:181
+#: templates/terms_of_use.html:189 templates/terms_of_use.html:197
+msgid "条"
+msgstr " "
+
+#: templates/terms_of_use.html:32
+msgid "適用"
+msgstr "Applicable"
+
+#: templates/terms_of_use.html:34
+msgid "本規約は、利用者と当社との間における当サイトの利用に関する一切の関係に適用されます。"
+msgstr ""
+"These Terms and Conditions apply to all matters concerning the use of this "
+"website between the user and the Company."
+
+#: templates/terms_of_use.html:40
+msgid "禁止事項"
+msgstr "Prohibitions"
+
+#: templates/terms_of_use.html:43
+msgid "利用者は、当サイトの利用にあたり、以下の行為を行ってはなりません。"
+msgstr ""
+"Users must not engage in the following activities when using this site."
+
+#: templates/terms_of_use.html:47
+msgid "法令または公序良俗に反する行為"
+msgstr "Acts that violate laws or public order and morals"
+
+#: templates/terms_of_use.html:51
+msgid "犯罪行為または、そのおそれのある行為"
+msgstr "Criminal acts or acts that may constitute criminal acts"
+
+#: templates/terms_of_use.html:55
+msgid "虚偽情報の送信"
+msgstr "Transmission of false information"
+
+#: templates/terms_of_use.html:59
+msgid "他者への誹謗中傷"
+msgstr "Slander and defamation against others"
+
+#: templates/terms_of_use.html:63
+msgid "当社または、第三者の権利・利益を侵害する行為"
+msgstr ""
+"Any act that infringes upon the rights or interests of our company or a "
+"third party"
+
+#: templates/terms_of_use.html:67
+msgid "当サイト運営を妨害する行為"
+msgstr "Acts that interfere with the operation of this site"
+
+#: templates/terms_of_use.html:71
+msgid "不正アクセスまたは、これを試みる行為"
+msgstr "Unauthorized access or attempts to gain such access"
+
+#: templates/terms_of_use.html:75
+msgid "営業・勧誘・スパム行為"
+msgstr "Sales, Solicitation, and Spam"
+
+#: templates/terms_of_use.html:79
+msgid "当社の提案内容、資料、ノウハウ等を無断で利用・転載・転用する行為"
+msgstr ""
+"Any unauthorized use, reproduction, or adaptation of our proposals, "
+"materials, or know-how"
+
+#: templates/terms_of_use.html:83
+msgid "その他、当社が不適切と判断する行為"
+msgstr "Any other conduct that we deem inappropriate"
+
+#: templates/terms_of_use.html:92
+msgid "知的財産権"
+msgstr "Intellectual Property Rights"
+
+#: templates/terms_of_use.html:96
+msgid ""
+"当サイトに記載される文章、画像、ロゴ、デザイン、提案資料、DX支援資料、業務フロー、各種ノウハウその他一切のコンテンツに関する著作権、商標権その他知的財産権は、当社または、正当な権利者に帰属します。"
+msgstr ""
+"All copyrights, trademark rights, and other intellectual property rights "
+"related to the text, images, logos, designs, proposal materials, DX support "
+"materials, business workflows, know-how, and all other content appearing on "
+"this website are the property of our company or the respective rights "
+"holders."
+
+#: templates/terms_of_use.html:98
+msgid "利用者は、法令により認められる範囲を超えて、当社の事前承諾なく、複製、転載、改変、転用、配布、二次利用等を行ってはなりません。"
+msgstr ""
+"Users may not reproduce, reprint, modify, repurpose, distribute, or "
+"otherwise reuse the content beyond the scope permitted by law without our "
+"prior consent."
+
+#: templates/terms_of_use.html:99
+msgid "また、当社が提供する改善提案、DX提案、業務設計資料等については、提案段階においても当社の知的資産として適切に保護されるものとします。"
+msgstr ""
+"In addition, any improvement proposals, digital transformation proposals, "
+"business design documents, and other materials provided by our company shall"
+" be appropriately protected as our intellectual property even during the "
+"proposal stage."
+
+#: templates/terms_of_use.html:106
+msgid "相談内容および秘密情報の取扱い"
+msgstr "Consultation Content and Handling of Confidential Information"
+
+#: templates/terms_of_use.html:109
+msgid ""
+"当社は、利用者から受領した相談内容、企業情報、経営情報、技術情報その他、業務上知り得た情報について守秘義務を徹底し、支援目的以外に利用しません。"
+msgstr ""
+"We strictly adhere to confidentiality obligations regarding all information "
+"received from users—including consultation details, corporate information, "
+"management information, technical information, and any other information "
+"obtained in the course of our business—and will not use such information for"
+" any purpose other than providing support."
+
+#: templates/terms_of_use.html:110
+msgid ""
+"特に、事業承継、経営改善、人材課題、製造受託、DX推進等に関するご相談については、その性質上、高度な秘密性を有することを認識し、適切な情報管理に努めます。"
+msgstr ""
+"In particular, we recognize that consultations regarding business "
+"succession, management improvement, human resources issues, contract "
+"manufacturing, and the promotion of digital transformation are, by their "
+"very nature, highly confidential, and we are committed to ensuring "
+"appropriate information management."
+
+#: templates/terms_of_use.html:112
+msgid "但し、以下の場合を除きます。"
+msgstr "However, this does not apply in the following cases."
+
+#: templates/terms_of_use.html:114
+msgid "本人または、企業の同意がある場合"
+msgstr "When the individual or company has given consent"
+
+#: templates/terms_of_use.html:115
+msgid "法令に基づく場合"
+msgstr "In cases based on laws and regulations"
+
+#: templates/terms_of_use.html:116
+msgid "人命・財産保護等のため必要な場合"
+msgstr "When necessary to protect human life and property, etc."
+
+#: templates/terms_of_use.html:125
+msgid "採用応募者情報の取扱い"
+msgstr "Handling of Job Applicant Information"
+
+#: templates/terms_of_use.html:128
+msgid ""
+"当社は、採用応募時に取得する個人情報について、採用選考および採用関連業務の範囲内で適切に取り扱います。応募者情報については、漏洩、滅失、毀損等を防止するため適切な安全管理措置を講じるとともに、応募者の意思およびプライバシーに十分配慮いたします。"
+msgstr ""
+"We will handle personal information collected during the application process"
+" appropriately, strictly within the scope of the recruitment selection "
+"process and related operations. We will implement appropriate security "
+"measures to prevent the leakage, loss, or damage of applicant information, "
+"and will give due consideration to the wishes and privacy of applicants."
+
+#: templates/terms_of_use.html:135
+msgid "免責事項"
+msgstr "Disclaimer"
+
+#: templates/terms_of_use.html:138
+msgid ""
+"当社は、当サイトに掲載する情報について、可能な限り正確な情報提供に努めますが、その完全性、正確性、有用性、安全性等を保証するものではありません。"
+msgstr ""
+"While we strive to ensure that the information posted on this website is as "
+"accurate as possible, we do not guarantee its completeness, accuracy, "
+"usefulness, or security."
+
+#: templates/terms_of_use.html:139
+msgid "当サイトの利用、または掲載情報に基づく判断によって生じた損害について、当社は一切の責任を負いかねます。"
+msgstr ""
+"We assume no liability for any damages arising from the use of this website "
+"or from decisions made based on the information provided herein."
+
+#: templates/terms_of_use.html:140
+msgid "また当サイトの内容は予告なく変更または削除される場合があります。"
+msgstr ""
+"Please note that the content of this site is subject to change or removal "
+"without notice."
+
+#: templates/terms_of_use.html:147
+msgid "外部リンクについて"
+msgstr "About External Links"
+
+#: templates/terms_of_use.html:149
+msgid "当サイトには外部へのリンクが含まれる場合があります。リンク先サイトにおける情報、サービス等について、当社は一切責任を負いません。"
+msgstr ""
+"This site may contain links to external websites. We assume no "
+"responsibility for the information, services, or other content provided on "
+"those linked sites."
+
+#: templates/terms_of_use.html:155
+msgid "お問い合わせについて"
+msgstr "Regarding inquiries"
+
+#: templates/terms_of_use.html:158
+msgid ""
+"利用者からのお問い合わせ内容については、当社プライバシーポリシーに基づき適切に管理いたします。尚、営業目的のみのお問い合わせ、または当社業務と無関係な内容については、回答を行わない場合があります。"
+msgstr ""
+"We will handle all inquiries from users appropriately in accordance with our"
+" Privacy Policy. Please note that we may not respond to inquiries made "
+"solely for sales purposes or those unrelated to our business operations."
+
+#: templates/terms_of_use.html:165
+msgid "サービスの停止等"
+msgstr "Service Suspension, etc."
+
+#: templates/terms_of_use.html:168
+msgid "当社は、以下の場合に事前予告なく当サイトの全部または一部を停止または中断できるものとします。"
+msgstr ""
+"We reserve the right to suspend or discontinue all or part of this website "
+"without prior notice in the following cases."
+
+#: templates/terms_of_use.html:170
+msgid "システムの保守・点検"
+msgstr "System Maintenance and Inspection"
+
+#: templates/terms_of_use.html:171
+msgid "通信障害"
+msgstr "Communication failure"
+
+#: templates/terms_of_use.html:172
+msgid "天災その他不可抗力"
+msgstr "Natural disasters and other force majeure events"
+
+#: templates/terms_of_use.html:173
+msgid "その他、当社が必要と判断した場合"
+msgstr "In addition, whenever we deem it necessary"
+
+#: templates/terms_of_use.html:175
+msgid "これにより利用者に生じた損害について、当社は責任を負いません。"
+msgstr "We shall not be liable for any damages incurred by users as a result."
+
+#: templates/terms_of_use.html:182
+msgid "個人情報の取扱い"
+msgstr "Handling of Personal Information"
+
+#: templates/terms_of_use.html:184
+msgid "当社による個人情報の取扱いについては、別途定める「プライバシーポリシー」に従うものとします。"
+msgstr ""
+"Our handling of personal information will be in accordance with our "
+"separately defined \"Privacy Policy.\""
+
+#: templates/terms_of_use.html:190
+msgid "規約の変更"
+msgstr "Changes to the Terms of Service"
+
+#: templates/terms_of_use.html:192
+msgid "当社は、必要に応じて本規約を変更できるものとします。変更後の規約は、当サイト上に掲載した時点で効力を生じるものとします。"
+msgstr ""
+"We reserve the right to amend these Terms and Conditions as necessary. The "
+"amended Terms and Conditions shall take effect upon their posting on this "
+"website."
+
+#: templates/terms_of_use.html:198
+msgid "準拠法・管轄"
+msgstr "Governing Law and Jurisdiction"
+
+#: templates/terms_of_use.html:200
+msgid "本規約は日本法に準拠します。当サイトに関して紛争が生じた場合には、当社所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。"
+msgstr ""
+"These Terms and Conditions shall be governed by the laws of Japan. In the "
+"event of any dispute arising in connection with this website, the courts "
+"having jurisdiction over the location of our company’s headquarters shall "
+"have exclusive jurisdiction as the court of first instance."
+
+#: templates/terms_of_use.html:207
+msgid "制定日"
+msgstr "Effective Date"
+
+#: templates/terms_of_use.html:207
+msgid "2026年5月1日"
+msgstr "May 1, 2026"
+
+#: templates/terms_of_use.html:208
+msgid "最終改定日"
+msgstr "Date of Last Revision"
+
+#: templates/terms_of_use.html:208
+msgid "2026年5月15日"
+msgstr "May 15, 2026"
+
+#~ msgid "当社の個人情報保護方針をご確認いただき、内容に同意の上、送信してください。"
+#~ msgstr ""
+#~ "Please review our Privacy Policy and submit your information after agreeing "
+#~ "to its terms."
+
+#~ msgid "プライバシーポリシーおよび利用規約"
+#~ msgstr "Privacy Policy and Terms of Use"
+
+#~ msgid "に同意する"
+#~ msgstr "I agree"
+
+#~ msgid "職位"
+#~ msgstr "Position"
+
+#~ msgid "職位を入力してください"
+#~ msgstr "Please enter your position"
+
 #~ msgid "お問い合わせ・ご相談"
 #~ msgstr "Inquiries and Consultations"
 
 #~ msgid "当社は、お問い合わせ・採用募集等に際して"
 #~ msgstr "Our company will handle personal information"
 
-#~ msgid "プライバシーポリシー・利用規約"
-#~ msgstr "Privacy Policy and Terms of Use"
-
 #~ msgid ""
-#~ "（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護するこ"
-#~ "とを重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただ"
-#~ "いた情報は、お問い合わせ対応の目的のみに使用されます。）"
+#~ "（ダミーテキスト：当サイトは、お客様の個人情報を適切に取り扱い、保護することを重大な責務と考え、法令および関連する規範を遵守いたします。ご入力いただいた情報は、お問い合わせ対応の目的のみに使用されます。）"
 #~ msgstr ""
 #~ "(Placeholder text: We consider the proper handling and protection of your "
-#~ "personal information to be a serious responsibility and will comply with "
-#~ "all applicable laws and regulations. The information you provide will be "
-#~ "used solely for the purpose of responding to your inquiry.)"
+#~ "personal information to be a serious responsibility and will comply with all"
+#~ " applicable laws and regulations. The information you provide will be used "
+#~ "solely for the purpose of responding to your inquiry.)"
 
 #~ msgid "代表者"
 #~ msgstr "President"

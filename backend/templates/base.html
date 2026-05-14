@@ -37,40 +37,74 @@
         </main>
         <!-- Footer -->
         <footer class="bg-primary text-white">
-            <div class="container-content py-8 lg:py-16">
-                <div class="grid lg:grid-cols-8 gap-12 lg:gap-16">
+            <div class="container mx-auto px-6 lg:px-10 py-8 lg:py-16">
+                <div class="grid lg:grid-cols-10 gap-12 lg:gap-16">
                     <!-- Company -->
-                    <div class="lg:col-span-5">
+                    <div class="lg:col-span-6 flex flex-col gap-4">
                         <div class="text-3xl font-black tracking-widest text-white mb-6">{% trans "株式会社 e-tac" %}</div>
+                        <div class="flex items-center gap-3 text-lg text-white/70 font-medium hover:text-white transition-all">
+                            <div class="w-10 h-10 rounded-full bg-white/10 border border-border/20 flex items-center justify-center group-hover/link:border-primary/30 group-hover/link:shadow-sm">
+                                <span class="text-xl">📮</span>
+                            </div>
+                            {% trans "福岡県行橋市中央三丁目５番２５号" %}
+                        </div>
+                        <a href="tel:0800-808-0325"
+                           class="flex items-center gap-3 text-lg text-white/70 font-medium hover:text-white transition-all">
+                            <div class="w-10 h-10 rounded-full bg-white/10 border border-border/20 flex items-center justify-center group-hover/link:border-primary/30 group-hover/link:shadow-sm">
+                                <span class="text-xl">📞</span>
+                            </div>
+                            0800-808-0325
+                        </a>
+                        <a href="mailto:info@e-tac.biz"
+                           class="flex items-center gap-3 text-lg text-white/70 font-medium hover:text-white transition-all">
+                            <div class="w-10 h-10 rounded-full bg-white/10 border border-border/20 flex items-center justify-center group-hover/link:border-primary/30 group-hover/link:shadow-sm">
+                                <span class="text-xl">✉️</span>
+                            </div>
+                            info@e-tac.biz
+                        </a>
                     </div>
                     <!-- Navigation Menu -->
-                    <div class="lg:col-span-3">
+                    <div class="lg:col-span-4">
                         <p class="text-xs font-bold tracking-widest text-white/30 uppercase mb-6">{% trans "ナビゲーション" %}</p>
-                        <ul class="grid grid-cols-2 space-y-4">
-                            <li>
-                                <a href="{% url 'home' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ホーム" %}</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'about' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "会社概要" %}</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'services' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "サービス" %}</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'group' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "グループ" %}</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'contact' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ご担当者様へ" %}</a>
-                            </li>
-                            <li>
-                                <a href="{% url 'inquiry' %}"
-                                   class="text-white/70 font-bold hover:text-white transition-colors">{% trans "お問い合わせ" %}</a>
-                            </li>
+                        <ul class="grid grid-cols-3 gap-2 lg:gap-4">
+                            <div class="col-span-1 space-y-4">
+                                <li>
+                                    <a href="{% url 'home' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ホーム" %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'about' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "会社概要" %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'services' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "サービス" %}</a>
+                                </li>
+                            </div>
+                            <div class="col-span-1 space-y-4">
+                                <li>
+                                    <a href="{% url 'group' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "グループ" %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "ご担当者様へ" %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'inquiry' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "お問い合わせ" %}</a>
+                                </li>
+                            </div>
+                            <div class="col-span-1 space-y-4">
+                                <li>
+                                    <a href="{% url 'privacy-policy' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "プライバシーポリシー" %}</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'terms-of-use' %}"
+                                       class="text-white/70 font-bold hover:text-white transition-colors">{% trans "利用規約" %}</a>
+                                </li>
+                            </div>
                         </ul>
                     </div>
                 </div>

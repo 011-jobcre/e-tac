@@ -1,6 +1,6 @@
 {% load i18n %}
-<div x-data="searchableSelect()" class="relative">
-    <label class="text-sm tracking-widest ml-1">{% trans "小分類" %}</label>
+<div x-data="searchableSelect()" class="relative flex flex-col gap-2">
+    <label class="text-sm tracking-widest ml-1 mb-2">{% trans "小分類" %}</label>
     <!-- Hidden Real Select -->
     <div class="hidden">
         <div x-ref="realSelect">
@@ -12,7 +12,7 @@
                     x-model="shoSelected"
                     @change="handleShoChange($event)"
                     :class="fieldErrorClass('shoSelected')">
-                <option value="">{% trans "---------" %}</option>
+                <option value="">---------</option>
                 {% for sho in shobunrui_list %}<option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>{% endfor %}
             </select>
         </div>
@@ -48,7 +48,7 @@
                            @input="filterOptions()"
                            type="text"
                            class="w-full bg-surface border border-border rounded-lg pl-9 pr-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary/20"
-                           placeholder="{% trans "検索..." %}">
+                           placeholder="{% trans "検索..." %}" />
                 </div>
             </div>
             <div x-ref="optionsList" class="max-h-60 overflow-y-auto">

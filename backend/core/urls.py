@@ -29,8 +29,8 @@ urlpatterns += i18n_patterns(
     path("inquiry/", InquiryView.as_view(), name="inquiry"),
     path("inquiry/thanks/", InquiryThanksView.as_view(), name="inquiry-thanks"),
     path("group/", GroupView.as_view(), name="group"),
-    path("privacy/", PrivacyView.as_view(), name="privacy"),
-    path("termsofuse/", TermsofuseView.as_view(), name="termsofuse"),
+    path("privacy-policy/", PrivacyView.as_view(), name="privacy-policy"),
+    path("terms-of-use/", TermsofuseView.as_view(), name="terms-of-use"),
     path("api/chubunrui-options/", chubunrui_options, name="chubunrui-options"),
     path("api/shobunrui-options/", shobunrui_options, name="shobunrui-options"),
 )

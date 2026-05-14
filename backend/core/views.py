@@ -42,7 +42,7 @@ class InquiryView(FormView):
                 f"業務分類 大分類: {data['daibunrui']}",
                 f"業務分類 中分類: {data['chubunrui']}",
                 f"業務分類 小分類: {data['shobunrui']}",
-                f"職位: {data['position']}",
+                f"所属: {data['position']}",
                 f"担当者名: {data['contact_name']}",
                 "",
                 "お問い合わせ内容:",
@@ -72,7 +72,7 @@ class PrivacyView(TemplateView):
 
 
 class TermsofuseView(TemplateView):
-    template_name = "termsofuse.html"
+    template_name = "terms_of_use.html"
 
 
 def chubunrui_options(request):

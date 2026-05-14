@@ -101,13 +101,12 @@
         @apply py-10 lg:py-20;
     }
 
-    /* Typography — Components should define the "look", utilities define the "context" */
-    .section-tag {
-        @apply text-accent font-bold text-xs tracking-widest uppercase block mb-1;
+    .hero-title {
+        @apply text-3xl lg:text-5xl font-bold tracking-widest uppercase;
     }
 
     .section-title {
-        @apply text-2xl text-primary font-bold tracking-widest;
+        @apply text-xl lg:text-2xl font-bold tracking-widest uppercase;
     }
 
     /* HTMX Indicator */
