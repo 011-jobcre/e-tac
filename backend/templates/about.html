@@ -5,83 +5,249 @@
 {% endblock title %}
 {% block content %}
     <!-- Hero -->
-    <section class="relative pt-32 pb-10 lg:pt-36 lg:pb-14 overflow-hidden">
+    <section class="relative pt-24 pb-6 lg:pt-30 lg:pb-10 overflow-hidden">
         <div class="container-content relative z-10 text-center"
              data-aos="fade-up">
             <h1 class="hero-title">{% trans "会社概要" %}</h1>
         </div>
     </section>
     <!-- Main Content -->
-    <div class="container-content section-pad space-y-32">
-        <!-- Company Info -->
-        <section>
-            <div class="minimal-card p-0 overflow-hidden bg-surface"
-                 data-aos="fade-up"
-                 data-aos-delay="200">
-                <div class="divide-y divide-border">
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "商号" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "株式会社 e-tac" %}</div>
+    <div class="container mx-auto px-6 lg:px-10 section-pad space-y-32">
+        <!-- Timeline History Section -->
+        <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="text-center mb-20">
+                    <h2 class="text-primary font-headline-lg text-headline-lg mb-4">沿革</h2>
+                    <p class="text-on-surface-variant font-body-md text-body-md">Zenith Corpが歩んできた、成長と挑戦の軌跡。</p>
+                </div>
+                <div class="relative timeline-line space-y-12 md:space-y-24">
+                    <!-- Milestone 2010 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+                        <div class="hidden md:block w-[45%] text-right pr-12">
+                            <h3 class="text-primary font-display-lg text-display-lg">2010</h3>
+                        </div>
+                        <div class="z-10 w-4 h-4 rounded-full bg-surface border-4 border-primary"></div>
+                        <div class="w-full md:w-[45%] pl-10 md:pl-12">
+                            <h3 class="md:hidden text-primary font-headline-md text-headline-md mb-2">2010</h3>
+                            <h4 class="text-on-surface font-headline-md text-headline-md mb-2">Foundation</h4>
+                            <p class="text-on-surface-variant font-body-md text-body-md">東京都港区にてZenith Corporationを設立。次世代型ITソリューションの提供を開始しました。</p>
+                        </div>
                     </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "代表取締役" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "小森雅之" %}</div>
+                    <!-- Milestone 2015 -->
+                    <div class="relative flex flex-col md:flex-row-reverse items-center justify-between w-full">
+                        <div class="hidden md:block w-[45%] text-left pl-12">
+                            <h3 class="text-primary font-display-lg text-display-lg">2015</h3>
+                        </div>
+                        <div class="z-10 w-4 h-4 rounded-full bg-surface border-4 border-primary"></div>
+                        <div class="w-full md:w-[45%] pr-10 md:pr-12 md:text-right">
+                            <h3 class="md:hidden text-primary font-headline-md text-headline-md mb-2">2015</h3>
+                            <h4 class="text-on-surface font-headline-md text-headline-md mb-2">Expansion</h4>
+                            <p class="text-on-surface-variant font-body-md text-body-md">事業規模の拡大に伴い、本社を現在のオフィスへ移転。従業員数が100名を超え、国内主要都市に拠点を展開。</p>
+                        </div>
                     </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "設立" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "令和７年３月１０日" %}</div>
-                    </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "資本金" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "500万円" %}</div>
-                    </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "所在地" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "福岡県行橋市中央三丁目５番２５号" %}</div>
-                    </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "法務顧問" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "安田法律事務所" %}</div>
-                    </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "税務顧問" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "あんしん税理士法人" %}</div>
-                    </div>
-                    <div class="grid lg:grid-cols-[240px_1fr]">
-                        <div class="px-8 py-6 font-bold text-lg">{% trans "労務顧問" %}</div>
-                        <div class="px-8 py-6 font-medium">{% trans "社会保険労務士法人ウインツ" %}</div>
+                    <!-- Milestone 2020 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between w-full">
+                        <div class="hidden md:block w-[45%] text-right pr-12">
+                            <h3 class="text-primary font-display-lg text-display-lg">2020</h3>
+                        </div>
+                        <div class="z-10 w-4 h-4 rounded-full bg-surface border-4 border-primary"></div>
+                        <div class="w-full md:w-[45%] pl-10 md:pl-12">
+                            <h3 class="md:hidden text-primary font-headline-md text-headline-md mb-2">2020</h3>
+                            <h4 class="text-on-surface font-headline-md text-headline-md mb-2">Global Reach</h4>
+                            <p class="text-on-surface-variant font-body-md text-body-md">シンガポールおよび北米支社を開設。グローバル市場への本格参入を果たし、多様なニーズに応える体制を構築。</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- History Timeline -->
-        <section>
-            <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
-                <h2 class="section-title">{% trans "沿革" %}</h2>
+        <!-- Company Info Table -->
+        <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-primary font-headline-lg text-headline-lg mb-4">企業データ</h2>
+                        <div class="w-20 h-1 bg-primary mx-auto"></div>
+                    </div>
+                    <div class="overflow-hidden border-t-2 border-primary">
+                        <table class="w-full border-collapse">
+                            <tbody>
+                                <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+                                    <th class="py-6 px-4 md:px-8 text-left w-1/3 md:w-1/4 font-headline-md text-headline-md text-primary bg-surface-container-low/30">
+                                        会社名
+                                    </th>
+                                    <td class="py-6 px-4 md:px-8 font-body-lg text-body-lg text-on-surface">Zenith Corporation (株式会社ゼニス)</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                                    <th class="py-6 px-4 md:px-8 text-left font-headline-md text-headline-md text-primary bg-surface-container-low/30">
+                                        設立
+                                    </th>
+                                    <td class="py-6 px-4 md:px-8 font-body-lg text-body-lg text-on-surface">2010年6月1日</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                                    <th class="py-6 px-4 md:px-8 text-left font-headline-md text-headline-md text-primary bg-surface-container-low/30">
+                                        代表者
+                                    </th>
+                                    <td class="py-6 px-4 md:px-8 font-body-lg text-body-lg text-on-surface">代表取締役社長 田中 健二</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                                    <th class="py-6 px-4 md:px-8 text-left font-headline-md text-headline-md text-primary bg-surface-container-low/30">
+                                        資本金
+                                    </th>
+                                    <td class="py-6 px-4 md:px-8 font-body-lg text-body-lg text-on-surface">5,000万円</td>
+                                </tr>
+                                <tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+                                    <th class="py-6 px-4 md:px-8 text-left font-headline-md text-headline-md text-primary bg-surface-container-low/30">
+                                        所在地
+                                    </th>
+                                    <td class="py-6 px-4 md:px-8 font-body-lg text-body-lg text-on-surface">
+                                        〒105-0001 東京都港区虎ノ門 1-2-3
+                                        <br />
+                                        Zenith Tower 18F
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <ol class="relative border-s" data-aos="fade-up" data-aos-delay="200">
-                <!-- 2022 -->
-                <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
-                    </span>
-                    <time class="border font-medium px-2 py-1 rounded">{% trans "2022年11月" %}</time>
-                    <h3 class="font-medium my-2">{% trans "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設" %}</h3>
-                </li>
-                <!-- 2025 -->
-                <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
-                    </span>
-                    <time class="border font-medium px-2 py-1 rounded">{% trans "2025年3月" %}</time>
-                    <h3 class="font-medium my-2">{% trans "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立" %}</h3>
-                </li>
-                <!-- 2026 -->
-                <li class="mb-10 ms-6">
-                    <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
-                    </span>
-                    <time class="border font-medium px-2 py-1 rounded">{% trans "2026年3月" %}</time>
-                    <h3 class="font-medium my-2">{% trans "一般社団法人工業製品製造技能人材機構（JAIM）加入" %}</h3>
-                </li>
-            </ol>
         </section>
+        <!-- Company Info -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 items-center justify-center">
+            <section class="col-span-1">
+                <div class="minimal-card p-0 overflow-hidden bg-surface"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                    <div class="divide-y divide-border">
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-6 py-4 font-bold text-lg">{% trans "商号" %}</div>
+                            <div class="px-6 py-4 font-medium text-sm">{% trans "株式会社 e-tac" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "代表者" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "代表取締役　小森雅之" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "設立" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "令和７年３月１０日" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "資本金" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "500万円" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "所在地" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "福岡県行橋市中央三丁目５番２５号" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "法務顧問" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "安田法律事務所" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "税務顧問" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "あんしん税理士法人" %}</div>
+                        </div>
+                        <div class="grid lg:grid-cols-[240px_1fr]">
+                            <div class="px-8 py-6 font-bold text-lg">{% trans "労務顧問" %}</div>
+                            <div class="px-8 py-6 font-medium">{% trans "社会保険労務士法人ウインツ" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="col-span-1 place-self-center"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                <div class="carousel carousel-vertical h-120">
+                    <div class="carousel-item h-full">
+                        <img src="{% static 'images/e-tac-1.jpeg' %}"
+                             class="w-full aspect-square lg:aspect-auto object-cover rounded-md" />
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- History Timeline -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
+            <section class="col-span-1 place-self-center"
+                     data-aos="fade-up"
+                     data-aos-delay="200">
+                <div class="carousel carousel-vertical h-96 autoplay-carousel">
+                    <div class="carousel-item h-full">
+                        <img src="{% static 'images/IMG_2943.jpeg' %}"
+                             class="max-w-full h-auto object-contain rounded-md" />
+                    </div>
+                    <div class="carousel-item h-full">
+                        <img src="{% static 'images/IMG_2229.jpg' %}"
+                             class="max-w-full h-auto object-contain rounded-md" />
+                    </div>
+                    <div class="carousel-item h-full">
+                        <img src="{% static 'images/IMG_2940.jpeg' %}"
+                             class="max-w-full h-auto object-contain rounded-md" />
+                    </div>
+                </div>
+                {% comment %} <img src="{% static 'images/e-tac-1.jpeg' %}" alt="会社概要" width="100%" height="100%" class="w-full h-full object-cover rounded-xl" /> {% endcomment %}
+            </section>
+            <section class="col-span-1">
+                <div class="mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title">{% trans "沿革" %}</h2>
+                </div>
+                <ol class="relative border-s" data-aos="fade-up" data-aos-delay="200">
+                    <!-- 2022 -->
+                    <li class="mb-10 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
+                        </span>
+                        <time class="border font-medium px-2 py-1 rounded">{% trans "2022年11月" %}</time>
+                        <h3 class="font-medium my-2">{% trans "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設" %}</h3>
+                    </li>
+                    <!-- 2025 -->
+                    <li class="mb-10 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
+                        </span>
+                        <time class="border font-medium px-2 py-1 rounded">{% trans "2025年3月" %}</time>
+                        <h3 class="font-medium my-2">{% trans "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立" %}</h3>
+                    </li>
+                    <!-- 2026 -->
+                    <li class="mb-10 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-black rounded-full -inset-s-3 ring-8 ring-white shadow">
+                        </span>
+                        <time class="border font-medium px-2 py-1 rounded">{% trans "2026年3月" %}</time>
+                        <h3 class="font-medium my-2">{% trans "一般社団法人工業製品製造技能人材機構（JAIM）加入" %}</h3>
+                    </li>
+                </ol>
+            </section>
+        </div>
     </div>
 {% endblock content %}
+{% block extra_scripts %}
+    <script>
+        document.querySelectorAll('.autoplay-carousel').forEach(carousel => {
+            const scrollInterval = 3000; // 3 seconds
+            let interval;
+
+            const startAutoplay = () => {
+                interval = setInterval(() => {
+                    const itemHeight = carousel.querySelector('.carousel-item').offsetHeight;
+                    // Check if we are at the end
+                    if (carousel.scrollTop + carousel.offsetHeight >= carousel.scrollHeight - 10) {
+                        carousel.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        carousel.scrollBy({
+                            top: itemHeight,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, scrollInterval);
+            };
+
+            const stopAutoplay = () => clearInterval(interval);
+
+            // Initial start
+            startAutoplay();
+
+            // Pause on hover
+            carousel.addEventListener('mouseenter', stopAutoplay);
+            carousel.addEventListener('mouseleave', startAutoplay);
+        });
+    </script>
+{% endblock extra_scripts %}

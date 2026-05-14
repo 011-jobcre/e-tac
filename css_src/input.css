@@ -98,11 +98,11 @@
     }
 
     .section-pad {
-        @apply py-10 lg:py-20;
+        @apply py-10 lg:py-14;
     }
 
     .hero-title {
-        @apply text-3xl lg:text-5xl font-bold tracking-widest uppercase;
+        @apply text-2xl lg:text-4xl font-bold tracking-widest uppercase;
     }
 
     .section-title {
@@ -125,7 +125,7 @@
 
     /* Cards & Effects */
     .minimal-card {
-        @apply border border-border rounded-2xl p-8 transition-all duration-300 hover:shadow-xl;
+        @apply border border-border rounded-2xl p-6 transition-all duration-300 hover:shadow-xl;
     }
 
     .shine-btn {
