@@ -1,21 +1,9 @@
 {% load i18n %}
 <div x-data="searchableSelect()" class="relative flex flex-col gap-2">
-    <label class="text-sm tracking-widest ml-1">{% trans "小分類" %}</label>
+    <label class="text-sm tracking-widest ml-1">{% trans "大分類" %}</label>
     <!-- Hidden Real Select -->
     <div class="hidden">
-        <div x-ref="realSelect">
-            <select name="shobunrui"
-                    id="id_shobunrui"
-                    class="select outline-none w-full"
-                    required
-                    {% if disabled %}disabled{% endif %}
-                    x-model="shoSelected"
-                    @change="handleShoChange($event)"
-                    :class="fieldErrorClass('shoSelected')">
-                <option value="">---------</option>
-                {% for sho in shobunrui_list %}<option value="{{ sho.code }}">{{ sho.code }} {{ sho.name }}</option>{% endfor %}
-            </select>
-        </div>
+        <div x-ref="realSelect">{{ form.daibunrui }}</div>
     </div>
     <!-- Custom Trigger -->
     <div class="relative"
@@ -27,7 +15,7 @@
                 @click.away="open = false"
                 @keydown.escape="open = false"
                 :disabled="getSelect()?.disabled"
-                :class="[ fieldErrorClass('shoSelected'), getSelect()?.disabled ? 'opacity-50 cursor-not-allowed bg-base-200' : 'bg-surface cursor-pointer' ]"
+                :class="[ fieldErrorClass('daiSelected'), getSelect()?.disabled ? 'opacity-50 cursor-not-allowed bg-base-200' : 'bg-surface cursor-pointer' ]"
                 class="flex items-center justify-between outline-none w-full border border-border text-sm px-3 py-2 rounded-xl text-left transition-all appearance-none">
             <span x-text="selectedText" class="truncate mr-2"></span>
             <span class="material-symbols-outlined transition-transform"
@@ -70,4 +58,8 @@
             </div>
         </div>
     </div>
+    <p class="text-sm text-error ml-1 mt-1"
+       x-show="errors.daiSelected"
+       x-text="errors.daiSelected"
+       x-cloak></p>
 </div>

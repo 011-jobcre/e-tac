@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-14 14:59+0900\n"
+"POT-Creation-Date: 2026-05-15 16:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,98 +23,98 @@ msgstr ""
 msgid "会社概要"
 msgstr ""
 
-#: templates/about.html:23
-msgid "商号"
-msgstr ""
-
-#: templates/about.html:24 templates/base.html:44
-msgid "株式会社 e-tac"
-msgstr ""
-
-#: templates/about.html:27
-msgid "代表取締役"
-msgstr ""
-
-#: templates/about.html:28
-msgid "小森雅之"
-msgstr ""
-
-#: templates/about.html:31
-msgid "設立"
-msgstr ""
-
-#: templates/about.html:32
-msgid "令和７年３月１０日"
-msgstr ""
-
-#: templates/about.html:35
-msgid "資本金"
-msgstr ""
-
-#: templates/about.html:36
-msgid "500万円"
-msgstr ""
-
-#: templates/about.html:39
-msgid "所在地"
-msgstr ""
-
-#: templates/about.html:40 templates/base.html:49 templates/privacy.html:113
-msgid "福岡県行橋市中央三丁目５番２５号"
-msgstr ""
-
-#: templates/about.html:43
-msgid "法務顧問"
-msgstr ""
-
-#: templates/about.html:44
-msgid "安田法律事務所"
-msgstr ""
-
-#: templates/about.html:47
-msgid "税務顧問"
-msgstr ""
-
-#: templates/about.html:48
-msgid "あんしん税理士法人"
-msgstr ""
-
-#: templates/about.html:51
-msgid "労務顧問"
-msgstr ""
-
-#: templates/about.html:52
-msgid "社会保険労務士法人ウインツ"
-msgstr ""
-
-#: templates/about.html:60
+#: templates/about.html:20
 msgid "沿革"
 msgstr ""
 
-#: templates/about.html:67
-msgid "2022年11月"
+#: templates/about.html:32
+msgid "11月"
 msgstr ""
 
-#: templates/about.html:68
+#: templates/about.html:33
 msgid "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設"
 msgstr ""
 
-#: templates/about.html:74
-msgid "2025年3月"
+#: templates/about.html:46 templates/about.html:60
+msgid "3月"
 msgstr ""
 
-#: templates/about.html:75
+#: templates/about.html:47
 msgid ""
 "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社"
 "e-tac設立"
 msgstr ""
 
-#: templates/about.html:81
-msgid "2026年3月"
+#: templates/about.html:61
+msgid "一般社団法人工業製品製造技能人材機構（JAIM）加入"
 msgstr ""
 
-#: templates/about.html:82
-msgid "一般社団法人工業製品製造技能人材機構（JAIM）加入"
+#: templates/about.html:100
+msgid "企業情報"
+msgstr ""
+
+#: templates/about.html:109
+msgid "商号"
+msgstr ""
+
+#: templates/about.html:111 templates/base.html:44
+msgid "株式会社 e-tac"
+msgstr ""
+
+#: templates/about.html:118
+msgid "代表者"
+msgstr ""
+
+#: templates/about.html:120
+msgid "代表取締役　小森雅之"
+msgstr ""
+
+#: templates/about.html:125
+msgid "設立"
+msgstr ""
+
+#: templates/about.html:127
+msgid "令和７年３月１０日"
+msgstr ""
+
+#: templates/about.html:132
+msgid "資本金"
+msgstr ""
+
+#: templates/about.html:134
+msgid "500万円"
+msgstr ""
+
+#: templates/about.html:139
+msgid "所在地"
+msgstr ""
+
+#: templates/about.html:141 templates/base.html:49 templates/privacy.html:113
+msgid "福岡県行橋市中央三丁目５番２５号"
+msgstr ""
+
+#: templates/about.html:146
+msgid "法務顧問"
+msgstr ""
+
+#: templates/about.html:148
+msgid "安田法律事務所"
+msgstr ""
+
+#: templates/about.html:153
+msgid "税務顧問"
+msgstr ""
+
+#: templates/about.html:155
+msgid "あんしん税理士法人"
+msgstr ""
+
+#: templates/about.html:160
+msgid "労務顧問"
+msgstr ""
+
+#: templates/about.html:162
+msgid "社会保険労務士法人ウインツ"
 msgstr ""
 
 #: templates/base.html:68
@@ -210,55 +210,39 @@ msgstr ""
 msgid "業務分類"
 msgstr ""
 
-#: templates/inquiry.html:53
-msgid "大分類"
-msgstr ""
-
-#: templates/inquiry.html:89
-#: templates/inquiry/partials/_chubunrui_select.html:56
-#: templates/inquiry/partials/_shobunrui_select.html:51
-msgid "検索..."
-msgstr ""
-
-#: templates/inquiry.html:106
-#: templates/inquiry/partials/_chubunrui_select.html:73
-#: templates/inquiry/partials/_shobunrui_select.html:68
-msgid "一致する結果がありません"
-msgstr ""
-
-#: templates/inquiry.html:126 templates/inquiry.html:139
+#: templates/inquiry.html:63 templates/inquiry.html:76
 msgid "読み込み中..."
 msgstr ""
 
-#: templates/inquiry.html:149
+#: templates/inquiry.html:86
 msgid "業務分類選択内容"
 msgstr ""
 
-#: templates/inquiry.html:158
+#: templates/inquiry.html:95
 msgid "所属"
 msgstr ""
 
-#: templates/inquiry.html:167
+#: templates/inquiry.html:104
 msgid "例：係長、主任など"
 msgstr ""
 
-#: templates/inquiry.html:177
+#: templates/inquiry.html:114
 msgid "担当者名"
 msgstr ""
 
-#: templates/inquiry.html:186
+#: templates/inquiry.html:123
 msgid "例：田中太郎"
 msgstr ""
 
-#: templates/inquiry.html:196
+#: templates/inquiry.html:133
 msgid "お問い合わせ内容"
 msgstr ""
 
-#: templates/inquiry.html:205
+#: templates/inquiry.html:142
 msgid "例：具体的な課題やご要望をご記入ください。"
 msgstr ""
 
-#: templates/inquiry.html:224
+#: templates/inquiry.html:161
 msgid ""
 "\n"
 "                                        <a href=\"#privacy_modal\" "
@@ -267,23 +251,23 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/inquiry.html:233
+#: templates/inquiry.html:170
 msgid "送信する"
 msgstr ""
 
-#: templates/inquiry.html:242
+#: templates/inquiry.html:179
 msgid ""
 "ご入力いただいた個人情報および企業情報は、お問い合わせ対応、ご相談対応、サー"
 "ビス提供検討のために利用いたします。"
 msgstr ""
 
-#: templates/inquiry.html:243
+#: templates/inquiry.html:180
 msgid ""
 "また、当社は、業務上知り得た相談内容、経営情報、技術情報その他機密性を有する"
 "情報について適切な安全管理および守秘義務の徹底に努めます。"
 msgstr ""
 
-#: templates/inquiry.html:248
+#: templates/inquiry.html:185
 #, python-format
 msgid ""
 "\n"
@@ -296,45 +280,61 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/inquiry.html:257
+#: templates/inquiry.html:194
 msgid "キャンセル"
 msgstr ""
 
-#: templates/inquiry.html:260
+#: templates/inquiry.html:197
 msgid "同意する"
 msgstr ""
 
-#: templates/inquiry.html:431
+#: templates/inquiry.html:368
 msgid "会社名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:432
+#: templates/inquiry.html:369
 msgid "大分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:433 templates/inquiry.html:467
+#: templates/inquiry.html:370 templates/inquiry.html:404
 msgid "中分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:434 templates/inquiry.html:468
-#: templates/inquiry.html:480
+#: templates/inquiry.html:371 templates/inquiry.html:405
+#: templates/inquiry.html:417
 msgid "小分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:435
+#: templates/inquiry.html:372
 msgid "所属を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:436
+#: templates/inquiry.html:373
 msgid "担当者名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:437
+#: templates/inquiry.html:374
 msgid "お問い合わせ内容を入力してください"
 msgstr ""
 
 #: templates/inquiry/partials/_chubunrui_select.html:3
 msgid "中分類"
+msgstr ""
+
+#: templates/inquiry/partials/_chubunrui_select.html:56
+#: templates/inquiry/partials/_daibunrui_select.html:39
+#: templates/inquiry/partials/_shobunrui_select.html:51
+msgid "検索..."
+msgstr ""
+
+#: templates/inquiry/partials/_chubunrui_select.html:73
+#: templates/inquiry/partials/_daibunrui_select.html:56
+#: templates/inquiry/partials/_shobunrui_select.html:68
+msgid "一致する結果がありません"
+msgstr ""
+
+#: templates/inquiry/partials/_daibunrui_select.html:3
+msgid "大分類"
 msgstr ""
 
 #: templates/inquiry/partials/_shobunrui_select.html:3
