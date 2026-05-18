@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 14:19+0900\n"
-"PO-Revision-Date: 2026-05-18 10:21+0900\n"
+"POT-Creation-Date: 2026-05-18 15:49+0900\n"
+"PO-Revision-Date: 2026-05-18 15:22+0900\n"
 "Last-Translator:   <admin@mail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -44,8 +44,8 @@ msgstr "March"
 
 #: templates/about.html:50
 msgid ""
-"製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社"
-"e-tac設立"
+"製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会"
+"社 e-tac設立"
 msgstr ""
 "e-tac Co., Ltd. was established through a corporate spin-off from JOB "
 "CREATOR Co., Ltd. for the purpose of operating a contract manufacturing "
@@ -519,7 +519,7 @@ msgstr ""
 "the office listed below."
 
 #: templates/privacy.html:112
-msgid "株式会社e-tac　カスタマーサービス係"
+msgid "株式会社 e-tac　カスタマーサービス係"
 msgstr "e-tac Co., Ltd. Customer Service Department"
 
 #: templates/services.html:21
@@ -609,9 +609,9 @@ msgstr ""
 
 #: templates/terms_of_use.html:25
 msgid ""
-"本利用規約（以下「本規約」という）は、株式会社e-tac（以下「当社」という）が運"
-"営するWebサイト（以下「当サイト」という）の利用条件を定めるものです。当サイト"
-"をご利用される方（以下「利用者」という）は、本規約に同意の上、ご利用くださ"
+"本利用規約（以下「本規約」という）は、株式会社 e-tac（以下「当社」という）が"
+"運営するWebサイト（以下「当サイト」という）の利用条件を定めるものです。当サイ"
+"トをご利用される方（以下「利用者」という）は、本規約に同意の上、ご利用くださ"
 "い。"
 msgstr ""
 "These Terms of Use (hereinafter referred to as the “Terms”) set forth the "

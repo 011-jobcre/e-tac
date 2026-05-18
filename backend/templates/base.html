@@ -92,17 +92,12 @@
         </footer>
         <footer class="bg-primary text-white/30 text-sm border-t border-white/10">
             <!-- Copyright -->
-            <p class="py-4 text-center">
-                © <span id="current-year"></span> e-tac. All Rights Reserved.
-            </p>
+            <p class="py-4 text-center">© {% now "Y" %} e-tac. All Rights Reserved.</p>
         </footer>
         <!-- AOS -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init({ duration: 750, easing: "ease-out-cubic", once: true });</script>
         <script>
-            // Set the current year in the footer
-            document.getElementById("current-year").textContent =
-                new Date().getFullYear();
             // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
                 anchor.addEventListener("click", function (e) {
