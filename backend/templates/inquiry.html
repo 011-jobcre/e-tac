@@ -53,28 +53,10 @@
                             <!-- 中分類 (HTMX target) -->
                             <div class="relative">
                                 <div id="chubunrui-wrapper">{% include "inquiry/partials/_chubunrui_select.html" with disabled=True %}</div>
-                                <p class="text-sm text-error ml-1 mt-2"
-                                   x-show="errors.chuSelected"
-                                   x-text="errors.chuSelected"
-                                   x-cloak></p>
-                                <!-- Loading indicator -->
-                                <div id="chu-loading" class="htmx-indicator absolute right-3 top-9">
-                                    <span class="loading loading-spinner loading-xs"></span>
-                                    <span class="text-sm">{% trans "読み込み中..." %}</span>
-                                </div>
                             </div>
                             <!-- 小分類 (HTMX target) -->
                             <div class="relative">
                                 <div id="shobunrui-wrapper">{% include "inquiry/partials/_shobunrui_select.html" with disabled=True %}</div>
-                                <p class="text-sm text-error ml-1 mt-2"
-                                   x-show="errors.shoSelected"
-                                   x-text="errors.shoSelected"
-                                   x-cloak></p>
-                                <!-- Loading indicator -->
-                                <div id="sho-loading" class="htmx-indicator absolute right-3 top-9">
-                                    <span class="loading loading-spinner loading-xs"></span>
-                                    <span class="text-sm">{% trans "読み込み中..." %}</span>
-                                </div>
                             </div>
                             <!-- Summary display -->
                             <div x-show="hasSelection"

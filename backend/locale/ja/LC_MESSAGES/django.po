@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 16:22+0900\n"
+"POT-Creation-Date: 2026-05-18 09:20+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/about.html:4 templates/about.html:11 templates/base.html:77
+#: templates/about.html:4 templates/about.html:11 templates/base.html:80
 #: templates/navbar.html:11 templates/navbar.html:73
 msgid "会社概要"
 msgstr ""
@@ -89,7 +89,7 @@ msgstr ""
 msgid "所在地"
 msgstr ""
 
-#: templates/about.html:141 templates/base.html:49 templates/privacy.html:113
+#: templates/about.html:141 templates/base.html:52 templates/privacy.html:117
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr ""
 
@@ -117,41 +117,41 @@ msgstr ""
 msgid "社会保険労務士法人ウインツ"
 msgstr ""
 
-#: templates/base.html:68
+#: templates/base.html:71
 msgid "ナビゲーション"
 msgstr ""
 
-#: templates/base.html:73 templates/homepage.html:4 templates/navbar.html:9
+#: templates/base.html:76 templates/homepage.html:4 templates/navbar.html:9
 #: templates/navbar.html:71
 msgid "ホーム"
 msgstr ""
 
-#: templates/base.html:81 templates/navbar.html:13 templates/navbar.html:75
+#: templates/base.html:84 templates/navbar.html:13 templates/navbar.html:75
 #: templates/services.html:4 templates/services.html:11
 msgid "サービス"
 msgstr ""
 
-#: templates/base.html:87 templates/group.html:4 templates/group.html:11
+#: templates/base.html:90 templates/group.html:4 templates/group.html:11
 #: templates/navbar.html:15 templates/navbar.html:77
 msgid "グループ"
 msgstr ""
 
-#: templates/base.html:91 templates/contact.html:4 templates/contact.html:11
+#: templates/base.html:94 templates/contact.html:4 templates/contact.html:11
 #: templates/navbar.html:17 templates/navbar.html:79
 msgid "ご担当者様へ"
 msgstr ""
 
-#: templates/base.html:95 templates/inquiry.html:4 templates/inquiry.html:11
+#: templates/base.html:98 templates/inquiry.html:4 templates/inquiry.html:11
 #: templates/inquiry_thanks.html:4 templates/navbar.html:19
 #: templates/navbar.html:81
 msgid "お問い合わせ"
 msgstr ""
 
-#: templates/base.html:101 templates/privacy.html:4 templates/privacy.html:11
+#: templates/base.html:104 templates/privacy.html:4 templates/privacy.html:11
 msgid "プライバシーポリシー"
 msgstr ""
 
-#: templates/base.html:105 templates/terms_of_use.html:4
+#: templates/base.html:108 templates/terms_of_use.html:4
 #: templates/terms_of_use.html:11 templates/terms_of_use.html:19
 msgid "利用規約"
 msgstr ""
@@ -210,39 +210,35 @@ msgstr ""
 msgid "業務分類"
 msgstr ""
 
-#: templates/inquiry.html:63 templates/inquiry.html:76
-msgid "読み込み中..."
-msgstr ""
-
-#: templates/inquiry.html:86
+#: templates/inquiry.html:68
 msgid "業務分類選択内容"
 msgstr ""
 
-#: templates/inquiry.html:95
+#: templates/inquiry.html:77
 msgid "所属"
 msgstr ""
 
-#: templates/inquiry.html:104
+#: templates/inquiry.html:86
 msgid "例：係長、主任など"
 msgstr ""
 
-#: templates/inquiry.html:114
+#: templates/inquiry.html:96
 msgid "担当者名"
 msgstr ""
 
-#: templates/inquiry.html:123
+#: templates/inquiry.html:105
 msgid "例：田中太郎"
 msgstr ""
 
-#: templates/inquiry.html:133
+#: templates/inquiry.html:115
 msgid "お問い合わせ内容"
 msgstr ""
 
-#: templates/inquiry.html:142
+#: templates/inquiry.html:124
 msgid "例：具体的な課題やご要望をご記入ください。"
 msgstr ""
 
-#: templates/inquiry.html:161
+#: templates/inquiry.html:143
 msgid ""
 "\n"
 "                                        <a href=\"#privacy_modal\" "
@@ -251,23 +247,23 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/inquiry.html:170
+#: templates/inquiry.html:152
 msgid "送信する"
 msgstr ""
 
-#: templates/inquiry.html:179
+#: templates/inquiry.html:161
 msgid ""
 "ご入力いただいた個人情報および企業情報は、お問い合わせ対応、ご相談対応、サー"
 "ビス提供検討のために利用いたします。"
 msgstr ""
 
-#: templates/inquiry.html:180
+#: templates/inquiry.html:162
 msgid ""
 "また、当社は、業務上知り得た相談内容、経営情報、技術情報その他機密性を有する"
 "情報について適切な安全管理および守秘義務の徹底に努めます。"
 msgstr ""
 
-#: templates/inquiry.html:185
+#: templates/inquiry.html:167
 #, python-format
 msgid ""
 "\n"
@@ -280,40 +276,40 @@ msgid ""
 "                                    "
 msgstr ""
 
-#: templates/inquiry.html:194
+#: templates/inquiry.html:176
 msgid "キャンセル"
 msgstr ""
 
-#: templates/inquiry.html:197
+#: templates/inquiry.html:179
 msgid "同意する"
 msgstr ""
 
-#: templates/inquiry.html:368
+#: templates/inquiry.html:350
 msgid "会社名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:369
+#: templates/inquiry.html:351
 msgid "大分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:370 templates/inquiry.html:404
+#: templates/inquiry.html:352 templates/inquiry.html:386
 msgid "中分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:371 templates/inquiry.html:405
-#: templates/inquiry.html:417
+#: templates/inquiry.html:353 templates/inquiry.html:387
+#: templates/inquiry.html:399
 msgid "小分類を選択してください"
 msgstr ""
 
-#: templates/inquiry.html:372
+#: templates/inquiry.html:354
 msgid "所属を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:373
+#: templates/inquiry.html:355
 msgid "担当者名を入力してください"
 msgstr ""
 
-#: templates/inquiry.html:374
+#: templates/inquiry.html:356
 msgid "お問い合わせ内容を入力してください"
 msgstr ""
 
@@ -331,6 +327,11 @@ msgstr ""
 #: templates/inquiry/partials/_daibunrui_select.html:56
 #: templates/inquiry/partials/_shobunrui_select.html:68
 msgid "一致する結果がありません"
+msgstr ""
+
+#: templates/inquiry/partials/_chubunrui_select.html:86
+#: templates/inquiry/partials/_shobunrui_select.html:81
+msgid "読み込み中..."
 msgstr ""
 
 #: templates/inquiry/partials/_daibunrui_select.html:3
