@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-18 10:20+0900\n"
+"POT-Creation-Date: 2026-05-18 14:19+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,89 +31,89 @@ msgstr ""
 msgid "11月"
 msgstr ""
 
-#: templates/about.html:33
+#: templates/about.html:34
 msgid "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設"
 msgstr ""
 
-#: templates/about.html:46 templates/about.html:60
+#: templates/about.html:48 templates/about.html:64
 msgid "3月"
 msgstr ""
 
-#: templates/about.html:47
+#: templates/about.html:50
 msgid ""
 "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社"
 "e-tac設立"
 msgstr ""
 
-#: templates/about.html:61
+#: templates/about.html:65
 msgid "一般社団法人工業製品製造技能人材機構（JAIM）加入"
 msgstr ""
 
-#: templates/about.html:100
+#: templates/about.html:116
 msgid "企業情報"
 msgstr ""
 
-#: templates/about.html:109
+#: templates/about.html:125
 msgid "商号"
 msgstr ""
 
-#: templates/about.html:111 templates/base.html:44
+#: templates/about.html:128 templates/base.html:44
 msgid "株式会社 e-tac"
 msgstr ""
 
-#: templates/about.html:118
+#: templates/about.html:136
 msgid "代表者"
 msgstr ""
 
-#: templates/about.html:120
+#: templates/about.html:139
 msgid "代表取締役　小森雅之"
 msgstr ""
 
-#: templates/about.html:125
+#: templates/about.html:145
 msgid "設立"
 msgstr ""
 
-#: templates/about.html:127
+#: templates/about.html:148
 msgid "令和７年３月１０日"
 msgstr ""
 
-#: templates/about.html:132
+#: templates/about.html:154
 msgid "資本金"
 msgstr ""
 
-#: templates/about.html:134
+#: templates/about.html:156
 msgid "500万円"
 msgstr ""
 
-#: templates/about.html:139
+#: templates/about.html:161
 msgid "所在地"
 msgstr ""
 
-#: templates/about.html:141 templates/base.html:52 templates/privacy.html:117
+#: templates/about.html:164 templates/base.html:52 templates/privacy.html:117
 msgid "福岡県行橋市中央三丁目５番２５号"
 msgstr ""
 
-#: templates/about.html:146
+#: templates/about.html:170
 msgid "法務顧問"
 msgstr ""
 
-#: templates/about.html:148
+#: templates/about.html:172
 msgid "安田法律事務所"
 msgstr ""
 
-#: templates/about.html:153
+#: templates/about.html:177
 msgid "税務顧問"
 msgstr ""
 
-#: templates/about.html:155
+#: templates/about.html:180
 msgid "あんしん税理士法人"
 msgstr ""
 
-#: templates/about.html:160
+#: templates/about.html:186
 msgid "労務顧問"
 msgstr ""
 
-#: templates/about.html:162
+#: templates/about.html:189
 msgid "社会保険労務士法人ウインツ"
 msgstr ""
 

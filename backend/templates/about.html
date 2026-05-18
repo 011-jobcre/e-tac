@@ -30,7 +30,9 @@
                     <div class="w-full lg:w-[45%] pl-12 lg:pl-12 mt-4 lg:mt-0">
                         <h3 class="lg:hidden font-bold text-lg mb-2">2022</h3>
                         <h4 class="font-semibold text-xl mb-2">{% trans "11月" %}</h4>
-                        <p class="font-medium text-base">{% trans "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設" %}</p>
+                        <p class="font-medium text-base leading-relaxed tracking-normal">
+                            {% trans "株式会社JOB CREATORの製造受託部門として、e-tac事業部を開設" %}
+                        </p>
                     </div>
                 </div>
                 <!-- Milestone 2025 -->
@@ -44,7 +46,9 @@
                     <div class="w-full lg:w-[45%] pl-12 lg:pr-12 mt-4 lg:text-right lg:mt-0">
                         <h3 class="lg:hidden font-bold text-lg mb-2">2025</h3>
                         <h4 class="font-semibold text-xl mb-2">{% trans "3月" %}</h4>
-                        <p class="font-medium text-base">{% trans "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立" %}</p>
+                        <p class="font-medium text-base leading-relaxed tracking-normal">
+                            {% trans "製造受託事業運営を目的として、株式会社JOB CREATORより会社分割により、株式会社e-tac設立" %}
+                        </p>
                     </div>
                 </div>
                 <!-- Milestone 2026 -->
@@ -58,7 +62,7 @@
                     <div class="w-full lg:w-[45%] pl-12 lg:pl-12 mt-4 lg:mt-0">
                         <h3 class="lg:hidden font-bold text-lg mb-2">2026</h3>
                         <h4 class="font-semibold text-xl mb-2">{% trans "3月" %}</h4>
-                        <p class="font-medium text-base">{% trans "一般社団法人工業製品製造技能人材機構（JAIM）加入" %}</p>
+                        <p class="font-medium text-base leading-relaxed tracking-normal">{% trans "一般社団法人工業製品製造技能人材機構（JAIM）加入" %}</p>
                     </div>
                 </div>
             </div>
@@ -74,20 +78,32 @@
                     <div x-ref="item"
                          class="carousel h-130 flex items-center justify-around shrink-0 gap-4 pr-4">
                         <div class="carousel-item h-full">
-                            <img src="{% static 'images/IMG_2943.jpeg' %}"
-                                 class="max-w-full h-auto object-contain rounded-md" />
+                            <img src="{% static 'images/IMG_2943.jpg' %}"
+                                 alt=""
+                                 width="400"
+                                 height="300"
+                                 class="max-w-full h-auto object-contain rounded-md shadow-md" />
                         </div>
                         <div class="carousel-item h-full">
                             <img src="{% static 'images/IMG_2229.jpg' %}"
-                                 class="max-w-full h-auto object-contain rounded-md" />
+                                 alt=""
+                                 width="400"
+                                 height="300"
+                                 class="max-w-full h-auto object-contain rounded-md shadow-md" />
                         </div>
                         <div class="carousel-item h-full">
-                            <img src="{% static 'images/IMG_2940.jpeg' %}"
-                                 class="max-w-full h-auto object-contain rounded-md" />
+                            <img src="{% static 'images/IMG_2940.jpg' %}"
+                                 alt=""
+                                 width="400"
+                                 height="300"
+                                 class="max-w-full h-auto object-contain rounded-md shadow-md" />
                         </div>
                         <div class="carousel-item h-full">
-                            <img src="{% static 'images/e-tac-1.jpeg' %}"
-                                 class="max-w-full h-auto object-contain rounded-md" />
+                            <img src="{% static 'images/IMG_2221.jpg' %}"
+                                 alt=""
+                                 width="400"
+                                 height="300"
+                                 class="max-w-full h-auto object-contain rounded-md shadow-md" />
                         </div>
                     </div>
                 </div>
@@ -105,61 +121,73 @@
                     <thead class="border-b border-primary">
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "商号" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "株式会社 e-tac" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "株式会社 e-tac" %}
+                            </td>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-primary">
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "代表者" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "代表取締役　小森雅之" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "代表取締役　小森雅之" %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "設立" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "令和７年３月１０日" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "令和７年３月１０日" %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "資本金" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "500万円" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">{% trans "500万円" %}</td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "所在地" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "福岡県行橋市中央三丁目５番２５号" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "福岡県行橋市中央三丁目５番２５号" %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "法務顧問" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "安田法律事務所" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">{% trans "安田法律事務所" %}</td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "税務顧問" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "あんしん税理士法人" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "あんしん税理士法人" %}
+                            </td>
                         </tr>
                         <tr>
                             <th scope="row"
-                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left">
+                                class="py-6 px-4 lg:px-8 w-1/3 font-bold text-base lg:text-xl text-left tracking-wider">
                                 {% trans "労務顧問" %}
                             </th>
-                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide">{% trans "社会保険労務士法人ウインツ" %}</td>
+                            <td class="py-6 px-4 lg:px-8 font-medium text-sm lg:text-base tracking-wide leading-relaxed">
+                                {% trans "社会保険労務士法人ウインツ" %}
+                            </td>
                         </tr>
                     </tbody>
                 </table>

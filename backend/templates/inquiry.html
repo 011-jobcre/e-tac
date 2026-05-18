@@ -16,10 +16,10 @@
         <section>
             <!-- Form -->
             <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                <div class="border border-border rounded-2xl p-10 overflow-hidden bg-surface"
+                <div class="border border-border rounded-2xl p-6 lg:p-10 overflow-hidden bg-surface shadow-sm"
                      x-data="bunruiForm()"
                      x-init="init()">
-                    <form class="space-y-6"
+                    <form class="space-y-4 lg:space-y-6"
                           method="post"
                           action="{% url 'inquiry' %}"
                           @submit="handleSubmit($event)">
@@ -156,7 +156,7 @@
                     <!-- Privacy policy modal -->
                     <dialog id="privacy_modal" class="modal" :class="{'modal-open': showDialog}">
                         <div class="modal-box w-11/12 bg-surface max-w-xl">
-                            <div class="space-y-6 text-sm leading-relaxed max-h-[60vh] overflow-y-auto">
+                            <div class="space-y-6 text-sm leading-relaxed tracking-wide max-h-[60vh] overflow-y-auto">
                                 <section class="space-y-4">
                                     <p>{% trans "ご入力いただいた個人情報および企業情報は、お問い合わせ対応、ご相談対応、サービス提供検討のために利用いたします。" %}</p>
                                     <p>{% trans "また、当社は、業務上知り得た相談内容、経営情報、技術情報その他機密性を有する情報について適切な安全管理および守秘義務の徹底に努めます。" %}</p>

@@ -102,11 +102,11 @@
     }
 
     .hero-title {
-        @apply text-2xl lg:text-4xl font-bold tracking-widest uppercase;
+        @apply text-2xl lg:text-4xl font-bold tracking-wider uppercase;
     }
 
     .section-title {
-        @apply text-xl lg:text-2xl font-bold tracking-widest uppercase;
+        @apply text-xl lg:text-2xl font-bold tracking-wider uppercase;
     }
 
     /* HTMX Indicator */
@@ -125,7 +125,7 @@
 
     /* Cards & Effects */
     .minimal-card {
-        @apply border border-border rounded-2xl p-6 transition-all duration-300 hover:shadow-xl;
+        @apply border border-border rounded-2xl p-6 transition-all duration-300 shadow-sm hover:shadow-xl;
     }
 
     .shine-btn {
