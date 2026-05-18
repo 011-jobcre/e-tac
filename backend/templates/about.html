@@ -165,9 +165,10 @@
                 </table>
             </div>
         </section>
-    {% endblock content %}
-    {% block extra_scripts %}
-        <script>
+    </div>
+{% endblock content %}
+{% block extra_scripts %}
+    <script>
         document.querySelectorAll('.autoplay-carousel').forEach(carousel => {
             const scrollInterval = 3000; // 3 seconds
             let interval;
@@ -217,5 +218,5 @@
             carousel.addEventListener('mouseenter', stopAutoplay);
             carousel.addEventListener('mouseleave', startAutoplayVertical);
         });
-        </script>
-    {% endblock extra_scripts %}
+    </script>
+{% endblock extra_scripts %}
